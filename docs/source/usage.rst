@@ -243,11 +243,11 @@ LAMMPSの入力ファイル中で、以下の\ ``pair_style``\ が使えます�
 
 .. option:: --test
 
- 学習したニューラルネットワークを使ってテスト用データの計算を行います。テスト用データ\ :file:`sannp.train`\ は :option:`sannp --dft` で作成できます。結果として全エネルギー\ :file:`sannp.etot`\ 、原子毎のエネルギー\ :file:`sannp.eatom`\ 、原子に働く力\ :file:`sannp.force`\ 、電荷\ :file:`sannp.charge`\ がファイルに出力されます。
+ 学習したニューラルネットワークを使ってテスト用データの計算を行います。テスト用データのファイル\ :file:`sannp.test`\ は :option:`sannp --dft` を実行し、"test"を選ぶことで作成できます。結果として全エネルギー\ :file:`sannp.etot`\ 、原子毎のエネルギー\ :file:`sannp.eatom`\ 、原子に働く力\ :file:`sannp.force`\ 、電荷\ :file:`sannp.charge`\ がファイルに出力されます。
 
 .. option:: --force, --force-test
 
- 学習したニューラルネットワークを使ってテスト用データの計算を行い、結果として原子に働く力を表示します。テスト用データのファイル\ :file:`sannp.train`\ は :option:`sannp --dft` で作成できます。
+ 学習したニューラルネットワークを使ってテスト用データの計算を行い、結果として原子に働く力を表示します。テスト用データのファイル\ :file:`sannp.test`\ は :option:`sannp --dft` を実行し、"test"を選ぶことで作成できます。
 
 .. option:: --export, --force-field, --lammps
 
