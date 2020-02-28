@@ -64,11 +64,31 @@ SANNP
 
 構造中のある原子 :math:`i` に対して、近傍の構造から対称関数を計算し、ニューラルネットワークに入力すると、出力としてその原子のエネルギー :math:`E_i^\text{NN}` が得られます。
 
-一方、教師データとしては密度汎関数理論(DFT)に基づく第一原理計算が使われますが、その結果は「各原子のエネルギー」という形にはなっていません。系の全エネルギー :math:`E_{tot}^\text{DFT}` を使い、 :math:`|E_{tot}^\text{DFT} - \sum_i E_{i}^\text{NN}|` を残差として最適化を行う方法がありますが、この場合1つの原子構造に対するDFT計算からエネルギーに関する情報は1つしか得られないことになります。
+一方、教師データとしては密度汎関数理論(DFT)に基づく第一原理計算が使われますが、その結果は「各原子のエネルギー」という形にはなっていません。系の全エネルギー :math:`E_\text{tot}^\text{DFT}` を使い、 :math:`|E_\text{tot}^\text{DFT} - \sum_i E_{i}^\text{NN}|` を残差として最適化を行う方法がありますが、この場合1つの原子構造に対するDFT計算からエネルギーに関する情報は1つしか得られないことになります。
 
 本製品で採用しているSANNP(Single Atom Neural Network Potential)\ [2]_\ では、DFT計算の結果を各原子のエネルギー :math:`E_i^\text{DFT}` に分割する手法\ [3]_\ を使うことで、各原子のエネルギーを残差 :math:`|E_i^\text{DFT} - E_i^\text{NN}|` を使って直接最適化しています。これにより、1つの原子構造に対するDFT計算から得られるエネルギーに関する情報が原子数倍になり、少ないDFT計算の結果からでも効率よく学習を行うことができます。
 
 また、エネルギーと同様に、ニューラルネットワークを使って「各原子の電荷」を得ることができます。クーロン相互作用は長距離でも働くため、クーロン相互作用も含めてニューラルネットワーク力場で計算しようとすると大きなカットオフ半径が必要になります。本製品ではニューラルネットワーク力場と、ニューラルネットワークで計算した電荷を使ったクーロン相互作用を組み合わせて使うことができますので、短距離の相互作用を扱うニューラルネットワーク力場の部分についてはカットオフ半径を小さくして計算することが可能です。
+
+系の全エネルギーは、ニューラルネットワークで計算した各原子のエネルギー :math:`E_i^\text{NN}` を使って、電荷を使わない場合
+
+.. math::
+
+ E_\text{tot}^\text{NN} = \sum_i E_i^\text{NN}
+
+と表現されます。また、ニューラルネットワークで計算した電荷 :math:`Q_i^\text{NN}` を使う場合は、系の全電荷が0になるようシフトした上で、
+
+.. math::
+
+ E_\text{tot}^\text{NN} &= E_\text{short} + E_\text{elec} \\
+ &= \sum_i E_i^\text{NN} + \sum_i \sum_{j>i}^{R_{ij} < R_\text{elec}} \frac{Q_i^\text{NN} Q_j^\text{NN}}{4\pi\epsilon_0R_{ij}} \cdot f_\text{screen}(R_{ij}), \\
+ f_\text{screen}&(R_{ij}) =
+ \begin{cases}
+ \frac{1}{2}\left[1-\cos\left(\frac{\pi \cdot R_{ij}}{R_\text{short}}\right)\right] \; & \text{for} \; R_{ij} \leq R_\text{short} \\
+ 1 & \text{for} \; R_{ij} > R_\text{short}
+ \end{cases}
+
+として計算します。
 
 .. [1] "Constructing high‐dimensional neural network potentials: A tutorial review", J. Behler, *Int. J. Quantum Chem.* **115**, 1032-1050 (2015). DOI: `10.1002/qua.24890 <https://doi.org/10.1002/qua.24890>`_
 .. [2] "Density functional theory based neural network force fields from energy decompositions", Y. Huang *et al.*, *Phys. Rev. B* **99**, 064103 (2019). DOI: `10.1103/PhysRevB.99.064103 <https://doi.org/10.1103/PhysRevB.99.064103>`_
