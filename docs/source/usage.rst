@@ -63,7 +63,7 @@
 手順2　ランダム構造の生成
 ----------------------------------
 
-作成した入力ファイルを基に、Advance/NeuralMDを実行して多数のランダム構造を生成します。ファイル名が\ :file:`espresso.scf.in`\ の場合、
+作成した入力ファイルを基に、Advance/NeuralMDを実行して多数のランダム構造を生成します。実行ファイルはインストール先のbinフォルダーに入っている :file:`sannp` です。ファイル名が\ :file:`espresso.scf.in`\ の場合、
 
 .. code-block:: console
  
@@ -252,3 +252,10 @@ LAMMPSの入力ファイル中で、以下の\ ``pair_style``\ が使えます�
 .. option:: --export, --force-field, --lammps
 
  学習したニューラルネットワークから、LAMMPSで利用可能な力場ファイル\ :file:`ffield.sannp`\ を出力します。
+
+ .. _usage_double:
+
+単精度版・倍精度版
+======================
+
+インストール先のbinフォルダーには通常の :file:`sannp` （単精度版）に加え、 :file:`sannp_d` （倍精度版）が入っています。もし倍精度版を使用されたいという場合は、説明中の :file:`sannp` を :file:`sannp_d` に読み替えて実行してください。
