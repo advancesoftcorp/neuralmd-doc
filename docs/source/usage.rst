@@ -67,7 +67,7 @@
 
 .. code-block:: console
  
- sannp --dft espresso.scf.in
+ ./sannp --dft espresso.scf.in
 
 として実行します。
 
@@ -123,7 +123,7 @@
 
 .. code-block:: console
  
- sannp --train
+ ./sannp --train
 
 実行中は残差RMS、経過時間等が出力されます。実行が正常に終わると、ニューラルネットワークの情報を含むファイル\ :file:`sannp.data`\ 、\ :file:`sannp.data_e`\ が出力されます。
 
@@ -135,7 +135,7 @@
 
 .. code-block:: console
  
- sannp --train-charge
+ ./sannp --train-charge
 
 実行が正常に終わると、電荷のニューラルネットワークの情報を含むファイル\ :file:`sannp.data_q`\ が出力されます。
 
@@ -143,7 +143,7 @@
 
 .. code-block:: console
  
- sannp --export
+ ./sannp --export
 
 を実行することで、LAMMPSで使用する力場定義ファイル\ :file:`ffield.sannp`\ を出力します。
 
