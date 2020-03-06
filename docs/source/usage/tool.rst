@@ -23,24 +23,26 @@ NanoLabo-Toolインストール先の :file:`exec.WIN` にQuantum ESPRESSO( :fil
 Quantum ESPRESSOでDFT計算(SCF計算)を実行するには、 :file:`pw.exe` に入力ファイルを渡して実行します。
 
 .. code-block:: console
+ :caption: 入力ファイル :file:`PW.inp` の実行例
 
- pw.exe -in PW.inp > PW.out
+ pw.exe -in PW.inp 1> PW.out 2> PW.err
 
 .. code-block:: console
  :caption: 並列実行
 
- mpiexec.exe -n 4 pw.exe -in PW.inp > PW.out
+ mpiexec.exe -n 4 pw.exe -in PW.inp 1> PW.out 2> PW.err
 
 LAMMPSで分子動力学計算を実行するには、 :file:`lammps.exe` に入力ファイルを渡して実行します。
 
 .. code-block:: console
+ :caption: 入力ファイル :file:`lammps.in` の実行例
 
- lammps.exe < lammps.in > lammps.out
+ lammps.exe < lammps.in 1> lammps.out 2> lammps.err
 
 .. code-block:: console
  :caption: 並列実行
 
- mpiexec.exe -n 4 lammps.exe < lammps.in > lammps.out
+ mpiexec.exe -n 4 lammps.exe < lammps.in 1> lammps.out 2> lammps.err
 
 .. _tooll:
 
