@@ -16,7 +16,7 @@ NanoLabo-Toolインストール先の :file:`exec.WIN` にQuantum ESPRESSO( :fil
 .. code-block:: console
  :caption: デフォルトの場所にインストールした場合の例
 
- set Path=C:\Program Files\AdvanceSoft\NanoLabo\exec.WIN\qe;C:\Program Files\AdvanceSoft\NanoLabo\exec.WIN\lammps;C:\Program Files\AdvanceSoft\NanoLabo\exec.WIN\mpi;%PATH%
+ set Path=C:\Program Files\AdvanceSoft\NanoLabo\exec.WIN\qe;C:\Program Files\AdvanceSoft\NanoLabo\exec.WIN\lammps;C:\Program Files\AdvanceSoft\NanoLabo\exec.WIN\mpi;%Path%
 
 また、永続的に追加するには、システムのプロパティから環境変数 :envvar:`Path` を編集してください。
 
