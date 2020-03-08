@@ -86,7 +86,7 @@
 手順3　Quantum ESPRESSOによる第一原理計算
 ----------------------------------------------
 
-NanoLabo-Tool同梱のQuantum ESPRESSOを使用される場合は、ライブラリ検索パス等の設定が必要になります。以下を参照し、設定して下さい。
+NanoLabo Tool同梱のQuantum ESPRESSOを使用される場合は、ライブラリ検索パス等の設定が必要になります。以下を参照し、設定して下さい。
 
 .. toctree::
    :maxdepth: 2
@@ -159,7 +159,7 @@ NanoLabo-Tool同梱のQuantum ESPRESSOを使用される場合は、ライブラ
 手順5　LAMMPSによる分子動力学計算
 -------------------------------------------------
 
-NanoLabo-Tool同梱のLAMMPSを使用される場合は、ライブラリ検索パス等の設定が必要になります。以下を参照し、設定して下さい。
+NanoLabo Tool同梱のLAMMPSを使用される場合は、ライブラリ検索パス等の設定が必要になります。以下を参照し、設定して下さい。
 
 .. toctree::
    :maxdepth: 2
