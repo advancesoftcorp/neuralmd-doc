@@ -67,6 +67,8 @@
 
 インストール後、最後の画面で完了をクリックすると、Advance/NanoLabo Toolのインストールが終了します。
 
+Advance/NanoLabo Toolに同梱された計算エンジン（Quantum ESPRESSO・LAMMPS）の使用方法については、\ :doc:`/usage/tool`\ を参照してください。
+
 .. _launchl:
 
 ライセンスの設定
