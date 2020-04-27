@@ -13,7 +13,7 @@
 
  `Advance/NeuralMD (ver.1.0) <https://github.com/advancesoftcorp/neuralmd-doc/releases/download/v1.0/install_neuralmd_windows_v1.0.exe>`_
 
- `Advance/NanoLabo Tool (ver.1.3.1) <https://github.com/advancesoftcorp/nanolabo-doc/releases/download/v1.3.1-tool/install_nanolabo_tool_windows_v1.3.1.exe>`_
+ `Advance/NanoLabo Tool (ver.1.4) <https://github.com/advancesoftcorp/nanolabo-doc/releases/download/v1.4/install_nanolabo_tool_windows_v1.4.exe>`_
 
 .. _installerw:
 
