@@ -8,7 +8,7 @@ Advance/NanoLabo
 ================
 
 Advance/NanoLaboホームページ
- http://www.advancesoft.jp/product/advance_phase/
+ http://www.advancesoft.jp/product/advance_nanolabo/
 
 アドバンスソフト株式会社
  http://www.advancesoft.jp/
