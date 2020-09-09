@@ -239,6 +239,10 @@ LAMMPSの入力ファイル中で、以下の\ ``pair_style``\ が使えます�
 
  fileを指定しない場合、対話形式で入力を求められます。
 
+.. option:: --omp <n>, --cpu <n>
+
+ OpenMP並列（スレッド並列）の並列数を指定します。
+
 .. option:: --train, --train-energy
 
  教師データ :file:`sannp.train`\ を元に、エネルギー及び力の計算を行うためのニューラルネットワークの学習を行います。実行が正常に終わると、ニューラルネットワークの情報を含むファイル\ :file:`sannp.data`\ 、\ :file:`sannp.data_e`\ が出力されます。
@@ -249,7 +253,11 @@ LAMMPSの入力ファイル中で、以下の\ ``pair_style``\ が使えます�
 
 .. option:: --temp, --template
 
- \ :file:`sannp.prop`\ 、\ :file:`sannp.behler`\ のテンプレートとなるファイルを出力します。
+ 設定ファイル\ :file:`sannp.prop`\ のテンプレートを出力します。既存のファイルは上書きされます。
+
+.. option:: --behler, --behler-temp
+
+ Behler対称関数の設定ファイル\ :file:`sannp.behler`\ のテンプレートを出力します。既存のファイルは上書きされます。
 
 .. option:: --stop, --stop-training
 
