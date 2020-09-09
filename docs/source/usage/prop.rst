@@ -74,7 +74,7 @@ sannp.propの書式
 
  ニューラルネットワークの活性化関数です。asis（使用しない）、sigmoid、tanh、eLUが指定できます。
 
-.. describe:: batches
+.. describe:: batchs
 
  :デフォルト: 64
 
