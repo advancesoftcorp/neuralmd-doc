@@ -20,6 +20,12 @@ sannp.propの書式
 
  電荷の計算を行う(1)か行わない(0)かの指定です。
 
+.. describe:: withHDNNP
+
+ :デフォルト: 1
+
+ 系全体のエネルギーを教師データとするHDNNP法を使う(1)か、各原子に分割したエネルギーを教師データとするSANNP法を使う(0)かの指定です。
+
 .. describe:: directSF
 
  :デフォルト: -1
@@ -28,9 +34,21 @@ sannp.propの書式
 
 .. describe:: symmFunc
 
- :デフォルト: behler
+ :デフォルト: chebyshev
 
- 対称関数を指定します。behler、many-bodyが指定できます。
+ 対称関数を指定します。behler、chebyshev、many-bodyが指定できます。
+
+.. describe:: elemWeight
+
+ :デフォルト: 1
+
+ 重み付き対称関数を使う(1)か、使わない(0)かの指定です。Behler対称関数、Chebyshev対称関数で使用可能です。
+
+.. describe:: tanhCutoff
+
+ :デフォルト: 0
+
+ カットオフ関数\ :math:`f_c(R_{ij})`\ としてtanhを使った関数を使う(1)か、cosを使った関数を使う(0)かの指定です。
 
 .. describe:: m2
 
@@ -52,9 +70,33 @@ sannp.propの書式
 
 .. describe:: router
 
- :デフォルト: 6.0
+ :デフォルト: 6.5
 
- Behler対称関数のパラメータ *R*:sub:`c` (\ |angs|\ )、またはMany-Body対称関数のパラメータ *R*:sub:`outer` (\ |angs|\ )です。
+ Many-Body対称関数のパラメータ *R*:sub:`outer` (\ |angs|\ )です。
+
+.. describe:: numRadius
+
+ :デフォルト: 20
+
+ Behler対称関数、Chebyshev対称関数の動径成分の数を指定します。
+
+.. describe:: numAngle
+
+ :デフォルト: 20
+
+ Behler対称関数、Chebyshev対称関数の角度成分の数を指定します。
+
+.. describe:: rcutRadius
+
+ :デフォルト: 6.5
+
+ Behler対称関数、Chebyshev対称関数の動径成分のカットオフ距離 *R*:sub:`c` (\ |angs|\ )を指定します。
+
+.. describe:: rcutAngle
+
+ :デフォルト: 6.5
+
+ Behler対称関数、Chebyshev対称関数の角度成分のカットオフ距離 *R*:sub:`c` (\ |angs|\ )を指定します。
 
 .. describe:: layers
 
@@ -64,7 +106,7 @@ sannp.propの書式
 
 .. describe:: nodes
 
- :デフォルト: 512
+ :デフォルト: 30
 
  ニューラルネットワークのノード数です。
 
@@ -74,11 +116,17 @@ sannp.propの書式
 
  ニューラルネットワークの活性化関数です。asis（使用しない）、sigmoid、tanh、eLUが指定できます。
 
-.. describe:: batchs
+.. describe:: lbfgs
 
  :デフォルト: 64
 
- 学習時のミニバッチサイズです。
+ 学習時の最適化アルゴリズムの指定です。0を指定すると、Adam法を使用します。1以上の値を指定すると、その値を履歴数とするL-BFGS法を使用します。
+
+.. describe:: batchs
+
+ :デフォルト: 0
+
+ 学習時のミニバッチサイズです。0以下の値を指定した場合、ミニバッチは使用せず、フルバッチ（サンプル全体）で学習を行います。
 
 .. describe:: epochs
 
@@ -94,19 +142,19 @@ sannp.propの書式
 
 .. describe:: rmseEnergy
 
- :デフォルト: 0.50
+ :デフォルト: 0.10
 
  学習が収束したか判定するためのエネルギー残差(RMS)の閾値(eV/atom)です。
 
 .. describe:: rmseForce
 
- :デフォルト: 0.50
+ :デフォルト: 0.10
 
  学習が収束したか判定するための力の残差(RMS)の閾値(eV/\ |angs|\ )です。
 
 .. describe:: rmseCharge
 
- :デフォルト: 0.05
+ :デフォルト: 0.01
 
  学習が収束したか判定するための電荷の残差(RMS)の閾値(e)です。
 
@@ -118,7 +166,7 @@ sannp.propの書式
 
 .. describe:: coefForce
 
- :デフォルト: 0.50
+ :デフォルト: 1.00
 
  力の損失関数のスケール係数(\ |angs|\ :sup:`2`/eV)です。
 
@@ -136,7 +184,7 @@ sannp.propの書式
 
 .. describe:: learnRateFinal
 
- :デフォルト: 1.0e-6
+ :デフォルト: 1.0e-4
 
  学習率の下限値です。
 
