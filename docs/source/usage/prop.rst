@@ -78,25 +78,25 @@ sannp.propの書式
 
  :デフォルト: 20
 
- Behler対称関数、Chebyshev対称関数の動径成分の数を指定します。
+ Chebyshev対称関数の動径成分の数を指定します。
 
 .. describe:: numAngle
 
  :デフォルト: 20
 
- Behler対称関数、Chebyshev対称関数の角度成分の数を指定します。
+ Chebyshev対称関数の角度成分の数を指定します。
 
 .. describe:: rcutRadius
 
  :デフォルト: 6.5
 
- Behler対称関数、Chebyshev対称関数の動径成分のカットオフ距離 *R*:sub:`c` (\ |angs|\ )を指定します。
+ Chebyshev対称関数の動径成分のカットオフ距離 *R*:sub:`c` (\ |angs|\ )を指定します。
 
 .. describe:: rcutAngle
 
  :デフォルト: 6.5
 
- Behler対称関数、Chebyshev対称関数の角度成分のカットオフ距離 *R*:sub:`c` (\ |angs|\ )を指定します。
+ Chebyshev対称関数の角度成分のカットオフ距離 *R*:sub:`c` (\ |angs|\ )を指定します。
 
 .. describe:: layers
 

@@ -4,7 +4,7 @@
 sannp.behlerの書式
 ===================
 
-\ :file:`sannp.behler`\ のテンプレートは、 :option:`sannp --temp` で出力できます。
+\ :file:`sannp.behler`\ のテンプレートは、 :option:`sannp --behler-temp` で出力できます。
 
 行頭が#または!の行はコメントとして扱われます。
 
