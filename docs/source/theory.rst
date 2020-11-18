@@ -41,7 +41,7 @@ Chebyshev多項式を使った対称関数\ [2]_\ （\ :math:`c_\alpha^{(2)}`\ �
  \text{where} \; \alpha &= 1,2,...,M_k, \\
  \varphi_\alpha^{(k)}(R_{ml}) &= 
  \begin{cases}
- \frac{1}{2}\cos\left(\frac{R_ml-R_\alpha^k}{h_k}\pi\right) + \frac{1}{2}, & | R_{ml}-R_\alpha^k | < h_k\\
+ \frac{1}{2}\cos\left(\frac{R_{ml}-R_\alpha^k}{h_k}\pi\right) + \frac{1}{2}, & | R_{ml}-R_\alpha^k | < h_k\\
  0, & \text{Otherwise},
  \end{cases} \\
  G_{\alpha,l}^{(2)} &= \sum_m \varphi_\alpha^{(2)}(R_{ml}), \\
