@@ -13,7 +13,7 @@
 
  `Advance/NeuralMD (ver.1.1) <https://github.com/advancesoftcorp/neuralmd-doc/releases/download/v1.1/install_neuralmd_linux_v1.1.bin>`_
 
- `Advance/NanoLabo Tool (ver.1.5.1) <https://github.com/advancesoftcorp/nanolabo-doc/releases/download/v1.5.1-tool/install_nanolabo_tool_linux_v1.5.1.bin>`_
+ `Advance/NanoLabo Tool (ver.2.0) <https://github.com/advancesoftcorp/nanolabo-doc/releases/download/v2.0/install_nanolabo_tool_linux_v2.0.bin>`_
 
 .. _installerl:
 
