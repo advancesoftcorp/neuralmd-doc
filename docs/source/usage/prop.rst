@@ -118,9 +118,21 @@ sannp.propの書式
 
 .. describe:: lbfgs
 
- :デフォルト: 64
+ :デフォルト: 32
 
  学習時の最適化アルゴリズムの指定です。0を指定すると、Adam法を使用します。1以上の値を指定すると、その値を履歴数とするL-BFGS法を使用します。
+
+.. describe:: lineSearch
+
+ :デフォルト: more-thuente
+
+ L-BFGS法で使用する直線探索のアルゴリズムです。more-thuente、armijo、wolfe、strong-wolfeが指定できます。
+
+.. describe:: lineSteps
+
+ :デフォルト: 32
+
+ L-BFGS法で使用する直線探索の試行回数の最大値です。
 
 .. describe:: batchs
 
@@ -133,6 +145,12 @@ sannp.propの書式
  :デフォルト: 5000
 
  学習時の繰り返し回数の上限です。
+
+.. describe:: sqrtLoss
+
+ :デフォルト: 0
+
+ 損失関数のスケール係数を絶対値で設定する(1)か、2乗値で設定する(0)かの指定です。
 
 .. describe:: renormLoss
 
@@ -162,19 +180,19 @@ sannp.propの書式
 
  :デフォルト: 1.00
 
- エネルギーの損失関数のスケール係数(1/eV)です。
+ エネルギーの損失関数のスケール係数(1/eV または 1/eV\ :sup:`2`\ )です。
 
 .. describe:: coefForce
 
  :デフォルト: 1.00
 
- 力の損失関数のスケール係数(\ |angs|\ :sup:`2`/eV)です。
+ 力の損失関数のスケール係数(\ |angs|\ /eV または (\ |angs|\ /eV)\ :sup:`2`\ )です。
 
 .. describe:: coefCharge
 
  :デフォルト: 1.00
 
- 電荷の損失関数のスケール係数(1/e)です。
+ 電荷の損失関数のスケール係数(1/e または 1/e\ :sup:`2`\ )です。
 
 .. describe:: learnRate
 
