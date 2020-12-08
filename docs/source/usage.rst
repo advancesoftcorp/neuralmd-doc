@@ -73,9 +73,9 @@
 
 対話形式で、生成する構造の数や変位の大きさなど、必要な情報を入力していきます。入力を行わずにそのままEnterを押すと、デフォルトの値が使われます。
 
-入力が終わると、Quantum ESPRESSOの計算実行用シェルスクリプト\ :file:`dft_run.sh`\ と、各構造の入力ファイルが生成されます。
+入力が終わると、Quantum ESPRESSOの計算実行用シェルスクリプト\ :file:`dft_run.sh`\ （Windowsの場合はバッチファイル\ :file:`dft_run.bat`\ ）と、各構造の入力ファイルが生成されます。
 
-| ├ dft_run.sh
+| ├ dft_run.sh (.bat)
 | └ dft_inp
 |    ├ inp.1
 |    ├ inp.2
@@ -98,6 +98,12 @@ NanoLabo Tool同梱のQuantum ESPRESSOを使用される場合は、ライブラ
 .. code-block:: console
  
  ./dft_run.sh
+
+Windowsの場合は、\ :file:`dft_run.bat`\ を実行します。
+
+.. code-block:: console
+
+ dft_run.bat
 
 ジョブ管理システムをお使いの場合には、必要に応じて\ :file:`dft_run.sh`\ を編集してください。例えばPBSの場合は#PBSディレクティブ、SLURM（FOCUSスパコン）の場合は#SBATCHディレクティブを追記します。その後、ジョブスクリプトとして\ :file:`dft_run.sh`\ を投入してください。
 
