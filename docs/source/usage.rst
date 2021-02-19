@@ -138,6 +138,16 @@ Windowsの場合は、\ :file:`dft_run.bat`\ を実行します。
  
  ./sannp --train
 
+.. code-block:: console
+ :caption: MPI並列実行例(Linux)
+
+ mpirun -n 4 sannp --train
+
+.. code-block:: console
+ :caption: MPI並列実行例(Windows)
+
+ mpiexec.exe -n 4 sannp.exe --train
+
 実行中は残差RMS、経過時間等が出力されます。実行が正常に終わると、ニューラルネットワークの情報を含むファイル\ :file:`sannp.data`\ 、\ :file:`sannp.data_e`\ が出力されます。
 
 学習を中断する場合は、 :option:`sannp --stop` を実行します。
@@ -280,6 +290,14 @@ LAMMPSの入力ファイル中で、以下の\ ``pair_style``\ が使えます�
 .. option:: --export, --force-field, --lammps
 
  学習したニューラルネットワークから、LAMMPSで利用可能な力場ファイル\ :file:`ffield.sannp`\ を出力します。
+
+.. option:: --debug, --debug-energy
+
+ 学習したエネルギーのニューラルネットワークの情報を表示します。
+
+.. option:: --debug-charge
+
+ 学習した電荷のニューラルネットワークの情報を表示します。
 
  .. _usage_double:
 
