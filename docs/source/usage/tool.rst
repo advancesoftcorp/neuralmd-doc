@@ -28,7 +28,7 @@ Quantum ESPRESSOでDFT計算(SCF計算)を実行するには、 :file:`pw.exe` �
  pw.exe -in PW.inp 1> PW.out 2> PW.err
 
 .. code-block:: console
- :caption: 並列実行
+ :caption: 並列実行例
 
  mpiexec.exe -n 4 pw.exe -in PW.inp 1> PW.out 2> PW.err
 
@@ -40,7 +40,7 @@ LAMMPSで分子動力学計算を実行するには、 :file:`lammps.exe` に入
  lammps.exe < lammps.in 1> lammps.out 2> lammps.err
 
 .. code-block:: console
- :caption: 並列実行
+ :caption: 並列実行例
 
  mpiexec.exe -n 4 lammps.exe < lammps.in 1> lammps.out 2> lammps.err
 
@@ -75,7 +75,7 @@ Quantum ESPRESSOでDFT計算(SCF計算)を実行するには、 :file:`pw.x` に
 .. code-block:: console
  :caption: 並列実行例
 
- mpirun -n 4 pw.exe -in PW.inp 1> PW.out 2> PW.err
+ mpirun -n 4 pw.x -in PW.inp 1> PW.out 2> PW.err
 
 LAMMPSで分子動力学計算を実行するには、 :file:`lammps` に入力ファイルを渡して実行します。
 
@@ -87,4 +87,4 @@ LAMMPSで分子動力学計算を実行するには、 :file:`lammps` に入力�
 .. code-block:: console
  :caption: 並列実行例
 
- mpirun -n 4 lammps.exe < lammps.in 1> lammps.out 2> lammps.err
+ mpirun -n 4 lammps < lammps.in 1> lammps.out 2> lammps.err
