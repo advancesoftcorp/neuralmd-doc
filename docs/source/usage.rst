@@ -138,6 +138,8 @@ Windowsの場合は、\ :file:`dft_run.bat`\ を実行します。
  
  ./sannp --train
 
+Linuxの場合は、MPI並列での実行が可能です。NeuralMDインストーラーに同梱のMPI実行ファイル、またはNanoLabo Toolインストーラーに同梱のMPI実行ファイルをお使い下さい。\ :ref:`設定方法<tooll>`\ を参照して設定の上、実行してください。
+
 .. code-block:: console
  :caption: MPI並列実行例(Linux)
 
