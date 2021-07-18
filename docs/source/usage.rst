@@ -239,6 +239,60 @@ LAMMPSの入力ファイル中で、以下の\ ``pair_style``\ が使えます�
 
    &rarr;
 
+.. _additional_features:
+
+追加機能の使用手順
+======================
+
+.. _hybridnnp_usage
+
+ハイブリッドNNP
+-------------------------------------------------
+
+ニューラルネットワークの学習（手順4）の前に、古典力場のパラメータの最適化を行います。
+
+.. code-block:: console
+ 
+ ./sannp --classical
+
+を実行することで、古典力場のパラメータを含むファイル\ :file:`sannp.class`\ が出力されます。
+
+その後、\ :file:`sannp.prop`\ で ``withClassical 1`` と設定して、手順4以降を実行します。
+
+.. _metropolis_usage
+
+メトロポリス法による構造生成
+-------------------------------------------------
+
+ニューラルネットワークの学習（手順4）が終わった後に実行します。
+
+メトロポリス法の設定をファイル\ :file:`sannp.metro`\ に用意します。デフォルトの設定を使う場合は、ファイルが無くてもかまいません。
+
+.. toctree::
+   :maxdepth: 2
+
+   usage/metro
+
+.. code-block:: console
+ 
+ ./sannp --metro
+
+を実行すると、モンテカルロ計算が行われ、構造が生成されます。生成された構造はQuantum ESPRESSOの入力ファイルの形で\ :file:`dft_geom`\ フォルダに出力されます。
+
+.. hint::
+
+ モンテカルロ計算の過程はmovieフォルダにxyz形式で保存されます。
+ 
+ xyzファイルをAdvance/NanoLaboの画面にドラッグ&ドロップすることで動画として可視化ができます。
+
+続けて
+
+.. code-block:: console
+ 
+ ./sannp --dft
+
+を実行すると、\ :file:`dft_geom`\ 内の計算を実行するためのシェルスクリプト\ :file:`dft_run.sh`\ （Windowsの場合はバッチファイル\ :file:`dft_run.bat`\ ）が生成されます。これを使って、再度手順3から実行し、教師データを追加します。
+
 .. _usage_options:
 
 実行オプションリスト
@@ -288,7 +342,19 @@ LAMMPSの入力ファイル中で、以下の\ ``pair_style``\ が使えます�
 
  学習したニューラルネットワークから、LAMMPSで利用可能な力場ファイル\ :file:`ffield.sannp`\ を出力します。
 
- .. _usage_double:
+.. option:: --metro, --monte-carlo, --mc
+
+ 学習後に実行すると、メトロポリス法を使ったモンテカルロ計算により構造を生成します。MPI並列実行時はレプリカ並列となります。実行後、生成された構造が\ :file:`dft_geom`\ フォルダに、各レプリカに対するモンテカルロ計算の動画が\ :file:`movie`\ フォルダにそれぞれ保存されます。続けて :option:`sannp --dft` を実行することで、生成された構造から教師データを作成するための実行用スクリプト\ :file:`dft_run.sh`\ を生成します。
+
+.. option:: --metro-temp, --monte-carlo-temp, --mc-temp
+
+ メトロポリス法の設定ファイル\ :file:`sannp.metro`\ のテンプレートを出力します。既存のファイルは上書きされます。GEOMETRYには教師データ\ :file:`sannp.train`\ 中の最初の構造が使われます。 
+
+.. option:: --classical
+
+ 教師データ :file:`sannp.train`\ を元に、ハイブリッドNNPで使用する古典力場のパラメータを最適化します。実行が正常に終わると、パラメータを含むファイル\ :file:`sannp.class`\ が出力されます。
+
+.. _usage_double:
 
 単精度版・倍精度版
 ======================

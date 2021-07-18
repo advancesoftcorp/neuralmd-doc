@@ -26,11 +26,35 @@ sannp.propの書式
 
  系全体のエネルギーを教師データとするHDNNP法を使う(1)か、各原子に分割したエネルギーを教師データとするSANNP法を使う(0)かの指定です。
 
+.. describe:: withClassical
+
+ :デフォルト: 0
+
+ ニューラルネットワーク力場のみを使う(0)か、古典力場とニューラルネットワーク力場を組み合わせたハイブリッドNNPを使う(1)かの指定です。
+
 .. describe:: directSF
 
  :デフォルト: -1
 
  対称関数の正規化をミニバッチ内で行う(1)か、サンプル全体で行う(0)かの指定です。負の値を指定した場合、Behler対称関数ならサンプル全体、Many-Body対称関数ならミニバッチ内になります。
+
+.. describe:: maxForce
+
+ :デフォルト: 10.0
+
+ 教師データに含まれる、力が大きすぎる外れ値を除外するための閾値(eV/\ |angs|\ )です。
+
+.. describe:: minEDev
+
+ :デフォルト: 0.5
+
+ 原子のエネルギーの正規化に使う分散の下限値(eV)を指定します。
+
+.. describe:: minQDev
+
+ :デフォルト: 0.1
+
+ 原子の電荷の正規化に使う分散の下限値(e)を指定します。
 
 .. describe:: symmFunc
 
@@ -112,9 +136,9 @@ sannp.propの書式
 
 .. describe:: activ
 
- :デフォルト: tanh
+ :デフォルト: twtanh
 
- ニューラルネットワークの活性化関数です。asis（使用しない）、sigmoid、tanh、eLUが指定できます。
+ ニューラルネットワークの活性化関数です。asis（使用しない）、sigmoid、tanh、twtanh(twisted tanh)、eLU、GELUが指定できます。
 
 .. describe:: lbfgs
 
@@ -247,6 +271,18 @@ sannp.propの書式
  :デフォルト: 0.999
 
  学習時のハイパーパラメータ（Adam法の\ |beta|\ :sub:`2`）です。
+
+.. describe:: classicalTry
+
+ :デフォルト: 64
+
+ ハイブリッドNNPで使用する古典力場を最適化する際の繰り返し回数の上限です。
+
+.. describe:: classicalLower
+
+ :デフォルト: -50.0
+
+ ハイブリッドNNPで使用する古典力場を最適化する際、ここで指定した値(eV)よりも小さいエネルギーが現れにくくなるように、ペナルティ関数を適用して最適化します。
 
 .. describe:: endProperty
 
