@@ -169,6 +169,12 @@ NNPを最適化する際に、原子エネルギーの平均値および分散�
 
 |Delta|\ -NNPは通常のNNPに比べてロバストで、少ない教師データで作成した力場でも、大きな破綻が起きにくいのが特長です。外挿も機能し、例えば300 Kの教師データで作成した力場でも、1000 Kでそれなりに上手く動きます。
 
+.. figure:: /img/deltannp_rmse.png
+ :align: left
+ :alt: |Delta|\ -NNPとHDNNPの収束性の比較
+
+ 図： |Delta|\ -NNPとHDNNPを同じ教師データ（Li\ `10`:sub:\ GeP\ `2`:sub:\ S\ `12`:sub:\ 、6914構造）を使って学習し、RMSEを比較しました。\ |Delta|\ -NNPはHDNNPよりも収束性が良いことが確認できます。
+
 .. [1] "Constructing high‐dimensional neural network potentials: A tutorial review", J. Behler, *Int. J. Quantum Chem.* **115**, 1032-1050 (2015). DOI: `10.1002/qua.24890 <https://doi.org/10.1002/qua.24890>`_
 .. [2] "Efficient and accurate machine-learning interpolation of atomic energies in compositions with many species", N. Artrith *et al.*, *Phys. Rev. B* **96**, 014112 (2017). DOI: `10.1103/PhysRevB.96.014112 <https://doi.org/10.1103/PhysRevB.96.014112>`_
 .. [3] "Density functional theory based neural network force fields from energy decompositions", Y. Huang *et al.*, *Phys. Rev. B* **99**, 064103 (2019). DOI: `10.1103/PhysRevB.99.064103 <https://doi.org/10.1103/PhysRevB.99.064103>`_
