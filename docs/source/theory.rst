@@ -154,10 +154,10 @@ NNPを最適化する際に、原子エネルギーの平均値および分散�
 
 この手順を繰り返していくと、温度\ :math:`T`\ でのボルツマン分布に従うようなエネルギー分布を持つ構造を生成することができます。この構造を元に教師データを作り、ニューラルネットワークを再度学習させる（強化学習）ことで、より広いエネルギーの構造をカバーするNNPを作ることができます。
 
-ハイブリッドNNP
+|Delta|\ -NNP
 ----------------------
 
-全エネルギーをNNPで表現するのではなく、第0近似として古典力場による2体間エネルギーを使い、そこにNNPを足し合わせて全エネルギーを表現する、という方法です。
+全エネルギーをNNPで表現するのではなく、第0近似として古典力場による2体間エネルギーを使い、そこからの差分をNNPを使って表現する、という方法です。
 
 .. math::
 
@@ -167,10 +167,14 @@ NNPを最適化する際に、原子エネルギーの平均値および分散�
 
 古典力場のパラメータについては、教師データを使ってあらかじめ最適化しておきます。ニューラルネットワークを学習する際の教師データには、DFT計算と古典力場のエネルギーの差分 :math:`E_\mathrm{DFT}-E_\mathrm{classical}` を使います。
 
-ハイブリッドNNPは通常のNNPに比べてロバストで、少ない教師データで作成した力場でも、大きな破綻が起きにくいのが特長です。外挿も機能し、例えば300 Kの教師データで作成した力場でも、1000 Kでそれなりに上手く動きます。
+|Delta|\ -NNPは通常のNNPに比べてロバストで、少ない教師データで作成した力場でも、大きな破綻が起きにくいのが特長です。外挿も機能し、例えば300 Kの教師データで作成した力場でも、1000 Kでそれなりに上手く動きます。
 
 .. [1] "Constructing high‐dimensional neural network potentials: A tutorial review", J. Behler, *Int. J. Quantum Chem.* **115**, 1032-1050 (2015). DOI: `10.1002/qua.24890 <https://doi.org/10.1002/qua.24890>`_
 .. [2] "Efficient and accurate machine-learning interpolation of atomic energies in compositions with many species", N. Artrith *et al.*, *Phys. Rev. B* **96**, 014112 (2017). DOI: `10.1103/PhysRevB.96.014112 <https://doi.org/10.1103/PhysRevB.96.014112>`_
 .. [3] "Density functional theory based neural network force fields from energy decompositions", Y. Huang *et al.*, *Phys. Rev. B* **99**, 064103 (2019). DOI: `10.1103/PhysRevB.99.064103 <https://doi.org/10.1103/PhysRevB.99.064103>`_
 .. [4] "wACSF—Weighted atom-centered symmetry functions as descriptors in machine learning potentials", M. Gastegger *et al.*, *J. Chem. Phys.* **148**, 241709 (2018). DOI: `10.1063/1.5019667 <https://doi.org/10.1063/1.5019667>`_
 .. [5] "First-principles green-Kubo method for thermal conductivity calculations", J. Kang and L.-W. Wang, *Phys Rev B* **96**, 020302(R) (2017). DOI: `10.1103/PhysRevB.96.020302 <https://doi.org/10.1103/PhysRevB.96.020302>`_
+
+.. |Delta| raw:: html
+
+ &Delta;
