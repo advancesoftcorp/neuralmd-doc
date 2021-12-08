@@ -101,7 +101,7 @@ Advance/NanoLabo Toolに同梱された計算エンジン（Quantum ESPRESSO・L
 
  export ADVANCED_LICENSE_FILE=/opt/AdvanceSoft/NeuralMD/license/neumd.lic
 
-ニューラルネットワークの学習を行う機能（\ :option:`sannp --train`\ 、\ :option:`sannp --train-charge`\ ）を使う場合に、有効なライセンスが必要となります。その他の機能、およびQuantum ESPRESSO・LAMMPSを実行する際には、ライセンスは不要です。
+ニューラルネットワークの学習を行う機能（\ :option:`sannp --train`\ 、\ :option:`sannp --train-charge`\ 、\ :option:`sannp --classical`\ ）を使う場合に、有効なライセンスが必要となります。その他の機能、およびQuantum ESPRESSO・LAMMPSを実行する際には、ライセンスは不要です。
 
 また、本製品とは別の弊社製品をお使いの場合、ライセンスファイルを結合することで、1つのライセンスサーバーで複数製品のライセンス認証が可能です。\ :file:`.lic`\ ファイルを単純に結合した後、重複する行（ ``SERVER`` 、 ``VENDOR`` 、 ``USE_SERVER`` ） を削除して、1つのライセンスファイルを作ります。その後、そのファイルを使ってライセンスサーバーを起動してください。
 
