@@ -69,6 +69,28 @@
 
 Advance/NanoLabo Toolに同梱された計算エンジン（Quantum ESPRESSO・LAMMPS）の使用方法については、\ :doc:`/usage/tool`\ を参照してください。
 
+NeuralMDの実行時には :file:`mpi/lib` にある動的ライブラリが必要ですので、環境変数 :envvar:`LD_LIBRARY_PATH` に設定するため、以下を実行してください。
+
+.. code-block:: console
+ :caption: デフォルトの場所にインストールした場合の例
+
+ export LD_LIBRARY_PATH=/opt/AdvanceSoft/NeuralMD/mpi/lib:$LD_LIBRARY_PATH
+
+また、実行ファイルのパスを環境変数 :envvar:`PATH` に設定していただくと便利です。
+
+.. code-block:: console
+ :caption: デフォルトの場所にインストールした場合の例
+
+ export PATH=/opt/AdvanceSoft/NeuralMD/bin:/opt/AdvanceSoft/NeuralMD/mpi/bin:$PATH
+
+.. note::
+
+ MPIの実行ファイル・ライブラリはNeuralMD本体のインストーラー、NanoLabo Toolインストーラーの両方に含まれています。
+
+ 前者はインストール先の :file:`mpi` 、後者はインストール先の :file:`exec.LINUX/mpi` に配置されます。
+
+ 内容は同じものですので、環境変数にはどちらか片方のみを設定していただければ大丈夫です。
+
 .. _launchl:
 
 ライセンスの設定
