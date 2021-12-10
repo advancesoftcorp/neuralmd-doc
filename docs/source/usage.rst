@@ -231,9 +231,9 @@ LAMMPSの入力ファイル中で、以下の\ ``pair_style``\ が使えます�
   
 いずれかの\ ``pair_style``\ を設定した上でLAMMPSを実行すると、ニューラルネットワーク力場を使った分子動力学計算が行われます。
 
-.. _`coul/cut`: https://lammps.sandia.gov/doc/pair_coul.html
+.. _`coul/cut`: https://docs.lammps.org/pair_coul.html
 
-.. _`kspace_modify`: https://lammps.sandia.gov/doc/kspace_modify.html
+.. _`kspace_modify`: https://docs.lammps.org/kspace_modify.html
 
 .. |rarr| raw:: html
 
