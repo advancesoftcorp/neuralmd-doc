@@ -193,7 +193,7 @@ LAMMPSの入力ファイル中で、以下の\ ``pair_style``\ が使えます�
   :caption: 書式
 
   pair_style nnp
-  pair_coeff * * <ffield.sannp> <元素名1 元素名2 ...>
+  pair_coeff * * <ffield.sannp> <eatom zero|finite> <元素名1 元素名2 ...>
 
 .. describe:: pair_style nnp/coul/cut
 
@@ -203,7 +203,7 @@ LAMMPSの入力ファイル中で、以下の\ ``pair_style``\ が使えます�
   :caption: 書式
 
   pair_style nnp/coul/cut <rcut>
-  pair_coeff * * <ffield.sannp> <元素名1 元素名2 ...>
+  pair_coeff * * <ffield.sannp> <eatom zero|finite> <元素名1 元素名2 ...>
 
 .. describe:: pair_style nnp/coul/long
 
@@ -213,7 +213,7 @@ LAMMPSの入力ファイル中で、以下の\ ``pair_style``\ が使えます�
   :caption: 書式
 
   pair_style nnp/coul/long <rcut>
-  pair_coeff * * <ffield.sannp> <元素名1 元素名2 ...>
+  pair_coeff * * <ffield.sannp> <eatom zero|finite> <元素名1 元素名2 ...>
   kspace_modify gewald <rinv>
 
 パラメータ
@@ -225,6 +225,9 @@ LAMMPSの入力ファイル中で、以下の\ ``pair_style``\ が使えます�
   | ffield.sannp                       | 手順4で出力した力場ファイル名                                                                   |
   +------------------------------------+-------------------------------------------------------------------------------------------------+
   | 元素名                             | LAMMPSのatom type毎に、対応する教師データ中の元素名（=Quantum ESPRESSO計算時の元素名）を列挙    |
+  +------------------------------------+-------------------------------------------------------------------------------------------------+
+  | eatom                              || ニューラルネットワーク最終層のバイアス項を0に設定する機能 (原子エネルギーの平準化)             |
+  |                                    || eatom zeroで有効、eatom finiteまたは省略（力場ファイル名に続けて元素名を指定）で無効           |
   +------------------------------------+-------------------------------------------------------------------------------------------------+
   | rcut                               || 実空間（短距離）クーロン相互作用のカットオフ半径                                               |
   |                                    || (\ ``nnp/coul/cut``\ では必ず指定、\ ``nnp/coul/long``\ では省略可)  (\ |rarr|\ `coul/cut`_)   |
@@ -314,21 +317,19 @@ LAMMPSの入力ファイル中で、以下の\ ``pair_style``\ が使えます�
 
  OpenMP並列（スレッド並列）の並列数を指定します。
 
+.. option:: --que
+
+ ライセンスエラー（同時実行数上限）の場合に、実行できるようになるまで待機します。
+
+ このオプションを指定しない場合、ライセンスエラー時にはすぐに終了します。
+
 .. option:: --train, --train-energy
 
- 教師データ :file:`sannp.train`\ を元に、エネルギー及び力の計算を行うためのニューラルネットワークの学習を行います。実行が正常に終わると、ニューラルネットワークの情報を含むファイル\ :file:`sannp.data`\ 、\ :file:`sannp.data_e`\ が出力されます。
+ 教師データ\ :file:`sannp.train`\ を元に、エネルギー及び力の計算を行うためのニューラルネットワークの学習を行います。実行が正常に終わると、ニューラルネットワークの情報を含むファイル\ :file:`sannp.data`\ 、\ :file:`sannp.data_e`\ が出力されます。
 
 .. option:: --train-charge
 
- 教師データ :file:`sannp.train`\ を元に、電荷の計算を行うためのニューラルネットワークの学習を行います。実行が正常に終わると、ニューラルネットワークの情報を含むファイル\ :file:`sannp.data_q`\ が出力されます。
-
-.. option:: --temp, --template
-
- 設定ファイル\ :file:`sannp.prop`\ のテンプレートを出力します。既存のファイルは上書きされます。
-
-.. option:: --behler, --behler-temp
-
- Behler対称関数の設定ファイル\ :file:`sannp.behler`\ のテンプレートを出力します。既存のファイルは上書きされます。
+ 教師データ\ :file:`sannp.train`\ を元に、電荷の計算を行うためのニューラルネットワークの学習を行います。実行が正常に終わると、ニューラルネットワークの情報を含むファイル\ :file:`sannp.data_q`\ が出力されます。
 
 .. option:: --stop, --stop-training
 
@@ -338,6 +339,14 @@ LAMMPSの入力ファイル中で、以下の\ ``pair_style``\ が使えます�
 
  学習したニューラルネットワークを使ってテスト用データの計算を行います。テスト用データのファイル\ :file:`sannp.test`\ は :option:`sannp --dft` を実行し、"test"を選ぶことで作成できます。結果として全エネルギー\ :file:`sannp.etot`\ 、原子毎のエネルギー\ :file:`sannp.eatom`\ 、原子に働く力\ :file:`sannp.force`\ 、電荷\ :file:`sannp.charge`\ がファイルに出力されます。
 
+.. option:: --temp, --template
+
+ 設定ファイル\ :file:`sannp.prop`\ のテンプレートを出力します。既存のファイルは上書きされます。
+
+.. option:: --behler, --behler-temp
+
+ Behler対称関数の設定ファイル\ :file:`sannp.behler`\ のテンプレートを出力します。既存のファイルは上書きされます。
+
 .. option:: --force, --force-test
 
  学習したニューラルネットワークを使ってテスト用データの計算を行い、結果として原子に働く力を表示します。テスト用データのファイル\ :file:`sannp.test`\ は :option:`sannp --dft` を実行し、"test"を選ぶことで作成できます。
@@ -345,6 +354,10 @@ LAMMPSの入力ファイル中で、以下の\ ``pair_style``\ が使えます�
 .. option:: --export, --force-field, --lammps
 
  学習したニューラルネットワークから、LAMMPSで利用可能な力場ファイル\ :file:`ffield.sannp`\ を出力します。
+
+.. option:: --split <r>, --split-train <r>
+
+ 教師データ\ :file:`sannp.train`\ から割合\ :math:`r (0 \le r \le 1)`\ を指定してデータを抽出し、テストデータ\ :file:`sannp.test`\ を作ります。同時に、残り\ :math:`(1 - r)`\ のデータを新たな教師データ\ :file:`sannp.train`\ として出力します。
 
 .. option:: --metro, --monte-carlo, --mc
 
