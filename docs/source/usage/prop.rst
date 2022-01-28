@@ -14,6 +14,12 @@ sannp.propの書式
 
  0の場合、最初から学習を実行します。1の場合、ニューラルネットワークの情報を\ :file:`sannp.data`\ 、\ :file:`sannp.data_e`\ または\ :file:`sannp.data_q`\ から読み込み、学習を再開します。
 
+.. describe:: insituTest
+
+ :デフォルト: 0
+
+ 1の場合、学習中の各epochで、テストデータに対するRSMEを計算して出力するin-situテストを行います。0の場合、in-situテストを行いません。
+
 .. describe:: withCharge
 
  :デフォルト: 0
