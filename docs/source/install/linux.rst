@@ -27,6 +27,16 @@
  $ chmod +x install_neural_linux.bin install_nanolabo_tool_linux.bin
  $ ./install_neuralmd_linux.bin
 
+.. note::
+
+ インストーラーはコンソールモード（GUIを表示せず、CUIで操作が完結する）でも動作します。もしGUIが無い環境で、実行時にコンソールモードにならない場合は
+
+ .. code-block:: console
+
+   $ ./install_neuralmd_linux.bin -i console
+
+ のように実行してください。
+
 言語の選択画面が出た場合は、インストール中に使用する言語を選択してください（ソフトウェア本体で使用する言語ではありません）。
 
 画面の指示に従い、インストールの設定を行ってください。
