@@ -13,7 +13,7 @@
  - LAMMPS実行時に最終層のバイアス項を0に設定する機能（原子エネルギーの平準化）を追加
  - メトロポリス法のログ出力に採択数／全構造数の情報を追加
  - sannp.behlerのテンプレート出力時、G2とG3で異なるカットオフを指定した場合に出力が指定と異なる不具合の修正
- - Linux版の実行ファイルのMPIライブラリ/コンパイラをOpenMPI/oneAPIに変更（以前はIntel MPI/Intel Compiler）
+ - Linux版の実行ファイルのMPIライブラリ/コンパイラをOpen MPI/oneAPIに変更（以前はIntel MPI/Intel Compiler）
  - その他、調整等
 
 2021/7/29 バージョン1.4
