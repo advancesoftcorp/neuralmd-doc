@@ -71,7 +71,7 @@
 
 .. code-block:: console
  
- ./sannp --dft espresso.scf.in
+ sannp --dft espresso.scf.in
 
 として実行します。
 
@@ -140,7 +140,7 @@ Windowsの場合は、\ :file:`dft_run.bat`\ を実行します。
 
 .. code-block:: console
  
- ./sannp --train
+ sannp --train
 
 Linuxの場合は、MPI並列での実行が可能です。NeuralMDインストーラーに同梱のMPI実行ファイル、またはNanoLabo Toolインストーラーに同梱のMPI実行ファイルをお使い下さい。\ :ref:`設定方法<tooll>`\ を参照して設定の上、実行してください。
 
@@ -159,7 +159,7 @@ Linuxの場合は、MPI並列での実行が可能です。NeuralMDインスト�
 
 .. code-block:: console
  
- ./sannp --train-charge
+ sannp --train-charge
 
 実行が正常に終わると、電荷のニューラルネットワークの情報を含むファイル\ :file:`sannp.data_q`\ が出力されます。
 
@@ -167,7 +167,7 @@ Linuxの場合は、MPI並列での実行が可能です。NeuralMDインスト�
 
 .. code-block:: console
  
- ./sannp --export
+ sannp --export
 
 を実行することで、LAMMPSで使用する力場定義ファイル\ :file:`ffield.sannp`\ を出力します。
 
@@ -260,7 +260,7 @@ LAMMPSの入力ファイル中で、以下の\ ``pair_style``\ が使えます�
 
 .. code-block:: console
  
- ./sannp --classical
+ sannp --classical
 
 を実行することで、古典力場のパラメータを含むファイル\ :file:`sannp.class`\ が出力されます。
 
@@ -282,7 +282,7 @@ LAMMPSの入力ファイル中で、以下の\ ``pair_style``\ が使えます�
 
 .. code-block:: console
  
- ./sannp --metro
+ sannp --metro
 
 を実行すると、モンテカルロ計算が行われ、構造が生成されます。生成された構造はQuantum ESPRESSOの入力ファイルの形で\ :file:`dft_geom`\ フォルダに出力されます。
 
@@ -296,7 +296,7 @@ LAMMPSの入力ファイル中で、以下の\ ``pair_style``\ が使えます�
 
 .. code-block:: console
  
- ./sannp --dft
+ sannp --dft
 
 を実行すると、\ :file:`dft_geom`\ 内の計算を実行するためのシェルスクリプト\ :file:`dft_run.sh`\ （Windowsの場合はバッチファイル\ :file:`dft_run.bat`\ ）が生成されます。これを使って、再度手順3から実行し、教師データを追加します。
 

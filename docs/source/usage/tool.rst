@@ -56,21 +56,30 @@ NanoLabo Toolインストール先の :file:`exec.LINUX` にQuantum ESPRESSO( :f
 .. code-block:: console
  :caption: デフォルトの場所にインストールした場合の例
 
- export LD_LIBRARY_PATH=/opt/AdvanceSoft/NeuralMD/exec.LINUX/mpi/lib:$LD_LIBRARY_PATH
+ export LD_LIBRARY_PATH=/opt/AdvanceSoft/NanoLabo/exec.LINUX/mpi/lib:$LD_LIBRARY_PATH
 
-また、Open MPIの環境変数 :envvar:`OPAL_PREFIX` の設定が必要ですので、以下を実行してください。
-
-.. code-block:: console
- :caption: デフォルトの場所にインストールした場合の例
-
- export OPAL_PREFIX=/opt/AdvanceSoft/NeuralMD/exec.LINUX/mpi
-
-実行ファイルのパスを環境変数 :envvar:`PATH` に設定していただくと便利です。
+また、環境変数 :envvar:`PATH`、およびOpen MPIの環境変数 :envvar:`OPAL_PREFIX` の設定が必要ですので、以下を実行してください。
 
 .. code-block:: console
  :caption: デフォルトの場所にインストールした場合の例
 
- export PATH=/opt/AdvanceSoft/NeuralMD/exec.LINUX/qe_parallel:/opt/AdvanceSoft/NeuralMD/exec.LINUX/lammps_parallel:/opt/AdvanceSoft/NeuralMD/exec.LINUX/mpi/bin:$PATH
+ export PATH=/opt/AdvanceSoft/NanoLabo/exec.LINUX/mpi/bin:$PATH
+ export OPAL_PREFIX=/opt/AdvanceSoft/NanoLabo/exec.LINUX/mpi
+
+.. note::
+
+ MPIの実行ファイル・ライブラリはNeuralMD本体のインストーラー、NanoLabo Toolインストーラーの両方に含まれています。
+
+ 前者はインストール先の :file:`mpi` 、後者はインストール先の :file:`exec.LINUX/mpi` に配置されます。
+
+ 内容は同じものですので、環境変数にはどちらか片方のみを設定していただければ大丈夫です。
+
+計算エンジンの実行ファイルのパスも環境変数 :envvar:`PATH` に設定していただくと便利です。
+
+.. code-block:: console
+ :caption: デフォルトの場所にインストールした場合の例
+
+ export PATH=/opt/AdvanceSoft/NanoLabo/exec.LINUX/qe_parallel:/opt/AdvanceSoft/NanoLabo/exec.LINUX/lammps_parallel:$PATH
 
 Quantum ESPRESSOでDFT計算(SCF計算)を実行するには、 :file:`pw.x` に入力ファイルを渡して実行します。
 
