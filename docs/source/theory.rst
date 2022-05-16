@@ -187,11 +187,38 @@ NNPを最適化する際に、原子エネルギーの平均値および分散�
 
  図： |Delta|\ -NNPとHDNNPを同じ教師データ（Li\ `10`:sub:\ GeP\ `2`:sub:\ S\ `12`:sub:\ 、6914構造）を使って学習し、RMSEを比較しました。\ |Delta|\ -NNPはHDNNPよりも収束性が良いことが確認できます。
 
-.. [1] "Constructing high‐dimensional neural network potentials: A tutorial review", J. Behler, *Int. J. Quantum Chem.* **115**, 1032-1050 (2015). DOI: `10.1002/qua.24890 <https://doi.org/10.1002/qua.24890>`_
-.. [2] "Efficient and accurate machine-learning interpolation of atomic energies in compositions with many species", N. Artrith *et al.*, *Phys. Rev. B* **96**, 014112 (2017). DOI: `10.1103/PhysRevB.96.014112 <https://doi.org/10.1103/PhysRevB.96.014112>`_
-.. [3] "Density functional theory based neural network force fields from energy decompositions", Y. Huang *et al.*, *Phys. Rev. B* **99**, 064103 (2019). DOI: `10.1103/PhysRevB.99.064103 <https://doi.org/10.1103/PhysRevB.99.064103>`_
-.. [4] "wACSF—Weighted atom-centered symmetry functions as descriptors in machine learning potentials", M. Gastegger *et al.*, *J. Chem. Phys.* **148**, 241709 (2018). DOI: `10.1063/1.5019667 <https://doi.org/10.1063/1.5019667>`_
-.. [5] "First-principles green-Kubo method for thermal conductivity calculations", J. Kang and L.-W. Wang, *Phys Rev B* **96**, 020302(R) (2017). DOI: `10.1103/PhysRevB.96.020302 <https://doi.org/10.1103/PhysRevB.96.020302>`_
+.. _theory_slhmc:
+
+自己学習ハイブリッドモンテカルロ法
+---------------------------------------
+
+自己学習ハイブリッドモンテカルロ(Self-learning hybrid Monte Carlo, SLHMC)法\ [6]_\ は、教師データの生成とニューラルネットワーク力場の学習を同時に進めることができる手法です。以下のようなアルゴリズムに従って実行します。
+
+0. 初期構造から第一原理分子動力学計算をある程度進め、それを教師データとして初期ニューラルネットワーク力場を作る。
+1. ニューラルネットワーク力場による分子動力学計算(NVE)で構造を時間発展させる( :math:`\{\bm{p}, \bm{r}\} \rightarrow \{\bm{p}', \bm{r}'\}` )。
+2. 発展後の構造 :math:`\{\bm{p}', \bm{r}'\}` について第一原理計算でエネルギー :math:`H_\mathrm{DFT}(\{\bm{p}', \bm{r}'\})` を計算する。
+3. 以下の遷移確率 :math:`P_\mathrm{acc}` を使って、メトロポリス法により構造を採択するかどうか決める。
+
+   .. math::
+
+    P_\mathrm{acc} = \min(1, e^{-\beta(H_\mathrm{DFT}(\{\bm{p}', \bm{r}'\})-H_\mathrm{DFT}(\{\bm{p}, \bm{r}\}))})
+
+   棄却する場合は、構造を :math:`\{\bm{p}, \bm{r}\}` に戻し、運動量 :math:`\bm{p}` を温度 :math:`T` におけるボルツマン分布で定義しなおす。
+4. 1.~3.をある程度繰り返したら、生成された構造（採択された構造のみ、または棄却されたものも含めた全ての構造）を教師データとしてニューラルネットワーク力場の再学習を行う。
+5. 1.~3.と4.を繰り返す。
+
+この方法では、教師データの準備すら行う必要がなく、1つの初期構造を用意するだけで後は自動的にニューラルネットワーク力場を作ることができます。力場作成の手間が大幅に削減でき、また教師データの質など手順に依存する要素が排除されるため、常に同水準の力場を作ることができます。教師データの数も低減できる傾向にあるため、計算に要する時間も大幅に削減できます。
+
+モンテカルロ法の遷移確率(3.)は第一原理計算により決めているため、教師データのアンサンブルが厳密に第一原理分子動力学計算のアンサンブルと一致するということもこの方法の特長です。
+
+また、本製品では構造の時間発展(1.)の前に、NPHによるセルの変形を行うこともできます。これによりセル形状の異なる教師データも含まれるようになり、格子定数（密度）が未知の物質に対しても本手法を使って力場を作ることができるようになります。この場合、厳密なモンテカルロ法ではなくなりますが、力場を作るという目的の上では問題なく使えます。
+
+.. [1] J. Behler, "Constructing high‐dimensional neural network potentials: A tutorial review", Int. J. Quantum Chem. **115**, 1032-1050 (2015). DOI: `10.1002/qua.24890 <https://doi.org/10.1002/qua.24890>`_
+.. [2] N. Artrith *et al.*, "Efficient and accurate machine-learning interpolation of atomic energies in compositions with many species", Phys. Rev. B **96**, 014112 (2017). DOI: `10.1103/PhysRevB.96.014112 <https://doi.org/10.1103/PhysRevB.96.014112>`_
+.. [3] Y. Huang *et al.*, "Density functional theory based neural network force fields from energy decompositions", Phys. Rev. B **99**, 064103 (2019). DOI: `10.1103/PhysRevB.99.064103 <https://doi.org/10.1103/PhysRevB.99.064103>`_
+.. [4] M. Gastegger *et al.*, "wACSF—Weighted atom-centered symmetry functions as descriptors in machine learning potentials", J. Chem. Phys. **148**, 241709 (2018). DOI: `10.1063/1.5019667 <https://doi.org/10.1063/1.5019667>`_
+.. [5] J. Kang and L.-W. Wang, "First-principles green-Kubo method for thermal conductivity calculations", Phys. Rev. B **96**, 020302 (2017). DOI: `10.1103/PhysRevB.96.020302 <https://doi.org/10.1103/PhysRevB.96.020302>`_
+.. [6] Y. Nagai *et al.*, "Self-learning hybrid Monte Carlo: A first-principles approach", Phys. Rev. B **102**, 041124 (2020). DOI: `10.1103/PhysRevB.102.041124 <https://doi.org/10.1103/PhysRevB.102.041124>`_
 
 .. |Delta| raw:: html
 
