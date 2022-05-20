@@ -149,6 +149,8 @@ Linuxの場合は、MPI並列での実行が可能です。NeuralMDインスト�
 
  mpirun -n 4 sannp --train
 
+.. note:: Windows版はMPI並列実行には非対応です。OpenMP並列は使用可能です。
+
 実行中は残差RMS、経過時間等が出力されます。実行が正常に終わると、ニューラルネットワークの情報を含むファイル\ :file:`sannp.data`\ 、\ :file:`sannp.data_e`\ が出力されます。
 
 学習を中断する場合は、 :option:`sannp --stop` を実行します。

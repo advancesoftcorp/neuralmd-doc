@@ -88,6 +88,8 @@ NanoLabo Tool同梱の計算エンジンを使用される場合は、ライブ�
   OMP_NUM_THREADS=1
   mpirun -n 4 pw.x -in espresso.in 1> espresso.out 2> espresso.err
 
+ .. note:: NeuralMD Windows版はMPI並列実行には非対応です。OpenMP並列は使用可能です。
+
 :file:`sannp.prop`
 
  NeuralMDの設定ファイルです。必要に応じ、\ :doc:`usage/prop`\ を参照して編集してください。
