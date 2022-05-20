@@ -11,13 +11,13 @@
 
 本ソフトウェアのインストールには、インストーラーを使用します。インストーラーは本体の「Advance/NeuralMD」に加え、弊社で改修した計算エンジン（Quantum ESPRESSO・LAMMPS）を含む「Advance/NanoLabo Tool」が用意されています。それぞれ以下のリンクからダウンロードしてください。
 
- `Advance/NeuralMD (ver.1.5) AlmaLinux8版 <https://www.nanolabo.advancesoft.jp/wp-content/uploads/2022/02/install_neuralmd_linux_v1.5.bin>`_
+ `Advance/NeuralMD (ver.1.6) AlmaLinux8版 <https://www.nanolabo.advancesoft.jp/wp-content/uploads/2022/05/install_neuralmd_linux_v1.6.bin>`_
 
- `Advance/NeuralMD (ver.1.5) CentOS6/7版 <https://www.nanolabo.advancesoft.jp/wp-content/uploads/2022/02/install_neuralmd_linux_v1.5-centos6.bin>`_
+ `Advance/NeuralMD (ver.1.6) CentOS6/7版 <https://www.nanolabo.advancesoft.jp/wp-content/uploads/2022/05/install_neuralmd_linux_v1.6-centos6.bin>`_
 
- `Advance/NanoLabo Tool (ver.2.4) AlmaLinux8版 <https://www.nanolabo.advancesoft.jp/wp-content/uploads/2022/02/install_nanolabo_tool_linux_v2.4.bin>`_
+ `Advance/NanoLabo Tool (ver.2.5) AlmaLinux8版 <https://www.nanolabo.advancesoft.jp/wp-content/uploads/2022/05/install_nanolabo_tool_linux_v2.5.bin>`_
 
- `Advance/NanoLabo Tool (ver.2.4) CentOS6/7版 <https://www.nanolabo.advancesoft.jp/wp-content/uploads/2022/02/install_nanolabo_tool_linux_v2.4-centos6.bin>`_
+ `Advance/NanoLabo Tool (ver.2.5) CentOS6/7版 <https://www.nanolabo.advancesoft.jp/wp-content/uploads/2022/05/install_nanolabo_tool_linux_v2.5-centos6.bin>`_
 
 .. _installerl:
 
