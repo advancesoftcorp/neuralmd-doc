@@ -1,0 +1,136 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, AdvanceSoft Corporation
+# This file is distributed under the same license as the Advance/NeuralMD
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Advance/NeuralMD \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-28 22:39+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../link.rst:5
+msgid "リンク"
+msgstr "Link"
+
+#: ../../link.rst:8
+msgid "アドバンスソフト株式会社"
+msgstr "AdvanceSoft Corporation"
+
+#: ../../link.rst:8
+msgid "https://www.advancesoft.jp/"
+msgstr ""
+
+#: ../../link.rst:11
+msgid "Advance/NeuralMD"
+msgstr ""
+
+#: ../../link.rst:14
+msgid "Advance/NeuralMDホームページ"
+msgstr "Advance/NeuralMD home page"
+
+#: ../../link.rst:14
+msgid "https://www.advancesoft.jp/product/advance_neuralmd/"
+msgstr ""
+
+#: ../../link.rst:17
+msgid "解析事例"
+msgstr "Analysis cases"
+
+#: ../../link.rst:17
+msgid "http://case.advancesoft.jp/NeuralMD/"
+msgstr ""
+
+#: ../../link.rst:20
+msgid "Advance/NanoLabo"
+msgstr ""
+
+#: ../../link.rst:23
+msgid "Advance/NanoLaboホームページ"
+msgstr "Advance/NanoLabo home page"
+
+#: ../../link.rst:23
+msgid "https://www.nanolabo.advancesoft.jp/"
+msgstr ""
+
+#: ../../link.rst:26 ../../link.rst:52
+msgid "マニュアル"
+msgstr "Manual"
+
+#: ../../link.rst:26
+msgid "https://nanolabo-doc.readthedocs.io/ja/latest/"
+msgstr ""
+
+#: ../../link.rst:29
+msgid "Quantum ESPRESSO"
+msgstr ""
+
+#: ../../link.rst:32
+msgid "Quantum ESPRESSO ホームページ"
+msgstr "Quantum ESPRESSO home page"
+
+#: ../../link.rst:32
+msgid "https://www.quantum-espresso.org/"
+msgstr ""
+
+#: ../../link.rst:37
+msgid "擬ポテンシャル"
+msgstr "Pseudo potential"
+
+#: ../../link.rst:35
+msgid "https://www.quantum-espresso.org/pseudopotentials/"
+msgstr ""
+
+#: ../../link.rst:37
+msgid "https://www.quantum-espresso.org/pseudopotentials/original-qe-pp-library/"
+msgstr ""
+
+#: ../../link.rst:40
+msgid "|lsquo|\\ pw.x\\ |rsquo| マニュアル"
+msgstr "|lsquo|\\ pw.x\\ |rsquo| manual"
+
+#: ../../link.rst:40
+msgid "https://www.quantum-espresso.org/Doc/INPUT_PW.html"
+msgstr ""
+
+#: ../../link.rst:43
+msgid "アドバンスソフト改修版Quantum ESPRESSOソースコード"
+msgstr "Source code of Quantum ESPRESSO modified by AdvanceSoft"
+
+#: ../../link.rst:43
+msgid "https://github.com/advancesoftcorp/espresso"
+msgstr ""
+
+#: ../../link.rst:46
+msgid "LAMMPS"
+msgstr ""
+
+#: ../../link.rst:49
+msgid "LAMMPSホームページ"
+msgstr "LAMMPS home page"
+
+#: ../../link.rst:49
+msgid "https://www.lammps.org/"
+msgstr ""
+
+#: ../../link.rst:52
+msgid "https://docs.lammps.org/Manual.html"
+msgstr ""
+
+#: ../../link.rst:55
+msgid "アドバンスソフト改修版LAMMPSソースコード"
+msgstr "Source code of LAMMPS modified by AdvanceSoft"
+
+#: ../../link.rst:55
+msgid "https://github.com/advancesoftcorp/lammps"
+msgstr ""
+
