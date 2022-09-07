@@ -90,7 +90,7 @@ NeuralMDの実行時には :file:`mpi/lib` にある動的ライブラリが必�
 
  export LD_LIBRARY_PATH=/opt/AdvanceSoft/NeuralMD/mpi/lib:$LD_LIBRARY_PATH
 
-また、環境変数 :envvar:`PATH`、およびOpen MPIの環境変数 :envvar:`OPAL_PREFIX` の設定が必要ですので、以下を実行してください。
+また、環境変数 :envvar:`PATH` 、およびOpen MPIの環境変数 :envvar:`OPAL_PREFIX` の設定が必要ですので、以下を実行してください。
 
 .. code-block:: console
  :caption: デフォルトの場所にインストールした場合の例
@@ -118,7 +118,7 @@ NeuralMDの実行ファイルのパスも環境変数 :envvar:`PATH` に設定�
 ライセンスの設定
 =============================
 
-ライセンス登録後、原則5営業日以内にライセンスファイル( :file:`nanolabo.lic` )をお送りします。インストール先の :file:`license` ディレクトリにコピーしてください。
+ライセンス登録後、原則5営業日以内にライセンスファイル( :file:`neumd.lic` )をお送りします。インストール先の :file:`license` ディレクトリにコピーしてください。
 
 本ソフトウェアを使用する際には、ライセンスサーバー（ライセンス認証用のプログラム）を起動しておく必要があります。ライセンスサーバーの実行ファイルはインストール先の :file:`license/lmgrd` です。端末（ターミナル）でインストール先のディレクトリに移動したら、以下のコマンド例のように起動します。
 
