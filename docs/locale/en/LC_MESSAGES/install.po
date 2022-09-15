@@ -39,7 +39,7 @@ msgstr ""
 "The installer are used to install this software. In addition to the main "
 "unit \"Advance/NeuralMD\", the installer \"Advance/NanoLabo Tool\" "
 "including our modified calculation engines (Quantum ESPRESSO and LAMMPS) "
-"is available.Download each of them from the following links."
+"is available. Download each of them from the following links."
 
 #: ../../install/linux.rst:14
 msgid ""
@@ -188,8 +188,8 @@ msgid ""
 ":doc:`/usage/tool`\\ を参照してください。"
 msgstr ""
 "For information on how to use the calculation engines (Quantum ESPRESSO "
-"and LAMMPS) included with the Advance/NanoLabo Tool, please refer to the "
-"NanoLabo Tool included calculation engines."
+"and LAMMPS) included with the Advance/NanoLabo Tool, please refer to "
+":doc:`/usage/tool`\\ ."
 
 #: ../../install/linux.rst:86
 msgid ""
@@ -557,7 +557,7 @@ msgstr ""
 msgid "また、LinuxではHost IDに加えてホスト名が必要となりますので、 ``hostname`` コマンドを実行してご確認ください。"
 msgstr ""
 "Besides, Linux requires a host name in addition to the Host ID, which can"
-" be confirmed by running the ``hostname`` command.\""
+" be confirmed by running the ``hostname`` command."
 
 #: ../../install/purchase.rst:71
 msgid "試用版と製品版でHost IDは変わりませんので、試用期間後に製品版をご購入の場合、改めて確認していただく必要はございません。"
