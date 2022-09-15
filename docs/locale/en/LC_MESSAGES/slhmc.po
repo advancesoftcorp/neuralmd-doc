@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Advance/NeuralMD \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-07 11:20+0900\n"
+"POT-Creation-Date: 2022-09-15 17:58+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -151,12 +151,12 @@ msgid ":file:`slhmc.prop`"
 msgstr ""
 
 #: ../../slhmc.rst:79
-msgid "自己学習ハイブリッドモンテカルロ法の設定ファイルです。\\ :doc:`slhmc/prop`\\ を参照して編集してください。"
+msgid "自己学習ハイブリッドモンテカルロ法の設定ファイルです。以下を参照して編集してください。"
 msgstr ""
-"Configuration file for the self-learning Hybrid Monte Carlo method. Refer"
-" to the :doc:`slhmc/prop` to edit as needed."
+"Configuration file for the self-learning Hybrid Monte Carlo method. Please refer to the "
+"following for the settings."
 
-#: ../../slhmc.rst:81
+#: ../../slhmc.rst:86
 msgid ""
 ":file:`espresso.sh`\\ , :file:`lammps.sh`\\ , :file:`sannp.sh`\\ "
 "（Windowsの場合は.bat）"
@@ -164,7 +164,7 @@ msgstr ""
 ":file:`espresso.sh`\\ , :file:`lammps.sh`\\ , :file:`sannp.sh`\\ (.bat "
 "for Windows)"
 
-#: ../../slhmc.rst:83
+#: ../../slhmc.rst:88
 msgid ""
 "Quantum ESPRESSO、LAMMPS、NeuralMD実行用のファイルです。\\ :file:`slhmc`\\ "
 "からこれらのファイルが実行されます。必要に応じ、実行に必要な環境変数の設定（パス :envvar:`PATH`\\ , "
@@ -180,33 +180,33 @@ msgstr ""
 "parallel number: :envvar:`OMP_NUM_THREADS`\\ ), etc. Do not change the "
 "input/output file names written in the file, which are fixed."
 
-#: ../../slhmc.rst:85
+#: ../../slhmc.rst:90
 msgid ":file:`espresso.sh`\\ でMPI並列を行う場合の記述例"
 msgstr "Example for MPI parallel execution in :file:`espresso.sh`"
 
-#: ../../slhmc.rst:85
+#: ../../slhmc.rst:90
 msgid ""
 "OMP_NUM_THREADS=1\n"
 "mpirun -n 4 pw.x -in espresso.in 1> espresso.out 2> espresso.err"
 msgstr ""
 
-#: ../../slhmc.rst:91
+#: ../../slhmc.rst:96
 msgid "NeuralMD Windows版はMPI並列実行には非対応です。OpenMP並列は使用可能です。"
 msgstr ""
 "NeuralMD of Windows version does not support MPI parallel execution while"
 " OpenMP parallel is available."
 
-#: ../../slhmc.rst:93
+#: ../../slhmc.rst:98
 msgid ":file:`sannp.prop`"
 msgstr ""
 
-#: ../../slhmc.rst:95
+#: ../../slhmc.rst:100
 msgid "NeuralMDの設定ファイルです。必要に応じ、\\ :doc:`usage/prop`\\ を参照して編集してください。"
 msgstr ""
 "NeuralMD configuration file. Refer to the :doc:`usage/prop` to edit as "
 "needed."
 
-#: ../../slhmc.rst:97
+#: ../../slhmc.rst:102
 msgid ""
 "電荷の計算を行う場合は、\\ :file:`sannp.prop`\\ で ``withCharge 1`` を設定し、\\ "
 ":file:`sannp.sh`\\ で :option:`sannp --train-charge` の行のコメントアウトを外してください。"
@@ -215,7 +215,7 @@ msgstr ""
 "and uncomment out the line of :option:`sannp --train-charge` in "
 ":file:`sannp.sh`\\ ."
 
-#: ../../slhmc.rst:99
+#: ../../slhmc.rst:104
 msgid ""
 "|Delta|\\ -NNPを使う場合は、\\ :file:`sannp.prop`\\ で ``withClassical 1`` "
 "を設定し、\\ :file:`sannp.sh`\\ で :option:`sannp --classical` "
@@ -225,27 +225,27 @@ msgstr ""
 "and uncomment out the line of :option:`sannp --classical` in "
 ":file:`sannp.sh`\\ ."
 
-#: ../../slhmc.rst:101
+#: ../../slhmc.rst:106
 msgid "準備が終わったら、手順1で作成した\\ :file:`espresso.in`\\ も同じフォルダに配置し、"
 msgstr ""
 "After preparation, place :file:`espresso.in` created in step 1 in the "
 "same folder and run"
 
-#: ../../slhmc.rst:103
+#: ../../slhmc.rst:108
 msgid "slhmc --calc"
 msgstr ""
 
-#: ../../slhmc.rst:107
+#: ../../slhmc.rst:112
 msgid "を実行することで、力場の作成が始まります。"
 msgstr "to initiate force field creation."
 
-#: ../../slhmc.rst:111
+#: ../../slhmc.rst:116
 msgid "slhmc自体の並列実行はできません。各sh(bat)ファイル内で並列実行を行うように設定を行ってください。"
 msgstr ""
 "Parallel execution of slhmc itself is not available. Set up parallel "
 "execution in each sh(bat) file."
 
-#: ../../slhmc.rst:115
+#: ../../slhmc.rst:120
 msgid ""
 "デフォルトでは最初に第一原理計算分子動力学計算を行ってそれを元に初期ニューラルネットワーク力場を作りますが、代わりに既に作成済みの力場を初期力場として使うこともできます。"
 " :file:`slhmc.prop` で ``initialTrain 0`` を設定し、力場ファイル :file:`ffield.sannp`"
@@ -257,59 +257,68 @@ msgstr ""
 "``initialTrain 0`` in :file:`slhmc.prop`\\ , place the force field file "
 ":file:`ffield.sannp` in the same folder, and then run slhmc."
 
-#: ../../slhmc.rst:117
+#: ../../slhmc.rst:122
 msgid ""
 "``slhmc --stop`` を実行すると、力場の作成を中断します。\\ :file:`slhmc.prop`\\ で ``restart "
 "1`` と設定し、 ``slhmc --calc`` を再度実行することで、中断したところから力場の作成を再開します。"
 msgstr ""
-"Running ``slhmc --stop`` aborts the force field creation. "
-"Setting ``restart 1`` in :file:`slhmc.prop` and running ``slhmc --calc`` again resumes the force field creation from where it is interrupted."
+"Running ``slhmc --stop`` aborts the force field creation. Setting "
+"``restart 1`` in :file:`slhmc.prop` and running ``slhmc --calc`` again "
+"resumes the force field creation from where it is interrupted."
 
-#: ../../slhmc.rst:119
+#: ../../slhmc.rst:124
 msgid ""
 "実行中には、力場更新のタイミングで力場ファイル\\ :file:`ffield.sannp`\\ が随時出力されます。また、構造の履歴が\\ "
 ":file:`slhmc.xyz`\\ として出力されます。"
 msgstr ""
-"During execution, the force field file :file:`field.sannp` is output progressively when the force field is updated. "
-"Also, the history of the structure is output as :file:`slhmc.xyz`\\ ."
+"During execution, the force field file :file:`field.sannp` is output "
+"progressively when the force field is updated. Also, the history of the "
+"structure is output as :file:`slhmc.xyz`\\ ."
 
-#: ../../slhmc.rst:121
+#: ../../slhmc.rst:126
 msgid ""
 "各計算エンジンの入出力ファイルは、サブフォルダ\\ :file:`slhmc_dat`\\ "
 "に保存されます。もしエラー等で計算が進まない場合は、\\ :file:`slhmc_dat`\\ 内の出力ファイルを確認してください。"
 msgstr ""
-"The input/output files for each calculation engine are stored in the subfolder :file:`slhmc_dat`\\ ."
-"Check output files in :file:`slhmc_dat` if the calculation does not proceed due to errors, etc."
+"The input/output files for each calculation engine are stored in the "
+"subfolder :file:`slhmc_dat`\\ .Check output files in :file:`slhmc_dat` if"
+" the calculation does not proceed due to errors, etc."
 
-#: ../../slhmc.rst:130
+#: ../../slhmc.rst:135
 msgid "手順3　LAMMPSによる分子動力学計算"
 msgstr "Step 3. Molecular Dynamics Calculations with LAMMPS"
 
-#: ../../slhmc.rst:132
+#: ../../slhmc.rst:137
 msgid ""
 "出力された力場ファイル\\ :file:`ffield.sannp`\\ "
 "を使って、LAMMPSによる分子動力学計算を実行します。基本の使用方法のページにある\\ :ref:`usage_step5`\\ "
 "を参照してください。"
 msgstr ""
-"Run molecular dynamics calculations with LAMMPS using the output force field file :file:`field.sannp`\\ . "
-"See :ref:`usage_step5` on the Basic Usage page."
+"Run molecular dynamics calculations with LAMMPS using the output force "
+"field file :file:`field.sannp`\\ . See :ref:`usage_step5` on the Basic "
+"Usage page."
 
-#: ../../slhmc.rst:136
+#: ../../slhmc.rst:141
 msgid ""
 "複数の異なる初期構造を使って自己学習ハイブリッドモンテカルロ法で力場を作りたい場合、まずはそれぞれの初期構造に対して手順2までを実行します。その後、得られた教師データ\\"
 " :file:`sannp.train`\\ を結合し、これを使って改めてニューラルネットワークの学習（基本の使用方法のページにある\\ "
 ":ref:`usage_step4`\\ ）を実行します。"
 msgstr ""
-"To create a force field using several different initial structures with a self-learning hybrid Monte Carlo method, first perform up to step 2 for each initial structure. "
-"Then, combine the resultant training data :file:`sannp.train` and use it to train the neural network again (see :ref:`usage_step4` on the Basic Usage page)."
+"To create a force field using several different initial structures with a"
+" self-learning hybrid Monte Carlo method, first perform up to step 2 for "
+"each initial structure. Then, combine the resultant training data "
+":file:`sannp.train` and use it to train the neural network again (see "
+":ref:`usage_step4` on the Basic Usage page)."
 
 #: ../../slhmc/prop.rst:5
 msgid "slhmc.propの書式"
 msgstr "Format of slhmc.prop"
 
 #: ../../slhmc/prop.rst:7
-msgid "\\ :file:`slhmc.prop`\\ のテンプレートは、 :option:`slhmc --template` で出力できます。"
-msgstr "Executing :option:`slhmc --template` outputs the template of :file:`slhmc.prop`\\ ."
+msgid "\\ :file:`slhmc.prop`\\ のテンプレートは、 ``slhmc --template`` で出力できます。"
+msgstr ""
+"Executing ``slhmc --template`` outputs the template of "
+":file:`slhmc.prop`\\ ."
 
 #: ../../slhmc/prop.rst:9
 msgid "行頭が#または!の行はコメントとして扱われます。"
@@ -328,8 +337,9 @@ msgid ""
 "0の場合、最初から力場生成を実行します。1の場合、\\ :file:`slhmc.restart`\\ "
 "およびフォルダ内のその他のファイルから情報を読み込み、力場生成を再開します。"
 msgstr ""
-"Start force field generation from the beginning in case of 0. "
-"Read the information of :file:`slhmc.restart` and other files in the folder to resume the force field generation in case of 1."
+"Start force field generation from the beginning in case of 0. Read the "
+"information of :file:`slhmc.restart` and other files in the folder to "
+"resume the force field generation in case of 1."
 
 #: ../../slhmc/prop.rst:19
 msgid "200"
@@ -340,16 +350,19 @@ msgid ""
 "初期構造から第一原理分子動力学計算を行う際のステップ数です。この構造を元に初期ニューラルネットワーク力場を作ります。0に設定した場合、フォルダにある力場ファイル"
 " :file:`ffield.sannp` を初期力場として使います。"
 msgstr ""
-"Specify the number of steps at performing first-principles molecular dynamics calculations from the initial structure. "
-"The initial neural network force field is generated based on these structures. "
-"In case of 0, the force field file :file:`ffield.sannp` in the folder is used as the initial force field."
+"Specify the number of steps at performing first-principles molecular "
+"dynamics calculations from the initial structure. The initial neural "
+"network force field is generated based on these structures. In case of 0,"
+" the force field file :file:`ffield.sannp` in the folder is used as the "
+"initial force field."
 
 #: ../../slhmc/prop.rst:27
 msgid ""
 "新規に（ ``restart 0`` "
 "と設定して）実行した場合、フォルダ内にある以前の教師データを使う(0)か新たに最初からデータを作る(1)かの設定です。"
 msgstr ""
-"Specify using previous training data in the folder (0) or making another one from the beginning (1) when executing new (setting as ``restart 0``)."
+"Specify using previous training data in the folder (0) or making another "
+"one from the beginning (1) when executing new (setting as ``restart 0``)."
 
 #: ../../slhmc/prop.rst:31 ../../slhmc/prop.rst:37 ../../slhmc/prop.rst:97
 msgid "0"
@@ -357,11 +370,17 @@ msgstr ""
 
 #: ../../slhmc/prop.rst:33
 msgid "ニューラルネットワークの教師データとして、モンテカルロ法で採択された構造だけを使う(1)か、棄却されたものも含めた全ての構造を使う(0)かの設定です。"
-msgstr "Specify using only accepted structures in Monte Carlo method (1) or all of those including abandoned ones (0) for training data of neural network."
+msgstr ""
+"Specify using only accepted structures in Monte Carlo method (1) or all "
+"of those including abandoned ones (0) for training data of neural "
+"network."
 
 #: ../../slhmc/prop.rst:39
 msgid "ニューラルネットワーク力場を使った分子動力学計算で、原子座標等のファイル出力を全ステップで行う(1)か、最初と最後のステップのみで行う(0)かの設定です。"
-msgstr "Specify whether files such as atomic coordinates are output for all steps (1) or at the first and final step (0) at first-principles molecular dynamics calculation using neural network force field."
+msgstr ""
+"Specify whether files such as atomic coordinates are output for all steps"
+" (1) or at the first and final step (0) at first-principles molecular "
+"dynamics calculation using neural network force field."
 
 #: ../../slhmc/prop.rst:43
 msgid "10"
@@ -369,11 +388,15 @@ msgstr ""
 
 #: ../../slhmc/prop.rst:45
 msgid "ニューラルネットワーク力場を使った分子動力学計算の（初期）ステップ数です。"
-msgstr "Specify the number of (initial) steps of molecular dynamics calculations using a neural network force field."
+msgstr ""
+"Specify the number of (initial) steps of molecular dynamics calculations "
+"using a neural network force field."
 
 #: ../../slhmc/prop.rst:51
 msgid "ニューラルネットワーク力場を使った分子動力学計算のステップ数を、モンテカルロ法の採択率に応じて自動的に変更する(1)か、固定する(0)かの設定です。"
-msgstr "Specify automatically changing the number of steps of molecular dynamics calculations using a neural network force field (1) or fixing it (0)."
+msgstr ""
+"Specify automatically changing the number of steps of molecular dynamics "
+"calculations using a neural network force field (1) or fixing it (0)."
 
 #: ../../slhmc/prop.rst:55
 msgid "2000"
@@ -381,7 +404,9 @@ msgstr ""
 
 #: ../../slhmc/prop.rst:57
 msgid "ニューラルネットワーク力場を使った分子動力学計算のステップ数の上限です。"
-msgstr "Specify the upper limit of the number of steps of molecular dynamics calculations using a neural network force field."
+msgstr ""
+"Specify the upper limit of the number of steps of molecular dynamics "
+"calculations using a neural network force field."
 
 #: ../../slhmc/prop.rst:61
 msgid "0.50"
@@ -389,7 +414,10 @@ msgstr ""
 
 #: ../../slhmc/prop.rst:63
 msgid "モンテカルロ法の採択率がこの値以上になった場合に、ニューラルネットワーク力場を使った分子動力学計算のステップ数を増やします。"
-msgstr "Increase the number of steps of molecular dynamics calculations using a neural network force field if the accept rate becomes larger than this value."
+msgstr ""
+"Increase the number of steps of molecular dynamics calculations using a "
+"neural network force field if the accept rate becomes larger than this "
+"value."
 
 #: ../../slhmc/prop.rst:67 ../../slhmc/prop.rst:85
 msgid "0.25"
@@ -397,7 +425,10 @@ msgstr ""
 
 #: ../../slhmc/prop.rst:69
 msgid "モンテカルロ法の採択率がこの値以下になった場合に、ニューラルネットワーク力場を使った分子動力学計算のステップ数を減らします。"
-msgstr "Decrease the number of steps of molecular dynamics calculations using a neural network force field if the accept rate becomes smaller than this value."
+msgstr ""
+"Decrease the number of steps of molecular dynamics calculations using a "
+"neural network force field if the accept rate becomes smaller than this "
+"value."
 
 #: ../../slhmc/prop.rst:73
 msgid "100"
@@ -405,7 +436,9 @@ msgstr ""
 
 #: ../../slhmc/prop.rst:75
 msgid "ニューラルネットワークの再学習を行うまでに何回モンテカルロステップを行うか（＝何回第一原理計算を行うか）の設定です。"
-msgstr "Specify the number of Monte Carlo steps (= the number of first-principles calculations performed) until relearning the neural network."
+msgstr ""
+"Specify the number of Monte Carlo steps (= the number of first-principles"
+" calculations performed) until relearning the neural network."
 
 #: ../../slhmc/prop.rst:79
 msgid "50"
@@ -414,12 +447,15 @@ msgstr ""
 #: ../../slhmc/prop.rst:81
 msgid "ニューラルネットワークの再学習を行う回数です。指定した回数の再学習が終わったら、実行を終了します。"
 msgstr ""
-"Specify the number of relearning a neural network. "
-"The execution is terminated after the specified number of relearning."
+"Specify the number of relearning a neural network. The execution is "
+"terminated after the specified number of relearning."
 
 #: ../../slhmc/prop.rst:87
 msgid "ニューラルネットワーク力場を使った分子動力学計算、および初期ニューラルネットワーク力場を作るための第一原理分子動力学計算の時間刻み(fs)です。"
-msgstr "Specify the time interval (fs) of molecular dynamics calculations using a neural network force field and first-principles molecular dynamics calculations for creating an initial neural network force field."
+msgstr ""
+"Specify the time interval (fs) of molecular dynamics calculations using a"
+" neural network force field and first-principles molecular dynamics "
+"calculations for creating an initial neural network force field."
 
 #: ../../slhmc/prop.rst:91
 msgid "300.0"
@@ -440,8 +476,10 @@ msgstr ""
 #: ../../slhmc/prop.rst:105
 msgid "セルの変形を行う場合の制約条件の設定です。各軸が垂直のまま等方的に変形する(iso)、各軸が垂直のまま異方的な変形を許す(aniso)、各軸が垂直でなくなる変形を許す(tri)が設定できます。"
 msgstr ""
-"Specify the constraints for cell deformation. "
-"Isotropic deformation while each axis remains perpendicular (iso), allowing anisotropic deformation while each axis remains perpendicular (aniso), and allowing deformation where each axis is no longer perpendicular (tri) are selectable."
+"Specify the constraints for cell deformation. Isotropic deformation while"
+" each axis remains perpendicular (iso), allowing anisotropic deformation "
+"while each axis remains perpendicular (aniso), and allowing deformation "
+"where each axis is no longer perpendicular (tri) are selectable."
 
 #: ../../slhmc/prop.rst:109
 msgid "1.0"

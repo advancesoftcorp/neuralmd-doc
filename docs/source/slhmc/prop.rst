@@ -4,7 +4,7 @@
 slhmc.propの書式
 ===================
 
-\ :file:`slhmc.prop`\ のテンプレートは、 :option:`slhmc --template` で出力できます。
+\ :file:`slhmc.prop`\ のテンプレートは、 ``slhmc --template`` で出力できます。
 
 行頭が#または!の行はコメントとして扱われます。
 
