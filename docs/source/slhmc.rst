@@ -119,11 +119,17 @@ NanoLabo Tool同梱の計算エンジンを使用される場合は、ライブ�
 
  デフォルトでは最初に第一原理計算分子動力学計算を行ってそれを元に初期ニューラルネットワーク力場を作りますが、代わりに既に作成済みの力場を初期力場として使うこともできます。 :file:`slhmc.prop` で ``initialTrain 0`` を設定し、力場ファイル :file:`ffield.sannp` を同じフォルダに配置してから、slhmcを実行します。
 
+.. hint::
+
+ GPUを使って計算を実行するには、\ :file:`sannp.sh`\ で\ :file:`sannp`\ を\ :file:`sannp_gpu`\ に、\ :file:`lammps.sh`\ で\ :file:`lammps`\ を\ :file:`lammps_gpu`\ にそれぞれ書き換えます。また、GPU用設定ファイル\ :ref:`sannp.mpi2gpu <usage_gpu_mpi>`\ 、\ :ref:`gpu.conf <toollammpsgpuconf>`\ を同じフォルダに配置すると、それぞれ実行時に設定内容が適用されます。
+
 ``slhmc --stop`` を実行すると、力場の作成を中断します。\ :file:`slhmc.prop`\ で ``restart 1`` と設定し、 ``slhmc --calc`` を再度実行することで、中断したところから力場の作成を再開します。
 
 実行中には、力場更新のタイミングで力場ファイル\ :file:`ffield.sannp`\ が随時出力されます。また、構造の履歴が\ :file:`slhmc.xyz`\ として出力されます。
 
-各計算エンジンの入出力ファイルは、サブフォルダ\ :file:`slhmc_dat`\ に保存されます。もしエラー等で計算が進まない場合は、\ :file:`slhmc_dat`\ 内の出力ファイルを確認してください。
+各計算エンジンの入出力ファイルは、サブフォルダ\ :file:`slhmc_dat`\ に保存されます。
+
+もしエラー等で計算が進まない場合は、\ :file:`slhmc.CRASH`\ に当該の計算エンジンの入出力ファイルの内容が保存されますので、確認してください。
 
 .. |Delta| raw:: html
 

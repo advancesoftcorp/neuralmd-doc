@@ -104,3 +104,62 @@ LAMMPSで分子動力学計算を実行するには、 :file:`lammps` に入力�
  :caption: 並列実行例
 
  mpirun -n 4 lammps < lammps.in 1> lammps.out 2> lammps.err
+
+.. _toollammpsgpu:
+
+GPU版LAMMPS
+================================
+
+LAMMPSの実行ファイルとして :file:`lammps` の代わりに :file:`lammps_gpu` を使うことで、ニューラルネットワーク力場の計算がGPUを使って行われるようになります。
+
+入力ファイルは非GPU版と同じ内容で問題なく実行できますが、設定ファイル\ :file:`gpu.conf`\ を作成することでGPU版特有の設定ができます。
+
+.. _toollammpsgpuconf:
+
+gpu.confの書式
+--------------------------------
+
+threads、atomBlock、mpi2Deviceが各セクションの始まりを表し、次の行以降がセクションの内容になります。
+
+各セクションは省略可能です。省略した場合、デフォルト値が使われます。
+
+各セクションの前後には空行またはコメント行（行頭を!か#にする）を入れられます。
+
+.. describe:: threads
+
+ :デフォルト: 256
+
+ CUDAのブロック当たりのスレッド数です。上限は1024（CUDAの仕様）です。32（ワープサイズ）の倍数を推奨します。
+
+.. describe:: atomBlock
+
+ :デフォルト: 4096
+
+ 対称関数をGPUで計算するときに、ここで指定した数の原子ごとにまとめて処理を行います。
+
+.. describe:: mpi2Device
+
+ :デフォルト:
+
+ 複数のGPUが搭載されているマシンの場合、使用するGPUをデバイスIDで指定します。MPI並列で使用する場合は、各行にプロセスをどのデバイスIDのGPUに割り当てるかを書きます。行数とMPI並列数（プロセス数）が一致するようにしてください。
+
+ 各GPUに割り当てられたデバイスIDは ``nvidia-smi -L`` を実行して確認できます。
+
+.. code-block:: none
+ :caption: gpu.confの例
+
+ threads
+ 512
+ atomBlock
+ 1024
+ #グラフィックカードが2つ搭載されているマシンで、MPI8並列で実行し、
+ #4プロセスをデバイスID0のGPU、4プロセスをデバイスID1のGPUに割り当てる場合
+ mpi2Device
+ 0
+ 0
+ 0
+ 0
+ 1
+ 1
+ 1
+ 1
