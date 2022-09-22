@@ -32,9 +32,9 @@ Quantum ESPRESSO ホームページ
  https://www.quantum-espresso.org/
 
 擬ポテンシャル
- https://www.quantum-espresso.org/pseudopotentials/
+ http://pseudopotentials.quantum-espresso.org/
 
- https://www.quantum-espresso.org/pseudopotentials/original-qe-pp-library/
+ http://pseudopotentials.quantum-espresso.org/legacy_tables/
 
 |lsquo|\ pw.x\ |rsquo| マニュアル
  https://www.quantum-espresso.org/Doc/INPUT_PW.html
