@@ -11,9 +11,9 @@
 
 本ソフトウェアのインストールには、インストーラーを使用します。インストーラーは本体の「Advance/NeuralMD」に加え、弊社で改修した計算エンジン（Quantum ESPRESSO・LAMMPS）を含む「Advance/NanoLabo Tool」が用意されています。それぞれ以下のリンクからダウンロードしてください。
 
- `Advance/NeuralMD (ver.1.6) <https://www.nanolabo.advancesoft.jp/wp-content/uploads/2022/05/install_neuralmd_windows_v1.6.exe>`_
+ `Advance/NeuralMD (ver.1.7) <https://www.nanolabo.advancesoft.jp/?wpdmdl=969>`_
 
- `Advance/NanoLabo Tool (ver.2.5) <https://www.nanolabo.advancesoft.jp/wp-content/uploads/2022/05/install_nanolabo_tool_windows_v2.5.exe>`_
+ `Advance/NanoLabo Tool (ver.2.6) <https://www.nanolabo.advancesoft.jp/?wpdmdl=968>`_
 
 .. _installerw:
 
