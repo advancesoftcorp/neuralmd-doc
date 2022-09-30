@@ -18,6 +18,8 @@ NanoLabo Toolインストール先の :file:`exec.WIN` にQuantum ESPRESSO( :fil
 
  set Path=C:\Program Files\AdvanceSoft\NanoLabo\exec.WIN\qe;C:\Program Files\AdvanceSoft\NanoLabo\exec.WIN\lammps;C:\Program Files\AdvanceSoft\NanoLabo\exec.WIN\mpi;%Path%
 
+NanoLabo Toolインストール先の :file:`bin` にある :file:`NanoLabo.bat` を実行すると、 :envvar:`Path` が設定された状態でコマンドプロンプトが起動します。
+
 また、永続的に追加するには、システムのプロパティから環境変数 :envvar:`Path` を編集してください。
 
 Quantum ESPRESSOでDFT計算(SCF計算)を実行するには、 :file:`pw.exe` に入力ファイルを渡して実行します。
