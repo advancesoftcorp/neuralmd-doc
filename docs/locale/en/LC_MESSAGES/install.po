@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Advance/NeuralMD \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-06 11:31+0900\n"
+"POT-Creation-Date: 2022-09-30 16:36+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
 
-#: ../../install.rst:5 ../../install/linux.rst:25 ../../install/windows.rst:21
+#: ../../install.rst:5 ../../install/linux.rst:21 ../../install/windows.rst:21
 msgid "インストール"
 msgstr "Installation"
 
@@ -43,84 +43,56 @@ msgstr ""
 
 #: ../../install/linux.rst:14
 msgid ""
-"`Advance/NeuralMD (ver.1.6) AlmaLinux8版 "
-"<https://www.nanolabo.advancesoft.jp/wp-"
-"content/uploads/2022/05/install_neuralmd_linux_v1.6.bin>`_"
+"`Advance/NeuralMD (ver.1.7) "
+"<https://www.nanolabo.advancesoft.jp/?wpdmdl=970>`_"
 msgstr ""
-"`Advance/NeuralMD (ver.1.6) for AlmaLinux8 "
-"<https://www.nanolabo.advancesoft.jp/wp-"
-"content/uploads/2022/05/install_neuralmd_linux_v1.6.bin>`_"
 
 #: ../../install/linux.rst:16
 msgid ""
-"`Advance/NeuralMD (ver.1.6) CentOS6/7版 "
-"<https://www.nanolabo.advancesoft.jp/wp-"
-"content/uploads/2022/05/install_neuralmd_linux_v1.6-centos6.bin>`_"
+"`Advance/NanoLabo Tool (ver.2.6) "
+"<https://www.nanolabo.advancesoft.jp/?wpdmdl=967>`_"
 msgstr ""
-"`Advance/NeuralMD (ver.1.6) for CentOS6/7 "
-"<https://www.nanolabo.advancesoft.jp/wp-"
-"content/uploads/2022/05/install_neuralmd_linux_v1.6-centos6.bin>`_"
 
-#: ../../install/linux.rst:18
-msgid ""
-"`Advance/NanoLabo Tool (ver.2.5) AlmaLinux8版 "
-"<https://www.nanolabo.advancesoft.jp/wp-"
-"content/uploads/2022/05/install_nanolabo_tool_linux_v2.5.bin>`_"
-msgstr ""
-"`Advance/NanoLabo Tool (ver.2.5) for AlmaLinux8 "
-"<https://www.nanolabo.advancesoft.jp/wp-"
-"content/uploads/2022/05/install_nanolabo_tool_linux_v2.5.bin>`_"
-
-#: ../../install/linux.rst:20
-msgid ""
-"`Advance/NanoLabo Tool (ver.2.5) CentOS6/7版 "
-"<https://www.nanolabo.advancesoft.jp/wp-"
-"content/uploads/2022/05/install_nanolabo_tool_linux_v2.5-centos6.bin>`_"
-msgstr ""
-"`Advance/NanoLabo Tool (ver.2.5) for CentOS6/7 "
-"<https://www.nanolabo.advancesoft.jp/wp-"
-"content/uploads/2022/05/install_nanolabo_tool_linux_v2.5-centos6.bin>`_"
-
-#: ../../install/linux.rst:27
+#: ../../install/linux.rst:23
 msgid "端末（ターミナル）で、インストーラーのあるディレクトリに移動します。実行権限を付与したら、まずAdvance/NeuralMDのインストーラーを実行します。"
 msgstr ""
 "In a terminal, change the current working directory to where the "
 "installer is located. After granting execute permission, first run the "
 "Advance/NeuralMD installer."
 
-#: ../../install/linux.rst:29
+#: ../../install/linux.rst:25
 msgid ""
 "$ chmod +x install_neural_linux.bin install_nanolabo_tool_linux.bin\n"
 "$ ./install_neuralmd_linux.bin"
 msgstr ""
 
-#: ../../install/linux.rst:36
+#: ../../install/linux.rst:32
 msgid "インストーラーはコンソールモード（GUIを表示せず、CUIで操作が完結する）でも動作します。もしGUIが無い環境で、実行時にコンソールモードにならない場合は"
 msgstr ""
 "The installer can also run in the console mode (no GUI is displayed, even"
 " only the CUI completes the operation). If the installer does not enter "
 "console mode at runtime in environment without a GUI, execute as follows."
 
-#: ../../install/linux.rst:38
+#: ../../install/linux.rst:34
 msgid "$ ./install_neuralmd_linux.bin -i console"
 msgstr ""
 
-#: ../../install/linux.rst:42
+#: ../../install/linux.rst:38
 msgid "のように実行してください。"
 msgstr "\\ "
 
-#: ../../install/linux.rst:44
+#: ../../install/linux.rst:40
 msgid "言語の選択画面が出た場合は、インストール中に使用する言語を選択してください（ソフトウェア本体で使用する言語ではありません）。"
 msgstr ""
 "When the language selection screen appears, select the language to be "
 "used during installation (not the language used in the software itself)."
 
-#: ../../install/linux.rst:46 ../../install/linux.rst:78
+#: ../../install/linux.rst:42 ../../install/linux.rst:74
 #: ../../install/windows.rst:37
 msgid "画面の指示に従い、インストールの設定を行ってください。"
 msgstr "Follow the on-screen instructions to set up the installation."
 
-#: ../../install/linux.rst:50
+#: ../../install/linux.rst:46
 msgid ""
 "書き込み権限のない場所にはインストールできません。インストール先として書き込み権限のある場所（ "
 ":file:`/home/ユーザー名/AdvanceSoft/NeuralMD` "
@@ -131,11 +103,11 @@ msgstr ""
 "/home/username/AdvanceSoft/NeuralMD) as the installation location or run "
 "the installer as a user with write permission."
 
-#: ../../install/linux.rst:52
+#: ../../install/linux.rst:48
 msgid "設定が終わると要約の画面が表示されます。"
 msgstr "After the setup is complete, a summary screen will appear."
 
-#: ../../install/linux.rst:56 ../../install/windows.rst:29
+#: ../../install/linux.rst:52 ../../install/windows.rst:29
 msgid "インストールが終わると、ライセンス登録案内が表示されます。ライセンス登録がお済みでない場合は、必要な項目をご記入ください。次へをクリックすると、ライセンス登録メールの内容が表示されますので、弊社宛に送信してください。"
 msgstr ""
 "After installation, a guidance screen of the license registration will "
@@ -143,7 +115,7 @@ msgstr ""
 "required fields. Click Next to view the contents of the license "
 "registration e-mail and send it to us."
 
-#: ../../install/linux.rst:62
+#: ../../install/linux.rst:58
 msgid ""
 "メール本文の「ホストＩＤ」が空欄になっている場合、Host ID取得時に必要なredhat-"
 "lsbライブラリがインストールされていない可能性があります。その場合、次のコマンドをroot権限で実行してインストールしてください。"
@@ -152,37 +124,37 @@ msgstr ""
 " required when obtaining Host ID may not be installed. In that case, "
 "execute the following command with root privileges to install it."
 
-#: ../../install/linux.rst:64
+#: ../../install/linux.rst:60
 msgid "# yum -y install redhat-lsb-core"
 msgstr ""
 
-#: ../../install/linux.rst:68
+#: ../../install/linux.rst:64
 msgid "インストーラーで一旦「戻る」をクリックし、再度「次へ」をクリックしていただくことで、Host IDの取得を再試行します。"
 msgstr ""
 "Click \"Back\" once in the installer and then click \"Next\" again to "
 "retry to obtain a Host ID."
 
-#: ../../install/linux.rst:70 ../../install/windows.rst:33
+#: ../../install/linux.rst:66 ../../install/windows.rst:33
 msgid "最後の画面で完了をクリックすると、Advance/NeuralMDのインストールが終了します。"
 msgstr ""
 "Clicking Finish on the last screen will complete the Advance/NeuralMD "
 "installation."
 
-#: ../../install/linux.rst:72 ../../install/windows.rst:35
+#: ../../install/linux.rst:68 ../../install/windows.rst:35
 msgid "続けて、Advance/NanoLabo Toolのインストーラーを実行します。"
 msgstr "Then run the Advance/NanoLabo Tool installer."
 
-#: ../../install/linux.rst:74
+#: ../../install/linux.rst:70
 msgid "$ ./install_nanolabo_tool_linux.bin"
 msgstr ""
 
-#: ../../install/linux.rst:82 ../../install/windows.rst:41
+#: ../../install/linux.rst:78 ../../install/windows.rst:41
 msgid "インストール後、最後の画面で完了をクリックすると、Advance/NanoLabo Toolのインストールが終了します。"
 msgstr ""
 "After the installation, click Finish on the last screen to complete the "
 "installation of the Advance/NanoLabo Tool."
 
-#: ../../install/linux.rst:84 ../../install/windows.rst:43
+#: ../../install/linux.rst:80 ../../install/windows.rst:43
 msgid ""
 "Advance/NanoLabo Toolに同梱された計算エンジン（Quantum ESPRESSO・LAMMPS）の使用方法については、\\ "
 ":doc:`/usage/tool`\\ を参照してください。"
@@ -191,7 +163,7 @@ msgstr ""
 "and LAMMPS) included with the Advance/NanoLabo Tool, please refer to "
 ":doc:`/usage/tool`\\ ."
 
-#: ../../install/linux.rst:86
+#: ../../install/linux.rst:82
 msgid ""
 "NeuralMDの実行時には :file:`mpi/lib` にある動的ライブラリが必要ですので、環境変数 "
 ":envvar:`LD_LIBRARY_PATH` に設定するため、以下を実行してください。"
@@ -200,17 +172,17 @@ msgstr ""
 "NeuralMD, execute the following to set up the environment variable "
 ":envvar:`LD_LIBRARY_PATH`\\ ."
 
-#: ../../install/linux.rst:88 ../../install/linux.rst:95
-#: ../../install/linux.rst:111 ../../install/linux.rst:143
+#: ../../install/linux.rst:84 ../../install/linux.rst:91
+#: ../../install/linux.rst:107 ../../install/linux.rst:139
 #: ../../install/windows.rst:54
 msgid "デフォルトの場所にインストールした場合の例"
 msgstr "Example of installing in the default location"
 
-#: ../../install/linux.rst:88
+#: ../../install/linux.rst:84
 msgid "export LD_LIBRARY_PATH=/opt/AdvanceSoft/NeuralMD/mpi/lib:$LD_LIBRARY_PATH"
 msgstr ""
 
-#: ../../install/linux.rst:93
+#: ../../install/linux.rst:89
 msgid ""
 "また、環境変数 :envvar:`PATH` 、およびOpen MPIの環境変数 :envvar:`OPAL_PREFIX` "
 "の設定が必要ですので、以下を実行してください。"
@@ -218,54 +190,54 @@ msgstr ""
 "In addition, the environment variable :envvar:`PATH` and that of "
 ":envvar:`OPAL_PREFIX` for Open MPI must be set, execute the followings."
 
-#: ../../install/linux.rst:95
+#: ../../install/linux.rst:91
 msgid ""
 "export PATH=/opt/AdvanceSoft/NeuralMD/mpi/bin:$PATH\n"
 "export OPAL_PREFIX=/opt/AdvanceSoft/NeuralMD/mpi"
 msgstr ""
 
-#: ../../install/linux.rst:103
+#: ../../install/linux.rst:99
 msgid "MPIの実行ファイル・ライブラリはNeuralMD本体のインストーラー、NanoLabo Toolインストーラーの両方に含まれています。"
 msgstr ""
 "The MPI executable files and libraries are included in both the NeuralMD "
 "main unit installer and the NanoLabo Tool installer."
 
-#: ../../install/linux.rst:105
+#: ../../install/linux.rst:101
 msgid "前者はインストール先の :file:`mpi` 、後者はインストール先の :file:`exec.LINUX/mpi` に配置されます。"
 msgstr ""
 "The former is located in the :file:`mpi` and the latter in the "
 ":file:`exec.LINUX/mpi` directory in the installation location."
 
-#: ../../install/linux.rst:107
+#: ../../install/linux.rst:103
 msgid "内容は同じものですので、環境変数にはどちらか片方のみを設定していただければ大丈夫です。"
 msgstr ""
 "The contents are the same, so you only need to set one of them in the "
 "environment variable."
 
-#: ../../install/linux.rst:109
+#: ../../install/linux.rst:105
 msgid "NeuralMDの実行ファイルのパスも環境変数 :envvar:`PATH` に設定していただくと便利です。"
 msgstr ""
 "It is also helpful to set the path to the NeuralMD executable in the "
 "environment variable :envvar:`PATH`\\ ."
 
-#: ../../install/linux.rst:111
+#: ../../install/linux.rst:107
 msgid "export PATH=/opt/AdvanceSoft/NeuralMD/bin:$PATH"
 msgstr ""
 
-#: ../../install/linux.rst:119 ../../install/windows.rst:48
+#: ../../install/linux.rst:115 ../../install/windows.rst:48
 msgid "ライセンスの設定"
 msgstr "License Configuration"
 
-#: ../../install/linux.rst:121
+#: ../../install/linux.rst:117
 msgid ""
 "ライセンス登録後、原則5営業日以内にライセンスファイル( :file:`neumd.lic` )をお送りします。インストール先の "
 ":file:`license` ディレクトリにコピーしてください。"
 msgstr ""
-"A license file ( :file:`neumd.lic` ) will be sent within 5 business "
-"days after license registration in principle. Copy the file to the "
+"A license file ( :file:`neumd.lic` ) will be sent within 5 business days "
+"after license registration in principle. Copy the file to the "
 ":file:`license` folder of the installation location."
 
-#: ../../install/linux.rst:123
+#: ../../install/linux.rst:119
 msgid ""
 "本ソフトウェアを使用する際には、ライセンスサーバー（ライセンス認証用のプログラム）を起動しておく必要があります。ライセンスサーバーの実行ファイルはインストール先の"
 " :file:`license/lmgrd` "
@@ -277,41 +249,41 @@ msgstr ""
 "current working directory to the installation location in the terminal, "
 "start it as shown in the following command example."
 
-#: ../../install/linux.rst:125
+#: ../../install/linux.rst:121
 msgid "$ license/lmgrd -c license/neumd.lic -l license/lmgrd.log"
 msgstr ""
 
-#: ../../install/linux.rst:129
+#: ../../install/linux.rst:125
 msgid "ライセンスサーバーの状態を表示するには、インストール先の :file:`license/lmstat` を使用します。"
 msgstr ""
 "To display the license server status, use :file:`license/lmstat` in the "
 "installation location."
 
-#: ../../install/linux.rst:131
+#: ../../install/linux.rst:127
 msgid "$ license/lmstat -a -c license/neumd.lic"
 msgstr ""
 
-#: ../../install/linux.rst:135
+#: ../../install/linux.rst:131
 msgid "また、ライセンスサーバーを終了するには、インストール先の :file:`license/lmdown` を使用します。"
 msgstr ""
 "Also, to terminate the license server, use :file:`license/lmdown` in the "
 "installation location."
 
-#: ../../install/linux.rst:137
+#: ../../install/linux.rst:133
 msgid "$ license/lmdown -c license/neumd.lic"
 msgstr ""
 
-#: ../../install/linux.rst:141
+#: ../../install/linux.rst:137
 msgid "実行時には、環境変数 :envvar:`ADVANCED_LICENSE_FILE` にライセンスファイルのパスが設定されている必要があります。"
 msgstr ""
 "At runtime, the environment variable :envvar:`ADVANCED_LICENSE_FILE` must"
 " be set to the path of the license file."
 
-#: ../../install/linux.rst:143
+#: ../../install/linux.rst:139
 msgid "export ADVANCED_LICENSE_FILE=/opt/AdvanceSoft/NeuralMD/license/neumd.lic"
 msgstr ""
 
-#: ../../install/linux.rst:148 ../../install/windows.rst:59
+#: ../../install/linux.rst:144 ../../install/windows.rst:59
 msgid ""
 "ニューラルネットワークの学習を行う機能（\\ :option:`sannp --train`\\ 、\\ :option:`sannp "
 "--train-charge`\\ 、\\ :option:`sannp --classical`\\ "
@@ -326,7 +298,7 @@ msgstr ""
 "license to run by itself, but does require a license to call the sannp to"
 " train a neural network."
 
-#: ../../install/linux.rst:150
+#: ../../install/linux.rst:146
 msgid ""
 "また、本製品とは別の弊社製品をお使いの場合、ライセンスファイルを結合することで、1つのライセンスサーバーで複数製品のライセンス認証が可能です。\\"
 " :file:`.lic`\\ ファイルを単純に結合した後、重複する行（ ``SERVER`` 、 ``VENDOR`` 、 "
@@ -339,15 +311,15 @@ msgstr ""
 "``SERVER`` , ``VENDOR`` , ``USE_SERVER`` ) to create a single license "
 "file. Then use that file to launch the license server."
 
-#: ../../install/linux.rst:156
+#: ../../install/linux.rst:152
 msgid "ファイル1.lic"
 msgstr "file1.lic"
 
-#: ../../install/linux.rst:156
+#: ../../install/linux.rst:152
 msgid "ファイル2.lic"
 msgstr "file2.lic"
 
-#: ../../install/linux.rst:156
+#: ../../install/linux.rst:152
 msgid "結合ファイル.lic"
 msgstr "combined file.lic"
 
@@ -375,28 +347,28 @@ msgstr ""
 msgid "|featblue|"
 msgstr ""
 
-#: ../../install/linux.rst:180 ../../install/windows.rst:64
+#: ../../install/linux.rst:176 ../../install/windows.rst:64
 msgid "更新・アップグレード"
 msgstr "Update/Upgrade"
 
-#: ../../install/linux.rst:182 ../../install/windows.rst:66
+#: ../../install/linux.rst:178 ../../install/windows.rst:66
 msgid "トライアル版から製品版にアップグレードされる場合、新たにインストールを行う必要はありません。ライセンスファイルのみ置き換えてください。"
 msgstr ""
 "When upgrading from the trial version to the full version, another "
 "installation is not required. Only the license file needs to be replaced."
 
-#: ../../install/linux.rst:184 ../../install/windows.rst:68
+#: ../../install/linux.rst:180 ../../install/windows.rst:68
 msgid "新しいバージョンにアップデートされる場合、上書きインストールを行うことも可能ではありますが、あらかじめ以前のバージョンをアンインストールするか、インストール先を変更していただくことをお勧めします。"
 msgstr ""
 "When updating to a new version, it is possible to perform an overwrite "
 "install. However, uninstalling the previous version or changing the "
 "installation location beforehand is recommended."
 
-#: ../../install/linux.rst:189 ../../install/windows.rst:73
+#: ../../install/linux.rst:185 ../../install/windows.rst:73
 msgid "アンインストール"
 msgstr "Uninstallation"
 
-#: ../../install/linux.rst:191
+#: ../../install/linux.rst:187
 msgid ""
 "端末（ターミナル）でインストール先の :file:`_NeuralMD_installation` ディレクトリにある :file:`Change"
 " NeuralMD Installation` を起動します。"
@@ -405,23 +377,23 @@ msgstr ""
 ":file:`_NeuralMD_installation` directory in the installation location in "
 "the terminal."
 
-#: ../../install/linux.rst:193
+#: ../../install/linux.rst:189
 msgid ""
 "$ AdvanceSoft/NeuralMD/_NeuralMD_installation/Change\\ NeuralMD\\ "
 "Installation"
 msgstr ""
 
-#: ../../install/linux.rst:197 ../../install/windows.rst:81
+#: ../../install/linux.rst:193 ../../install/windows.rst:81
 msgid "画面の指示に従い、アンインストールを行ってください。"
 msgstr "Follow the on-screen instructions to uninstall the software."
 
-#: ../../install/linux.rst:199 ../../install/windows.rst:83
+#: ../../install/linux.rst:195 ../../install/windows.rst:83
 msgid "Advance/NeuralMDのアンインストールが終わったら、同様にAdvance/NanoLabo Toolをアンインストールしてください。"
 msgstr ""
 "After uninstalling Advance/NeuralMD, uninstall Advance/NanoLabo Tool in "
 "the same manner."
 
-#: ../../install/linux.rst:203 ../../install/windows.rst:87
+#: ../../install/linux.rst:199 ../../install/windows.rst:87
 msgid "アンインストールの際に、インストール先のライセンスファイルは削除されずに残ります。また、インストールログファイルが残る場合があります。その際はお手数ですが手動で削除してください。"
 msgstr ""
 "During uninstallation, the license file in the installation location will"
@@ -464,56 +436,114 @@ msgstr ""
 "the license server (a program for license authentication) is fixed."
 
 #: ../../install/purchase.rst:22
-msgid "価格表"
-msgstr "Price List"
+msgid "エディション"
+msgstr "Editions"
+
+#: ../../install/purchase.rst:24
+msgid "トライアルパッケージ"
+msgstr "Trial Package"
+
+#: ../../install/purchase.rst:26
+msgid "1カ月間無料"
+msgstr "Free for 1 month"
+
+#: ../../install/purchase.rst:27
+msgid "製品パッケージの全機能を使用可能"
+msgstr "All functionalities in production package available"
 
 #: ../../install/purchase.rst:29
-msgid "年間ライセンス            （万円／年、税抜）"
-msgstr "Annual license (/yr. without tax)"
+msgid "製品パッケージ"
+msgstr "Production Package"
 
-#: ../../install/purchase.rst:29 ../../install/purchase.rst:39
-msgid "企業、国研"
-msgstr "Company, National institute"
-
-#: ../../install/purchase.rst:29 ../../install/purchase.rst:39
-msgid "大学"
-msgstr "University"
-
-#: ../../install/purchase.rst:31 ../../install/purchase.rst:41
+#: ../../install/purchase.rst:31 ../../install/purchase.rst:55
+#: ../../install/purchase.rst:67
 msgid "Advance/NeuralMD"
 msgstr ""
 
-#: ../../install/purchase.rst:31
+#: ../../install/purchase.rst:33
+msgid "基本的な機能をお使いいただけます。"
+msgstr "Basic functions"
+
+#: ../../install/purchase.rst:35 ../../install/purchase.rst:57
+#: ../../install/purchase.rst:69
+msgid "Advance/NeuralMD Pro"
+msgstr ""
+
+#: ../../install/purchase.rst:37
+msgid "基本機能に加え、強化された追加の機能をお使いいただけます。"
+msgstr "Basic + additional powerful calculation functions"
+
+#: ../../install/purchase.rst:39
+msgid "Ver. 1.7 Pro版では、GPUを使った計算が利用可能です。"
+msgstr "Calculation using GPU is available in Ver. 1.7 Pro edition."
+
+#: ../../install/purchase.rst:41
+msgid "WindowsではPro版はご利用になれません。"
+msgstr "Pro edition is not available for Windows."
+
+#: ../../install/purchase.rst:46
+msgid "価格表"
+msgstr "Price List"
+
+#: ../../install/purchase.rst:53
+msgid "年間ライセンス            （万円／年、税抜）"
+msgstr "Annual license (/yr. without tax)"
+
+#: ../../install/purchase.rst:53 ../../install/purchase.rst:65
+msgid "企業、国研"
+msgstr "Company, National institute"
+
+#: ../../install/purchase.rst:53 ../../install/purchase.rst:65
+msgid "大学"
+msgstr "University"
+
+#: ../../install/purchase.rst:55
 msgid "50\\ `*`:sup:\\"
 msgstr "500,000 JPY\\ `*`:sup:\\"
 
-#: ../../install/purchase.rst:31
+#: ../../install/purchase.rst:55
 msgid "25\\ `*`:sup:\\"
 msgstr "250,000 JPY\\ `*`:sup:\\"
 
-#: ../../install/purchase.rst:39
+#: ../../install/purchase.rst:57
+msgid "90\\ `*`:sup:\\"
+msgstr "900,000 JPY\\ `*`:sup:\\"
+
+#: ../../install/purchase.rst:57
+msgid "45\\ `*`:sup:\\"
+msgstr "450,000 JPY\\ `*`:sup:\\"
+
+#: ../../install/purchase.rst:65
 msgid "買取ライセンス             （万円、税抜）"
 msgstr "Permanent license (without tax)"
 
-#: ../../install/purchase.rst:41
+#: ../../install/purchase.rst:67
 msgid "150\\ `*`:sup:\\"
 msgstr "1,500,000 JPY\\ `*`:sup:\\"
 
-#: ../../install/purchase.rst:41
+#: ../../install/purchase.rst:67
 msgid "75\\ `*`:sup:\\"
 msgstr "750,000 JPY\\ `*`:sup:\\"
 
-#: ../../install/purchase.rst:44
+#: ../../install/purchase.rst:69
+msgid "270\\ `*`:sup:\\"
+msgstr "2,700,000 JPY\\ `*`:sup:\\"
+
+#: ../../install/purchase.rst:69
+msgid "135\\ `*`:sup:\\"
+msgstr "1,350,000 JPY\\ `*`:sup:\\"
+
+#: ../../install/purchase.rst:72
 msgid "`*`:sup: Advance/NanoLaboと同時にご購入いただくと、定価から2割引きとなります。"
 msgstr ""
 "`*`:sup: If purchased at the same time as Advance/NanoLabo, 20% discount "
 "off the list price is available."
 
-#: ../../install/purchase.rst:49
+#: ../../install/purchase.rst:77
 msgid "お申し込み手順"
 msgstr "Application Procedures"
 
-#: ../../install/purchase.rst:51
+#: ../../install/purchase.rst:79
 msgid ""
 "ご使用になるコンピューター（Windowsは本製品を使用するコンピューター、Linuxではライセンスサーバーを起動するコンピューター）について、固有のHost"
 " IDを取得し、そのHost IDに対してライセンスファイルを発行します。"
@@ -522,17 +552,17 @@ msgstr ""
 "the computer to use the product; for Linux, the computer launching the "
 "license server), and a license file is issued for that Host ID."
 
-#: ../../install/purchase.rst:53
+#: ../../install/purchase.rst:81
 msgid "ライセンス登録後、原則5営業日以内にライセンスファイルをお送りします。"
 msgstr ""
 "A license file will be sent within 5 business days after license "
 "registration in principle."
 
-#: ../../install/purchase.rst:58
+#: ../../install/purchase.rst:86
 msgid "インストール時"
 msgstr "At Installation Time"
 
-#: ../../install/purchase.rst:60
+#: ../../install/purchase.rst:88
 msgid ""
 "インストーラーでインストールを行う際に、ライセンス登録画面が表示されます。インストール手順（\\ "
 ":doc:`Windows<windows>`\\ 、\\ :doc:`Linux<linux>`\\ ）を参照ください。"
@@ -541,11 +571,11 @@ msgstr ""
 "appear. Refer to the installation procedure (\\ :doc:`Windows<windows>`\\"
 " , :doc:`Linux<linux>`\\ )."
 
-#: ../../install/purchase.rst:65
+#: ../../install/purchase.rst:93
 msgid "インストール後または試用期間後"
 msgstr "After Installation or Trial Period"
 
-#: ../../install/purchase.rst:67
+#: ../../install/purchase.rst:95
 msgid ""
 "インストール先の :file:`license` フォルダーにある :file:`advanceLCG` を実行することで、Host "
 "IDが表示されます。"
@@ -553,20 +583,20 @@ msgstr ""
 "Run :file:`advanceLCG` in the :file:`license` directory in the "
 "installation location to display the Host ID."
 
-#: ../../install/purchase.rst:69
+#: ../../install/purchase.rst:97
 msgid "また、LinuxではHost IDに加えてホスト名が必要となりますので、 ``hostname`` コマンドを実行してご確認ください。"
 msgstr ""
 "Besides, Linux requires a host name in addition to the Host ID, which can"
 " be confirmed by running the ``hostname`` command."
 
-#: ../../install/purchase.rst:71
+#: ../../install/purchase.rst:99
 msgid "試用版と製品版でHost IDは変わりませんので、試用期間後に製品版をご購入の場合、改めて確認していただく必要はございません。"
 msgstr ""
 "If you purchase the full version after the trial period, you do not need "
 "to confirm your Host ID again because the Host ID is the same for both "
 "the trial and the full version."
 
-#: ../../install/purchase.rst:73
+#: ../../install/purchase.rst:101
 msgid "support.nano@advancesoft.jp 宛にご希望のライセンス種別と併せてお送りください。"
 msgstr ""
 "Please send the e-mail to support.nano@advancesoft.jp along with desired "
@@ -578,14 +608,14 @@ msgstr "How to Install (Windows)"
 
 #: ../../install/windows.rst:14
 msgid ""
-"`Advance/NeuralMD (ver.1.6) <https://www.nanolabo.advancesoft.jp/wp-"
-"content/uploads/2022/05/install_neuralmd_windows_v1.6.exe>`_"
+"`Advance/NeuralMD (ver.1.7) "
+"<https://www.nanolabo.advancesoft.jp/?wpdmdl=969>`_"
 msgstr ""
 
 #: ../../install/windows.rst:16
 msgid ""
-"`Advance/NanoLabo Tool (ver.2.5) <https://www.nanolabo.advancesoft.jp/wp-"
-"content/uploads/2022/05/install_nanolabo_tool_windows_v2.5.exe>`_"
+"`Advance/NanoLabo Tool (ver.2.6) "
+"<https://www.nanolabo.advancesoft.jp/?wpdmdl=968>`_"
 msgstr ""
 
 #: ../../install/windows.rst:23
@@ -606,8 +636,8 @@ msgid ""
 "ライセンス登録後、原則5営業日以内にライセンスファイル( :file:`neumd.lic` )をお送りします。インストール先の "
 ":file:`license` フォルダーにコピーしてください。"
 msgstr ""
-"A license file ( :file:`neumd.lic` ) will be sent within 5 business "
-"days after license registration in principle. Copy the file to the "
+"A license file ( :file:`neumd.lic` ) will be sent within 5 business days "
+"after license registration in principle. Copy the file to the "
 ":file:`license` folder of the installation location."
 
 #: ../../install/windows.rst:52
@@ -615,8 +645,11 @@ msgid ""
 "実行時には、環境変数 :envvar:`ADVANCED_LICENSE_FILE` "
 "にライセンスファイルのパスが設定されている必要があります。他の弊社製品をお使いの場合、既に環境変数の値が設定されている場合がありますが、その場合はセミコロン区切りでパスを追加してください。"
 msgstr ""
-"At runtime, the environment variable :envvar:`ADVANCED_LICENSE_FILE` must be set to the path of the license file. "
-"If you have already used another product of ours, the value of the environment variable may already be set, in which case, add the path while separating each path with semicolons."
+"At runtime, the environment variable :envvar:`ADVANCED_LICENSE_FILE` must"
+" be set to the path of the license file. If you have already used another"
+" product of ours, the value of the environment variable may already be "
+"set, in which case, add the path while separating each path with "
+"semicolons."
 
 #: ../../install/windows.rst:54
 msgid ""
@@ -631,8 +664,8 @@ msgstr "Launch the uninstaller in one of the following ways."
 #: ../../install/windows.rst:77
 msgid "スタートボタンを右クリックし、「アプリと機能」を開きます。リストの中にあるAdvance/NeuralMDをクリックし、アンインストールボタンをクリックします。"
 msgstr ""
-"Right click on the Start button and open \"Apps and Features\". "
-"Click on Advance/NeuralMD in the list and click the Uninstall button."
+"Right click on the Start button and open \"Apps and Features\". Click on "
+"Advance/NeuralMD in the list and click the Uninstall button."
 
 #: ../../install/windows.rst:78
 msgid ""
@@ -640,12 +673,14 @@ msgid ""
 "パネル」を開きます。「プログラムのアンインストール」（アイコン表示の場合は「プログラムと機能」）を開き、リストの中にあるAdvance/NeuralMDをダブルクリックします。"
 msgstr ""
 "Open \"Control Panel\" in \"Windows System Tools\" from the Start menu. "
-"Open \"Uninstall a Program\" (or \"Programs and Features\" if the icon is displayed) and double-click Advance/NeuralMD in the list."
+"Open \"Uninstall a Program\" (or \"Programs and Features\" if the icon is"
+" displayed) and double-click Advance/NeuralMD in the list."
 
 #: ../../install/windows.rst:79
 msgid ""
 "インストール先の :file:`_NeuralMD_installation` フォルダーにある :file:`Change NeuralMD "
 "Installation.exe` を起動します。"
 msgstr ""
-"Launch :file:`Change NeuralMD Installation.exe` in the :file:`_NeuralMD_installation` folder of the installation location."
+"Launch :file:`Change NeuralMD Installation.exe` in the "
+":file:`_NeuralMD_installation` folder of the installation location."
 

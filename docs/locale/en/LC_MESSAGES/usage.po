@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Advance/NeuralMD \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-05 15:25+0900\n"
+"POT-Creation-Date: 2022-09-30 16:36+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -35,8 +35,9 @@ msgid ""
 "力場作成のためのサンプル構造を、Advance/NanoLaboなどを利用してユーザーが作成します。 "
 "複数個のサンプル構造を同時に使用して、一つの力場を作成することが可能です。"
 msgstr ""
-"Sample structures for generating force field are created by users using Advance/NanoLabo or other software. "
-"Multiple sample structures are simultaneously available to generate a single force field."
+"Sample structures for generating force field are created by users using "
+"Advance/NanoLabo or other software. Multiple sample structures are "
+"simultaneously available to generate a single force field."
 
 #: ../../usage.rst:17
 msgid ":ref:`ランダム構造の生成 <usage_step2>`"
@@ -47,8 +48,10 @@ msgid ""
 "サンプル構造を基にして、原子座標をランダムに変位させた多数の構造を自動的に生成します。 "
 "また、生成された全構造について、第一原理計算を一括して実行するスクリプトも同時に出力します。"
 msgstr ""
-"Based on the sample structures, a number of structures with randomly displaced atomic coordinates are automatically generated. "
-"It also outputs a script that performs a batch of first-principles calculations for all generated structures."
+"Based on the sample structures, a number of structures with randomly "
+"displaced atomic coordinates are automatically generated. It also outputs"
+" a script that performs a batch of first-principles calculations for all "
+"generated structures."
 
 #: ../../usage.rst:22
 msgid ":ref:`Quantum ESPRESSOによる第一原理計算 <usage_step3>`"
@@ -59,8 +62,9 @@ msgid ""
 "生成されたスクリプトを実行して、第一原理計算を実施します。 計算には当社にて改修を施したQuantum "
 "ESPRESSOを使用して、原子毎のエネルギーを出力します。"
 msgstr ""
-"The generated scripts are executed to perform first-principles calculations. "
-"The calculation uses our modified Quantum ESPRESSO to output each atomic energy."
+"The generated scripts are executed to perform first-principles "
+"calculations. The calculation uses our modified Quantum ESPRESSO to "
+"output each atomic energy."
 
 #: ../../usage.rst:27
 msgid ":ref:`ニューラルネットワークの学習（最適化） <usage_step4>`"
@@ -72,9 +76,11 @@ msgid ""
 "ニューラルネットワークを最適化します。最適化計算には、当社の提供するツールを使用します。 計算完了後、LAMMPSにて利用可能な力場ファイルとして"
 " ニューラルネットワークの情報を出力します。"
 msgstr ""
-"The neural network is optimized using each atomic energy calculated by Quantum ESPRESSO as the training data. "
-"The optimization calculations are performed with tools provided by us. "
-"After the calculation is completed, the information of the neural network is output as a force field file available in LAMMPS."
+"The neural network is optimized using each atomic energy calculated by "
+"Quantum ESPRESSO as the training data. The optimization calculations are "
+"performed with tools provided by us. After the calculation is completed, "
+"the information of the neural network is output as a force field file "
+"available in LAMMPS."
 
 #: ../../usage.rst:33
 msgid ":ref:`LAMMPSによる分子動力学計算 <usage_step5>`"
@@ -85,8 +91,9 @@ msgid ""
 "作成した力場ファイルを用いて、分子動力学計算を実施します。 計算には、当社にて Neural Network Potential "
 "の機能を追加したLAMMPSを使用します。"
 msgstr ""
-"Molecular dynamics calculations are performed using the generated force field file. "
-"The calculations are performed using LAMMPS, to which Neural Network Potential functionality are added by us."
+"Molecular dynamics calculations are performed using the generated force "
+"field file. The calculations are performed using LAMMPS, to which Neural "
+"Network Potential functionality are added by us."
 
 #: ../../usage.rst:41
 msgid "各手順の説明"
@@ -101,18 +108,24 @@ msgid ""
 "教師データとして使用したいサンプルの原子構造を用意し、それを元に、Quantum ESPRESSOのSCF計算用の入力ファイルを作成します。 "
 "当社製品のAdvance/NanoLaboを使っていただくと、cif等の原子構造ファイルから簡単に入力ファイルを生成できます。"
 msgstr ""
-"Prepare the atomic structure of the sample that would like to be used as training data, and create an input file for SCF calculations of Quantum ESPRESSO based on it. "
-"Our product Advance/NanoLabo can easily generate an input file from atomic structure files such as cif."
+"Prepare the atomic structure of the sample that would like to be used as "
+"training data, and create an input file for SCF calculations of Quantum "
+"ESPRESSO based on it. Our product Advance/NanoLabo can easily generate an"
+" input file from atomic structure files such as cif."
 
 #: ../../usage.rst:51
 msgid "ファイル中の擬ポテンシャルのパスは、手順3で実際に計算を行うときのものを指定してください。例えば計算サーバーで実行する場合には、計算サーバー内にある擬ポテンシャルのディレクトリを指すようにします。"
 msgstr ""
-"The path to the pseudopotential in the file must be the one used for the actual calculation in step 3. "
-"For example, when running the calculation on a calculation server, the path must point to the pseudopotential directory in the calculation server."
+"The path to the pseudopotential in the file must be the one used for the "
+"actual calculation in step 3. For example, when running the calculation "
+"on a calculation server, the path must point to the pseudopotential "
+"directory in the calculation server."
 
 #: ../../usage.rst:53
 msgid "入力ファイルが用意できたら、必要な情報を出力させるために以下の設定を加えてください。"
-msgstr "Once the input file is prepared, add the following settings to have the necessary information output."
+msgstr ""
+"Once the input file is prepared, add the following settings to have the "
+"necessary information output."
 
 #: ../../usage.rst:55
 msgid ""
@@ -134,9 +147,10 @@ msgid ""
 "作成した入力ファイルを基に、Advance/NeuralMDを実行して多数のランダム構造を生成します。実行ファイルはインストール先のbinフォルダーに入っている"
 " :file:`sannp` です。ファイル名が\\ :file:`espresso.scf.in`\\ の場合、"
 msgstr ""
-"Run Advance/NeuralMD to generate a number of random structures based on the input file created. "
-"The executable file is :file:`sannp` in the bin folder in the installation location. "
-"If the file is named :file:`espresso.scf.in`\\ , execute as follows."
+"Run Advance/NeuralMD to generate a number of random structures based on "
+"the input file created. The executable file is :file:`sannp` in the bin "
+"folder in the installation location. If the file is named "
+":file:`espresso.scf.in`\\ , execute as follows."
 
 #: ../../usage.rst:72
 msgid "sannp --dft espresso.scf.in"
@@ -149,15 +163,20 @@ msgstr "\\ "
 #: ../../usage.rst:78
 msgid "対話形式で、生成する構造の数や変位の大きさなど、必要な情報を入力していきます。入力を行わずにそのままEnterを押すと、デフォルトの値が使われます。"
 msgstr ""
-"In an interactive format, enter the required information such as the number of structures to be generated and the magnitude of the displacement. "
-"Pressing Enter without inputting any information, the default values will be used."
+"In an interactive format, enter the required information such as the "
+"number of structures to be generated and the magnitude of the "
+"displacement. Pressing Enter without inputting any information, the "
+"default values will be used."
 
 #: ../../usage.rst:80
 msgid ""
 "入力が終わると、Quantum ESPRESSOの計算実行用シェルスクリプト\\ :file:`dft_run.sh`\\ "
 "（Windowsの場合はバッチファイル\\ :file:`dft_run.bat`\\ ）と、各構造の入力ファイルが生成されます。"
 msgstr ""
-"After the input is complete, the shell script for running the Quantum ESPRESSO calculation :file:`dft_run.sh` (or the batch file :file:`dft_run.bat` for Windows) and the input files for each structure are generated."
+"After the input is complete, the shell script for running the Quantum "
+"ESPRESSO calculation :file:`dft_run.sh` (or the batch file "
+":file:`dft_run.bat` for Windows) and the input files for each structure "
+"are generated."
 
 #: ../../usage.rst:82
 msgid "├ dft_run.sh (.bat)"
@@ -188,8 +207,9 @@ msgid ""
 "NanoLabo Tool同梱のQuantum "
 "ESPRESSOを使用される場合は、ライブラリ検索パス等の設定が必要になります。以下を参照し、設定して下さい。"
 msgstr ""
-"When using Quantum ESPRESSO bundled with NanoLabo Tool, setup of the library search path and others are required. "
-"Please refer to the following for the settings."
+"When using Quantum ESPRESSO bundled with NanoLabo Tool, setup of the "
+"library search path and others are required. Please refer to the "
+"following for the settings."
 
 #: ../../usage.rst:100
 msgid "ジョブ管理システムをお使いでない場合は、\\ :file:`dft_run.sh`\\ を直接実行します。"
@@ -213,9 +233,10 @@ msgid ""
 "を編集してください。例えばPBSの場合は#PBSディレクティブ、SLURM（FOCUSスパコン）の場合は#SBATCHディレクティブを追記します。その後、ジョブスクリプトとして\\"
 " :file:`dft_run.sh`\\ を投入してください。"
 msgstr ""
-"When using a job management system, edit :file:`dft_run.sh` as necessary. "
-"For example, add the #PBS directive for PBS and the #SBATCH directive for SLURM (FOCUS supercomputer). "
-"Then submit :file:`dft_run.sh` as a job script."
+"When using a job management system, edit :file:`dft_run.sh` as necessary."
+" For example, add the #PBS directive for PBS and the #SBATCH directive "
+"for SLURM (FOCUS supercomputer). Then submit :file:`dft_run.sh` as a job "
+"script."
 
 #: ../../usage.rst:114
 msgid "PBSの例"
@@ -230,15 +251,20 @@ msgid ""
 "計算を実行すると、\\ :file:`sannp.train`\\ "
 "というファイルに教師データ（原子構造とそれに対応する原子毎のエネルギーや力、電荷）が保存されていきます。"
 msgstr ""
-"As calculations are performed, the training data (atomic structures and corresponding energy, force, and charge for each atom) are stored in :file:`sannp.train` file."
+"As calculations are performed, the training data (atomic structures and "
+"corresponding energy, force, and charge for each atom) are stored in "
+":file:`sannp.train` file."
 
 #: ../../usage.rst:123
 msgid ""
 "分子動力学計算を実行する系の原子の幾何構造を漏れなくかつ均一にサンプルするように、必要に応じて手順1～手順3を繰り返し、複数の\\ "
 ":file:`sannp.train`\\ ファイルを用意します。 複数の\\ :file:`sannp.train`\\ は結合して使えます。"
 msgstr ""
-"Repeat steps 1 through 3 as necessary to prepare multiple :file:`sannp.train` files so that the geometry of the atoms in the system for which molecular dynamics calculations are performed is sampled in an exhaustive and uniform manner. "
-"Multiple :file:`sannp.train` files can be combined for use."
+"Repeat steps 1 through 3 as necessary to prepare multiple "
+":file:`sannp.train` files so that the geometry of the atoms in the system"
+" for which molecular dynamics calculations are performed is sampled in an"
+" exhaustive and uniform manner. Multiple :file:`sannp.train` files can be"
+" combined for use."
 
 #: ../../usage.rst:129
 msgid "手順4　ニューラルネットワークの学習（最適化）"
@@ -249,15 +275,19 @@ msgid ""
 "ニューラルネットワークの設定をファイル\\ :file:`sannp.prop`\\ 、Behler対称関数の設定をファイル\\ "
 ":file:`sannp.behler`\\ にそれぞれ用意します。デフォルトの設定を使う場合は、ファイルが無くてもかまいません。"
 msgstr ""
-"Prepare the settings for the neural network in the file :file:`sannp.prop` and the settings for the Behler symmetry function in the file :file:`sannp.behler`\\ . "
-"No file is required with default settings."
+"Prepare the settings for the neural network in the file "
+":file:`sannp.prop` and the settings for the Behler symmetry function in "
+"the file :file:`sannp.behler`\\ . No file is required with default "
+"settings."
 
 #: ../../usage.rst:139
 msgid ""
 "電荷の計算を行わない場合(\\ :file:`sannp.prop`\\ で ``withCharge 0`` "
 "と設定)は、以下のコマンドを実行して、ニューラルネットワークの学習を行います。"
 msgstr ""
-"In case without calculations of the charge (set ``withCharge 0`` in :file:`sannp.prop`\\ ), execute the following command to train a neural network."
+"In case without calculations of the charge (set ``withCharge 0`` in "
+":file:`sannp.prop`\\ ), execute the following command to train a neural "
+"network."
 
 #: ../../usage.rst:141
 msgid "sannp --train"
@@ -269,9 +299,10 @@ msgid ""
 "Toolインストーラーに同梱のMPI実行ファイルをお使い下さい。\\ :ref:`設定方法<tooll>`\\ "
 "を参照して設定の上、実行してください。"
 msgstr ""
-"For Linux, MPI parallel execution is available. "
-"Use the MPI executable included with the NeuralMD installer or the MPI executable included with the NanoLabo Tool installer. "
-"Please refer to the :ref:`setup instructions<tooll>` to configure and run the program."
+"For Linux, MPI parallel execution is available. Use the MPI executable "
+"included with the NeuralMD installer or the MPI executable included with "
+"the NanoLabo Tool installer. Please refer to the :ref:`setup "
+"instructions<tooll>` to configure and run the program."
 
 #: ../../usage.rst:147
 msgid "MPI並列実行例(Linux)"
@@ -283,15 +314,18 @@ msgstr ""
 
 #: ../../usage.rst:152
 msgid "Windows版はMPI並列実行には非対応です。OpenMP並列は使用可能です。"
-msgstr "Windows version does not support MPI parallel execution while OpenMP parallel execution is available."
+msgstr ""
+"Windows version does not support MPI parallel execution while OpenMP "
+"parallel execution is available."
 
 #: ../../usage.rst:154
 msgid ""
 "実行中は残差RMS、経過時間等が出力されます。実行が正常に終わると、ニューラルネットワークの情報を含むファイル\\ "
 ":file:`sannp.data`\\ 、\\ :file:`sannp.data_e`\\ が出力されます。"
 msgstr ""
-"The residual RMS, elapsed time, etc. are output during execution. "
-"After the execution is completed successfully, files sannp.data and sannp.data_e containing information on the neural network are output."
+"The residual RMS, elapsed time, etc. are output during execution. After "
+"the execution is completed successfully, files sannp.data and "
+"sannp.data_e containing information on the neural network are output."
 
 #: ../../usage.rst:156
 msgid "学習を中断する場合は、 :option:`sannp --stop` を実行します。"
@@ -302,15 +336,20 @@ msgid ""
 "収束せずに上限回数に達した場合や、上記コマンドで中断した場合は、\\ :file:`sannp.prop`\\ で ``restart 1`` "
 "と設定して再度実行することで、既に学習したニューラルネットワークの情報を読み込み、学習を再開できます。"
 msgstr ""
-"If the maximum number of times has been reached without convergence, or if the process is interrupted with above command, "
-"you can set ``restart 1`` in :file:`sannp.prop` and execute it again to resume training after reading the information of the neural network that has already been trained."
+"If the maximum number of times has been reached without convergence, or "
+"if the process is interrupted with above command, you can set ``restart "
+"1`` in :file:`sannp.prop` and execute it again to resume training after "
+"reading the information of the neural network that has already been "
+"trained."
 
 #: ../../usage.rst:160
 msgid ""
 "また、電荷の計算を行う場合(\\ :file:`sannp.prop`\\ で ``withCharge 1`` "
 "と設定)は、上記に加えて電荷のニューラルネットワークの学習も行います。"
 msgstr ""
-"In the case of calculating the charge (set ``withCharge 1`` in sannp.prop), a neural network for the charge is trained in addition to the above."
+"In the case of calculating the charge (set ``withCharge 1`` in "
+"sannp.prop), a neural network for the charge is trained in addition to "
+"the above."
 
 #: ../../usage.rst:162
 msgid "sannp --train-charge"
@@ -318,7 +357,9 @@ msgstr ""
 
 #: ../../usage.rst:166
 msgid "実行が正常に終わると、電荷のニューラルネットワークの情報を含むファイル\\ :file:`sannp.data_q`\\ が出力されます。"
-msgstr "If successfully executed, the file :file:`sannp.data_q` containing information on the neural network of the charge is output."
+msgstr ""
+"If successfully executed, the file :file:`sannp.data_q` containing "
+"information on the neural network of the charge is output."
 
 #: ../../usage.rst:168
 msgid "ニューラルネットワークの学習が終わったら、"
@@ -330,7 +371,9 @@ msgstr ""
 
 #: ../../usage.rst:174
 msgid "を実行することで、LAMMPSで使用する力場定義ファイル\\ :file:`ffield.sannp`\\ を出力します。"
-msgstr "to output the force field definition file :file:`ffield.sannp` to be used in LAMMPS."
+msgstr ""
+"to output the force field definition file :file:`ffield.sannp` to be used"
+" in LAMMPS."
 
 #: ../../usage.rst:179
 msgid "手順5　LAMMPSによる分子動力学計算"
@@ -339,8 +382,8 @@ msgstr "Step 5. Molecular Dynamics Calculations with LAMMPS"
 #: ../../usage.rst:181
 msgid "NanoLabo Tool同梱のLAMMPSを使用される場合は、ライブラリ検索パス等の設定が必要になります。以下を参照し、設定して下さい。"
 msgstr ""
-"When using LAMMPS bundled with NanoLabo Tool, setup of the library search path and others are required. "
-"Please refer to the following and set up."
+"When using LAMMPS bundled with NanoLabo Tool, setup of the library search"
+" path and others are required. Please refer to the following and set up."
 
 #: ../../usage.rst:188
 msgid "LAMMPSの入力ファイル中で、以下の\\ ``pair_style``\\ が使えます。"
@@ -360,7 +403,8 @@ msgid ""
 "pair_coeff * * <ffield.sannp> <eatom zero|finite> <元素名1 元素名2 ...>"
 msgstr ""
 "pair_style nnp\n"
-"pair_coeff * * <ffield.sannp> <eatom zero|finite> <elementname1 elementname2 ...>"
+"pair_coeff * * <ffield.sannp> <eatom zero|finite> <elementname1 "
+"elementname2 ...>"
 
 #: ../../usage.rst:202
 msgid "ニューラルネットワーク力場 + クーロン相互作用（実空間）"
@@ -372,7 +416,8 @@ msgid ""
 "pair_coeff * * <ffield.sannp> <eatom zero|finite> <元素名1 元素名2 ...>"
 msgstr ""
 "pair_style nnp/coul/cut <rcut>\n"
-"pair_coeff * * <ffield.sannp> <eatom zero|finite> <elementname1 elementname2 ...>"
+"pair_coeff * * <ffield.sannp> <eatom zero|finite> <elementname1 "
+"elementname2 ...>"
 
 #: ../../usage.rst:212
 msgid "ニューラルネットワーク力場 + クーロン相互作用（実空間 + k空間）"
@@ -385,7 +430,8 @@ msgid ""
 "kspace_modify gewald <rinv>"
 msgstr ""
 "pair_style nnp/coul/long <rcut>\n"
-"pair_coeff * * <ffield.sannp> <eatom zero|finite> <elementname1 elementname2 ...>\n"
+"pair_coeff * * <ffield.sannp> <eatom zero|finite> <elementname1 "
+"elementname2 ...>\n"
 "kspace_modify gewald <rinv>"
 
 #: ../../usage.rst:221
@@ -406,7 +452,9 @@ msgstr "elementname"
 
 #: ../../usage.rst:229
 msgid "LAMMPSのatom type毎に、対応する教師データ中の元素名（=Quantum ESPRESSO計算時の元素名）を列挙"
-msgstr "List of the corresponding element name in the training data (= element name in Quantum ESPRESSO calculation) for each atom type in LAMMPS."
+msgstr ""
+"List of the corresponding element name in the training data (= element "
+"name in Quantum ESPRESSO calculation) for each atom type in LAMMPS."
 
 #: ../../usage.rst:231
 msgid "eatom"
@@ -414,11 +462,15 @@ msgstr ""
 
 #: ../../usage.rst
 msgid "ニューラルネットワーク最終層のバイアス項を0に設定する機能 (原子エネルギーの平準化)"
-msgstr "Function to set the bias term in the final layer of a neural network to zero (atomic energy equalization)"
+msgstr ""
+"Function to set the bias term in the final layer of a neural network to "
+"zero (atomic energy equalization)"
 
 #: ../../usage.rst
 msgid "eatom zeroで有効、eatom finiteまたは省略（力場ファイル名に続けて元素名を指定）で無効"
-msgstr "Enabled by eatom zero, disabled by eatom finite or omitted (specify element name followed by force field file name)"
+msgstr ""
+"Enabled by eatom zero, disabled by eatom finite or omitted (specify "
+"element name followed by force field file name)"
 
 #: ../../usage.rst:234
 msgid "rcut"
@@ -433,8 +485,8 @@ msgid ""
 "(\\ ``nnp/coul/cut``\\ では必ず指定、\\ ``nnp/coul/long``\\ では省略可)  (\\ |rarr|\\"
 " `coul/cut`_)"
 msgstr ""
-"(must be specified for ``nnp/coul/cut``\\ , can be omitted for ``nnp/coul/long``\\ ) (\\ |rarr|\\"
-" `coul/cut`_)"
+"(must be specified for ``nnp/coul/cut``\\ , can be omitted for "
+"``nnp/coul/long``\\ ) (\\ |rarr|\\ `coul/cut`_)"
 
 #: ../../usage.rst:237
 msgid "rinv"
@@ -442,18 +494,23 @@ msgstr ""
 
 #: ../../usage.rst
 msgid "電荷のEwald和を計算する際のパラメータ（1/距離単位）"
-msgstr "Parameters for calculating the Ewald sum of charges (in units of 1/distance)"
+msgstr ""
+"Parameters for calculating the Ewald sum of charges (in units of "
+"1/distance)"
 
 #: ../../usage.rst
 msgid "(\\ ``nnp/coul/long``\\ では必ず指定)  (\\ |rarr|\\ `kspace_modify`_)"
-msgstr "(must be specified for ``nnp/coul/long``\\ ) (\\ |rarr|\\ `kspace_modify`_)"
+msgstr ""
+"(must be specified for ``nnp/coul/long``\\ ) (\\ |rarr|\\ "
+"`kspace_modify`_)"
 
 #: ../../usage.rst:241
 msgid ""
 "いずれかの\\ ``pair_style``\\ "
 "を設定した上でLAMMPSを実行すると、ニューラルネットワーク力場を使った分子動力学計算が行われます。"
 msgstr ""
-"When running LAMMPS with setting either ``pair_style``\\ , molecular dynamics calculations are performed using the neural network force field."
+"When running LAMMPS with setting either ``pair_style``\\ , molecular "
+"dynamics calculations are performed using the neural network force field."
 
 #: ../../usage.rst:254
 msgid "追加機能の使用手順"
@@ -465,7 +522,9 @@ msgstr ""
 
 #: ../../usage.rst:261
 msgid "ニューラルネットワークの学習（手順4）の前に、古典力場のパラメータの最適化を行います。"
-msgstr "Before training the neural network (step 4), the parameters of the classical force field are optimized."
+msgstr ""
+"Before training the neural network (step 4), the parameters of the "
+"classical force field are optimized."
 
 #: ../../usage.rst:263
 msgid "sannp --classical"
@@ -473,11 +532,15 @@ msgstr ""
 
 #: ../../usage.rst:267
 msgid "を実行することで、古典力場のパラメータを含むファイル\\ :file:`sannp.class`\\ が出力されます。"
-msgstr "Executing the above outputs the file :file:`sannp.class`\\ , which contains the parameters of the classical force field."
+msgstr ""
+"Executing the above outputs the file :file:`sannp.class`\\ , which "
+"contains the parameters of the classical force field."
 
 #: ../../usage.rst:269
 msgid "その後、\\ :file:`sannp.prop`\\ で ``withClassical 1`` と設定して、手順4以降を実行します。"
-msgstr "Then, set ``withClassical 1`` in :file:`sannp.prop` and perform step 4 and onward."
+msgstr ""
+"Then, set ``withClassical 1`` in :file:`sannp.prop` and perform step 4 "
+"and onward."
 
 #: ../../usage.rst:274
 msgid "メトロポリス法による構造生成"
@@ -492,8 +555,8 @@ msgid ""
 "メトロポリス法の設定をファイル\\ :file:`sannp.metro`\\ "
 "に用意します。デフォルトの設定を使う場合は、ファイルが無くてもかまいません。"
 msgstr ""
-"Prepare the settings for the Metropolis method in the file :file:`sannp.metro`\\ . "
-"No file is required with the default settings."
+"Prepare the settings for the Metropolis method in the file "
+":file:`sannp.metro`\\ . No file is required with the default settings."
 
 #: ../../usage.rst:285
 msgid "sannp --metro"
@@ -504,16 +567,21 @@ msgid ""
 "を実行すると、モンテカルロ計算が行われ、構造が生成されます。生成された構造はQuantum ESPRESSOの入力ファイルの形で\\ "
 ":file:`dft_geom`\\ フォルダに出力されます。"
 msgstr ""
-"When executing the above, a Monte Carlo calculation is performed and a structure is generated. "
-"The generated structure is output to the :file:`dft_geom` folder in the form of a Quantum ESPRESSO input file."
+"When executing the above, a Monte Carlo calculation is performed and a "
+"structure is generated. The generated structure is output to the "
+":file:`dft_geom` folder in the form of a Quantum ESPRESSO input file."
 
 #: ../../usage.rst:293
 msgid "モンテカルロ計算の過程はmovieフォルダにxyz形式で保存されます。"
-msgstr "The Monte Carlo calculation process is saved in xyz format in the movie folder."
+msgstr ""
+"The Monte Carlo calculation process is saved in xyz format in the movie "
+"folder."
 
 #: ../../usage.rst:295
 msgid "xyzファイルをAdvance/NanoLaboの画面にドラッグ&ドロップすることで動画として可視化ができます。"
-msgstr "Dragging and dropping the xyz file onto the Advance/NanoLabo screen make it visible as a movie."
+msgstr ""
+"Dragging and dropping the xyz file onto the Advance/NanoLabo screen make "
+"it visible as a movie."
 
 #: ../../usage.rst:297
 msgid "続けて"
@@ -529,7 +597,8 @@ msgid ""
 "（Windowsの場合はバッチファイル\\ :file:`dft_run.bat`\\ "
 "）が生成されます。これを使って、再度手順3から実行し、教師データを追加します。"
 msgstr ""
-"to generate the shell script for the calculations in :file:`dft_geom`\\ , :file:`dft_run.sh` (or the batch file :file:`dft_run.bat` on Windows)."
+"to generate the shell script for the calculations in :file:`dft_geom`\\ ,"
+" :file:`dft_run.sh` (or the batch file :file:`dft_run.bat` on Windows)."
 
 #: ../../usage.rst:308
 msgid "In-situテスト"
@@ -538,9 +607,12 @@ msgstr "In-situ Tests"
 #: ../../usage.rst:310
 msgid "ニューラルネットワークの学習（手順4）を行う際に、同時にテストデータについても残差RMSを計算して表示する機能です。学習を進めながら、テストデータに対する性能を随時確認できます。また、教師データのRMSが小さくなっていてもテストデータのRMSが大きくなっている場合には、過学習を起こしていると判断できます。"
 msgstr ""
-"This function calculates and displays the residual RMS for test data at the same time when training a neural network (Step 4). "
-"While learning proceeds, that makes it possible to check the performance against the test data at any time. "
-"In addition, if the RMS of the test data is large even though one of the training data is small, it can be assumed that overlearning has occurred."
+"This function calculates and displays the residual RMS for test data at "
+"the same time when training a neural network (Step 4). While learning "
+"proceeds, that makes it possible to check the performance against the "
+"test data at any time. In addition, if the RMS of the test data is large "
+"even though one of the training data is small, it can be assumed that "
+"overlearning has occurred."
 
 #: ../../usage.rst:312
 msgid ""
@@ -549,9 +621,11 @@ msgid ""
 ":option:`sannp --split` で分割します。テストデータ\\ :file:`sannp.test`\\ が用意できたら、\\ "
 ":file:`sannp.prop`\\ で ``insituTest 1`` と設定して、学習を実行します。"
 msgstr ""
-"First, prepare test data that is separate from the training data. "
-"Either run :option:`sannp --dft` and select \"test\" to generate it, or split the existing training data sannp.train with :option:`sannp --split`\\ . "
-"Once the test data :file:`sannp.test` is ready, set ``insituTest 1`` in :file:`sannp.prop` and run the training."
+"First, prepare test data that is separate from the training data. Either "
+"run :option:`sannp --dft` and select \"test\" to generate it, or split "
+"the existing training data sannp.train with :option:`sannp --split`\\ . "
+"Once the test data :file:`sannp.test` is ready, set ``insituTest 1`` in "
+":file:`sannp.prop` and run the training."
 
 #: ../../usage.rst:317
 msgid "実行オプションリスト"
@@ -562,7 +636,9 @@ msgid ""
 "Quantum ESPRESSOの1つの入力ファイルから、教師データを作成するために多数のランダムな構造の入力ファイル\\ "
 ":file:`*.inp`\\ と実行用スクリプト\\ :file:`dft_run.sh`\\ を生成します。"
 msgstr ""
-"Generates a number of randomly structured input files :file:`*.inp` and a execution script :file:`dft_run.sh` from a single Quantum ESPRESSO input file to generate training data."
+"Generates a number of randomly structured input files :file:`*.inp` and a"
+" execution script :file:`dft_run.sh` from a single Quantum ESPRESSO input"
+" file to generate training data."
 
 #: ../../usage.rst:325
 msgid "fileを指定しない場合、対話形式で入力を求められます。"
@@ -574,11 +650,15 @@ msgstr "Specify the number of parallels of OpenMP parallel (thread parallel)."
 
 #: ../../usage.rst:333
 msgid "ライセンスエラー（同時実行数上限）の場合に、実行できるようになるまで待機します。"
-msgstr "In case of a license error (maximum number of concurrent executions), wait until it becomes possible to execute."
+msgstr ""
+"In case of a license error (maximum number of concurrent executions), "
+"wait until it becomes possible to execute."
 
 #: ../../usage.rst:335
 msgid "このオプションを指定しない場合、ライセンスエラー時にはすぐに終了します。"
-msgstr "Without specifying this option, the program exits immediately in case of a license error."
+msgstr ""
+"Without specifying this option, the program exits immediately in case of "
+"a license error."
 
 #: ../../usage.rst:339
 msgid ""
@@ -586,8 +666,10 @@ msgid ""
 "を元に、エネルギー及び力の計算を行うためのニューラルネットワークの学習を行います。実行が正常に終わると、ニューラルネットワークの情報を含むファイル\\"
 " :file:`sannp.data`\\ 、\\ :file:`sannp.data_e`\\ が出力されます。"
 msgstr ""
-"Trains a neural network to calculate energy and force based on the training data :file:`sannp.train`\\ . "
-"After the execution terminates successfully, files :file:`sannp.data` and :file:`sannp.data_e` containing information on the neural network are output."
+"Trains a neural network to calculate energy and force based on the "
+"training data :file:`sannp.train`\\ . After the execution terminates "
+"successfully, files :file:`sannp.data` and :file:`sannp.data_e` "
+"containing information on the neural network are output."
 
 #: ../../usage.rst:343
 msgid ""
@@ -595,15 +677,19 @@ msgid ""
 "を元に、電荷の計算を行うためのニューラルネットワークの学習を行います。実行が正常に終わると、ニューラルネットワークの情報を含むファイル\\ "
 ":file:`sannp.data_q`\\ が出力されます。"
 msgstr ""
-"Trains a neural network to calculate electric charge based on the training data :file:`sannp.train`\\ . "
-"After the execution terminates successfully, a file :file:`sannp.data_q` containing information on the neural network is output."
+"Trains a neural network to calculate electric charge based on the "
+"training data :file:`sannp.train`\\ . After the execution terminates "
+"successfully, a file :file:`sannp.data_q` containing information on the "
+"neural network is output."
 
 #: ../../usage.rst:347
 msgid ""
 "実行中の学習を中断し、学習途中のニューラルネットワークの情報を\\ :file:`sannp.data`\\ 、\\ "
 ":file:`sannp.data_e`\\ または\\ :file:`sannp.data_q`\\ に出力します。"
 msgstr ""
-"Stop training during execution and output the information of the neural network in the process of training to :file:`sannp.data`\\ , :file:`sannp.data_e` or :file:`sannp.data_q`\\ ."
+"Stop training during execution and output the information of the neural "
+"network in the process of training to :file:`sannp.data`\\ , "
+":file:`sannp.data_e` or :file:`sannp.data_q`\\ ."
 
 #: ../../usage.rst:351
 msgid ""
@@ -612,80 +698,206 @@ msgid ""
 ":file:`sannp.etot`\\ 、原子毎のエネルギー\\ :file:`sannp.eatom`\\ 、原子に働く力\\ "
 ":file:`sannp.force`\\ 、電荷\\ :file:`sannp.charge`\\ がファイルに出力されます。"
 msgstr ""
-"Calculate data for test using the learned neural network. "
-"The test data file :file:`sannp.test` can be created by executing :option:`sannp --dft` and selecting \"test\". "
-"The resultant file contains the total energy :file:`sannp.etot`\\ , the energy :file:`sannp.eatom` per atom, the force :file:`sannp.force` acting on the atom, and the electric charge :file:`sannp.charge`\\ ."
+"Calculate data for test using the learned neural network. The test data "
+"file :file:`sannp.test` can be created by executing :option:`sannp --dft`"
+" and selecting \"test\". The resultant file contains the total energy "
+":file:`sannp.etot`\\ , the energy :file:`sannp.eatom` per atom, the force"
+" :file:`sannp.force` acting on the atom, and the electric charge "
+":file:`sannp.charge`\\ ."
 
-#: ../../usage.rst:355
+#: ../../usage.rst:353
+msgid "原子エネルギーは、最終層のバイアス項を0にして平準化した値が出力されます。"
+msgstr ""
+"Atomic energies in the output are leveled by setting the bias term of the last layer to 0."
+
+#: ../../usage.rst:357
+msgid ":option:`--test` と同様ですが、原子エネルギーの平準化を行わずに出力します。"
+msgstr ""
+"Similar to :option:`--test` , but without leveling of atomic energies in the output."
+
+#: ../../usage.rst:361
 msgid "設定ファイル\\ :file:`sannp.prop`\\ のテンプレートを出力します。既存のファイルは上書きされます。"
-msgstr "Outputs the template for the configuration file :file:`sannp.prop` while existing files will be overwritten."
+msgstr ""
+"Outputs the template for the configuration file :file:`sannp.prop` while "
+"existing files will be overwritten."
 
-#: ../../usage.rst:359
+#: ../../usage.rst:365
 msgid "Behler対称関数の設定ファイル\\ :file:`sannp.behler`\\ のテンプレートを出力します。既存のファイルは上書きされます。"
-msgstr "Outputs the template for the Behler symmetric function configuration file :file:`sannp.behler` while existing files will be overwritten."
+msgstr ""
+"Outputs the template for the Behler symmetric function configuration file"
+" :file:`sannp.behler` while existing files will be overwritten."
 
-#: ../../usage.rst:363
+#: ../../usage.rst:369
 msgid ""
 "学習したニューラルネットワークを使ってテスト用データの計算を行い、結果として原子に働く力を表示します。テスト用データのファイル\\ "
 ":file:`sannp.test`\\ は :option:`sannp --dft` を実行し、\"test\"を選ぶことで作成できます。"
 msgstr ""
-"Calculate the test data using the trained neural network and display the resultant force acting on the atoms. "
-"The test data file :file:`sannp.test` can be created by executing :option:`sannp --dft` and selecting \"test\"."
+"Calculate the test data using the trained neural network and display the "
+"resultant force acting on the atoms. The test data file "
+":file:`sannp.test` can be created by executing :option:`sannp --dft` and "
+"selecting \"test\"."
 
-#: ../../usage.rst:367
+#: ../../usage.rst:373
 msgid "学習したニューラルネットワークから、LAMMPSで利用可能な力場ファイル\\ :file:`ffield.sannp`\\ を出力します。"
-msgstr "Outputs the force field file :file:`field.sannp` available in LAMMPS from the trained neural network."
+msgstr ""
+"Outputs the force field file :file:`field.sannp` available in LAMMPS from"
+" the trained neural network."
 
-#: ../../usage.rst:371
+#: ../../usage.rst:377
 msgid ""
 "教師データ\\ :file:`sannp.train`\\ から割合\\ :math:`r (0 \\le r \\le 1)`\\ "
 "を指定してデータを抽出し、テストデータ\\ :file:`sannp.test`\\ を作ります。同時に、残り\\ :math:`(1 - "
 "r)`\\ のデータを新たな教師データ\\ :file:`sannp.train`\\ として出力します。"
 msgstr ""
-"Extracts data from the training data :file:`sannp.train` with specifying the fraction :math:`r (0 \\le r \\le 1)`\\ , and creates the test data :file:`sannp.test`\\ . "
-"At the same time, the remaining :math:`(1 - r)` data is output as new training data :file:`sannp.train`\\ ."
+"Extracts data from the training data :file:`sannp.train` with specifying "
+"the fraction :math:`r (0 \\le r \\le 1)`\\ , and creates the test data "
+":file:`sannp.test`\\ . At the same time, the remaining :math:`(1 - r)` "
+"data is output as new training data :file:`sannp.train`\\ ."
 
-#: ../../usage.rst:375
+#: ../../usage.rst:381
 msgid ""
 "学習後に実行すると、メトロポリス法を使ったモンテカルロ計算により構造を生成します。MPI並列実行時はレプリカ並列となります。実行後、生成された構造が\\"
 " :file:`dft_geom`\\ フォルダに、各レプリカに対するモンテカルロ計算の動画が\\ :file:`movie`\\ "
 "フォルダにそれぞれ保存されます。続けて :option:`sannp --dft` "
 "を実行することで、生成された構造から教師データを作成するための実行用スクリプト\\ :file:`dft_run.sh`\\ を生成します。"
 msgstr ""
-"Executing after training, it generates a structure by Monte Carlo calculation using the Metropolis method, which is replica-parallel in MPI parallel execution. "
-"After execution, the generated structures are saved in the :file:`dft_geom` folder, and the Monte Carlo simulation movie for each replica is saved in the :file:`movie` folder. "
-"Following that, run :option:`sannp --dft` to generate the execution script :file:`dft_run.sh` to create training data from the generated structures."
+"Executing after training, it generates a structure by Monte Carlo "
+"calculation using the Metropolis method, which is replica-parallel in MPI"
+" parallel execution. After execution, the generated structures are saved "
+"in the :file:`dft_geom` folder, and the Monte Carlo simulation movie for "
+"each replica is saved in the :file:`movie` folder. Following that, run "
+":option:`sannp --dft` to generate the execution script :file:`dft_run.sh`"
+" to create training data from the generated structures."
 
-#: ../../usage.rst:379
+#: ../../usage.rst:385
 msgid ""
 "メトロポリス法の設定ファイル\\ :file:`sannp.metro`\\ "
 "のテンプレートを出力します。既存のファイルは上書きされます。GEOMETRYには教師データ\\ :file:`sannp.train`\\ "
 "中の最初の構造が使われます。"
 msgstr ""
-"Outputs the template for the metropolis method configuration file :file:`sannp.metro` while existing files are overwritten. "
-"GEOMETRY uses the first structure in training data :file:`sannp.train`\\ ."
+"Outputs the template for the metropolis method configuration file "
+":file:`sannp.metro` while existing files are overwritten. GEOMETRY uses "
+"the first structure in training data :file:`sannp.train`\\ ."
 
-#: ../../usage.rst:383
+#: ../../usage.rst:389
 msgid ""
 "教師データ :file:`sannp.train`\\ を元に、\\ |Delta|\\ "
 "-NNPで使用する古典力場のパラメータを最適化します。実行が正常に終わると、パラメータを含むファイル\\ "
 ":file:`sannp.class`\\ が出力されます。"
 msgstr ""
-"Optimizes the parameters of the classical force field used in |Delta|\\ -NNP based on the training data :file:`sannp.train`\\ . "
-"After a successful execution, a file :file:`sannp.class` containing the parameters is output."
+"Optimizes the parameters of the classical force field used in |Delta|\\ "
+"-NNP based on the training data :file:`sannp.train`\\ . After a "
+"successful execution, a file :file:`sannp.class` containing the "
+"parameters is output."
 
-#: ../../usage.rst:388
+#: ../../usage.rst:394
 msgid "単精度版・倍精度版"
 msgstr "Single-precision and Double-precision Versions"
 
-#: ../../usage.rst:390
+#: ../../usage.rst:396
 msgid ""
 "インストール先のbinフォルダーには通常の :file:`sannp` （単精度版）に加え、 :file:`sannp_d` "
 "（倍精度版）が入っています。もし倍精度版を使用されたいという場合は、説明中の :file:`sannp` を :file:`sannp_d` "
 "に読み替えて実行してください。"
 msgstr ""
-"The bin folder in the installation location contains :file:`sannp_d` (double-precision version) in addition to the normal :file:`sannp` (single-precision version). "
-"When using the double-precision version, replace :file:`sannp` with :file:`sannp_d` in the description."
+"The bin folder in the installation location contains :file:`sannp_d` "
+"(double-precision version) in addition to the normal :file:`sannp` "
+"(single-precision version). When using the double-precision version, "
+"replace :file:`sannp` with :file:`sannp_d` in the description."
+
+#: ../../usage.rst:401
+msgid "GPU版"
+msgstr "GPU version"
+
+#: ../../usage.rst:403
+msgid ""
+"グラフィックカード(GPU)が搭載されているマシンの場合、GPUで処理を行うことで計算を高速化することができます。インストール先のbinフォルダーに入っている"
+" :file:`sannp_gpu` （単精度版）、 :file:`sannp_gpu_d` （倍精度版）がGPU版の実行ファイルです。説明中の "
+":file:`sannp` をこれらのファイルに読み替えて実行してください。"
+msgstr ""
+"If your machine has a graphic card (GPU), you can accelerate the calculations by using the GPU for processing. "
+":file:`sannp_gpu` (single-precision version), :file:`sannp_gpu_d` (double-precision version) in the bin folder in the installation location are "
+"GPU version executables. Use them by replacing :file:`sannp` with these files in the description."
+
+#: ../../usage.rst:405
+msgid ""
+"設定ファイル\\ :file:`sannp.prop`\\ "
+"にはGPU版特有の設定項目もありますが、特に変更を加えなくても非GPU版の入力ファイルのままで問題なく実行できます。"
+msgstr ""
+"Although the property file :file:`sannp.prop` has some GPU version-specific items, the input files for non-GPU version can readily be used "
+"without any modification."
+
+#: ../../usage.rst:409 ../../usage/tool.rst:121
+msgid ""
+"GPUドライバを事前にインストールしておく必要があります。CUDA "
+"11.4.4を使用しており、これに対応するドライババージョン470.82.01以上が必要です。"
+msgstr ""
+"GPU driver is necessary to be installed beforehand. As CUDA 11.4.4 is used, "
+"driver version 470.82.01 or later is required."
+
+#: ../../usage.rst:410
+msgid ""
+"元素数が5以上の場合は、重み付き対称関数を使う（\\ :file:`sannp.prop`\\ で\\ ``elemWeight 1``\\ "
+"を設定する）必要があります。"
+msgstr ""
+"In case 5 or more elements are in the system, weighted symmetry function must be used "
+"(set ``elemWeight 1`` in :file:`sannp.prop`\\ )."
+
+#: ../../usage.rst:415
+msgid "MPI並列との併用"
+msgstr "Combination use with MPI parallel"
+
+#: ../../usage.rst:417
+msgid "GPU版をMPI並列で実行すると、GPUをより効率的に使うことができます。各プロセスが独立してGPUとやり取りを行い、例えばあるプロセスがGPUで計算をしている間に、他のプロセスがGPUメモリへのデータ転送を行う、という風に並行して複数のタスクを実行させる仕組みです。"
+msgstr ""
+"By executing GPU version with MPI parallel, the GPU is used more efficiently. The trick is that each process communicates with GPU independently, "
+"and while one process is calculating with GPU, another process transfers data to GPU memory, for example, to execute multiple tasks in parallel."
+
+
+#: ../../usage.rst:419
+msgid ""
+"また、複数のGPUが搭載されているマシンの場合、使用するGPUを指定することができます。\\ :file:`sannp.mpi2gpu`\\ "
+"というファイルを作成し、各行にプロセスをどのデバイスIDのGPUに割り当てるかを書きます。例えば、グラフィックカードが2つ搭載されているマシンで、MPI8並列で実行し、4プロセスをデバイスID0のGPU、4プロセスをデバイスID1のGPUに割り当てる場合は次のようにします。"
+msgstr ""
+"In case your machine has multiple GPUs, you can specify which one(s) to be used. Make a file named :file:`sannp.mpi2gpu` and specify to which GPU the process is allocated by the device ID in each line. "
+"For example, on a machine with 2 graphic cards, to execute with 8 MPI parallel processes, with allocating 4 processes to device ID0 GPU and 4 to device ID1 GPU, you can set it as follows."
+
+#: ../../usage.rst:421
+msgid "sannp.mpi2gpu"
+msgstr ""
+
+#: ../../usage.rst:421
+msgid ""
+"0\n"
+"0\n"
+"0\n"
+"0\n"
+"1\n"
+"1\n"
+"1\n"
+"1"
+msgstr ""
+
+#: ../../usage.rst:433
+msgid ""
+"ファイルの行数とMPI並列数（プロセス数）が一致するようにしてください。デフォルト（\\ :file:`sannp.mpi2gpu`\\ "
+"がない場合）では、全てのプロセスがデバイスID0のGPUに割り当てられます。"
+msgstr ""
+"Be sure to match the number of lines in the file with the number of MPI parallel (processes). "
+"By default (without :file:`sannp.mpi2gpu`\\ ), all processes are allocated to device ID0 GPU."
+
+#: ../../usage.rst:435
+msgid "なお、各GPUに割り当てられたデバイスIDは"
+msgstr ""
+"For your information, you can check the device ID assigned to each GPU by executing following:"
+
+#: ../../usage.rst:437
+msgid "nvidia-smi -L"
+msgstr ""
+
+#: ../../usage.rst:441
+msgid "を実行して確認できます。"
+msgstr "\\ "
 
 #: ../../usage/behler.rst:5
 msgid "sannp.behlerの書式"
@@ -693,7 +905,9 @@ msgstr "Format of sannp.behler"
 
 #: ../../usage/behler.rst:7
 msgid "\\ :file:`sannp.behler`\\ のテンプレートは、 :option:`sannp --behler-temp` で出力できます。"
-msgstr "Executing :option:`sannp --behler-temp` outputs the template of :file:`sannp.behler`\\ ."
+msgstr ""
+"Executing :option:`sannp --behler-temp` outputs the template of "
+":file:`sannp.behler`\\ ."
 
 #: ../../usage/behler.rst:9 ../../usage/metro.rst:9 ../../usage/prop.rst:9
 msgid "行頭が#または!の行はコメントとして扱われます。"
@@ -701,21 +915,24 @@ msgstr "A Line that initial character is # or ! is dealt with as a comment."
 
 #: ../../usage/behler.rst:11
 msgid "Rcut、G2、G3、G4が各セクションの始まりを表し、次の行以降がセクションの内容になります。"
-msgstr "Rcut, G2, G3, and G4 indicate the beginning of each section, and the next and subsequent lines are the contents of the section."
+msgstr ""
+"Rcut, G2, G3, and G4 indicate the beginning of each section, and the next"
+" and subsequent lines are the contents of the section."
 
 #: ../../usage/behler.rst:13
 msgid "G3、G4はいずれか一方のみ使用できます。G3、G4をどちらも指定しない場合は、G2関数のみを対称関数として使います。"
 msgstr ""
-"Only one of G3 or G4 are selectable. "
-"If neither of G3 nor G4 is specified, only G2 function is used as the symmetry function."
+"Only one of G3 or G4 are selectable. If neither of G3 nor G4 is "
+"specified, only G2 function is used as the symmetry function."
 
 #: ../../usage/behler.rst:17
 msgid ""
 "動径成分と角度成分のカットオフ半径 *R*\\ :sub:`c` (\\ |angs|\\ "
 ")を指定します。角度成分を省略した場合、動径成分の値が使われます。"
 msgstr ""
-"Specify the cutoff radius *R*\\ :sub:`c` (\\ |angs|\\ ) of radial and angular components. "
-"If the angular component is omitted, the value of the radial component is used."
+"Specify the cutoff radius *R*\\ :sub:`c` (\\ |angs|\\ ) of radial and "
+"angular components. If the angular component is omitted, the value of the"
+" radial component is used."
 
 #: ../../usage/behler.rst:21
 msgid "G2関数のパラメータを指定します。"
@@ -724,8 +941,8 @@ msgstr "Specify the parameter of G2 function."
 #: ../../usage/behler.rst:23
 msgid "各行にG2関数の |eta| 、 *R*:sub:`s` を指定します。使用するG2関数の数だけ行を追加します。"
 msgstr ""
-"Specify |eta| and *R*:sub:`s` of G2 function in each line. "
-"Add lines by the number of used G2 functions."
+"Specify |eta| and *R*:sub:`s` of G2 function in each line. Add lines by "
+"the number of used G2 functions."
 
 #: ../../usage/behler.rst:25 ../../usage/behler.rst:33
 #: ../../usage/behler.rst:41
@@ -742,8 +959,8 @@ msgid ""
 "を省略した場合は0になります。使用するG3関数の数だけ行を追加します。"
 msgstr ""
 "Specify |eta|, |zeta|, and *R*:sub:`s` of G3 function in each line. "
-"*R*:sub:`s` is 0 if it is omitted. "
-"Add lines by the number of used G3 functions."
+"*R*:sub:`s` is 0 if it is omitted. Add lines by the number of used G3 "
+"functions."
 
 #: ../../usage/behler.rst:37
 msgid "G4関数のパラメータを指定します。"
@@ -755,8 +972,8 @@ msgid ""
 "を省略した場合は0になります。使用するG4関数の数だけ行を追加します。"
 msgstr ""
 "Specify |eta|, |zeta|, and *R*:sub:`s` of G4 function in each line. "
-"*R*:sub:`s` is 0 if it is omitted. "
-"Add lines by the number of used G4 functions."
+"*R*:sub:`s` is 0 if it is omitted. Add lines by the number of used G4 "
+"functions."
 
 #: ../../usage/metro.rst:5
 msgid "sannp.metroの書式"
@@ -764,13 +981,16 @@ msgstr "Format of sannp.metro"
 
 #: ../../usage/metro.rst:7
 msgid "\\ :file:`sannp.metro`\\ のテンプレートは、 :option:`sannp --metro-temp` で出力できます。"
-msgstr "Executing :option:`sannp --metro-temp` outputs the template of :file:`sannp.metro`\\ ."
+msgstr ""
+"Executing :option:`sannp --metro-temp` outputs the template of "
+":file:`sannp.metro`\\ ."
 
 #: ../../usage/metro.rst:11
 msgid "SWAPPING、GEOMETRYが各セクションの始まりを表し、次の行以降がセクションの内容になります。GEOMETRYは必須です。"
 msgstr ""
-"SWAPPING and GEOMETRY indicate the beginning of each section, and the next and subsequent lines are the contents of the section. "
-"GEOMETRY is mandatory."
+"SWAPPING and GEOMETRY indicate the beginning of each section, and the "
+"next and subsequent lines are the contents of the section. GEOMETRY is "
+"mandatory."
 
 #: ../../usage/metro.rst:15
 msgid "モンテカルロ計算のステップ数です。"
@@ -779,38 +999,43 @@ msgstr "Specify the number of steps of Monte Carlo calculations."
 #: ../../usage/metro.rst:19
 msgid "生成する構造数です。この数だけ構造を生成すると、計算が停止します。"
 msgstr ""
-"Specify the number of structures to generate. "
-"Calculation stops after generating as many structures as this value."
+"Specify the number of structures to generate. Calculation stops after "
+"generating as many structures as this value."
 
 #: ../../usage/metro.rst:23
 msgid ""
 "未知の構造のみを出力対象とします。強化学習に使用します。未知構造の判定には、NNP学習時に生成された対象関数の分布(\\ "
 ":file:`sannp.gdist`\\ )を参照し、近い対称関数の値を持つ構造が十分にない場合に未知とします。"
 msgstr ""
-"Allow only unknown structures to be output. "
-"It is used at reinforcement learning. "
-"Referring to the distribution of symmetry functions generated at NNP learning (\\ "
-":file:`sannp.gdist`\\ ), determine unknown in case that there are insufficient number of structures which have close values of symmetry functions."
+"Allow only unknown structures to be output. It is used at reinforcement "
+"learning. Referring to the distribution of symmetry functions generated "
+"at NNP learning (\\ :file:`sannp.gdist`\\ ), determine unknown in case "
+"that there are insufficient number of structures which have close values "
+"of symmetry functions."
 
 #: ../../usage/metro.rst:27
 msgid "メトロポリス法におけるボルツマン因子の温度(K)です。"
-msgstr "Specify the temperature (K) of the Boltzmann factor in the Metropolis method."
+msgstr ""
+"Specify the temperature (K) of the Boltzmann factor in the Metropolis "
+"method."
 
 #: ../../usage/metro.rst:31
 msgid "エネルギーの上限値(eV/atom)です。この値より大きいエネルギーを持つ構造には遷移しません。"
 msgstr ""
-"Specify the upper limit of energy (eV/atom). "
-"Structures with larger energy than this value is not transferred."
+"Specify the upper limit of energy (eV/atom). Structures with larger "
+"energy than this value is not transferred."
 
 #: ../../usage/metro.rst:35
 msgid "エネルギーの下限値(eV/atom)です。この値より小さいエネルギーを持つ構造には遷移しません。"
 msgstr ""
-"Specify the lower limit of energy (eV/atom). "
-"Structures with smaller energy than this value is not transferred."
+"Specify the lower limit of energy (eV/atom). Structures with smaller "
+"energy than this value is not transferred."
 
 #: ../../usage/metro.rst:39
 msgid "メトロポリス法における遷移過程として原子の変位を使う(1)か使わない(0)かの指定です。"
-msgstr "Specify using displacement of atoms (1) or not (0) as transition processes in the Metropolis method."
+msgstr ""
+"Specify using displacement of atoms (1) or not (0) as transition "
+"processes in the Metropolis method."
 
 #: ../../usage/metro.rst:43
 msgid "原子の変位距離(\\ |angs|\\ )です。"
@@ -818,11 +1043,15 @@ msgstr "Specify displacement distance (\\ |angs|\\ ) of an atom."
 
 #: ../../usage/metro.rst:47
 msgid "計算を開始する前に、全ての原子をランダムに変位させる(1)かしない(0)かの指定です。"
-msgstr "Specify randomly displacing all of the atoms (1) or not (0) before initiating calculation."
+msgstr ""
+"Specify randomly displacing all of the atoms (1) or not (0) before "
+"initiating calculation."
 
 #: ../../usage/metro.rst:51
 msgid "計算を開始する前の原子の変位距離(\\ |angs|\\ )です。"
-msgstr "Specify displacement distance (\\ |angs|\\ ) of an atom before initiating calculation."
+msgstr ""
+"Specify displacement distance (\\ |angs|\\ ) of an atom before initiating"
+" calculation."
 
 #: ../../usage/metro.rst:55
 msgid "遷移過程として原子の入れ替えを設定します。"
@@ -831,19 +1060,23 @@ msgstr "Set up replacements of atoms as transition processes."
 #: ../../usage/metro.rst:57
 msgid "1行目に入れ替えペアの数、2行目以降に入れ替えペアを元素名で指定します。元素名としてXを使うと空孔の意味になります。同じ元素名をペアにすることはできません。"
 msgstr ""
-"Specify the number of replacement pairs in the 1st line and replacement pair with element names after the 2nd line. "
-"Using X as an element name express a vacancy. "
-"The same element name is unavailable as a pair."
+"Specify the number of replacement pairs in the 1st line and replacement "
+"pair with element names after the 2nd line. Using X as an element name "
+"express a vacancy. The same element name is unavailable as a pair."
 
 #: ../../usage/metro.rst:59
 msgid "ペアの後に温度(K)を指定することで、そのペアに個別の温度を設定することができます。温度を省略した場合、または0以下の値を指定した場合は、temperatureで指定した温度が使われます。"
 msgstr ""
-"Temperature of a pair can be individually set up by specifying temperature (K) after the pair. "
-"If temperature is omitted or specified as 0 or lower value, the temperature specified with keyword **temperature** is used."
+"Temperature of a pair can be individually set up by specifying "
+"temperature (K) after the pair. If temperature is omitted or specified as"
+" 0 or lower value, the temperature specified with keyword **temperature**"
+" is used."
 
 #: ../../usage/metro.rst:61
 msgid "SWAPPINGセクションがない場合、遷移過程として原子の入れ替えを使いません。"
-msgstr "Without a SWAPPING section, replacements of atoms is not used as transition processes."
+msgstr ""
+"Without a SWAPPING section, replacements of atoms is not used as "
+"transition processes."
 
 #: ../../usage/metro.rst:63 ../../usage/metro.rst:77
 msgid "例"
@@ -866,10 +1099,10 @@ msgid ""
 "1行目に原子数、2～4行目に格子ベクトル、5行目以降に元素名・原子座標(\\ |angs|\\ "
 ")を指定します。元素名としてXを使うと空孔の意味になります。原子座標の後ろにfixと記載すると、その原子は固定されます。"
 msgstr ""
-"Specify the number of atoms in the 1st line, lattice vectors in the 2nd-4th lines, and element names / atomic coordinates (\\ |angs|\\ "
-") in and after the 5th line. "
-"Using X as an element name express a vacancy. "
-"An atom is fixed if fix is put after an atomic coordinate."
+"Specify the number of atoms in the 1st line, lattice vectors in the 2nd-"
+"4th lines, and element names / atomic coordinates (\\ |angs|\\ ) in and "
+"after the 5th line. Using X as an element name express a vacancy. An atom"
+" is fixed if fix is put after an atomic coordinate."
 
 #: ../../usage/metro.rst:77
 msgid ""
@@ -890,9 +1123,11 @@ msgstr "Format of sannp.prop"
 
 #: ../../usage/prop.rst:7
 msgid "\\ :file:`sannp.prop`\\ のテンプレートは、 :option:`sannp --temp` で出力できます。"
-msgstr "Executing :option:`sannp --temp` outputs the template of :file:`sannp.prop`\\ ."
+msgstr ""
+"Executing :option:`sannp --temp` outputs the template of "
+":file:`sannp.prop`\\ ."
 
-#: ../../usage/prop.rst
+#: ../../usage/prop.rst ../../usage/tool.rst
 msgid "デフォルト"
 msgstr "default"
 
@@ -907,16 +1142,18 @@ msgid ""
 "0の場合、最初から学習を実行します。1の場合、ニューラルネットワークの情報を\\ :file:`sannp.data`\\ 、\\ "
 ":file:`sannp.data_e`\\ または\\ :file:`sannp.data_q`\\ から読み込み、学習を再開します。"
 msgstr ""
-"Start learning from the beginning in case of 0. "
-"Read the information of the neural network from :file:`sannp.data`\\ , :file:`sannp.data_e` or :file:`sannp.data_q` to resume the learning in case of 1."
+"Start learning from the beginning in case of 0. Read the information of "
+"the neural network from :file:`sannp.data`\\ , :file:`sannp.data_e` or "
+":file:`sannp.data_q` to resume the learning in case of 1."
 
 #: ../../usage/prop.rst:21
 msgid ""
 "1の場合、学習中の各epochで、テストデータに対するRSMEを計算して出力するin-situテストを行います。0の場合、in-"
 "situテストを行いません。"
 msgstr ""
-"Perform in-situ tests to calculate and output RSME against the test data in each epoch during learning in case of 1. "
-"Not perform in-situ tests in case of 0."
+"Perform in-situ tests to calculate and output RSME against the test data "
+"in each epoch during learning in case of 1. Not perform in-situ tests in "
+"case of 0."
 
 #: ../../usage/prop.rst:27
 msgid "電荷の計算を行う(1)か行わない(0)かの指定です。"
@@ -928,14 +1165,18 @@ msgstr ""
 
 #: ../../usage/prop.rst:33
 msgid "系全体のエネルギーを教師データとするHDNNP法を使う(1)か、各原子に分割したエネルギーを教師データとするSANNP法を使う(0)かの指定です。"
-msgstr "Use HDNNP method (1) of setting the total energy in the system as training data or SANNP method (0) of setting energy divided into each atom as training data."
+msgstr ""
+"Use HDNNP method (1) of setting the total energy in the system as "
+"training data or SANNP method (0) of setting energy divided into each "
+"atom as training data."
 
 #: ../../usage/prop.rst:39
 msgid ""
 "ニューラルネットワーク力場のみを使う(0)か、古典力場とニューラルネットワーク力場を組み合わせた\\ |Delta|\\ "
 "-NNPを使う(1)かの指定です。"
 msgstr ""
-"Use neural network force fields only (0) or |Delta|\\ -NNP (1), which combines classical force fields and neural network force fields."
+"Use neural network force fields only (0) or |Delta|\\ -NNP (1), which "
+"combines classical force fields and neural network force fields."
 
 #: ../../usage/prop.rst:43
 msgid "-1"
@@ -946,8 +1187,9 @@ msgid ""
 "対称関数の正規化をミニバッチ内で行う(1)か、サンプル全体で行う(0)かの指定です。負の値を指定した場合、Behler対称関数ならサンプル全体"
 "、Many-Body対称関数ならミニバッチ内になります。"
 msgstr ""
-"Normalize symmetry functions in each mini batch (1) or in whole sample (0); "
-"in case of a negative value, normalize in whole sample for Behler symmetry function, in mini batch for Many-Body symmetry function."
+"Normalize symmetry functions in each mini batch (1) or in whole sample "
+"(0); in case of a negative value, normalize in whole sample for Behler "
+"symmetry function, in mini batch for Many-Body symmetry function."
 
 #: ../../usage/prop.rst:49
 msgid "10.0"
@@ -956,8 +1198,8 @@ msgstr ""
 #: ../../usage/prop.rst:51
 msgid "教師データに含まれる、力が大きすぎる外れ値を除外するための閾値(eV/\\ |angs|\\ )です。0以下の値を指定した場合、除外を行いません。"
 msgstr ""
-"Specify the threshold (eV/\\ |angs|\\ ) to eliminate outliers with too large force in training data. "
-"Not eliminate in case of 0 or lower."
+"Specify the threshold (eV/\\ |angs|\\ ) to eliminate outliers with too "
+"large force in training data. Not eliminate in case of 0 or lower."
 
 #: ../../usage/prop.rst:55
 msgid "0.5"
@@ -981,20 +1223,23 @@ msgstr ""
 
 #: ../../usage/prop.rst:69
 msgid "対称関数を指定します。behler、chebyshev、many-bodyが指定できます。"
-msgstr "Specify a symmetry function. behler, chebyshev and many-body are available."
+msgstr ""
+"Specify a symmetry function. behler, chebyshev and many-body are "
+"available."
 
 #: ../../usage/prop.rst:75
 msgid "重み付き対称関数を使う(1)か、使わない(0)かの指定です。Behler対称関数、Chebyshev対称関数で使用可能です。"
 msgstr ""
-"Use weighted symmetry functions (1) or not (0). "
-"Available only when Behler symmetry function or Chebyshev symmetry function is used."
+"Use weighted symmetry functions (1) or not (0). Available only when "
+"Behler symmetry function or Chebyshev symmetry function is used."
 
 #: ../../usage/prop.rst:81
 msgid ""
 "カットオフ関数\\ :math:`f_c(R_{ij})`\\ "
 "としてtanhを使った関数を使う(1)か、cosを使った関数を使う(0)かの指定です。"
 msgstr ""
-"Use functions composed of tanh (1) or cos (0) as cutoff functions :math:`f_c(R_{ij})`\\ ."
+"Use functions composed of tanh (1) or cos (0) as cutoff functions "
+":math:`f_c(R_{ij})`\\ ."
 
 #: ../../usage/prop.rst:85
 msgid "100"
@@ -1018,7 +1263,9 @@ msgstr ""
 
 #: ../../usage/prop.rst:99
 msgid "Many-Body対称関数のパラメータ *R*:sub:`inner` (\\ |angs|\\ )です。"
-msgstr "Specify the parameter *R*:sub:`inner` (\\ |angs|\\ ) of Many-Body functions."
+msgstr ""
+"Specify the parameter *R*:sub:`inner` (\\ |angs|\\ ) of Many-Body "
+"functions."
 
 #: ../../usage/prop.rst:103 ../../usage/prop.rst:121 ../../usage/prop.rst:127
 msgid "6.5"
@@ -1026,7 +1273,9 @@ msgstr ""
 
 #: ../../usage/prop.rst:105
 msgid "Many-Body対称関数のパラメータ *R*:sub:`outer` (\\ |angs|\\ )です。"
-msgstr "Specify the parameter *R*:sub:`outer` (\\ |angs|\\ ) of Many-Body functions."
+msgstr ""
+"Specify the parameter *R*:sub:`outer` (\\ |angs|\\ ) of Many-Body "
+"functions."
 
 #: ../../usage/prop.rst:109 ../../usage/prop.rst:115
 msgid "20"
@@ -1042,11 +1291,15 @@ msgstr "Specify the number of angular components of Chebyshev symmetry functions
 
 #: ../../usage/prop.rst:123
 msgid "Chebyshev対称関数の動径成分のカットオフ距離 *R*:sub:`c` (\\ |angs|\\ )を指定します。"
-msgstr "Specify the cutoff radius *R*:sub:`c` (\\ |angs|\\ ) of radial components of Chebyshev symmetry functions."
+msgstr ""
+"Specify the cutoff radius *R*:sub:`c` (\\ |angs|\\ ) of radial components"
+" of Chebyshev symmetry functions."
 
 #: ../../usage/prop.rst:129
 msgid "Chebyshev対称関数の角度成分のカットオフ距離 *R*:sub:`c` (\\ |angs|\\ )を指定します。"
-msgstr "Specify the cutoff radius *R*:sub:`c` (\\ |angs|\\ ) of angular components of Chebyshev symmetry functions."
+msgstr ""
+"Specify the cutoff radius *R*:sub:`c` (\\ |angs|\\ ) of angular "
+"components of Chebyshev symmetry functions."
 
 #: ../../usage/prop.rst:133
 msgid "2"
@@ -1073,7 +1326,8 @@ msgid ""
 "ニューラルネットワークの活性化関数です。asis（使用しない）、sigmoid、tanh、twtanh(twisted "
 "tanh)、eLU、GELUが指定できます。"
 msgstr ""
-"Specify an activation function of a neural network. asis (not use), sigmoid, tanh, twtanh (twisted tanh), eLU, and GELU are available."
+"Specify an activation function of a neural network. asis (not use), "
+"sigmoid, tanh, twtanh (twisted tanh), eLU, and GELU are available."
 
 #: ../../usage/prop.rst:151 ../../usage/prop.rst:163
 msgid "32"
@@ -1084,9 +1338,9 @@ msgid ""
 "学習時の最適化アルゴリズムの指定です。0を指定すると、Adam法を使用します。1以上の値を指定すると、その値を履歴数とするL-"
 "BFGS法を使用します。"
 msgstr ""
-"Specify an optimization algorithm at learning. "
-"In case of 0, use Adam method. "
-"In case of 1 or larger, use L-BFGS method with the specified value as the number of histories."
+"Specify an optimization algorithm at learning. In case of 0, use Adam "
+"method. In case of 1 or larger, use L-BFGS method with the specified "
+"value as the number of histories."
 
 #: ../../usage/prop.rst:157
 msgid "more-thuente"
@@ -1095,18 +1349,20 @@ msgstr ""
 #: ../../usage/prop.rst:159
 msgid "L-BFGS法で使用する直線探索のアルゴリズムです。more-thuente、armijo、wolfe、strong-wolfeが指定できます。"
 msgstr ""
-"Specify a linear search algorithm used in L-BFGS method. "
-"more-thuente, armijo, wolfe, and srong-wolfe are available."
+"Specify a linear search algorithm used in L-BFGS method. more-thuente, "
+"armijo, wolfe, and srong-wolfe are available."
 
 #: ../../usage/prop.rst:165
 msgid "L-BFGS法で使用する直線探索の試行回数の最大値です。"
-msgstr "Specify the maximum value of the number of trials of linear search used in L-BFGS method."
+msgstr ""
+"Specify the maximum value of the number of trials of linear search used "
+"in L-BFGS method."
 
 #: ../../usage/prop.rst:171
 msgid "学習時のミニバッチサイズです。0以下の値を指定した場合、ミニバッチは使用せず、フルバッチ（サンプル全体）で学習を行います。"
 msgstr ""
-"Specify the mini batch size at learning. "
-"In case of 0 or lower, not use mini batches but use a full batch (whole sample) for learning."
+"Specify the mini batch size at learning. In case of 0 or lower, not use "
+"mini batches but use a full batch (whole sample) for learning."
 
 #: ../../usage/prop.rst:175
 msgid "5000"
@@ -1123,8 +1379,8 @@ msgstr ""
 #: ../../usage/prop.rst:183
 msgid "学習中にニューラルネットワークのデータをファイルに保存する間隔を設定します。0以下の値を設定すると終了時のみ保存します。"
 msgstr ""
-"Specify the interval to save data of neural network into a file at learning. "
-"In case of 0 or lower, store only at the end."
+"Specify the interval to save data of neural network into a file at "
+"learning. In case of 0 or lower, store only at the end."
 
 #: ../../usage/prop.rst:187
 msgid "250"
@@ -1133,8 +1389,9 @@ msgstr ""
 #: ../../usage/prop.rst:189
 msgid "学習時の繰り返し回数(epoch)がこの数字より小さいうちはエネルギーのみを使って学習を行います。それ以降はエネルギーと原子に働く力の両方を使って学習を行います。"
 msgstr ""
-"Use only energy for learning until the nuber of repeats (epoch) at learning becomes larger than this number. "
-"After that, use both energy and force for learning."
+"Use only energy for learning until the nuber of repeats (epoch) at "
+"learning becomes larger than this number. After that, use both energy and"
+" force for learning."
 
 #: ../../usage/prop.rst:193
 msgid "500"
@@ -1145,12 +1402,16 @@ msgid ""
 "エネルギーから原子に働く力の誤差を計算する際、繰り返し回数(epoch)がこの数字より小さいうちはDouble "
 "Backward法による近似的な微分法を使います。それ以降は厳密に微分を計算します。"
 msgstr ""
-"Use approximate differentiation with Double Backward method when calculating from energy an error of force acting on an atom until the number of repeats (epoch) becomes larger than this number. "
-"After that, strictly calculate a differentiate."
+"Use approximate differentiation with Double Backward method when "
+"calculating from energy an error of force acting on an atom until the "
+"number of repeats (epoch) becomes larger than this number. After that, "
+"strictly calculate a differentiate."
 
 #: ../../usage/prop.rst:201
 msgid "損失関数のスケール係数を絶対値で設定する(1)か、2乗値で設定する(0)かの指定です。"
-msgstr "Specify the scale factor of a loss function with absolute value (1) or squared value (0)."
+msgstr ""
+"Specify the scale factor of a loss function with absolute value (1) or "
+"squared value (0)."
 
 #: ../../usage/prop.rst:207
 msgid "損失関数の正規化を行う(1)か行わない(0)かの指定です。"
@@ -1158,7 +1419,10 @@ msgstr "Specify whether a loss function should be normalized (1) or not (0)."
 
 #: ../../usage/prop.rst:213
 msgid "エネルギーから原子に働く力の誤差を計算する際、epochsApproxFを使って近似的な微分と厳密な微分を切り替える(0)か、常に近似的な微分法を使う(1)か設定します。"
-msgstr "Select switching approximate and strict differentiation with epochsApproxF (0) or using always approximate one (1) when calculating from energy an error of force acting on an atom."
+msgstr ""
+"Select switching approximate and strict differentiation with "
+"epochsApproxF (0) or using always approximate one (1) when calculating "
+"from energy an error of force acting on an atom."
 
 #: ../../usage/prop.rst:217 ../../usage/prop.rst:229
 msgid "0.01"
@@ -1166,7 +1430,9 @@ msgstr ""
 
 #: ../../usage/prop.rst:219
 msgid "学習が収束したか判定するためのエネルギー残差(RMS)の閾値(eV/atom)です。"
-msgstr "Specify the threshold (eV/atom) of residual (RMS) of energy to determine whether learning has converged or not."
+msgstr ""
+"Specify the threshold (eV/atom) of residual (RMS) of energy to determine "
+"whether learning has converged or not."
 
 #: ../../usage/prop.rst:223
 msgid "0.10"
@@ -1174,11 +1440,15 @@ msgstr ""
 
 #: ../../usage/prop.rst:225
 msgid "学習が収束したか判定するための力の残差(RMS)の閾値(eV/\\ |angs|\\ )です。"
-msgstr "Specify the threshold (eV/\\ |angs|\\ ) of residual (RMS) of force to determine whether learning has converged or not."
+msgstr ""
+"Specify the threshold (eV/\\ |angs|\\ ) of residual (RMS) of force to "
+"determine whether learning has converged or not."
 
 #: ../../usage/prop.rst:231
 msgid "学習が収束したか判定するための電荷の残差(RMS)の閾値(e)です。"
-msgstr "Specify the threshold (e) of residual (RMS) of charge to determine whether learning has converged or not."
+msgstr ""
+"Specify the threshold (e) of residual (RMS) of charge to determine "
+"whether learning has converged or not."
 
 #: ../../usage/prop.rst:235 ../../usage/prop.rst:241 ../../usage/prop.rst:247
 msgid "1.00"
@@ -1186,15 +1456,21 @@ msgstr ""
 
 #: ../../usage/prop.rst:237
 msgid "エネルギーの損失関数のスケール係数(1/eV または 1/eV\\ :sup:`2`\\ )です。"
-msgstr "Specify the scale factor (1/eV or 1/eV\\ :sup:`2`\\ ) of a loss function of energy."
+msgstr ""
+"Specify the scale factor (1/eV or 1/eV\\ :sup:`2`\\ ) of a loss function "
+"of energy."
 
 #: ../../usage/prop.rst:243
 msgid "力の損失関数のスケール係数(\\ |angs|\\ /eV または (\\ |angs|\\ /eV)\\ :sup:`2`\\ )です。"
-msgstr "Specify the scale factor (\\ |angs|\\ /eV or (\\ |angs|\\ /eV)\\ :sup:`2`\\ ) of a loss function of force."
+msgstr ""
+"Specify the scale factor (\\ |angs|\\ /eV or (\\ |angs|\\ /eV)\\ "
+":sup:`2`\\ ) of a loss function of force."
 
 #: ../../usage/prop.rst:249
 msgid "電荷の損失関数のスケール係数(1/e または 1/e\\ :sup:`2`\\ )です。"
-msgstr "Specify the scale factor (1/e or 1/e\\ :sup:`2`\\ ) of a loss function of charge."
+msgstr ""
+"Specify the scale factor (1/e or 1/e\\ :sup:`2`\\ ) of a loss function of"
+" charge."
 
 #: ../../usage/prop.rst:253 ../../usage/prop.rst:259
 msgid "1.0e-4"
@@ -1222,7 +1498,9 @@ msgstr ""
 
 #: ../../usage/prop.rst:273
 msgid "学習時のハイパーパラメータ（Adam法の\\ |beta|\\ :sub:`1`）です。"
-msgstr "Specify the hyper parameter (\\ |beta|\\ :sub:`1` of Adam method) at learning."
+msgstr ""
+"Specify the hyper parameter (\\ |beta|\\ :sub:`1` of Adam method) at "
+"learning."
 
 #: ../../usage/prop.rst:277
 msgid "0.999"
@@ -1230,7 +1508,9 @@ msgstr ""
 
 #: ../../usage/prop.rst:279
 msgid "学習時のハイパーパラメータ（Adam法の\\ |beta|\\ :sub:`2`）です。"
-msgstr "Specify the hyper parameter (\\ |beta|\\ :sub:`2` of Adam method) at learning."
+msgstr ""
+"Specify the hyper parameter (\\ |beta|\\ :sub:`2` of Adam method) at "
+"learning."
 
 #: ../../usage/prop.rst:283
 msgid "64"
@@ -1238,7 +1518,9 @@ msgstr ""
 
 #: ../../usage/prop.rst:285
 msgid "|Delta|\\ -NNPで使用する古典力場を最適化する際の繰り返し回数の上限です。"
-msgstr "Specify the upper limit of the number of repeats when optimizing a classical force field used in |Delta|\\ -NNP."
+msgstr ""
+"Specify the upper limit of the number of repeats when optimizing a "
+"classical force field used in |Delta|\\ -NNP."
 
 #: ../../usage/prop.rst:289
 msgid "-50.0"
@@ -1248,9 +1530,32 @@ msgstr ""
 msgid ""
 "|Delta|\\ "
 "-NNPで使用する古典力場を最適化する際、ここで指定した値(eV)よりも小さいエネルギーが現れにくくなるように、ペナルティ関数を適用して最適化します。"
-msgstr "When optimizing a classical force field used in |Delta|\\ -NNP, penalty functions will be applied so that lower energy than this value (eV) has seldomly appeared."
+msgstr ""
+"When optimizing a classical force field used in |Delta|\\ -NNP, penalty "
+"functions will be applied so that lower energy than this value (eV) has "
+"seldomly appeared."
 
-#: ../../usage/prop.rst:295
+#: ../../usage/prop.rst:295 ../../usage/tool.rst:137
+msgid "256"
+msgstr ""
+
+#: ../../usage/prop.rst:297
+msgid "（GPU版）CUDAのブロック当たりのスレッド数です。上限は1024（CUDAの仕様）です。32（ワープサイズ）の倍数を推奨します。"
+msgstr "(GPU version) Number of threads per block in CUDA. Upper limit is 1024 (specification of CUDA). Multiple of 32 (warp size) is appropriate."
+
+#: ../../usage/prop.rst:299
+msgid "GPU上で生成するスレッドに関する設定で、CPUのスレッド並列（OpenMP並列）とは関係ありません。"
+msgstr "This setting is about the threads on GPU, and not related to thread parallel (OpenMP parallel) on CPU."
+
+#: ../../usage/prop.rst:303
+msgid "512"
+msgstr ""
+
+#: ../../usage/prop.rst:305
+msgid "（GPU版）対称関数をGPUで計算するときに、ここで指定した数の原子ごとにまとめて処理を行います。"
+msgstr "(GPU version) Number of atoms to be processed at a time when calculating the symmetry function using GPU."
+
+#: ../../usage/prop.rst:309
 msgid "以降のファイル内容はコメントとして扱われます。"
 msgstr "Subsequent file contents are treated as comments."
 
@@ -1267,15 +1572,18 @@ msgid ""
 "NanoLabo Toolインストール先の :file:`exec.WIN` にQuantum ESPRESSO( :file:`qe` "
 ")、LAMMPS、MPIの実行ファイルがあります。"
 msgstr ""
-"Executable files of Quantum ESPRESSO( :file:`qe` ), LAMMPS and MPI are stored in :file:`exec.WIN` in the NanoLabo Tool installation location."
+"Executable files of Quantum ESPRESSO( :file:`qe` ), LAMMPS and MPI are "
+"stored in :file:`exec.WIN` in the NanoLabo Tool installation location."
 
 #: ../../usage/tool.rst:14
 msgid "実行ファイルのパスを環境変数 :envvar:`Path` に設定していただくと便利です。一時的に追加するには、以下を実行してください。"
-msgstr "You may want to add the path of the executable files to the environment variable :envvar:`Path` for convenience. "
-"To add them temporarily, execute the following."
+msgstr ""
+"You may want to add the path of the executable files to the environment "
+"variable :envvar:`Path` for convenience. To add them temporarily, execute"
+" the following."
 
-#: ../../usage/tool.rst:16 ../../usage/tool.rst:56 ../../usage/tool.rst:63
-#: ../../usage/tool.rst:79
+#: ../../usage/tool.rst:16 ../../usage/tool.rst:58 ../../usage/tool.rst:65
+#: ../../usage/tool.rst:81
 msgid "デフォルトの場所にインストールした場合の例"
 msgstr "Example in case installed in default location"
 
@@ -1288,129 +1596,262 @@ msgid ""
 msgstr ""
 
 #: ../../usage/tool.rst:21
-msgid "また、永続的に追加するには、システムのプロパティから環境変数 :envvar:`Path` を編集してください。"
-msgstr "Or, to add them permanently, edit the environment variable :envvar:`Path` from the system property."
+msgid ""
+"NanoLabo Toolインストール先の :file:`bin` にある :file:`NanoLabo.bat` を実行すると、 "
+":envvar:`Path` が設定された状態でコマンドプロンプトが起動します。"
+msgstr ""
+"You can launch a command prompt with :envvar:`Path` being set by executing :file:`NanoLabo.bat` in :file:`bin` in NanoLabo Tool installation location."
 
 #: ../../usage/tool.rst:23
-msgid "Quantum ESPRESSOでDFT計算(SCF計算)を実行するには、 :file:`pw.exe` に入力ファイルを渡して実行します。"
-msgstr "To perform DFT (SCF) calculation using Quantum ESPRESSO, execute :file:`pw.exe` with specifying the input file."
+msgid "また、永続的に追加するには、システムのプロパティから環境変数 :envvar:`Path` を編集してください。"
+msgstr ""
+"Or, to add them permanently, edit the environment variable :envvar:`Path`"
+" from the system property."
 
-#: ../../usage/tool.rst:25 ../../usage/tool.rst:86
+#: ../../usage/tool.rst:25
+msgid "Quantum ESPRESSOでDFT計算(SCF計算)を実行するには、 :file:`pw.exe` に入力ファイルを渡して実行します。"
+msgstr ""
+"To perform DFT (SCF) calculation using Quantum ESPRESSO, execute "
+":file:`pw.exe` with specifying the input file."
+
+#: ../../usage/tool.rst:27 ../../usage/tool.rst:88
 msgid "入力ファイル :file:`PW.inp` の実行例"
 msgstr "Example of executing the input file :file:`PW.inp`"
 
-#: ../../usage/tool.rst:25
+#: ../../usage/tool.rst:27
 msgid "pw.exe -in PW.inp 1> PW.out 2> PW.err"
 msgstr ""
 
-#: ../../usage/tool.rst:30 ../../usage/tool.rst:42 ../../usage/tool.rst:91
-#: ../../usage/tool.rst:103
+#: ../../usage/tool.rst:32 ../../usage/tool.rst:44 ../../usage/tool.rst:93
+#: ../../usage/tool.rst:105
 msgid "並列実行例"
 msgstr "Example of parallel execution"
 
-#: ../../usage/tool.rst:30
+#: ../../usage/tool.rst:32
 msgid "mpiexec.exe -n 4 pw.exe -in PW.inp 1> PW.out 2> PW.err"
 msgstr ""
 
-#: ../../usage/tool.rst:35
+#: ../../usage/tool.rst:37
 msgid "LAMMPSで分子動力学計算を実行するには、 :file:`lammps.exe` に入力ファイルを渡して実行します。"
-msgstr "To perform molecular dynamics calculation using LAMMPS, execute :file:`lammps.exe` with specifying the input file."
+msgstr ""
+"To perform molecular dynamics calculation using LAMMPS, execute "
+":file:`lammps.exe` with specifying the input file."
 
-#: ../../usage/tool.rst:37 ../../usage/tool.rst:98
+#: ../../usage/tool.rst:39 ../../usage/tool.rst:100
 msgid "入力ファイル :file:`lammps.in` の実行例"
 msgstr "Example of executing the input file :file:`lammps.in`"
 
-#: ../../usage/tool.rst:37
+#: ../../usage/tool.rst:39
 msgid "lammps.exe < lammps.in 1> lammps.out 2> lammps.err"
 msgstr ""
 
-#: ../../usage/tool.rst:42
+#: ../../usage/tool.rst:44
 msgid "mpiexec.exe -n 4 lammps.exe < lammps.in 1> lammps.out 2> lammps.err"
 msgstr ""
 
-#: ../../usage/tool.rst:50
+#: ../../usage/tool.rst:52
 msgid "Linux版"
 msgstr "Linux version"
 
-#: ../../usage/tool.rst:52
+#: ../../usage/tool.rst:54
 msgid ""
 "NanoLabo Toolインストール先の :file:`exec.LINUX` にQuantum ESPRESSO( "
 ":file:`qe_parallel` )、LAMMPS( :file:`lammps_parallel` )、MPIの実行ファイルがあります。"
 msgstr ""
-"Executable files of Quantum ESPRESSO( :file:`qe` ), LAMMPS and MPI are stored in :file:`exec.LINUX` in the NanoLabo Tool installation location."
+"Executable files of Quantum ESPRESSO( :file:`qe` ), LAMMPS and MPI are "
+"stored in :file:`exec.LINUX` in the NanoLabo Tool installation location."
 
-#: ../../usage/tool.rst:54
+#: ../../usage/tool.rst:56
 msgid ""
 "実行時には :file:`mpi/lib` にある動的ライブラリが必要ですので、環境変数 :envvar:`LD_LIBRARY_PATH` "
 "に設定するため、以下を実行してください。"
 msgstr ""
-"As the dynamic library in :file:`mpi/lib` are required for execution, execute the following to set it to the "
-"environment variable :envvar:`LD_LIBRARY_PATH`\\ ."
+"As the dynamic library in :file:`mpi/lib` are required for execution, "
+"execute the following to set it to the environment variable "
+":envvar:`LD_LIBRARY_PATH`\\ ."
 
-#: ../../usage/tool.rst:56
+#: ../../usage/tool.rst:58
 msgid ""
 "export "
 "LD_LIBRARY_PATH=/opt/AdvanceSoft/NanoLabo/exec.LINUX/mpi/lib:$LD_LIBRARY_PATH"
 msgstr ""
 
-#: ../../usage/tool.rst:61
+#: ../../usage/tool.rst:63
 msgid ""
 "また、環境変数 :envvar:`PATH`、およびOpen MPIの環境変数 :envvar:`OPAL_PREFIX` "
 "の設定が必要ですので、以下を実行してください。"
 msgstr ""
-"Also execute the following as the environment variable :envvar:`PATH` and Open MPI's environment variable :envvar:`OPAL_PREFIX` "
-"are necessary to be set."
+"Also execute the following as the environment variable :envvar:`PATH` and"
+" Open MPI's environment variable :envvar:`OPAL_PREFIX` are necessary to "
+"be set."
 
-#: ../../usage/tool.rst:63
+#: ../../usage/tool.rst:65
 msgid ""
 "export PATH=/opt/AdvanceSoft/NanoLabo/exec.LINUX/mpi/bin:$PATH\n"
 "export OPAL_PREFIX=/opt/AdvanceSoft/NanoLabo/exec.LINUX/mpi"
 msgstr ""
 
-#: ../../usage/tool.rst:71
-msgid "MPIの実行ファイル・ライブラリはNeuralMD本体のインストーラー、NanoLabo Toolインストーラーの両方に含まれています。"
-msgstr "MPI executable files / library are included both in the main NeuralMD installer and the NanoLabo Tool installer."
-
 #: ../../usage/tool.rst:73
-msgid "前者はインストール先の :file:`mpi` 、後者はインストール先の :file:`exec.LINUX/mpi` に配置されます。"
-msgstr "They are stored in :file:`mpi` in the installation destination by the former, "
-"and in :file:`exec.LINUX/mpi` by the latter."
+msgid "MPIの実行ファイル・ライブラリはNeuralMD本体のインストーラー、NanoLabo Toolインストーラーの両方に含まれています。"
+msgstr ""
+"MPI executable files / library are included both in the main NeuralMD "
+"installer and the NanoLabo Tool installer."
 
 #: ../../usage/tool.rst:75
-msgid "内容は同じものですので、環境変数にはどちらか片方のみを設定していただければ大丈夫です。"
-msgstr "You have to set just one of them to the environment variable as the content are the same."
+msgid "前者はインストール先の :file:`mpi` 、後者はインストール先の :file:`exec.LINUX/mpi` に配置されます。"
+msgstr ""
+"They are stored in :file:`mpi` in the installation destination by the "
+"former, and in :file:`exec.LINUX/mpi` by the latter."
 
 #: ../../usage/tool.rst:77
-msgid "計算エンジンの実行ファイルのパスも環境変数 :envvar:`PATH` に設定していただくと便利です。"
-msgstr "In addition, you may want to add the path of the executable files to the environment variable :envvar:`Path` for convenience."
+msgid "内容は同じものですので、環境変数にはどちらか片方のみを設定していただければ大丈夫です。"
+msgstr ""
+"You have to set just one of them to the environment variable as the "
+"content are the same."
 
 #: ../../usage/tool.rst:79
+msgid "計算エンジンの実行ファイルのパスも環境変数 :envvar:`PATH` に設定していただくと便利です。"
+msgstr ""
+"In addition, you may want to add the path of the executable files to the "
+"environment variable :envvar:`Path` for convenience."
+
+#: ../../usage/tool.rst:81
 msgid ""
 "export "
 "PATH=/opt/AdvanceSoft/NanoLabo/exec.LINUX/qe_parallel:/opt/AdvanceSoft/NanoLabo/exec.LINUX/lammps_parallel:$PATH"
 msgstr ""
 
-#: ../../usage/tool.rst:84
-msgid "Quantum ESPRESSOでDFT計算(SCF計算)を実行するには、 :file:`pw.x` に入力ファイルを渡して実行します。"
-msgstr "To perform DFT (SCF) calculation using Quantum ESPRESSO, execute :file:`pw.x` with specifying the input file."
-
 #: ../../usage/tool.rst:86
+msgid "Quantum ESPRESSOでDFT計算(SCF計算)を実行するには、 :file:`pw.x` に入力ファイルを渡して実行します。"
+msgstr ""
+"To perform DFT (SCF) calculation using Quantum ESPRESSO, execute "
+":file:`pw.x` with specifying the input file."
+
+#: ../../usage/tool.rst:88
 msgid "pw.x -in PW.inp 1> PW.out 2> PW.err"
 msgstr ""
 
-#: ../../usage/tool.rst:91
+#: ../../usage/tool.rst:93
 msgid "mpirun -n 4 pw.x -in PW.inp 1> PW.out 2> PW.err"
 msgstr ""
 
-#: ../../usage/tool.rst:96
-msgid "LAMMPSで分子動力学計算を実行するには、 :file:`lammps` に入力ファイルを渡して実行します。"
-msgstr "To perform molecular dynamics calculation using LAMMPS, execute :file:`lammps` with specifying the input file."
-
 #: ../../usage/tool.rst:98
+msgid "LAMMPSで分子動力学計算を実行するには、 :file:`lammps` に入力ファイルを渡して実行します。"
+msgstr ""
+"To perform molecular dynamics calculation using LAMMPS, execute "
+":file:`lammps` with specifying the input file."
+
+#: ../../usage/tool.rst:100
 msgid "lammps < lammps.in 1> lammps.out 2> lammps.err"
 msgstr ""
 
-#: ../../usage/tool.rst:103
+#: ../../usage/tool.rst:105
 msgid "mpirun -n 4 lammps < lammps.in 1> lammps.out 2> lammps.err"
 msgstr ""
 
+#: ../../usage/tool.rst:113
+msgid "GPU版LAMMPS"
+msgstr "GPU version of LAMMPS"
+
+#: ../../usage/tool.rst:115
+msgid ""
+"LAMMPSの実行ファイルとして :file:`lammps` の代わりに :file:`lammps_gpu` "
+"を使うことで、ニューラルネットワーク力場の計算がGPUを使って行われるようになります。"
+msgstr ""
+"Use :file:`lammps_gpu` instead of :file:`lammps` as the LAMMPS executable to perform calculations of neural network potential using GPU."
+
+#: ../../usage/tool.rst:117
+msgid ""
+"入力ファイルは非GPU版と同じ内容で問題なく実行できますが、設定ファイル\\ :file:`gpu.conf`\\ "
+"を作成することでGPU版特有の設定ができます。"
+msgstr ""
+"While the same input files for non-GPU version can be used, you can configure GPU version-specific settings by "
+"creating the configuration file :file:`gpu.conf`\\ ."
+
+#: ../../usage/tool.rst:122
+msgid "元素数が5以上の場合は、力場作成時に重み付き対称関数を使っている必要があります。"
+msgstr ""
+"In case 5 or more elements are in the system, weighted symmetry function must be used "
+"when you generate the force field."
+
+#: ../../usage/tool.rst:127
+msgid "gpu.confの書式"
+msgstr "Format of gpu.conf"
+
+#: ../../usage/tool.rst:129
+msgid "threads、atomBlock、mpi2Deviceが各セクションの始まりを表し、次の行以降がセクションの内容になります。"
+msgstr ""
+"threads, atomBlock and mpi2Device indicate the beginning of each section, and the next"
+" and subsequent lines are the contents of the section."
+
+#: ../../usage/tool.rst:131
+msgid "各セクションは省略可能です。省略した場合、デフォルト値が使われます。"
+msgstr ""
+"Each section can be omitted. If omitted, default value is used."
+
+#: ../../usage/tool.rst:133
+msgid "各セクションの前後には空行またはコメント行（行頭を!か#にする）を入れられます。"
+msgstr ""
+"You can insert empty lines or comment lines (begin with ! or #) before and/or after each section."
+
+#: ../../usage/tool.rst:139
+msgid "CUDAのブロック当たりのスレッド数です。上限は1024（CUDAの仕様）です。32（ワープサイズ）の倍数を推奨します。"
+msgstr ""
+"Number of threads per block in CUDA. Upper limit is 1024 (specification of CUDA). Multiple of 32 (warp size) is appropriate."
+
+#: ../../usage/tool.rst:143
+msgid "4096"
+msgstr ""
+
+#: ../../usage/tool.rst:145
+msgid "対称関数をGPUで計算するときに、ここで指定した数の原子ごとにまとめて処理を行います。"
+msgstr ""
+"Number of atoms to be processed at a time when calculating the symmetry function using GPU."
+
+#: ../../usage/tool.rst:151
+msgid "複数のGPUが搭載されているマシンの場合、使用するGPUをデバイスIDで指定します。MPI並列で使用する場合は、各行にプロセスをどのデバイスIDのGPUに割り当てるかを書きます。行数とMPI並列数（プロセス数）が一致するようにしてください。"
+msgstr ""
+"In case of using a machine with multiple GPUs, specify the GPU(s) to be used by the device ID. "
+
+#: ../../usage/tool.rst:153
+msgid "各GPUに割り当てられたデバイスIDは ``nvidia-smi -L`` を実行して確認できます。"
+msgstr ""
+"You can check the device ID assigned to each GPU by executing ``nvidia-smi -L`` ."
+
+#: ../../usage/tool.rst:155
+msgid "gpu.confの例"
+msgstr "gpu.conf example"
+
+#: ../../usage/tool.rst:155
+msgid ""
+"threads\n"
+"512\n"
+"atomBlock\n"
+"1024\n"
+"#グラフィックカードが2つ搭載されているマシンで、MPI8並列で実行し、\n"
+"#4プロセスをデバイスID0のGPU、4プロセスをデバイスID1のGPUに割り当てる場合\n"
+"mpi2Device\n"
+"0\n"
+"0\n"
+"0\n"
+"0\n"
+"1\n"
+"1\n"
+"1\n"
+"1"
+msgstr ""
+"threads\n"
+"512\n"
+"atomBlock\n"
+"1024\n"
+"#On a machine with 2 graphic cards, to execute with 8 MPI parallel processes, \n"
+"#with allocating 4 processes to device ID0 GPU and 4 to device ID1 GPU\n"
+"mpi2Device\n"
+"0\n"
+"0\n"
+"0\n"
+"0\n"
+"1\n"
+"1\n"
+"1\n"
+"1"

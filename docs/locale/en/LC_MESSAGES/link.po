@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Advance/NeuralMD \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-28 22:39+0900\n"
+"POT-Creation-Date: 2022-09-30 16:36+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -87,11 +87,11 @@ msgid "擬ポテンシャル"
 msgstr "Pseudo potential"
 
 #: ../../link.rst:35
-msgid "https://www.quantum-espresso.org/pseudopotentials/"
+msgid "http://pseudopotentials.quantum-espresso.org/"
 msgstr ""
 
 #: ../../link.rst:37
-msgid "https://www.quantum-espresso.org/pseudopotentials/original-qe-pp-library/"
+msgid "http://pseudopotentials.quantum-espresso.org/legacy_tables/"
 msgstr ""
 
 #: ../../link.rst:40

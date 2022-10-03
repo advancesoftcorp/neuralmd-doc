@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Advance/NeuralMD \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-15 17:58+0900\n"
+"POT-Creation-Date: 2022-09-30 16:36+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -153,8 +153,8 @@ msgstr ""
 #: ../../slhmc.rst:79
 msgid "自己学習ハイブリッドモンテカルロ法の設定ファイルです。以下を参照して編集してください。"
 msgstr ""
-"Configuration file for the self-learning Hybrid Monte Carlo method. Please refer to the "
-"following for the settings."
+"Configuration file for the self-learning Hybrid Monte Carlo method. "
+"Please refer to the following for the settings."
 
 #: ../../slhmc.rst:86
 msgid ""
@@ -257,7 +257,20 @@ msgstr ""
 "``initialTrain 0`` in :file:`slhmc.prop`\\ , place the force field file "
 ":file:`ffield.sannp` in the same folder, and then run slhmc."
 
-#: ../../slhmc.rst:122
+#: ../../slhmc.rst:124
+msgid ""
+"GPUを使って計算を実行するには、\\ :file:`sannp.sh`\\ で\\ :file:`sannp`\\ を\\ "
+":file:`sannp_gpu`\\ に、\\ :file:`lammps.sh`\\ で\\ :file:`lammps`\\ を\\ "
+":file:`lammps_gpu`\\ にそれぞれ書き換えます。また、GPU用設定ファイル\\ :ref:`sannp.mpi2gpu "
+"<usage_gpu_mpi>`\\ 、\\ :ref:`gpu.conf <toollammpsgpuconf>`\\ "
+"を同じフォルダに配置すると、それぞれ実行時に設定内容が適用されます。"
+msgstr ""
+"To perform calculations using GPU, replace :file:`sannp` with :file:`sannp_gpu` in :file:`sannp.sh` , "
+"and :file:`lammps` with :file:`lammps_gpu` in :file:`lammps.sh` . Also, if you place configuration files for GPU "
+":ref:`sannp.mpi2gpu <usage_gpu_mpi>` , :ref:`gpu.conf <toollammpsgpuconf>` in the same folder, the settings are applied "
+"at execution."
+
+#: ../../slhmc.rst:126
 msgid ""
 "``slhmc --stop`` を実行すると、力場の作成を中断します。\\ :file:`slhmc.prop`\\ で ``restart "
 "1`` と設定し、 ``slhmc --calc`` を再度実行することで、中断したところから力場の作成を再開します。"
@@ -266,7 +279,7 @@ msgstr ""
 "``restart 1`` in :file:`slhmc.prop` and running ``slhmc --calc`` again "
 "resumes the force field creation from where it is interrupted."
 
-#: ../../slhmc.rst:124
+#: ../../slhmc.rst:128
 msgid ""
 "実行中には、力場更新のタイミングで力場ファイル\\ :file:`ffield.sannp`\\ が随時出力されます。また、構造の履歴が\\ "
 ":file:`slhmc.xyz`\\ として出力されます。"
@@ -275,20 +288,24 @@ msgstr ""
 "progressively when the force field is updated. Also, the history of the "
 "structure is output as :file:`slhmc.xyz`\\ ."
 
-#: ../../slhmc.rst:126
-msgid ""
-"各計算エンジンの入出力ファイルは、サブフォルダ\\ :file:`slhmc_dat`\\ "
-"に保存されます。もしエラー等で計算が進まない場合は、\\ :file:`slhmc_dat`\\ 内の出力ファイルを確認してください。"
+#: ../../slhmc.rst:130
+msgid "各計算エンジンの入出力ファイルは、サブフォルダ\\ :file:`slhmc_dat`\\ に保存されます。"
 msgstr ""
 "The input/output files for each calculation engine are stored in the "
-"subfolder :file:`slhmc_dat`\\ .Check output files in :file:`slhmc_dat` if"
-" the calculation does not proceed due to errors, etc."
+"subfolder :file:`slhmc_dat`\\ ."
 
-#: ../../slhmc.rst:135
+#: ../../slhmc.rst:132
+msgid ""
+"もしエラー等で計算が進まない場合は、\\ :file:`slhmc.CRASH`\\ "
+"に当該の計算エンジンの入出力ファイルの内容が保存されますので、確認してください。"
+msgstr ""
+"If the calculation does not proceed due to errors etc, check the file :file:`slhmc.CRASH` in which input/output files of relevant calculation engine are saved."
+
+#: ../../slhmc.rst:141
 msgid "手順3　LAMMPSによる分子動力学計算"
 msgstr "Step 3. Molecular Dynamics Calculations with LAMMPS"
 
-#: ../../slhmc.rst:137
+#: ../../slhmc.rst:143
 msgid ""
 "出力された力場ファイル\\ :file:`ffield.sannp`\\ "
 "を使って、LAMMPSによる分子動力学計算を実行します。基本の使用方法のページにある\\ :ref:`usage_step5`\\ "
@@ -298,7 +315,7 @@ msgstr ""
 "field file :file:`field.sannp`\\ . See :ref:`usage_step5` on the Basic "
 "Usage page."
 
-#: ../../slhmc.rst:141
+#: ../../slhmc.rst:147
 msgid ""
 "複数の異なる初期構造を使って自己学習ハイブリッドモンテカルロ法で力場を作りたい場合、まずはそれぞれの初期構造に対して手順2までを実行します。その後、得られた教師データ\\"
 " :file:`sannp.train`\\ を結合し、これを使って改めてニューラルネットワークの学習（基本の使用方法のページにある\\ "
@@ -364,7 +381,7 @@ msgstr ""
 "Specify using previous training data in the folder (0) or making another "
 "one from the beginning (1) when executing new (setting as ``restart 0``)."
 
-#: ../../slhmc/prop.rst:31 ../../slhmc/prop.rst:37 ../../slhmc/prop.rst:97
+#: ../../slhmc/prop.rst:31 ../../slhmc/prop.rst:37
 msgid "0"
 msgstr ""
 
@@ -409,7 +426,7 @@ msgstr ""
 "calculations using a neural network force field."
 
 #: ../../slhmc/prop.rst:61
-msgid "0.50"
+msgid "0.20"
 msgstr ""
 
 #: ../../slhmc/prop.rst:63
@@ -419,8 +436,8 @@ msgstr ""
 "neural network force field if the accept rate becomes larger than this "
 "value."
 
-#: ../../slhmc/prop.rst:67 ../../slhmc/prop.rst:85
-msgid "0.25"
+#: ../../slhmc/prop.rst:67
+msgid "0.05"
 msgstr ""
 
 #: ../../slhmc/prop.rst:69
@@ -450,6 +467,10 @@ msgstr ""
 "Specify the number of relearning a neural network. The execution is "
 "terminated after the specified number of relearning."
 
+#: ../../slhmc/prop.rst:85
+msgid "0.25"
+msgstr ""
+
 #: ../../slhmc/prop.rst:87
 msgid "ニューラルネットワーク力場を使った分子動力学計算、および初期ニューラルネットワーク力場を作るための第一原理分子動力学計算の時間刻み(fs)です。"
 msgstr ""
@@ -465,15 +486,27 @@ msgstr ""
 msgid "メトロポリス計算で使う温度(K)です。"
 msgstr "Specify the temperature (K) for Metropolis calculations."
 
-#: ../../slhmc/prop.rst:99
-msgid "NPHによるセルの変形を行う(1)か行わない(0)かの設定です。"
-msgstr "Specify whether a cell is to be deformed by NPH (1) or not (0)."
+#: ../../slhmc/prop.rst:97
+msgid "none"
+msgstr ""
 
-#: ../../slhmc/prop.rst:103
+#: ../../slhmc/prop.rst:99
+msgid "セルの変形に関する設定です。noneを指定すると変形を行いません。aprioriを指定すると、ニューラルネットワーク力場による分子動力学計算の前にNPHによるセルの変形を行います。asNptMCを指定すると、ニューラルネットワーク力場による分子動力学計算をNPHで行います。"
+msgstr ""
+"Setting about cell deformation. Specify \"none\" to not perform deformation. "
+"Specify \"apriori\" to deform cell using NPH before the molecular dynamics calculation by neural network force field. "
+"Specify \"asNptMC\" to perform NPH molecular dynamics calculation by neural network force field."
+
+#: ../../slhmc/prop.rst:101
+msgid "``aprioriNPH 1`` を指定した場合、 ``nphMethod apriori`` と同じ設定になります。"
+msgstr ""
+"Specifying ``aprioriNPH 1`` is the same setting as ``nphMethod apriori`` ."
+
+#: ../../slhmc/prop.rst:105
 msgid "tri"
 msgstr ""
 
-#: ../../slhmc/prop.rst:105
+#: ../../slhmc/prop.rst:107
 msgid "セルの変形を行う場合の制約条件の設定です。各軸が垂直のまま等方的に変形する(iso)、各軸が垂直のまま異方的な変形を許す(aniso)、各軸が垂直でなくなる変形を許す(tri)が設定できます。"
 msgstr ""
 "Specify the constraints for cell deformation. Isotropic deformation while"
@@ -481,23 +514,23 @@ msgstr ""
 "while each axis remains perpendicular (aniso), and allowing deformation "
 "where each axis is no longer perpendicular (tri) are selectable."
 
-#: ../../slhmc/prop.rst:109
+#: ../../slhmc/prop.rst:111
 msgid "1.0"
 msgstr ""
 
-#: ../../slhmc/prop.rst:111
+#: ../../slhmc/prop.rst:113
 msgid "セルの変形を行う場合の圧力(bar)です。"
 msgstr "Specify the pressure (bar) while cell deformation."
 
-#: ../../slhmc/prop.rst:115
+#: ../../slhmc/prop.rst:117
 msgid "250.0"
 msgstr ""
 
-#: ../../slhmc/prop.rst:117
+#: ../../slhmc/prop.rst:119
 msgid "セルの変形を行う場合の圧力のダンピング時定数(fs)です。"
 msgstr "Specify the pressure damping time constant (fs) for cell deformation."
 
-#: ../../slhmc/prop.rst:121
+#: ../../slhmc/prop.rst:123
 msgid "以降のファイル内容はコメントとして扱われます。"
 msgstr "Subsequent file contents are treated as comments."
 
