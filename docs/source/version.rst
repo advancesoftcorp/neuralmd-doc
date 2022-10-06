@@ -7,7 +7,7 @@
 2022/9/30 バージョン1.7
  - 「Pro版」をリリース
  - [Pro] GPU対応版を追加（新規実行ファイルとして同梱）
- - in-situテスト計算時に最終層のバイアス項の有無を指定する機能を追加（\ ``--test-with-bias``\ 、\ ``--test-without-bias``\ ）
+ - テスト計算時に最終層のバイアス項の有無を指定する機能を追加（\ ``--test-with-bias``\ 、\ ``--test-without-bias``\ ）
  - SLHMC: NNP-MDステップ数の自動調整範囲のデフォルト値を調整（\ ``nnpStepUp``\ 、\ ``nnpStepDown``\ ）
  - SLHMC: NNP-MDをNPHで実行する設定を追加
  - SLHMC: エラー終了時にCRASHログを出力する機能を追加
