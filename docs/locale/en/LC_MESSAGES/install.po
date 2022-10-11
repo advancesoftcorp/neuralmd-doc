@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Advance/NeuralMD \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-30 16:36+0900\n"
+"POT-Creation-Date: 2022-10-11 16:04+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -173,7 +173,7 @@ msgstr ""
 ":envvar:`LD_LIBRARY_PATH`\\ ."
 
 #: ../../install/linux.rst:84 ../../install/linux.rst:91
-#: ../../install/linux.rst:107 ../../install/linux.rst:139
+#: ../../install/linux.rst:107 ../../install/linux.rst:162
 #: ../../install/windows.rst:54
 msgid "デフォルトの場所にインストールした場合の例"
 msgstr "Example of installing in the default location"
@@ -229,61 +229,117 @@ msgid "ライセンスの設定"
 msgstr "License Configuration"
 
 #: ../../install/linux.rst:117
-msgid ""
-"ライセンス登録後、原則5営業日以内にライセンスファイル( :file:`neumd.lic` )をお送りします。インストール先の "
-":file:`license` ディレクトリにコピーしてください。"
+msgid "ライセンス登録後、原則5営業日以内にライセンスファイル( :file:`neumd.lic` )をお送りします。"
 msgstr ""
-"A license file ( :file:`neumd.lic` ) will be sent within 5 business days "
-"after license registration in principle. Copy the file to the "
-":file:`license` folder of the installation location."
+"A license file will be sent within 5 business days after license "
+"registration in principle."
 
 #: ../../install/linux.rst:119
+msgid "本ソフトウェアを使用する際には、ライセンスサーバー（ライセンス認証用のプログラム）を起動しておく必要があります。"
+msgstr ""
+"The computer to use the product is not fixed, but the computer launching "
+"the license server (a program for license authentication) is fixed."
+
+#: ../../install/linux.rst:124
+msgid "Windowsから操作する場合"
+msgstr "Operate from Windows"
+
+#: ../../install/linux.rst:126
 msgid ""
-"本ソフトウェアを使用する際には、ライセンスサーバー（ライセンス認証用のプログラム）を起動しておく必要があります。ライセンスサーバーの実行ファイルはインストール先の"
-" :file:`license/lmgrd` "
+"弊社ツール\\ `remoteLicense <https://remotelicense-"
+"doc.readthedocs.io/ja/latest/>`_\\ "
+"を使うことで、Windows上から簡単にLinuxマシン上のライセンスサーバーを起動することができます。"
+msgstr ""
+"You can use our tool `remoteLicense <https://remotelicense-doc.readthedocs.io/en/latest/>`_ "
+"to easily launch the license server on Linux machine from Windows."
+
+#: ../../install/linux.rst:128 ../../install/purchase.rst:110
+msgid ""
+"手順の概要を以下に示します。詳細は\\ `マニュアル <https://remotelicense-"
+"doc.readthedocs.io/ja/latest/>`_\\ を参照してください。"
+msgstr ""
+"Below is the outline of procedure. Please refer to the `manual <https://remotelicense-"
+"doc.readthedocs.io/ja/latest/>`_ for detail."
+
+#: ../../install/linux.rst:130 ../../install/purchase.rst:112
+msgid ""
+"`remoteLicenseインストーラー <https://github.com/advancesoftcorp/remotelicense-"
+"doc/releases/download/v1.0/install_remotelicense_windows_v1.0.exe>`_\\ "
+"をインストールし、起動します。"
+msgstr ""
+"Install the `remoteLicense installer <https://github.com/advancesoftcorp/remotelicense-"
+"doc/releases/download/v1.0/install_remotelicense_windows_v1.0.exe>`_ and launch it."
+
+#: ../../install/linux.rst:131 ../../install/purchase.rst:113
+msgid ":guilabel:`Host` タブでLinuxマシンへの接続情報を設定します。"
+msgstr "On :guilabel:`Host` tab, enter the connection information to the Linux machine."
+
+#: ../../install/linux.rst:132
+msgid ":guilabel:`License` タブでライセンスファイルを選択します。"
+msgstr "On :guilabel:`License` tab, choose the license file."
+
+#: ../../install/linux.rst:133
+msgid ""
+":guilabel:`Start` タブの :guilabel:`Execute \\`lmgrd'` "
+"ボタンをクリックすると、ライセンスサーバーが起動します。"
+msgstr "On :guilabel:`Start` tab, click :guilabel:`Execute \\`lmgrd'` button "
+"to launch the license server."
+
+#: ../../install/linux.rst:138
+msgid "Linux上で操作する場合"
+msgstr "Operate on Linux"
+
+#: ../../install/linux.rst:140
+msgid "ライセンスファイル( :file:`neumd.lic` )をインストール先の :file:`license` ディレクトリにコピーしてください。"
+msgstr ""
+"Copy the license file ( :file:`neumd.lic` ) to the "
+":file:`license` folder of the installation location."
+
+#: ../../install/linux.rst:142
+msgid ""
+"ライセンスサーバーの実行ファイルはインストール先の :file:`license/lmgrd` "
 "です。端末（ターミナル）でインストール先のディレクトリに移動したら、以下のコマンド例のように起動します。"
 msgstr ""
-"When using this software, the license server (a program for license "
-"authentication) must be launched. The license server executable is "
+"The license server executable is "
 ":file:`license/lmgrd` in the installation location. After changing the "
 "current working directory to the installation location in the terminal, "
 "start it as shown in the following command example."
 
-#: ../../install/linux.rst:121
+#: ../../install/linux.rst:144
 msgid "$ license/lmgrd -c license/neumd.lic -l license/lmgrd.log"
 msgstr ""
 
-#: ../../install/linux.rst:125
+#: ../../install/linux.rst:148
 msgid "ライセンスサーバーの状態を表示するには、インストール先の :file:`license/lmstat` を使用します。"
 msgstr ""
 "To display the license server status, use :file:`license/lmstat` in the "
 "installation location."
 
-#: ../../install/linux.rst:127
+#: ../../install/linux.rst:150
 msgid "$ license/lmstat -a -c license/neumd.lic"
 msgstr ""
 
-#: ../../install/linux.rst:131
+#: ../../install/linux.rst:154
 msgid "また、ライセンスサーバーを終了するには、インストール先の :file:`license/lmdown` を使用します。"
 msgstr ""
 "Also, to terminate the license server, use :file:`license/lmdown` in the "
 "installation location."
 
-#: ../../install/linux.rst:133
+#: ../../install/linux.rst:156
 msgid "$ license/lmdown -c license/neumd.lic"
 msgstr ""
 
-#: ../../install/linux.rst:137
+#: ../../install/linux.rst:160
 msgid "実行時には、環境変数 :envvar:`ADVANCED_LICENSE_FILE` にライセンスファイルのパスが設定されている必要があります。"
 msgstr ""
 "At runtime, the environment variable :envvar:`ADVANCED_LICENSE_FILE` must"
 " be set to the path of the license file."
 
-#: ../../install/linux.rst:139
+#: ../../install/linux.rst:162
 msgid "export ADVANCED_LICENSE_FILE=/opt/AdvanceSoft/NeuralMD/license/neumd.lic"
 msgstr ""
 
-#: ../../install/linux.rst:144 ../../install/windows.rst:59
+#: ../../install/linux.rst:167 ../../install/windows.rst:59
 msgid ""
 "ニューラルネットワークの学習を行う機能（\\ :option:`sannp --train`\\ 、\\ :option:`sannp "
 "--train-charge`\\ 、\\ :option:`sannp --classical`\\ "
@@ -298,7 +354,7 @@ msgstr ""
 "license to run by itself, but does require a license to call the sannp to"
 " train a neural network."
 
-#: ../../install/linux.rst:146
+#: ../../install/linux.rst:169
 msgid ""
 "また、本製品とは別の弊社製品をお使いの場合、ライセンスファイルを結合することで、1つのライセンスサーバーで複数製品のライセンス認証が可能です。\\"
 " :file:`.lic`\\ ファイルを単純に結合した後、重複する行（ ``SERVER`` 、 ``VENDOR`` 、 "
@@ -311,15 +367,15 @@ msgstr ""
 "``SERVER`` , ``VENDOR`` , ``USE_SERVER`` ) to create a single license "
 "file. Then use that file to launch the license server."
 
-#: ../../install/linux.rst:152
+#: ../../install/linux.rst:175
 msgid "ファイル1.lic"
 msgstr "file1.lic"
 
-#: ../../install/linux.rst:152
+#: ../../install/linux.rst:175
 msgid "ファイル2.lic"
 msgstr "file2.lic"
 
-#: ../../install/linux.rst:152
+#: ../../install/linux.rst:175
 msgid "結合ファイル.lic"
 msgstr "combined file.lic"
 
@@ -347,28 +403,28 @@ msgstr ""
 msgid "|featblue|"
 msgstr ""
 
-#: ../../install/linux.rst:176 ../../install/windows.rst:64
+#: ../../install/linux.rst:199 ../../install/windows.rst:64
 msgid "更新・アップグレード"
 msgstr "Update/Upgrade"
 
-#: ../../install/linux.rst:178 ../../install/windows.rst:66
+#: ../../install/linux.rst:201 ../../install/windows.rst:66
 msgid "トライアル版から製品版にアップグレードされる場合、新たにインストールを行う必要はありません。ライセンスファイルのみ置き換えてください。"
 msgstr ""
 "When upgrading from the trial version to the full version, another "
 "installation is not required. Only the license file needs to be replaced."
 
-#: ../../install/linux.rst:180 ../../install/windows.rst:68
+#: ../../install/linux.rst:203 ../../install/windows.rst:68
 msgid "新しいバージョンにアップデートされる場合、上書きインストールを行うことも可能ではありますが、あらかじめ以前のバージョンをアンインストールするか、インストール先を変更していただくことをお勧めします。"
 msgstr ""
 "When updating to a new version, it is possible to perform an overwrite "
 "install. However, uninstalling the previous version or changing the "
 "installation location beforehand is recommended."
 
-#: ../../install/linux.rst:185 ../../install/windows.rst:73
+#: ../../install/linux.rst:208 ../../install/windows.rst:73
 msgid "アンインストール"
 msgstr "Uninstallation"
 
-#: ../../install/linux.rst:187
+#: ../../install/linux.rst:210
 msgid ""
 "端末（ターミナル）でインストール先の :file:`_NeuralMD_installation` ディレクトリにある :file:`Change"
 " NeuralMD Installation` を起動します。"
@@ -377,23 +433,23 @@ msgstr ""
 ":file:`_NeuralMD_installation` directory in the installation location in "
 "the terminal."
 
-#: ../../install/linux.rst:189
+#: ../../install/linux.rst:212
 msgid ""
 "$ AdvanceSoft/NeuralMD/_NeuralMD_installation/Change\\ NeuralMD\\ "
 "Installation"
 msgstr ""
 
-#: ../../install/linux.rst:193 ../../install/windows.rst:81
+#: ../../install/linux.rst:216 ../../install/windows.rst:81
 msgid "画面の指示に従い、アンインストールを行ってください。"
 msgstr "Follow the on-screen instructions to uninstall the software."
 
-#: ../../install/linux.rst:195 ../../install/windows.rst:83
+#: ../../install/linux.rst:218 ../../install/windows.rst:83
 msgid "Advance/NeuralMDのアンインストールが終わったら、同様にAdvance/NanoLabo Toolをアンインストールしてください。"
 msgstr ""
 "After uninstalling Advance/NeuralMD, uninstall Advance/NanoLabo Tool in "
 "the same manner."
 
-#: ../../install/linux.rst:199 ../../install/windows.rst:87
+#: ../../install/linux.rst:222 ../../install/windows.rst:87
 msgid "アンインストールの際に、インストール先のライセンスファイルは削除されずに残ります。また、インストールログファイルが残る場合があります。その際はお手数ですが手動で削除してください。"
 msgstr ""
 "During uninstallation, the license file in the installation location will"
@@ -601,6 +657,27 @@ msgid "support.nano@advancesoft.jp 宛にご希望のライセンス種別と併
 msgstr ""
 "Please send the e-mail to support.nano@advancesoft.jp along with desired "
 "license type."
+
+#: ../../install/purchase.rst:106
+msgid "Windows上からLinuxマシンのHost IDを取得"
+msgstr "Acquiring Host ID of Linux machine from Windows"
+
+#: ../../install/purchase.rst:108
+msgid ""
+"弊社ツール\\ `remoteLicense <https://remotelicense-"
+"doc.readthedocs.io/ja/latest/>`_\\ を使うことで、Windows上から簡単にLinuxマシンのHost "
+"IDを取得できます。"
+msgstr ""
+"You can use our tool `remoteLicense <https://remotelicense-"
+"doc.readthedocs.io/ja/latest/>`_ to easily acquire the Host ID of Linux machine from Windows."
+
+#: ../../install/purchase.rst:114
+msgid ""
+":guilabel:`Get Host ID` をクリックし、Host IDが取得できたら :guilabel:`Send Mail of "
+"License Request` をクリックします。"
+msgstr ""
+"Click :guilabel:`Get Host ID` and once Host ID is acquired click :guilabel:`Send Mail of "
+"License Request` ."
 
 #: ../../install/windows.rst:5
 msgid "インストール手順 (Windows)"

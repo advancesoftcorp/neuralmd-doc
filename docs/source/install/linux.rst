@@ -114,9 +114,32 @@ NeuralMDの実行ファイルのパスも環境変数 :envvar:`PATH` に設定�
 ライセンスの設定
 =============================
 
-ライセンス登録後、原則5営業日以内にライセンスファイル( :file:`neumd.lic` )をお送りします。インストール先の :file:`license` ディレクトリにコピーしてください。
+ライセンス登録後、原則5営業日以内にライセンスファイル( :file:`neumd.lic` )をお送りします。
 
-本ソフトウェアを使用する際には、ライセンスサーバー（ライセンス認証用のプログラム）を起動しておく必要があります。ライセンスサーバーの実行ファイルはインストール先の :file:`license/lmgrd` です。端末（ターミナル）でインストール先のディレクトリに移動したら、以下のコマンド例のように起動します。
+本ソフトウェアを使用する際には、ライセンスサーバー（ライセンス認証用のプログラム）を起動しておく必要があります。
+
+.. _launchlfromwin:
+
+Windowsから操作する場合
+-----------------------
+
+弊社ツール\ `remoteLicense <https://remotelicense-doc.readthedocs.io/ja/latest/>`_\ を使うことで、Windows上から簡単にLinuxマシン上のライセンスサーバーを起動することができます。
+
+手順の概要を以下に示します。詳細は\ `マニュアル <https://remotelicense-doc.readthedocs.io/ja/latest/>`_\ を参照してください。
+
+#. `remoteLicenseインストーラー <https://github.com/advancesoftcorp/remotelicense-doc/releases/download/v1.0/install_remotelicense_windows_v1.0.exe>`_\ をインストールし、起動します。
+#. :guilabel:`Host` タブでLinuxマシンへの接続情報を設定します。
+#. :guilabel:`License` タブでライセンスファイルを選択します。
+#. :guilabel:`Start` タブの :guilabel:`Execute \`lmgrd'` ボタンをクリックすると、ライセンスサーバーが起動します。
+
+.. _launchlonlinux:
+
+Linux上で操作する場合
+-----------------------
+
+ライセンスファイル( :file:`neumd.lic` )をインストール先の :file:`license` ディレクトリにコピーしてください。
+
+ライセンスサーバーの実行ファイルはインストール先の :file:`license/lmgrd` です。端末（ターミナル）でインストール先のディレクトリに移動したら、以下のコマンド例のように起動します。
 
 .. code-block:: console
 
