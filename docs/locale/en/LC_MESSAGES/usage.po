@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Advance/NeuralMD \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-30 16:36+0900\n"
+"POT-Creation-Date: 2022-11-22 16:10+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -645,22 +645,6 @@ msgid "fileを指定しない場合、対話形式で入力を求められます
 msgstr "If no file is specified, input must be interactive."
 
 #: ../../usage.rst:329
-msgid "OpenMP並列（スレッド並列）の並列数を指定します。"
-msgstr "Specify the number of parallels of OpenMP parallel (thread parallel)."
-
-#: ../../usage.rst:333
-msgid "ライセンスエラー（同時実行数上限）の場合に、実行できるようになるまで待機します。"
-msgstr ""
-"In case of a license error (maximum number of concurrent executions), "
-"wait until it becomes possible to execute."
-
-#: ../../usage.rst:335
-msgid "このオプションを指定しない場合、ライセンスエラー時にはすぐに終了します。"
-msgstr ""
-"Without specifying this option, the program exits immediately in case of "
-"a license error."
-
-#: ../../usage.rst:339
 msgid ""
 "教師データ\\ :file:`sannp.train`\\ "
 "を元に、エネルギー及び力の計算を行うためのニューラルネットワークの学習を行います。実行が正常に終わると、ニューラルネットワークの情報を含むファイル\\"
@@ -671,7 +655,7 @@ msgstr ""
 "successfully, files :file:`sannp.data` and :file:`sannp.data_e` "
 "containing information on the neural network are output."
 
-#: ../../usage.rst:343
+#: ../../usage.rst:333
 msgid ""
 "教師データ\\ :file:`sannp.train`\\ "
 "を元に、電荷の計算を行うためのニューラルネットワークの学習を行います。実行が正常に終わると、ニューラルネットワークの情報を含むファイル\\ "
@@ -682,7 +666,7 @@ msgstr ""
 "successfully, a file :file:`sannp.data_q` containing information on the "
 "neural network is output."
 
-#: ../../usage.rst:347
+#: ../../usage.rst:337
 msgid ""
 "実行中の学習を中断し、学習途中のニューラルネットワークの情報を\\ :file:`sannp.data`\\ 、\\ "
 ":file:`sannp.data_e`\\ または\\ :file:`sannp.data_q`\\ に出力します。"
@@ -691,7 +675,7 @@ msgstr ""
 "network in the process of training to :file:`sannp.data`\\ , "
 ":file:`sannp.data_e` or :file:`sannp.data_q`\\ ."
 
-#: ../../usage.rst:351
+#: ../../usage.rst:341
 msgid ""
 "学習したニューラルネットワークを使ってテスト用データの計算を行います。テスト用データのファイル\\ :file:`sannp.test`\\ は "
 ":option:`sannp --dft` を実行し、\"test\"を選ぶことで作成できます。結果として全エネルギー\\ "
@@ -705,29 +689,35 @@ msgstr ""
 " :file:`sannp.force` acting on the atom, and the electric charge "
 ":file:`sannp.charge`\\ ."
 
-#: ../../usage.rst:353
+#: ../../usage.rst:343 ../../usage.rst:363
+msgid "MPI並列計算には非対応です。"
+msgstr "MPI parallel calculation is not supported."
+
+#: ../../usage.rst:345
 msgid "原子エネルギーは、最終層のバイアス項を0にして平準化した値が出力されます。"
 msgstr ""
-"Atomic energies in the output are leveled by setting the bias term of the last layer to 0."
+"Atomic energies in the output are leveled by setting the bias term of the"
+" last layer to 0."
 
-#: ../../usage.rst:357
+#: ../../usage.rst:349
 msgid ":option:`--test` と同様ですが、原子エネルギーの平準化を行わずに出力します。"
 msgstr ""
-"Similar to :option:`--test` , but without leveling of atomic energies in the output."
+"Similar to :option:`--test` , but without leveling of atomic energies in "
+"the output."
 
-#: ../../usage.rst:361
+#: ../../usage.rst:353
 msgid "設定ファイル\\ :file:`sannp.prop`\\ のテンプレートを出力します。既存のファイルは上書きされます。"
 msgstr ""
 "Outputs the template for the configuration file :file:`sannp.prop` while "
 "existing files will be overwritten."
 
-#: ../../usage.rst:365
+#: ../../usage.rst:357
 msgid "Behler対称関数の設定ファイル\\ :file:`sannp.behler`\\ のテンプレートを出力します。既存のファイルは上書きされます。"
 msgstr ""
 "Outputs the template for the Behler symmetric function configuration file"
 " :file:`sannp.behler` while existing files will be overwritten."
 
-#: ../../usage.rst:369
+#: ../../usage.rst:361
 msgid ""
 "学習したニューラルネットワークを使ってテスト用データの計算を行い、結果として原子に働く力を表示します。テスト用データのファイル\\ "
 ":file:`sannp.test`\\ は :option:`sannp --dft` を実行し、\"test\"を選ぶことで作成できます。"
@@ -737,13 +727,13 @@ msgstr ""
 ":file:`sannp.test` can be created by executing :option:`sannp --dft` and "
 "selecting \"test\"."
 
-#: ../../usage.rst:373
+#: ../../usage.rst:367
 msgid "学習したニューラルネットワークから、LAMMPSで利用可能な力場ファイル\\ :file:`ffield.sannp`\\ を出力します。"
 msgstr ""
 "Outputs the force field file :file:`field.sannp` available in LAMMPS from"
 " the trained neural network."
 
-#: ../../usage.rst:377
+#: ../../usage.rst:371
 msgid ""
 "教師データ\\ :file:`sannp.train`\\ から割合\\ :math:`r (0 \\le r \\le 1)`\\ "
 "を指定してデータを抽出し、テストデータ\\ :file:`sannp.test`\\ を作ります。同時に、残り\\ :math:`(1 - "
@@ -754,7 +744,7 @@ msgstr ""
 ":file:`sannp.test`\\ . At the same time, the remaining :math:`(1 - r)` "
 "data is output as new training data :file:`sannp.train`\\ ."
 
-#: ../../usage.rst:381
+#: ../../usage.rst:375
 msgid ""
 "学習後に実行すると、メトロポリス法を使ったモンテカルロ計算により構造を生成します。MPI並列実行時はレプリカ並列となります。実行後、生成された構造が\\"
 " :file:`dft_geom`\\ フォルダに、各レプリカに対するモンテカルロ計算の動画が\\ :file:`movie`\\ "
@@ -769,7 +759,7 @@ msgstr ""
 ":option:`sannp --dft` to generate the execution script :file:`dft_run.sh`"
 " to create training data from the generated structures."
 
-#: ../../usage.rst:385
+#: ../../usage.rst:379
 msgid ""
 "メトロポリス法の設定ファイル\\ :file:`sannp.metro`\\ "
 "のテンプレートを出力します。既存のファイルは上書きされます。GEOMETRYには教師データ\\ :file:`sannp.train`\\ "
@@ -779,7 +769,7 @@ msgstr ""
 ":file:`sannp.metro` while existing files are overwritten. GEOMETRY uses "
 "the first structure in training data :file:`sannp.train`\\ ."
 
-#: ../../usage.rst:389
+#: ../../usage.rst:383
 msgid ""
 "教師データ :file:`sannp.train`\\ を元に、\\ |Delta|\\ "
 "-NNPで使用する古典力場のパラメータを最適化します。実行が正常に終わると、パラメータを含むファイル\\ "
@@ -790,11 +780,31 @@ msgstr ""
 "successful execution, a file :file:`sannp.class` containing the "
 "parameters is output."
 
+#: ../../usage.rst:388
+msgid "他のオプションに追加して指定するオプション"
+msgstr "Option to use with other options"
+
 #: ../../usage.rst:394
+msgid "OpenMP並列（スレッド並列）の並列数を指定します。"
+msgstr "Specify the number of parallels of OpenMP parallel (thread parallel)."
+
+#: ../../usage.rst:398
+msgid "ライセンスエラー（同時実行数上限）の場合に、実行できるようになるまで待機します。"
+msgstr ""
+"In case of a license error (maximum number of concurrent executions), "
+"wait until it becomes possible to execute."
+
+#: ../../usage.rst:400
+msgid "このオプションを指定しない場合、ライセンスエラー時にはすぐに終了します。"
+msgstr ""
+"Without specifying this option, the program exits immediately in case of "
+"a license error."
+
+#: ../../usage.rst:405
 msgid "単精度版・倍精度版"
 msgstr "Single-precision and Double-precision Versions"
 
-#: ../../usage.rst:396
+#: ../../usage.rst:407
 msgid ""
 "インストール先のbinフォルダーには通常の :file:`sannp` （単精度版）に加え、 :file:`sannp_d` "
 "（倍精度版）が入っています。もし倍精度版を使用されたいという場合は、説明中の :file:`sannp` を :file:`sannp_d` "
@@ -805,68 +815,77 @@ msgstr ""
 "(single-precision version). When using the double-precision version, "
 "replace :file:`sannp` with :file:`sannp_d` in the description."
 
-#: ../../usage.rst:401
+#: ../../usage.rst:412
 msgid "GPU版"
 msgstr "GPU version"
 
-#: ../../usage.rst:403
+#: ../../usage.rst:414
 msgid ""
 "グラフィックカード(GPU)が搭載されているマシンの場合、GPUで処理を行うことで計算を高速化することができます。インストール先のbinフォルダーに入っている"
 " :file:`sannp_gpu` （単精度版）、 :file:`sannp_gpu_d` （倍精度版）がGPU版の実行ファイルです。説明中の "
 ":file:`sannp` をこれらのファイルに読み替えて実行してください。"
 msgstr ""
-"If your machine has a graphic card (GPU), you can accelerate the calculations by using the GPU for processing. "
-":file:`sannp_gpu` (single-precision version), :file:`sannp_gpu_d` (double-precision version) in the bin folder in the installation location are "
-"GPU version executables. Use them by replacing :file:`sannp` with these files in the description."
+"If your machine has a graphic card (GPU), you can accelerate the "
+"calculations by using the GPU for processing. :file:`sannp_gpu` (single-"
+"precision version), :file:`sannp_gpu_d` (double-precision version) in the"
+" bin folder in the installation location are GPU version executables. Use"
+" them by replacing :file:`sannp` with these files in the description."
 
-#: ../../usage.rst:405
+#: ../../usage.rst:416
 msgid ""
 "設定ファイル\\ :file:`sannp.prop`\\ "
 "にはGPU版特有の設定項目もありますが、特に変更を加えなくても非GPU版の入力ファイルのままで問題なく実行できます。"
 msgstr ""
-"Although the property file :file:`sannp.prop` has some GPU version-specific items, the input files for non-GPU version can readily be used "
+"Although the property file :file:`sannp.prop` has some GPU version-"
+"specific items, the input files for non-GPU version can readily be used "
 "without any modification."
 
-#: ../../usage.rst:409 ../../usage/tool.rst:121
+#: ../../usage.rst:420 ../../usage/tool.rst:121
 msgid ""
 "GPUドライバを事前にインストールしておく必要があります。CUDA "
 "11.4.4を使用しており、これに対応するドライババージョン470.82.01以上が必要です。"
 msgstr ""
-"GPU driver is necessary to be installed beforehand. As CUDA 11.4.4 is used, "
-"driver version 470.82.01 or later is required."
+"GPU driver is necessary to be installed beforehand. As CUDA 11.4.4 is "
+"used, driver version 470.82.01 or later is required."
 
-#: ../../usage.rst:410
+#: ../../usage.rst:421
 msgid ""
 "元素数が5以上の場合は、重み付き対称関数を使う（\\ :file:`sannp.prop`\\ で\\ ``elemWeight 1``\\ "
 "を設定する）必要があります。"
 msgstr ""
-"In case 5 or more elements are in the system, weighted symmetry function must be used "
-"(set ``elemWeight 1`` in :file:`sannp.prop`\\ )."
+"In case 5 or more elements are in the system, weighted symmetry function "
+"must be used (set ``elemWeight 1`` in :file:`sannp.prop`\\ )."
 
-#: ../../usage.rst:415
+#: ../../usage.rst:426
 msgid "MPI並列との併用"
 msgstr "Combination use with MPI parallel"
 
-#: ../../usage.rst:417
+#: ../../usage.rst:428
 msgid "GPU版をMPI並列で実行すると、GPUをより効率的に使うことができます。各プロセスが独立してGPUとやり取りを行い、例えばあるプロセスがGPUで計算をしている間に、他のプロセスがGPUメモリへのデータ転送を行う、という風に並行して複数のタスクを実行させる仕組みです。"
 msgstr ""
-"By executing GPU version with MPI parallel, the GPU is used more efficiently. The trick is that each process communicates with GPU independently, "
-"and while one process is calculating with GPU, another process transfers data to GPU memory, for example, to execute multiple tasks in parallel."
+"By executing GPU version with MPI parallel, the GPU is used more "
+"efficiently. The trick is that each process communicates with GPU "
+"independently, and while one process is calculating with GPU, another "
+"process transfers data to GPU memory, for example, to execute multiple "
+"tasks in parallel."
 
-
-#: ../../usage.rst:419
+#: ../../usage.rst:430
 msgid ""
 "また、複数のGPUが搭載されているマシンの場合、使用するGPUを指定することができます。\\ :file:`sannp.mpi2gpu`\\ "
 "というファイルを作成し、各行にプロセスをどのデバイスIDのGPUに割り当てるかを書きます。例えば、グラフィックカードが2つ搭載されているマシンで、MPI8並列で実行し、4プロセスをデバイスID0のGPU、4プロセスをデバイスID1のGPUに割り当てる場合は次のようにします。"
 msgstr ""
-"In case your machine has multiple GPUs, you can specify which one(s) to be used. Make a file named :file:`sannp.mpi2gpu` and specify to which GPU the process is allocated by the device ID in each line. "
-"For example, on a machine with 2 graphic cards, to execute with 8 MPI parallel processes, with allocating 4 processes to device ID0 GPU and 4 to device ID1 GPU, you can set it as follows."
+"In case your machine has multiple GPUs, you can specify which one(s) to "
+"be used. Make a file named :file:`sannp.mpi2gpu` and specify to which GPU"
+" the process is allocated by the device ID in each line. For example, on "
+"a machine with 2 graphic cards, to execute with 8 MPI parallel processes,"
+" with allocating 4 processes to device ID0 GPU and 4 to device ID1 GPU, "
+"you can set it as follows."
 
-#: ../../usage.rst:421
+#: ../../usage.rst:432
 msgid "sannp.mpi2gpu"
 msgstr ""
 
-#: ../../usage.rst:421
+#: ../../usage.rst:432
 msgid ""
 "0\n"
 "0\n"
@@ -878,24 +897,26 @@ msgid ""
 "1"
 msgstr ""
 
-#: ../../usage.rst:433
+#: ../../usage.rst:444
 msgid ""
 "ファイルの行数とMPI並列数（プロセス数）が一致するようにしてください。デフォルト（\\ :file:`sannp.mpi2gpu`\\ "
 "がない場合）では、全てのプロセスがデバイスID0のGPUに割り当てられます。"
 msgstr ""
-"Be sure to match the number of lines in the file with the number of MPI parallel (processes). "
-"By default (without :file:`sannp.mpi2gpu`\\ ), all processes are allocated to device ID0 GPU."
+"Be sure to match the number of lines in the file with the number of MPI "
+"parallel (processes). By default (without :file:`sannp.mpi2gpu`\\ ), all "
+"processes are allocated to device ID0 GPU."
 
-#: ../../usage.rst:435
+#: ../../usage.rst:446
 msgid "なお、各GPUに割り当てられたデバイスIDは"
 msgstr ""
-"For your information, you can check the device ID assigned to each GPU by executing following:"
+"For your information, you can check the device ID assigned to each GPU by"
+" executing following:"
 
-#: ../../usage.rst:437
+#: ../../usage.rst:448
 msgid "nvidia-smi -L"
 msgstr ""
 
-#: ../../usage.rst:441
+#: ../../usage.rst:452
 msgid "を実行して確認できます。"
 msgstr "\\ "
 
@@ -1541,11 +1562,15 @@ msgstr ""
 
 #: ../../usage/prop.rst:297
 msgid "（GPU版）CUDAのブロック当たりのスレッド数です。上限は1024（CUDAの仕様）です。32（ワープサイズ）の倍数を推奨します。"
-msgstr "(GPU version) Number of threads per block in CUDA. Upper limit is 1024 (specification of CUDA). Multiple of 32 (warp size) is appropriate."
+msgstr ""
+"(GPU version) Number of threads per block in CUDA. Upper limit is 1024 "
+"(specification of CUDA). Multiple of 32 (warp size) is appropriate."
 
 #: ../../usage/prop.rst:299
 msgid "GPU上で生成するスレッドに関する設定で、CPUのスレッド並列（OpenMP並列）とは関係ありません。"
-msgstr "This setting is about the threads on GPU, and not related to thread parallel (OpenMP parallel) on CPU."
+msgstr ""
+"This setting is about the threads on GPU, and not related to thread "
+"parallel (OpenMP parallel) on CPU."
 
 #: ../../usage/prop.rst:303
 msgid "512"
@@ -1553,7 +1578,9 @@ msgstr ""
 
 #: ../../usage/prop.rst:305
 msgid "（GPU版）対称関数をGPUで計算するときに、ここで指定した数の原子ごとにまとめて処理を行います。"
-msgstr "(GPU version) Number of atoms to be processed at a time when calculating the symmetry function using GPU."
+msgstr ""
+"(GPU version) Number of atoms to be processed at a time when calculating "
+"the symmetry function using GPU."
 
 #: ../../usage/prop.rst:309
 msgid "以降のファイル内容はコメントとして扱われます。"
@@ -1600,7 +1627,9 @@ msgid ""
 "NanoLabo Toolインストール先の :file:`bin` にある :file:`NanoLabo.bat` を実行すると、 "
 ":envvar:`Path` が設定された状態でコマンドプロンプトが起動します。"
 msgstr ""
-"You can launch a command prompt with :envvar:`Path` being set by executing :file:`NanoLabo.bat` in :file:`bin` in NanoLabo Tool installation location."
+"You can launch a command prompt with :envvar:`Path` being set by "
+"executing :file:`NanoLabo.bat` in :file:`bin` in NanoLabo Tool "
+"installation location."
 
 #: ../../usage/tool.rst:23
 msgid "また、永続的に追加するには、システムのプロパティから環境変数 :envvar:`Path` を編集してください。"
@@ -1758,21 +1787,23 @@ msgid ""
 "LAMMPSの実行ファイルとして :file:`lammps` の代わりに :file:`lammps_gpu` "
 "を使うことで、ニューラルネットワーク力場の計算がGPUを使って行われるようになります。"
 msgstr ""
-"Use :file:`lammps_gpu` instead of :file:`lammps` as the LAMMPS executable to perform calculations of neural network potential using GPU."
+"Use :file:`lammps_gpu` instead of :file:`lammps` as the LAMMPS executable"
+" to perform calculations of neural network potential using GPU."
 
 #: ../../usage/tool.rst:117
 msgid ""
 "入力ファイルは非GPU版と同じ内容で問題なく実行できますが、設定ファイル\\ :file:`gpu.conf`\\ "
 "を作成することでGPU版特有の設定ができます。"
 msgstr ""
-"While the same input files for non-GPU version can be used, you can configure GPU version-specific settings by "
-"creating the configuration file :file:`gpu.conf`\\ ."
+"While the same input files for non-GPU version can be used, you can "
+"configure GPU version-specific settings by creating the configuration "
+"file :file:`gpu.conf`\\ ."
 
 #: ../../usage/tool.rst:122
 msgid "元素数が5以上の場合は、力場作成時に重み付き対称関数を使っている必要があります。"
 msgstr ""
-"In case 5 or more elements are in the system, weighted symmetry function must be used "
-"when you generate the force field."
+"In case 5 or more elements are in the system, weighted symmetry function "
+"must be used when you generate the force field."
 
 #: ../../usage/tool.rst:127
 msgid "gpu.confの書式"
@@ -1781,23 +1812,24 @@ msgstr "Format of gpu.conf"
 #: ../../usage/tool.rst:129
 msgid "threads、atomBlock、mpi2Deviceが各セクションの始まりを表し、次の行以降がセクションの内容になります。"
 msgstr ""
-"threads, atomBlock and mpi2Device indicate the beginning of each section, and the next"
-" and subsequent lines are the contents of the section."
+"threads, atomBlock and mpi2Device indicate the beginning of each section,"
+" and the next and subsequent lines are the contents of the section."
 
 #: ../../usage/tool.rst:131
 msgid "各セクションは省略可能です。省略した場合、デフォルト値が使われます。"
-msgstr ""
-"Each section can be omitted. If omitted, default value is used."
+msgstr "Each section can be omitted. If omitted, default value is used."
 
 #: ../../usage/tool.rst:133
 msgid "各セクションの前後には空行またはコメント行（行頭を!か#にする）を入れられます。"
 msgstr ""
-"You can insert empty lines or comment lines (begin with ! or #) before and/or after each section."
+"You can insert empty lines or comment lines (begin with ! or #) before "
+"and/or after each section."
 
 #: ../../usage/tool.rst:139
 msgid "CUDAのブロック当たりのスレッド数です。上限は1024（CUDAの仕様）です。32（ワープサイズ）の倍数を推奨します。"
 msgstr ""
-"Number of threads per block in CUDA. Upper limit is 1024 (specification of CUDA). Multiple of 32 (warp size) is appropriate."
+"Number of threads per block in CUDA. Upper limit is 1024 (specification "
+"of CUDA). Multiple of 32 (warp size) is appropriate."
 
 #: ../../usage/tool.rst:143
 msgid "4096"
@@ -1806,17 +1838,20 @@ msgstr ""
 #: ../../usage/tool.rst:145
 msgid "対称関数をGPUで計算するときに、ここで指定した数の原子ごとにまとめて処理を行います。"
 msgstr ""
-"Number of atoms to be processed at a time when calculating the symmetry function using GPU."
+"Number of atoms to be processed at a time when calculating the symmetry "
+"function using GPU."
 
 #: ../../usage/tool.rst:151
 msgid "複数のGPUが搭載されているマシンの場合、使用するGPUをデバイスIDで指定します。MPI並列で使用する場合は、各行にプロセスをどのデバイスIDのGPUに割り当てるかを書きます。行数とMPI並列数（プロセス数）が一致するようにしてください。"
 msgstr ""
-"In case of using a machine with multiple GPUs, specify the GPU(s) to be used by the device ID. "
+"In case of using a machine with multiple GPUs, specify the GPU(s) to be "
+"used by the device ID. "
 
 #: ../../usage/tool.rst:153
 msgid "各GPUに割り当てられたデバイスIDは ``nvidia-smi -L`` を実行して確認できます。"
 msgstr ""
-"You can check the device ID assigned to each GPU by executing ``nvidia-smi -L`` ."
+"You can check the device ID assigned to each GPU by executing ``nvidia-"
+"smi -L`` ."
 
 #: ../../usage/tool.rst:155
 msgid "gpu.confの例"
@@ -1844,7 +1879,8 @@ msgstr ""
 "512\n"
 "atomBlock\n"
 "1024\n"
-"#On a machine with 2 graphic cards, to execute with 8 MPI parallel processes, \n"
+"#On a machine with 2 graphic cards, to execute with 8 MPI parallel "
+"processes, \n"
 "#with allocating 4 processes to device ID0 GPU and 4 to device ID1 GPU\n"
 "mpi2Device\n"
 "0\n"
@@ -1855,3 +1891,4 @@ msgstr ""
 "1\n"
 "1\n"
 "1"
+

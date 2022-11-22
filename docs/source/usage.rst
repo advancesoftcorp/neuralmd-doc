@@ -324,16 +324,6 @@ In-situテスト
 
  fileを指定しない場合、対話形式で入力を求められます。
 
-.. option:: --omp <n>, --cpu <n>
-
- OpenMP並列（スレッド並列）の並列数を指定します。
-
-.. option:: --que
-
- ライセンスエラー（同時実行数上限）の場合に、実行できるようになるまで待機します。
-
- このオプションを指定しない場合、ライセンスエラー時にはすぐに終了します。
-
 .. option:: --train, --train-energy
 
  教師データ\ :file:`sannp.train`\ を元に、エネルギー及び力の計算を行うためのニューラルネットワークの学習を行います。実行が正常に終わると、ニューラルネットワークの情報を含むファイル\ :file:`sannp.data`\ 、\ :file:`sannp.data_e`\ が出力されます。
@@ -349,6 +339,8 @@ In-situテスト
 .. option:: --test, --test-without-bias
 
  学習したニューラルネットワークを使ってテスト用データの計算を行います。テスト用データのファイル\ :file:`sannp.test`\ は :option:`sannp --dft` を実行し、"test"を選ぶことで作成できます。結果として全エネルギー\ :file:`sannp.etot`\ 、原子毎のエネルギー\ :file:`sannp.eatom`\ 、原子に働く力\ :file:`sannp.force`\ 、電荷\ :file:`sannp.charge`\ がファイルに出力されます。
+
+ MPI並列計算には非対応です。
 
  原子エネルギーは、最終層のバイアス項を0にして平準化した値が出力されます。
 
@@ -367,6 +359,8 @@ In-situテスト
 .. option:: --force, --force-test
 
  学習したニューラルネットワークを使ってテスト用データの計算を行い、結果として原子に働く力を表示します。テスト用データのファイル\ :file:`sannp.test`\ は :option:`sannp --dft` を実行し、"test"を選ぶことで作成できます。
+
+ MPI並列計算には非対応です。
 
 .. option:: --export, --force-field, --lammps
 
@@ -387,6 +381,23 @@ In-situテスト
 .. option:: --classical
 
  教師データ :file:`sannp.train`\ を元に、\ |Delta|\ -NNPで使用する古典力場のパラメータを最適化します。実行が正常に終わると、パラメータを含むファイル\ :file:`sannp.class`\ が出力されます。
+
+.. _usage_options_sub:
+
+他のオプションに追加して指定するオプション
+------------------------------------------
+
+.. program:: sannp
+
+.. option:: --omp <n>, --cpu <n>
+
+ OpenMP並列（スレッド並列）の並列数を指定します。
+
+.. option:: --que
+
+ ライセンスエラー（同時実行数上限）の場合に、実行できるようになるまで待機します。
+
+ このオプションを指定しない場合、ライセンスエラー時にはすぐに終了します。
 
 .. _usage_double:
 
