@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Advance/NeuralMD \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-30 16:36+0900\n"
+"POT-Creation-Date: 2022-12-05 11:04+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -245,7 +245,15 @@ msgstr ""
 "Parallel execution of slhmc itself is not available. Set up parallel "
 "execution in each sh(bat) file."
 
-#: ../../slhmc.rst:120
+#: ../../slhmc.rst:118
+msgid ""
+"ジョブ管理システムをお使いの場合は、 ``slhmc --calc`` "
+"を実行するようなジョブスクリプトを作成し、ジョブ投入してください。この場合も、slhmc自体は並列実行せずに、各shファイル内で並列実行するように設定を行ってください。"
+msgstr ""
+"When using a job management system, make a job script to run ``slhmc --calc`` and post the job. "
+"In this case, too, do not parallel execute slhmc itself but set up parallel execution in each sh file."
+
+#: ../../slhmc.rst:122
 msgid ""
 "デフォルトでは最初に第一原理計算分子動力学計算を行ってそれを元に初期ニューラルネットワーク力場を作りますが、代わりに既に作成済みの力場を初期力場として使うこともできます。"
 " :file:`slhmc.prop` で ``initialTrain 0`` を設定し、力場ファイル :file:`ffield.sannp`"
@@ -257,7 +265,7 @@ msgstr ""
 "``initialTrain 0`` in :file:`slhmc.prop`\\ , place the force field file "
 ":file:`ffield.sannp` in the same folder, and then run slhmc."
 
-#: ../../slhmc.rst:124
+#: ../../slhmc.rst:126
 msgid ""
 "GPUを使って計算を実行するには、\\ :file:`sannp.sh`\\ で\\ :file:`sannp`\\ を\\ "
 ":file:`sannp_gpu`\\ に、\\ :file:`lammps.sh`\\ で\\ :file:`lammps`\\ を\\ "
@@ -265,12 +273,14 @@ msgid ""
 "<usage_gpu_mpi>`\\ 、\\ :ref:`gpu.conf <toollammpsgpuconf>`\\ "
 "を同じフォルダに配置すると、それぞれ実行時に設定内容が適用されます。"
 msgstr ""
-"To perform calculations using GPU, replace :file:`sannp` with :file:`sannp_gpu` in :file:`sannp.sh` , "
-"and :file:`lammps` with :file:`lammps_gpu` in :file:`lammps.sh` . Also, if you place configuration files for GPU "
-":ref:`sannp.mpi2gpu <usage_gpu_mpi>` , :ref:`gpu.conf <toollammpsgpuconf>` in the same folder, the settings are applied "
-"at execution."
+"To perform calculations using GPU, replace :file:`sannp` with "
+":file:`sannp_gpu` in :file:`sannp.sh` , and :file:`lammps` with "
+":file:`lammps_gpu` in :file:`lammps.sh` . Also, if you place "
+"configuration files for GPU :ref:`sannp.mpi2gpu <usage_gpu_mpi>` , "
+":ref:`gpu.conf <toollammpsgpuconf>` in the same folder, the settings are "
+"applied at execution."
 
-#: ../../slhmc.rst:126
+#: ../../slhmc.rst:128
 msgid ""
 "``slhmc --stop`` を実行すると、力場の作成を中断します。\\ :file:`slhmc.prop`\\ で ``restart "
 "1`` と設定し、 ``slhmc --calc`` を再度実行することで、中断したところから力場の作成を再開します。"
@@ -279,7 +289,7 @@ msgstr ""
 "``restart 1`` in :file:`slhmc.prop` and running ``slhmc --calc`` again "
 "resumes the force field creation from where it is interrupted."
 
-#: ../../slhmc.rst:128
+#: ../../slhmc.rst:130
 msgid ""
 "実行中には、力場更新のタイミングで力場ファイル\\ :file:`ffield.sannp`\\ が随時出力されます。また、構造の履歴が\\ "
 ":file:`slhmc.xyz`\\ として出力されます。"
@@ -288,24 +298,26 @@ msgstr ""
 "progressively when the force field is updated. Also, the history of the "
 "structure is output as :file:`slhmc.xyz`\\ ."
 
-#: ../../slhmc.rst:130
+#: ../../slhmc.rst:132
 msgid "各計算エンジンの入出力ファイルは、サブフォルダ\\ :file:`slhmc_dat`\\ に保存されます。"
 msgstr ""
 "The input/output files for each calculation engine are stored in the "
 "subfolder :file:`slhmc_dat`\\ ."
 
-#: ../../slhmc.rst:132
+#: ../../slhmc.rst:134
 msgid ""
 "もしエラー等で計算が進まない場合は、\\ :file:`slhmc.CRASH`\\ "
 "に当該の計算エンジンの入出力ファイルの内容が保存されますので、確認してください。"
 msgstr ""
-"If the calculation does not proceed due to errors etc, check the file :file:`slhmc.CRASH` in which input/output files of relevant calculation engine are saved."
+"If the calculation does not proceed due to errors etc, check the file "
+":file:`slhmc.CRASH` in which input/output files of relevant calculation "
+"engine are saved."
 
-#: ../../slhmc.rst:141
+#: ../../slhmc.rst:143
 msgid "手順3　LAMMPSによる分子動力学計算"
 msgstr "Step 3. Molecular Dynamics Calculations with LAMMPS"
 
-#: ../../slhmc.rst:143
+#: ../../slhmc.rst:145
 msgid ""
 "出力された力場ファイル\\ :file:`ffield.sannp`\\ "
 "を使って、LAMMPSによる分子動力学計算を実行します。基本の使用方法のページにある\\ :ref:`usage_step5`\\ "
@@ -315,7 +327,7 @@ msgstr ""
 "field file :file:`field.sannp`\\ . See :ref:`usage_step5` on the Basic "
 "Usage page."
 
-#: ../../slhmc.rst:147
+#: ../../slhmc.rst:149
 msgid ""
 "複数の異なる初期構造を使って自己学習ハイブリッドモンテカルロ法で力場を作りたい場合、まずはそれぞれの初期構造に対して手順2までを実行します。その後、得られた教師データ\\"
 " :file:`sannp.train`\\ を結合し、これを使って改めてニューラルネットワークの学習（基本の使用方法のページにある\\ "
@@ -493,14 +505,15 @@ msgstr ""
 #: ../../slhmc/prop.rst:99
 msgid "セルの変形に関する設定です。noneを指定すると変形を行いません。aprioriを指定すると、ニューラルネットワーク力場による分子動力学計算の前にNPHによるセルの変形を行います。asNptMCを指定すると、ニューラルネットワーク力場による分子動力学計算をNPHで行います。"
 msgstr ""
-"Setting about cell deformation. Specify \"none\" to not perform deformation. "
-"Specify \"apriori\" to deform cell using NPH before the molecular dynamics calculation by neural network force field. "
-"Specify \"asNptMC\" to perform NPH molecular dynamics calculation by neural network force field."
+"Setting about cell deformation. Specify \"none\" to not perform "
+"deformation. Specify \"apriori\" to deform cell using NPH before the "
+"molecular dynamics calculation by neural network force field. Specify "
+"\"asNptMC\" to perform NPH molecular dynamics calculation by neural "
+"network force field."
 
 #: ../../slhmc/prop.rst:101
 msgid "``aprioriNPH 1`` を指定した場合、 ``nphMethod apriori`` と同じ設定になります。"
-msgstr ""
-"Specifying ``aprioriNPH 1`` is the same setting as ``nphMethod apriori`` ."
+msgstr "Specifying ``aprioriNPH 1`` is the same setting as ``nphMethod apriori`` ."
 
 #: ../../slhmc/prop.rst:105
 msgid "tri"
