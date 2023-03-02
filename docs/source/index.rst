@@ -11,6 +11,7 @@ Neural Network Potentialに基づいた分子動力学計算のソフトウェ�
    theory
    install
    usage
+   additional
    slhmc
    version
    link
