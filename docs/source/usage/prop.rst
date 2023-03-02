@@ -42,7 +42,7 @@ sannp.propの書式
 
  :デフォルト: 0
 
- ReaxFFとニューラルネットワーク力場を組み合わせた\ |Delta|\ -NNPを使う(1)か使わない(0)かの指定です。LJ-like力場を用いた \ |Delta|\ -NNPとは併用できません。 ``withClassical 2`` でも ``withReaxFF 1`` と同じ設定になります。
+ ReaxFFとニューラルネットワーク力場を組み合わせた\ |Delta|\ -NNPを使う(1)か使わない(0)かの指定です。ReaxFFを使う場合、パラメータ定義ファイル\ :file:`ffield.reax`\ が必要です。LJ-like力場を用いた \ |Delta|\ -NNPとは併用できません。 ``withClassical 2`` でも ``withReaxFF 1`` と同じ設定になります。
 
 .. describe:: rcutReaxFF
 

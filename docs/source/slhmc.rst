@@ -101,7 +101,9 @@ NanoLabo Tool同梱の計算エンジンを使用される場合は、ライブ�
 
  電荷の計算を行う場合は、\ :file:`sannp.prop`\ で ``withCharge 1`` を設定し、\ :file:`sannp.sh`\ で :option:`sannp --train-charge` の行のコメントアウトを外してください。
 
- |Delta|\ -NNPを使う場合は、\ :file:`sannp.prop`\ で ``withClassical 1`` を設定し、\ :file:`sannp.sh`\ で :option:`sannp --classical` の行のコメントアウトを外してください。
+ |Delta|\ -NNP（LJ-like力場）を使う場合は、\ :file:`sannp.prop`\ で ``withLJlike 1`` を設定し、\ :file:`sannp.sh`\ で :option:`sannp --classical` の行のコメントアウトを外してください。
+
+ |Delta|\ -NNP(ReaxFF)を使う場合は、\ :file:`sannp.prop`\ で ``withReaxFF 1`` を設定し、同じフォルダにパラメータ定義ファイル\ :file:`ffield.reax`\ を配置してください。
 
 準備が終わったら、手順1で作成した\ :file:`espresso.in`\ も同じフォルダに配置し、
 

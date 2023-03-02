@@ -192,13 +192,13 @@ NNPを最適化する際に、原子エネルギーの平均値および分散�
 ReaxFFを用いた\ |Delta|\ -NNP
 -----------------------------------
 
-|Delta|\ -NNPの古典力場としてReaxFF\ [7]_\ を使う方法です。ReaxFFは多体力場であり、LJ(-like)力場に比べてよりよくエネルギー・力を表現することができます。ReaxFFのパラメータは既存のものを使用し、本製品での最適化は行いません。ReaxFFの寄与を係数（混合率） :math:`r` で指定し、そこからの差分をNNPを使って表現します。
+|Delta|\ -NNPの古典力場としてReaxFF\ [7]_\ を使う方法です。ReaxFFは多体力場であり、LJ(-like)力場に比べてよりよくエネルギー・力を表現することができます。本製品ではReaxFFのエネルギーとして結合エネルギー(\ :math:`E_\mathrm{bond}`\ )、Over-coordinationエネルギー(\ :math:`E_\mathrm{over}`\ )、Under-coordinationエネルギー(\ :math:`E_\mathrm{under}`\ )、Lone-pairエネルギー(\ :math:`E_\mathrm{lp}`\ )、van der Waalsエネルギー(\ :math:`E_\mathrm{vdW}`\ )のみを使用します。ReaxFFのパラメータは既存のものを使用し、本製品での最適化は行いません。ReaxFFの寄与を係数（混合率） :math:`r` で指定し、そこからの差分をNNPを使って表現します。
 
 .. math::
 
  E_\mathrm{tot} &= r E_\mathrm{Reax}+E_\mathrm{NNP},
 
- E_\mathrm{Reax} &= E_\mathrm{atom}+E_\mathrm{bond}+E_\mathrm{lone-pair}+E_\mathrm{over}+E_\mathrm{vdW}
+ E_\mathrm{Reax} &= E_\mathrm{bond}+E_\mathrm{over}+E_\mathrm{under}+E_\mathrm{lp}+E_\mathrm{vdW}
 
 .. _theory_slhmc:
 

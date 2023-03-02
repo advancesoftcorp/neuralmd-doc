@@ -21,12 +21,12 @@ LJ-like力場を用いた\ |Delta|\ -NNP
 
 .. _deltannp_reax_usage:
 
-ReaxFFを用いた\ |Delta|\ -NNP法
+ReaxFFを用いた\ |Delta|\ -NNP
 -------------------------------------------------
 
 ニューラルネットワークの学習（手順4）で、\ :file:`sannp.prop`\ で ``withReaxFF 1`` と設定して実行します。
 
-学習時、および分子動力学計算実行時（手順5）にパラメータ定義ファイル\ :file`ffield.reax`\ が必要です。NanoLabo Toolに同梱されているものをお使いいただけます。
+学習時、および分子動力学計算実行時（手順5）にパラメータ定義ファイル\ :file:`ffield.reax`\ が必要です。NanoLabo Toolに同梱されているものをお使いいただけます。\ :file:`ffield.reax`\ ファイルの書式は\ `LAMMPSに準拠 <https://docs.lammps.org/pair_reaxff.html>`_\ します。
 
 .. hint:: ReaxFFのパラメータはあらかじめ用意されたものを使い、本製品での最適化は行いません。
 
