@@ -70,7 +70,7 @@
 作成した入力ファイルを基に、Advance/NeuralMDを実行して多数のランダム構造を生成します。実行ファイルはインストール先のbinフォルダーに入っている :file:`sannp` です。ファイル名が\ :file:`espresso.scf.in`\ の場合、
 
 .. code-block:: console
- 
+
  sannp --dft espresso.scf.in
 
 として実行します。
@@ -100,7 +100,7 @@ NanoLabo Tool同梱のQuantum ESPRESSOを使用される場合は、ライブラ
 ジョブ管理システムをお使いでない場合は、\ :file:`dft_run.sh`\ を直接実行します。
 
 .. code-block:: console
- 
+
  ./dft_run.sh
 
 Windowsの場合は、\ :file:`dft_run.bat`\ を実行します。
@@ -135,11 +135,11 @@ Windowsの場合は、\ :file:`dft_run.bat`\ を実行します。
 
    usage/prop
    usage/behler
-   
+
 電荷の計算を行わない場合(\ :file:`sannp.prop`\ で ``withCharge 0`` と設定)は、以下のコマンドを実行して、ニューラルネットワークの学習を行います。
 
 .. code-block:: console
- 
+
  sannp --train
 
 Linuxの場合は、MPI並列での実行が可能です。NeuralMDインストーラーに同梱のMPI実行ファイル、またはNanoLabo Toolインストーラーに同梱のMPI実行ファイルをお使い下さい。\ :ref:`設定方法<tooll>`\ を参照して設定の上、実行してください。
@@ -160,7 +160,7 @@ Linuxの場合は、MPI並列での実行が可能です。NeuralMDインスト�
 また、電荷の計算を行う場合(\ :file:`sannp.prop`\ で ``withCharge 1`` と設定)は、上記に加えて電荷のニューラルネットワークの学習も行います。
 
 .. code-block:: console
- 
+
  sannp --train-charge
 
 実行が正常に終わると、電荷のニューラルネットワークの情報を含むファイル\ :file:`sannp.data_q`\ が出力されます。
@@ -168,7 +168,7 @@ Linuxの場合は、MPI並列での実行が可能です。NeuralMDインスト�
 ニューラルネットワークの学習が終わったら、
 
 .. code-block:: console
- 
+
  sannp --export
 
 を実行することで、LAMMPSで使用する力場定義ファイル\ :file:`ffield.sannp`\ を出力します。
@@ -188,7 +188,7 @@ NanoLabo Tool同梱のLAMMPSを使用される場合は、ライブラリ検索�
 LAMMPSの入力ファイル中で、以下の\ ``pair_style``\ が使えます。
 
 .. describe:: pair_style nnp
- 
+
  ニューラルネットワーク力場
 
  .. code-block:: none
@@ -237,7 +237,7 @@ LAMMPSの入力ファイル中で、以下の\ ``pair_style``\ が使えます�
   | rinv                               || 電荷のEwald和を計算する際のパラメータ（1/距離単位）                                            |
   |                                    || (\ ``nnp/coul/long``\ では必ず指定)  (\ |rarr|\ `kspace_modify`_)                              |
   +------------------------------------+-------------------------------------------------------------------------------------------------+
-  
+
 いずれかの\ ``pair_style``\ を設定した上でLAMMPSを実行すると、ニューラルネットワーク力場を使った分子動力学計算が行われます。
 
 .. _`coul/cut`: https://docs.lammps.org/pair_coul.html
@@ -247,69 +247,6 @@ LAMMPSの入力ファイル中で、以下の\ ``pair_style``\ が使えます�
 .. |rarr| raw:: html
 
    &rarr;
-
-.. _additional_features:
-
-追加機能の使用手順
-======================
-
-.. _hybridnnp_usage:
-
-|Delta|\ -NNP
--------------------------------------------------
-
-ニューラルネットワークの学習（手順4）の前に、古典力場のパラメータの最適化を行います。
-
-.. code-block:: console
- 
- sannp --classical
-
-を実行することで、古典力場のパラメータを含むファイル\ :file:`sannp.class`\ が出力されます。
-
-その後、\ :file:`sannp.prop`\ で ``withClassical 1`` と設定して、手順4以降を実行します。
-
-.. _metropolis_usage:
-
-メトロポリス法による構造生成
--------------------------------------------------
-
-ニューラルネットワークの学習（手順4）が終わった後に実行します。
-
-メトロポリス法の設定をファイル\ :file:`sannp.metro`\ に用意します。デフォルトの設定を使う場合は、ファイルが無くてもかまいません。
-
-.. toctree::
-   :maxdepth: 2
-
-   usage/metro
-
-.. code-block:: console
- 
- sannp --metro
-
-を実行すると、モンテカルロ計算が行われ、構造が生成されます。生成された構造はQuantum ESPRESSOの入力ファイルの形で\ :file:`dft_geom`\ フォルダに出力されます。
-
-.. hint::
-
- モンテカルロ計算の過程はmovieフォルダにxyz形式で保存されます。
- 
- xyzファイルをAdvance/NanoLaboの画面にドラッグ&ドロップすることで動画として可視化ができます。
-
-続けて
-
-.. code-block:: console
- 
- sannp --dft
-
-を実行すると、\ :file:`dft_geom`\ 内の計算を実行するためのシェルスクリプト\ :file:`dft_run.sh`\ （Windowsの場合はバッチファイル\ :file:`dft_run.bat`\ ）が生成されます。これを使って、再度手順3から実行し、教師データを追加します。
-
-.. _insitu_usage:
-
-In-situテスト
---------------------------
-
-ニューラルネットワークの学習（手順4）を行う際に、同時にテストデータについても残差RMSを計算して表示する機能です。学習を進めながら、テストデータに対する性能を随時確認できます。また、教師データのRMSが小さくなっていてもテストデータのRMSが大きくなっている場合には、過学習を起こしていると判断できます。
-
-まず、教師データとは別のテストデータを用意します。 :option:`sannp --dft` を実行し、"test"を選んで生成するか、または既存の教師データ\ :file:`sannp.train`\ を :option:`sannp --split` で分割します。テストデータ\ :file:`sannp.test`\ が用意できたら、\ :file:`sannp.prop`\ で ``insituTest 1`` と設定して、学習を実行します。
 
 .. _usage_options:
 
@@ -376,7 +313,7 @@ In-situテスト
 
 .. option:: --metro-temp, --monte-carlo-temp, --mc-temp
 
- メトロポリス法の設定ファイル\ :file:`sannp.metro`\ のテンプレートを出力します。既存のファイルは上書きされます。GEOMETRYには教師データ\ :file:`sannp.train`\ 中の最初の構造が使われます。 
+ メトロポリス法の設定ファイル\ :file:`sannp.metro`\ のテンプレートを出力します。既存のファイルは上書きされます。GEOMETRYには教師データ\ :file:`sannp.train`\ 中の最初の構造が使われます。
 
 .. option:: --classical
 
@@ -446,10 +383,14 @@ GPU版をMPI並列で実行すると、GPUをより効率的に使うことが�
 なお、各GPUに割り当てられたデバイスIDは
 
 .. code-block:: console
- 
+
  nvidia-smi -L
 
 を実行して確認できます。
+
+.. hint:: 1GPUデバイス当たりMPIプロセス数を2～4程度に設定すると効率的に計算を実行できます。
+
+.. hint:: NanoLabo Toolに同梱の計算エンジンについては、Quantum ESPRESSOはGPU非対応、LAMMPSはGPU対応です。詳細は\ :ref:`toollammpsgpu`\ をご参照ください。
 
 .. |Delta| raw:: html
 

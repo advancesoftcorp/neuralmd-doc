@@ -32,11 +32,29 @@ sannp.propの書式
 
  系全体のエネルギーを教師データとするHDNNP法を使う(1)か、各原子に分割したエネルギーを教師データとするSANNP法を使う(0)かの指定です。
 
-.. describe:: withClassical
+.. describe:: withLJlike
 
  :デフォルト: 0
 
- ニューラルネットワーク力場のみを使う(0)か、古典力場とニューラルネットワーク力場を組み合わせた\ |Delta|\ -NNPを使う(1)かの指定です。
+ LJ-like力場とニューラルネットワーク力場を組み合わせた\ |Delta|\ -NNPを使う(1)か使わない(0)かの指定です。ReaxFFを用いた \ |Delta|\ -NNPとは併用できません。 ``withClassical 1`` でも ``withLJlike 1`` と同じ設定になります。
+
+.. describe:: withReaxFF
+
+ :デフォルト: 0
+
+ ReaxFFとニューラルネットワーク力場を組み合わせた\ |Delta|\ -NNPを使う(1)か使わない(0)かの指定です。LJ-like力場を用いた \ |Delta|\ -NNPとは併用できません。 ``withClassical 2`` でも ``withReaxFF 1`` と同じ設定になります。
+
+.. describe:: rcutReaxFF
+
+ :デフォルト: 5.0
+
+ ReaxFFを用いた \ |Delta|\ -NNPで、ReaxFFのカットオフ半径(\ |angs|\ )を指定します。
+
+.. describe:: rateReaxFF
+
+ :デフォルト: 0.5
+
+ ReaxFFを用いた \ |Delta|\ -NNPで、エネルギーと力を計算する際のReaxFFの寄与（混合率）を指定します。
 
 .. describe:: directSF
 
@@ -132,7 +150,7 @@ sannp.propの書式
 
  :デフォルト: 2
 
- ニューラルネットワークの隠れ層の層数です。 
+ ニューラルネットワークの隠れ層の層数です。
 
 .. describe:: nodes
 
