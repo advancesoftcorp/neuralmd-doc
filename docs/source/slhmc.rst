@@ -69,9 +69,9 @@ NanoLabo Tool同梱の計算エンジンを使用される場合は、ライブ�
 力場の自動生成は、実行ファイル\ :file:`slhmc`\ からQuantum ESPRESSO、LAMMPS、NeuralMDを順次呼び出しながら進められます。そこで、まずはこれらが実行できるように設定を行います。
 
 .. code-block:: console
- 
+
  slhmc --template
- 
+
 を実行することで、必要な設定ファイルのテンプレートが出力されます。
 
 :file:`slhmc.prop`
@@ -106,7 +106,7 @@ NanoLabo Tool同梱の計算エンジンを使用される場合は、ライブ�
 準備が終わったら、手順1で作成した\ :file:`espresso.in`\ も同じフォルダに配置し、
 
 .. code-block:: console
- 
+
  slhmc --calc
 
 を実行することで、力場の作成が始まります。
