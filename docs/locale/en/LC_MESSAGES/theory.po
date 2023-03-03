@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Advance/NeuralMD \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-30 16:36+0900\n"
+"POT-Creation-Date: 2023-03-02 16:06+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -465,11 +465,15 @@ msgid "|Delta|\\ -NNP"
 msgstr ""
 
 #: ../../theory.rst:172
-msgid "全エネルギーをNNPで表現するのではなく、第0近似として古典力場による2体間エネルギーを使い、そこからの差分をNNPを使って表現する、という方法です。"
+msgid ""
+"全エネルギーをNNPで表現するのではなく、第0近似として古典力場による2体間エネルギーを使い、そこからの差分をNNPを使って表現する、という方法です。古典力場としては"
+"、通常のLJ力場に加えて次数の異なる項を増やしたLJ-like力場を使っています。"
 msgstr ""
 "|Delta|\\ -NNP is the method to express in NNP the difference from the "
 "energy between two bodies due to the classical force field as the zeroth "
-"approximation instead of the total energy."
+"approximation instead of the total energy. LJ-like force field, which has"
+" more terms with different orders in addition to the normal LJ force field,"
+" is used as the classical force field."
 
 #: ../../theory.rst:174
 msgid ""
@@ -516,10 +520,42 @@ msgstr ""
 "convergence than HDNNP."
 
 #: ../../theory.rst:193
+msgid "ReaxFFを用いた\\ |Delta|\\ -NNP"
+msgstr "|Delta|\\ -NNP using ReaxFF"
+
+#: ../../theory.rst:195
+msgid ""
+"|Delta|\\ -NNPの古典力場としてReaxFF\\ [7]_\\ "
+"を使う方法です。ReaxFFは多体力場であり、LJ(-like)力場に比べてよりよくエネルギー・力を表現することができます。本製品ではReaxFFのエネルギーとして結合エネルギー(\\"
+" :math:`E_\\mathrm{bond}`\\ )、Over-coordinationエネルギー(\\ "
+":math:`E_\\mathrm{over}`\\ )、Under-coordinationエネルギー(\\ "
+":math:`E_\\mathrm{under}`\\ )、Lone-pairエネルギー(\\ :math:`E_\\mathrm{lp}`\\ "
+")、van der Waalsエネルギー(\\ :math:`E_\\mathrm{vdW}`\\ "
+")のみを使用します。ReaxFFのパラメータは既存のものを使用し、本製品での最適化は行いません。ReaxFFの寄与を係数（混合率） "
+":math:`r` で指定し、そこからの差分をNNPを使って表現します。"
+msgstr ""
+"In this method, ReaxFF\\ [7]_\\ is used as the classical potential of |Delta|\\ -NNP. ReaxFF is an many-body force field and can express energy/force better. "
+"In this product, only bond energy(\\"
+" :math:`E_\\mathrm{bond}`\\ ), Over-coordination energy(\\ "
+":math:`E_\\mathrm{over}`\\ ), Under-coordination energy(\\ "
+":math:`E_\\mathrm{under}`\\ ), Lone-pair energy(\\ :math:`E_\\mathrm{lp}`\\ "
+") and van der Waals energy(\\ :math:`E_\\mathrm{vdW}`\\ "
+") are used as the ReaxFF energy. Existing ReaxFF parameters are used and no optimization is performed within this product. "
+"You can specify the contribution of ReaxFF by factor (mixing rate) :math:`r`\\ , and the remaining is expressed by NNP."
+
+#: ../../theory.rst:197
+msgid ""
+"E_\\mathrm{tot} &= r E_\\mathrm{Reax}+E_\\mathrm{NNP},\n"
+"\n"
+"E_\\mathrm{Reax} &= "
+"E_\\mathrm{bond}+E_\\mathrm{over}+E_\\mathrm{under}+E_\\mathrm{lp}+E_\\mathrm{vdW}"
+msgstr ""
+
+#: ../../theory.rst:206
 msgid "自己学習ハイブリッドモンテカルロ法"
 msgstr "Self-learning Hybrid Monte Carlo Method "
 
-#: ../../theory.rst:195
+#: ../../theory.rst:208
 msgid ""
 "自己学習ハイブリッドモンテカルロ(Self-learning hybrid Monte Carlo, SLHMC)法\\ [6]_\\ "
 "は、教師データの生成とニューラルネットワーク力場の学習を同時に進めることができる手法です。以下のようなアルゴリズムに従って実行します。"
@@ -529,14 +565,14 @@ msgstr ""
 " neural network force fields. It is executed according to the following "
 "algorithm."
 
-#: ../../theory.rst:197
+#: ../../theory.rst:210
 msgid "初期構造から第一原理分子動力学計算をある程度進め、それを教師データとして初期ニューラルネットワーク力場を作る。"
 msgstr ""
 "Advance some ab initio molecular dynamics calculations from the initial "
 "structure and use them as training data to create an initial neural "
 "network force field."
 
-#: ../../theory.rst:198
+#: ../../theory.rst:211
 msgid ""
 "ニューラルネットワーク力場による分子動力学計算(NVE)で構造を時間発展させる( :math:`\\{\\bm{p}, \\bm{r}\\} "
 "\\rightarrow \\{\\bm{p}', \\bm{r}'\\}` )。"
@@ -545,7 +581,7 @@ msgstr ""
 "calculations (NVE) using the neural network force field ( "
 ":math:`\\{\\bm{p}, \\bm{r}\\} \\rightarrow \\{\\bm{p}', \\bm{r}'\\}` )."
 
-#: ../../theory.rst:199
+#: ../../theory.rst:212
 msgid ""
 "発展後の構造 :math:`\\{\\bm{p}', \\bm{r}'\\}` について第一原理計算でエネルギー "
 ":math:`H_\\mathrm{DFT}(\\{\\bm{p}', \\bm{r}'\\})` を計算する。"
@@ -554,19 +590,19 @@ msgstr ""
 "for the structure :math:`\\{\\bm{p}', \\bm{r}'\\}` after time development"
 " by first-principles calculation."
 
-#: ../../theory.rst:200
+#: ../../theory.rst:213
 msgid "以下の遷移確率 :math:`P_\\mathrm{acc}` を使って、メトロポリス法により構造を採択するかどうか決める。"
 msgstr ""
 "Use the following transition probabilities :math:`P_\\mathrm{acc}` to "
 "decide whether to adopt the structure by the Metropolis method."
 
-#: ../../theory.rst:202
+#: ../../theory.rst:215
 msgid ""
 "P_\\mathrm{acc} = \\min(1, e^{-(H_\\mathrm{DFT}(\\{\\bm{p}', "
 "\\bm{r}'\\})-H_\\mathrm{DFT}(\\{\\bm{p}, \\bm{r}\\}))/k_\\mathrm{B}T})"
 msgstr ""
 
-#: ../../theory.rst:206
+#: ../../theory.rst:219
 msgid ""
 "棄却する場合は、構造を :math:`\\{\\bm{p}, \\bm{r}\\}` に戻し、運動量 :math:`\\bm{p}` を温度 "
 ":math:`T` におけるボルツマン分布で定義しなおす。"
@@ -575,18 +611,18 @@ msgstr ""
 " and redefine the momentum :math:`\\bm{p}` with the Boltzmann "
 "distribution at temperature :math:`T`\\ ."
 
-#: ../../theory.rst:207
+#: ../../theory.rst:220
 msgid "1.~3.をある程度繰り返したら、生成された構造（採択された構造のみ、または棄却されたものも含めた全ての構造）を教師データとしてニューラルネットワーク力場の再学習を行う。"
 msgstr ""
 "After repeating 1.~3. to some extent, retrain the neural network force "
 "field using the generated structures (only the adopted structures or all "
 "the structures including the rejected ones) as the training data."
 
-#: ../../theory.rst:208
+#: ../../theory.rst:221
 msgid "1.~3.と4.を繰り返す。"
 msgstr "Repeat 1.~3. and 4."
 
-#: ../../theory.rst:210
+#: ../../theory.rst:223
 msgid "この方法では、教師データの準備すら行う必要がなく、1つの初期構造を用意するだけで後は自動的にニューラルネットワーク力場を作ることができます。力場作成の手間が大幅に削減でき、また教師データの質など手順に依存する要素が排除されるため、常に同水準の力場を作ることができます。教師データの数も低減できる傾向にあるため、計算に要する時間も大幅に削減できます。"
 msgstr ""
 "In this method, there is no need to even prepare the training data but "
@@ -598,7 +634,7 @@ msgstr ""
 "for calculations can also be significantly reduced since it tends to be "
 "possible to reduce the number of training data."
 
-#: ../../theory.rst:212
+#: ../../theory.rst:225
 msgid "モンテカルロ法の遷移確率(3.)は第一原理計算により決めているため、教師データのアンサンブルが厳密に第一原理分子動力学計算のアンサンブルと一致するということもこの方法の特長です。"
 msgstr ""
 "Another feature of this method is that the ensemble of training data "
@@ -606,25 +642,26 @@ msgstr ""
 "calculations, since the transition probabilities (3.) of the Monte Carlo "
 "method are determined by first-principles calculations."
 
-#: ../../theory.rst:214
+#: ../../theory.rst:227
 msgid "また、本製品では構造の時間発展(1.)の前にNPHによるセルの変形を行う、または構造の時間発展(1.)の分子動力学計算をNVEではなくNPHで行うこともできます。これによりセル形状の異なる教師データも含まれるようになり、格子定数（密度）が未知の物質に対しても本手法を使って力場を作ることができるようになります。この場合、厳密なモンテカルロ法ではなくなりますが、力場を作るという目的の上では問題なく使えます。"
 msgstr ""
 "This product can also deform the cell by NPH before the time development "
 "of the structure (1.), or perform molecular dynamics calculation by NPH "
-"(not NVE) at the time development of the structure (1.). This will also include training data with "
-"different cell geometries, allowing this method to create force fields "
-"for materials with unknown lattice constants (densities). In this case, "
-"it is no longer a strict Monte Carlo method, but it can be used without "
-"problems for the purpose of creating a force field."
+"(not NVE) at the time development of the structure (1.). This will also "
+"include training data with different cell geometries, allowing this "
+"method to create force fields for materials with unknown lattice "
+"constants (densities). In this case, it is no longer a strict Monte Carlo"
+" method, but it can be used without problems for the purpose of creating "
+"a force field."
 
-#: ../../theory.rst:216
+#: ../../theory.rst:229
 msgid ""
 "Behler, \"Constructing high‐dimensional neural network potentials: A "
 "tutorial review\", Int. J. Quantum Chem. **115**, 1032-1050 (2015). DOI: "
 "`10.1002/qua.24890 <https://doi.org/10.1002/qua.24890>`_"
 msgstr ""
 
-#: ../../theory.rst:217
+#: ../../theory.rst:230
 msgid ""
 "Artrith *et al.*, \"Efficient and accurate machine-learning interpolation"
 " of atomic energies in compositions with many species\", Phys. Rev. B "
@@ -632,7 +669,7 @@ msgid ""
 "<https://doi.org/10.1103/PhysRevB.96.014112>`_"
 msgstr ""
 
-#: ../../theory.rst:218
+#: ../../theory.rst:231
 msgid ""
 "Huang *et al.*, \"Density functional theory based neural network force "
 "fields from energy decompositions\", Phys. Rev. B **99**, 064103 (2019). "
@@ -640,7 +677,7 @@ msgid ""
 "<https://doi.org/10.1103/PhysRevB.99.064103>`_"
 msgstr ""
 
-#: ../../theory.rst:219
+#: ../../theory.rst:232
 msgid ""
 "Gastegger *et al.*, \"wACSF—Weighted atom-centered symmetry functions as "
 "descriptors in machine learning potentials\", J. Chem. Phys. **148**, "
@@ -648,7 +685,7 @@ msgid ""
 "<https://doi.org/10.1063/1.5019667>`_"
 msgstr ""
 
-#: ../../theory.rst:220
+#: ../../theory.rst:233
 msgid ""
 "Kang and L.-W. Wang, \"First-principles green-Kubo method for thermal "
 "conductivity calculations\", Phys. Rev. B **96**, 020302 (2017). DOI: "
@@ -656,11 +693,19 @@ msgid ""
 "<https://doi.org/10.1103/PhysRevB.96.020302>`_"
 msgstr ""
 
-#: ../../theory.rst:221
+#: ../../theory.rst:234
 msgid ""
 "Nagai *et al.*, \"Self-learning hybrid Monte Carlo: A first-principles "
 "approach\", Phys. Rev. B **102**, 041124 (2020). DOI: "
 "`10.1103/PhysRevB.102.041124 "
 "<https://doi.org/10.1103/PhysRevB.102.041124>`_"
+msgstr ""
+
+#: ../../theory.rst:235
+msgid ""
+"Senftle *et al.*, \"The ReaxFF reactive force-field: development, "
+"applications and future directions\", npj Computational Materials **2**, "
+"15011 (2016). DOI: `10.1038/npjcompumats.2015.11 "
+"<https://doi.org/10.1038/npjcompumats.2015.11>`_"
 msgstr ""
 

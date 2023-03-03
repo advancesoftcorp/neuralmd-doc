@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Advance/NeuralMD \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-05 11:04+0900\n"
+"POT-Creation-Date: 2023-03-02 16:06+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -217,43 +217,52 @@ msgstr ""
 
 #: ../../slhmc.rst:104
 msgid ""
-"|Delta|\\ -NNPを使う場合は、\\ :file:`sannp.prop`\\ で ``withClassical 1`` "
-"を設定し、\\ :file:`sannp.sh`\\ で :option:`sannp --classical` "
+"|Delta|\\ -NNP（LJ-like力場）を使う場合は、\\ :file:`sannp.prop`\\ で ``withLJlike "
+"1`` を設定し、\\ :file:`sannp.sh`\\ で :option:`sannp --classical` "
 "の行のコメントアウトを外してください。"
 msgstr ""
-"When using |Delta|\\ -NNP, set ``withClassical 1`` in :file:`sannp.prop` "
+"When using |Delta|\\ -NNP(LJ-like force field), set ``withLJlike 1`` in :file:`sannp.prop` "
 "and uncomment out the line of :option:`sannp --classical` in "
 ":file:`sannp.sh`\\ ."
 
 #: ../../slhmc.rst:106
+msgid ""
+"|Delta|\\ -NNP(ReaxFF)を使う場合は、\\ :file:`sannp.prop`\\ で ``withReaxFF 1`` "
+"を設定し、同じフォルダにパラメータ定義ファイル\\ :file:`ffield.reax`\\ を配置してください。"
+msgstr ""
+"When using |Delta|\\ -NNP(ReaxFF), set ``withReaxFF 1`` in :file:`sannp.prop` "
+"and place the parameter definition file :file:`ffield.reax` in the same folder."
+
+#: ../../slhmc.rst:108
 msgid "準備が終わったら、手順1で作成した\\ :file:`espresso.in`\\ も同じフォルダに配置し、"
 msgstr ""
 "After preparation, place :file:`espresso.in` created in step 1 in the "
 "same folder and run"
 
-#: ../../slhmc.rst:108
+#: ../../slhmc.rst:110
 msgid "slhmc --calc"
 msgstr ""
 
-#: ../../slhmc.rst:112
+#: ../../slhmc.rst:114
 msgid "を実行することで、力場の作成が始まります。"
 msgstr "to initiate force field creation."
 
-#: ../../slhmc.rst:116
+#: ../../slhmc.rst:118
 msgid "slhmc自体の並列実行はできません。各sh(bat)ファイル内で並列実行を行うように設定を行ってください。"
 msgstr ""
 "Parallel execution of slhmc itself is not available. Set up parallel "
 "execution in each sh(bat) file."
 
-#: ../../slhmc.rst:118
+#: ../../slhmc.rst:120
 msgid ""
 "ジョブ管理システムをお使いの場合は、 ``slhmc --calc`` "
 "を実行するようなジョブスクリプトを作成し、ジョブ投入してください。この場合も、slhmc自体は並列実行せずに、各shファイル内で並列実行するように設定を行ってください。"
 msgstr ""
-"When using a job management system, make a job script to run ``slhmc --calc`` and post the job. "
-"In this case, too, do not parallel execute slhmc itself but set up parallel execution in each sh file."
+"When using a job management system, make a job script to run ``slhmc "
+"--calc`` and post the job. In this case, too, do not parallel execute "
+"slhmc itself but set up parallel execution in each sh file."
 
-#: ../../slhmc.rst:122
+#: ../../slhmc.rst:124
 msgid ""
 "デフォルトでは最初に第一原理計算分子動力学計算を行ってそれを元に初期ニューラルネットワーク力場を作りますが、代わりに既に作成済みの力場を初期力場として使うこともできます。"
 " :file:`slhmc.prop` で ``initialTrain 0`` を設定し、力場ファイル :file:`ffield.sannp`"
@@ -265,7 +274,7 @@ msgstr ""
 "``initialTrain 0`` in :file:`slhmc.prop`\\ , place the force field file "
 ":file:`ffield.sannp` in the same folder, and then run slhmc."
 
-#: ../../slhmc.rst:126
+#: ../../slhmc.rst:128
 msgid ""
 "GPUを使って計算を実行するには、\\ :file:`sannp.sh`\\ で\\ :file:`sannp`\\ を\\ "
 ":file:`sannp_gpu`\\ に、\\ :file:`lammps.sh`\\ で\\ :file:`lammps`\\ を\\ "
@@ -280,7 +289,7 @@ msgstr ""
 ":ref:`gpu.conf <toollammpsgpuconf>` in the same folder, the settings are "
 "applied at execution."
 
-#: ../../slhmc.rst:128
+#: ../../slhmc.rst:130
 msgid ""
 "``slhmc --stop`` を実行すると、力場の作成を中断します。\\ :file:`slhmc.prop`\\ で ``restart "
 "1`` と設定し、 ``slhmc --calc`` を再度実行することで、中断したところから力場の作成を再開します。"
@@ -289,7 +298,7 @@ msgstr ""
 "``restart 1`` in :file:`slhmc.prop` and running ``slhmc --calc`` again "
 "resumes the force field creation from where it is interrupted."
 
-#: ../../slhmc.rst:130
+#: ../../slhmc.rst:132
 msgid ""
 "実行中には、力場更新のタイミングで力場ファイル\\ :file:`ffield.sannp`\\ が随時出力されます。また、構造の履歴が\\ "
 ":file:`slhmc.xyz`\\ として出力されます。"
@@ -298,13 +307,13 @@ msgstr ""
 "progressively when the force field is updated. Also, the history of the "
 "structure is output as :file:`slhmc.xyz`\\ ."
 
-#: ../../slhmc.rst:132
+#: ../../slhmc.rst:134
 msgid "各計算エンジンの入出力ファイルは、サブフォルダ\\ :file:`slhmc_dat`\\ に保存されます。"
 msgstr ""
 "The input/output files for each calculation engine are stored in the "
 "subfolder :file:`slhmc_dat`\\ ."
 
-#: ../../slhmc.rst:134
+#: ../../slhmc.rst:136
 msgid ""
 "もしエラー等で計算が進まない場合は、\\ :file:`slhmc.CRASH`\\ "
 "に当該の計算エンジンの入出力ファイルの内容が保存されますので、確認してください。"
@@ -313,11 +322,11 @@ msgstr ""
 ":file:`slhmc.CRASH` in which input/output files of relevant calculation "
 "engine are saved."
 
-#: ../../slhmc.rst:143
+#: ../../slhmc.rst:145
 msgid "手順3　LAMMPSによる分子動力学計算"
 msgstr "Step 3. Molecular Dynamics Calculations with LAMMPS"
 
-#: ../../slhmc.rst:145
+#: ../../slhmc.rst:147
 msgid ""
 "出力された力場ファイル\\ :file:`ffield.sannp`\\ "
 "を使って、LAMMPSによる分子動力学計算を実行します。基本の使用方法のページにある\\ :ref:`usage_step5`\\ "
@@ -327,7 +336,7 @@ msgstr ""
 "field file :file:`field.sannp`\\ . See :ref:`usage_step5` on the Basic "
 "Usage page."
 
-#: ../../slhmc.rst:149
+#: ../../slhmc.rst:151
 msgid ""
 "複数の異なる初期構造を使って自己学習ハイブリッドモンテカルロ法で力場を作りたい場合、まずはそれぞれの初期構造に対して手順2までを実行します。その後、得られた教師データ\\"
 " :file:`sannp.train`\\ を結合し、これを使って改めてニューラルネットワークの学習（基本の使用方法のページにある\\ "

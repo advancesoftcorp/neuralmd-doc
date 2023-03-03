@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Advance/NeuralMD \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-22 16:10+0900\n"
+"POT-Creation-Date: 2023-03-02 16:06+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -513,125 +513,10 @@ msgstr ""
 "dynamics calculations are performed using the neural network force field."
 
 #: ../../usage.rst:254
-msgid "追加機能の使用手順"
-msgstr "Additional Features"
-
-#: ../../usage.rst:259
-msgid "|Delta|\\ -NNP"
-msgstr ""
-
-#: ../../usage.rst:261
-msgid "ニューラルネットワークの学習（手順4）の前に、古典力場のパラメータの最適化を行います。"
-msgstr ""
-"Before training the neural network (step 4), the parameters of the "
-"classical force field are optimized."
-
-#: ../../usage.rst:263
-msgid "sannp --classical"
-msgstr ""
-
-#: ../../usage.rst:267
-msgid "を実行することで、古典力場のパラメータを含むファイル\\ :file:`sannp.class`\\ が出力されます。"
-msgstr ""
-"Executing the above outputs the file :file:`sannp.class`\\ , which "
-"contains the parameters of the classical force field."
-
-#: ../../usage.rst:269
-msgid "その後、\\ :file:`sannp.prop`\\ で ``withClassical 1`` と設定して、手順4以降を実行します。"
-msgstr ""
-"Then, set ``withClassical 1`` in :file:`sannp.prop` and perform step 4 "
-"and onward."
-
-#: ../../usage.rst:274
-msgid "メトロポリス法による構造生成"
-msgstr "Structure Generation by Metropolis Method"
-
-#: ../../usage.rst:276
-msgid "ニューラルネットワークの学習（手順4）が終わった後に実行します。"
-msgstr "It is executed after the neural network training (step 4) is completed."
-
-#: ../../usage.rst:278
-msgid ""
-"メトロポリス法の設定をファイル\\ :file:`sannp.metro`\\ "
-"に用意します。デフォルトの設定を使う場合は、ファイルが無くてもかまいません。"
-msgstr ""
-"Prepare the settings for the Metropolis method in the file "
-":file:`sannp.metro`\\ . No file is required with the default settings."
-
-#: ../../usage.rst:285
-msgid "sannp --metro"
-msgstr ""
-
-#: ../../usage.rst:289
-msgid ""
-"を実行すると、モンテカルロ計算が行われ、構造が生成されます。生成された構造はQuantum ESPRESSOの入力ファイルの形で\\ "
-":file:`dft_geom`\\ フォルダに出力されます。"
-msgstr ""
-"When executing the above, a Monte Carlo calculation is performed and a "
-"structure is generated. The generated structure is output to the "
-":file:`dft_geom` folder in the form of a Quantum ESPRESSO input file."
-
-#: ../../usage.rst:293
-msgid "モンテカルロ計算の過程はmovieフォルダにxyz形式で保存されます。"
-msgstr ""
-"The Monte Carlo calculation process is saved in xyz format in the movie "
-"folder."
-
-#: ../../usage.rst:295
-msgid "xyzファイルをAdvance/NanoLaboの画面にドラッグ&ドロップすることで動画として可視化ができます。"
-msgstr ""
-"Dragging and dropping the xyz file onto the Advance/NanoLabo screen make "
-"it visible as a movie."
-
-#: ../../usage.rst:297
-msgid "続けて"
-msgstr "Following that, run"
-
-#: ../../usage.rst:299
-msgid "sannp --dft"
-msgstr ""
-
-#: ../../usage.rst:303
-msgid ""
-"を実行すると、\\ :file:`dft_geom`\\ 内の計算を実行するためのシェルスクリプト\\ :file:`dft_run.sh`\\ "
-"（Windowsの場合はバッチファイル\\ :file:`dft_run.bat`\\ "
-"）が生成されます。これを使って、再度手順3から実行し、教師データを追加します。"
-msgstr ""
-"to generate the shell script for the calculations in :file:`dft_geom`\\ ,"
-" :file:`dft_run.sh` (or the batch file :file:`dft_run.bat` on Windows)."
-
-#: ../../usage.rst:308
-msgid "In-situテスト"
-msgstr "In-situ Tests"
-
-#: ../../usage.rst:310
-msgid "ニューラルネットワークの学習（手順4）を行う際に、同時にテストデータについても残差RMSを計算して表示する機能です。学習を進めながら、テストデータに対する性能を随時確認できます。また、教師データのRMSが小さくなっていてもテストデータのRMSが大きくなっている場合には、過学習を起こしていると判断できます。"
-msgstr ""
-"This function calculates and displays the residual RMS for test data at "
-"the same time when training a neural network (Step 4). While learning "
-"proceeds, that makes it possible to check the performance against the "
-"test data at any time. In addition, if the RMS of the test data is large "
-"even though one of the training data is small, it can be assumed that "
-"overlearning has occurred."
-
-#: ../../usage.rst:312
-msgid ""
-"まず、教師データとは別のテストデータを用意します。 :option:`sannp --dft` "
-"を実行し、\"test\"を選んで生成するか、または既存の教師データ\\ :file:`sannp.train`\\ を "
-":option:`sannp --split` で分割します。テストデータ\\ :file:`sannp.test`\\ が用意できたら、\\ "
-":file:`sannp.prop`\\ で ``insituTest 1`` と設定して、学習を実行します。"
-msgstr ""
-"First, prepare test data that is separate from the training data. Either "
-"run :option:`sannp --dft` and select \"test\" to generate it, or split "
-"the existing training data sannp.train with :option:`sannp --split`\\ . "
-"Once the test data :file:`sannp.test` is ready, set ``insituTest 1`` in "
-":file:`sannp.prop` and run the training."
-
-#: ../../usage.rst:317
 msgid "実行オプションリスト"
 msgstr "Execution Option List"
 
-#: ../../usage.rst:323
+#: ../../usage.rst:260
 msgid ""
 "Quantum ESPRESSOの1つの入力ファイルから、教師データを作成するために多数のランダムな構造の入力ファイル\\ "
 ":file:`*.inp`\\ と実行用スクリプト\\ :file:`dft_run.sh`\\ を生成します。"
@@ -640,11 +525,11 @@ msgstr ""
 " execution script :file:`dft_run.sh` from a single Quantum ESPRESSO input"
 " file to generate training data."
 
-#: ../../usage.rst:325
+#: ../../usage.rst:262
 msgid "fileを指定しない場合、対話形式で入力を求められます。"
 msgstr "If no file is specified, input must be interactive."
 
-#: ../../usage.rst:329
+#: ../../usage.rst:266
 msgid ""
 "教師データ\\ :file:`sannp.train`\\ "
 "を元に、エネルギー及び力の計算を行うためのニューラルネットワークの学習を行います。実行が正常に終わると、ニューラルネットワークの情報を含むファイル\\"
@@ -655,7 +540,7 @@ msgstr ""
 "successfully, files :file:`sannp.data` and :file:`sannp.data_e` "
 "containing information on the neural network are output."
 
-#: ../../usage.rst:333
+#: ../../usage.rst:270
 msgid ""
 "教師データ\\ :file:`sannp.train`\\ "
 "を元に、電荷の計算を行うためのニューラルネットワークの学習を行います。実行が正常に終わると、ニューラルネットワークの情報を含むファイル\\ "
@@ -666,7 +551,7 @@ msgstr ""
 "successfully, a file :file:`sannp.data_q` containing information on the "
 "neural network is output."
 
-#: ../../usage.rst:337
+#: ../../usage.rst:274
 msgid ""
 "実行中の学習を中断し、学習途中のニューラルネットワークの情報を\\ :file:`sannp.data`\\ 、\\ "
 ":file:`sannp.data_e`\\ または\\ :file:`sannp.data_q`\\ に出力します。"
@@ -675,7 +560,7 @@ msgstr ""
 "network in the process of training to :file:`sannp.data`\\ , "
 ":file:`sannp.data_e` or :file:`sannp.data_q`\\ ."
 
-#: ../../usage.rst:341
+#: ../../usage.rst:278
 msgid ""
 "学習したニューラルネットワークを使ってテスト用データの計算を行います。テスト用データのファイル\\ :file:`sannp.test`\\ は "
 ":option:`sannp --dft` を実行し、\"test\"を選ぶことで作成できます。結果として全エネルギー\\ "
@@ -689,35 +574,35 @@ msgstr ""
 " :file:`sannp.force` acting on the atom, and the electric charge "
 ":file:`sannp.charge`\\ ."
 
-#: ../../usage.rst:343 ../../usage.rst:363
+#: ../../usage.rst:280 ../../usage.rst:300
 msgid "MPI並列計算には非対応です。"
 msgstr "MPI parallel calculation is not supported."
 
-#: ../../usage.rst:345
+#: ../../usage.rst:282
 msgid "原子エネルギーは、最終層のバイアス項を0にして平準化した値が出力されます。"
 msgstr ""
 "Atomic energies in the output are leveled by setting the bias term of the"
 " last layer to 0."
 
-#: ../../usage.rst:349
+#: ../../usage.rst:286
 msgid ":option:`--test` と同様ですが、原子エネルギーの平準化を行わずに出力します。"
 msgstr ""
 "Similar to :option:`--test` , but without leveling of atomic energies in "
 "the output."
 
-#: ../../usage.rst:353
+#: ../../usage.rst:290
 msgid "設定ファイル\\ :file:`sannp.prop`\\ のテンプレートを出力します。既存のファイルは上書きされます。"
 msgstr ""
 "Outputs the template for the configuration file :file:`sannp.prop` while "
 "existing files will be overwritten."
 
-#: ../../usage.rst:357
+#: ../../usage.rst:294
 msgid "Behler対称関数の設定ファイル\\ :file:`sannp.behler`\\ のテンプレートを出力します。既存のファイルは上書きされます。"
 msgstr ""
 "Outputs the template for the Behler symmetric function configuration file"
 " :file:`sannp.behler` while existing files will be overwritten."
 
-#: ../../usage.rst:361
+#: ../../usage.rst:298
 msgid ""
 "学習したニューラルネットワークを使ってテスト用データの計算を行い、結果として原子に働く力を表示します。テスト用データのファイル\\ "
 ":file:`sannp.test`\\ は :option:`sannp --dft` を実行し、\"test\"を選ぶことで作成できます。"
@@ -727,13 +612,13 @@ msgstr ""
 ":file:`sannp.test` can be created by executing :option:`sannp --dft` and "
 "selecting \"test\"."
 
-#: ../../usage.rst:367
+#: ../../usage.rst:304
 msgid "学習したニューラルネットワークから、LAMMPSで利用可能な力場ファイル\\ :file:`ffield.sannp`\\ を出力します。"
 msgstr ""
 "Outputs the force field file :file:`field.sannp` available in LAMMPS from"
 " the trained neural network."
 
-#: ../../usage.rst:371
+#: ../../usage.rst:308
 msgid ""
 "教師データ\\ :file:`sannp.train`\\ から割合\\ :math:`r (0 \\le r \\le 1)`\\ "
 "を指定してデータを抽出し、テストデータ\\ :file:`sannp.test`\\ を作ります。同時に、残り\\ :math:`(1 - "
@@ -744,7 +629,7 @@ msgstr ""
 ":file:`sannp.test`\\ . At the same time, the remaining :math:`(1 - r)` "
 "data is output as new training data :file:`sannp.train`\\ ."
 
-#: ../../usage.rst:375
+#: ../../usage.rst:312
 msgid ""
 "学習後に実行すると、メトロポリス法を使ったモンテカルロ計算により構造を生成します。MPI並列実行時はレプリカ並列となります。実行後、生成された構造が\\"
 " :file:`dft_geom`\\ フォルダに、各レプリカに対するモンテカルロ計算の動画が\\ :file:`movie`\\ "
@@ -759,7 +644,7 @@ msgstr ""
 ":option:`sannp --dft` to generate the execution script :file:`dft_run.sh`"
 " to create training data from the generated structures."
 
-#: ../../usage.rst:379
+#: ../../usage.rst:316
 msgid ""
 "メトロポリス法の設定ファイル\\ :file:`sannp.metro`\\ "
 "のテンプレートを出力します。既存のファイルは上書きされます。GEOMETRYには教師データ\\ :file:`sannp.train`\\ "
@@ -769,7 +654,7 @@ msgstr ""
 ":file:`sannp.metro` while existing files are overwritten. GEOMETRY uses "
 "the first structure in training data :file:`sannp.train`\\ ."
 
-#: ../../usage.rst:383
+#: ../../usage.rst:320
 msgid ""
 "教師データ :file:`sannp.train`\\ を元に、\\ |Delta|\\ "
 "-NNPで使用する古典力場のパラメータを最適化します。実行が正常に終わると、パラメータを含むファイル\\ "
@@ -780,31 +665,31 @@ msgstr ""
 "successful execution, a file :file:`sannp.class` containing the "
 "parameters is output."
 
-#: ../../usage.rst:388
+#: ../../usage.rst:325
 msgid "他のオプションに追加して指定するオプション"
 msgstr "Option to use with other options"
 
-#: ../../usage.rst:394
+#: ../../usage.rst:331
 msgid "OpenMP並列（スレッド並列）の並列数を指定します。"
 msgstr "Specify the number of parallels of OpenMP parallel (thread parallel)."
 
-#: ../../usage.rst:398
+#: ../../usage.rst:335
 msgid "ライセンスエラー（同時実行数上限）の場合に、実行できるようになるまで待機します。"
 msgstr ""
 "In case of a license error (maximum number of concurrent executions), "
 "wait until it becomes possible to execute."
 
-#: ../../usage.rst:400
+#: ../../usage.rst:337
 msgid "このオプションを指定しない場合、ライセンスエラー時にはすぐに終了します。"
 msgstr ""
 "Without specifying this option, the program exits immediately in case of "
 "a license error."
 
-#: ../../usage.rst:405
+#: ../../usage.rst:342
 msgid "単精度版・倍精度版"
 msgstr "Single-precision and Double-precision Versions"
 
-#: ../../usage.rst:407
+#: ../../usage.rst:344
 msgid ""
 "インストール先のbinフォルダーには通常の :file:`sannp` （単精度版）に加え、 :file:`sannp_d` "
 "（倍精度版）が入っています。もし倍精度版を使用されたいという場合は、説明中の :file:`sannp` を :file:`sannp_d` "
@@ -815,11 +700,11 @@ msgstr ""
 "(single-precision version). When using the double-precision version, "
 "replace :file:`sannp` with :file:`sannp_d` in the description."
 
-#: ../../usage.rst:412
+#: ../../usage.rst:349
 msgid "GPU版"
 msgstr "GPU version"
 
-#: ../../usage.rst:414
+#: ../../usage.rst:351
 msgid ""
 "グラフィックカード(GPU)が搭載されているマシンの場合、GPUで処理を行うことで計算を高速化することができます。インストール先のbinフォルダーに入っている"
 " :file:`sannp_gpu` （単精度版）、 :file:`sannp_gpu_d` （倍精度版）がGPU版の実行ファイルです。説明中の "
@@ -831,7 +716,7 @@ msgstr ""
 " bin folder in the installation location are GPU version executables. Use"
 " them by replacing :file:`sannp` with these files in the description."
 
-#: ../../usage.rst:416
+#: ../../usage.rst:353
 msgid ""
 "設定ファイル\\ :file:`sannp.prop`\\ "
 "にはGPU版特有の設定項目もありますが、特に変更を加えなくても非GPU版の入力ファイルのままで問題なく実行できます。"
@@ -840,7 +725,7 @@ msgstr ""
 "specific items, the input files for non-GPU version can readily be used "
 "without any modification."
 
-#: ../../usage.rst:420 ../../usage/tool.rst:121
+#: ../../usage.rst:357 ../../usage/tool.rst:121
 msgid ""
 "GPUドライバを事前にインストールしておく必要があります。CUDA "
 "11.4.4を使用しており、これに対応するドライババージョン470.82.01以上が必要です。"
@@ -848,7 +733,7 @@ msgstr ""
 "GPU driver is necessary to be installed beforehand. As CUDA 11.4.4 is "
 "used, driver version 470.82.01 or later is required."
 
-#: ../../usage.rst:421
+#: ../../usage.rst:358
 msgid ""
 "元素数が5以上の場合は、重み付き対称関数を使う（\\ :file:`sannp.prop`\\ で\\ ``elemWeight 1``\\ "
 "を設定する）必要があります。"
@@ -856,11 +741,11 @@ msgstr ""
 "In case 5 or more elements are in the system, weighted symmetry function "
 "must be used (set ``elemWeight 1`` in :file:`sannp.prop`\\ )."
 
-#: ../../usage.rst:426
+#: ../../usage.rst:363
 msgid "MPI並列との併用"
 msgstr "Combination use with MPI parallel"
 
-#: ../../usage.rst:428
+#: ../../usage.rst:365
 msgid "GPU版をMPI並列で実行すると、GPUをより効率的に使うことができます。各プロセスが独立してGPUとやり取りを行い、例えばあるプロセスがGPUで計算をしている間に、他のプロセスがGPUメモリへのデータ転送を行う、という風に並行して複数のタスクを実行させる仕組みです。"
 msgstr ""
 "By executing GPU version with MPI parallel, the GPU is used more "
@@ -869,7 +754,7 @@ msgstr ""
 "process transfers data to GPU memory, for example, to execute multiple "
 "tasks in parallel."
 
-#: ../../usage.rst:430
+#: ../../usage.rst:367
 msgid ""
 "また、複数のGPUが搭載されているマシンの場合、使用するGPUを指定することができます。\\ :file:`sannp.mpi2gpu`\\ "
 "というファイルを作成し、各行にプロセスをどのデバイスIDのGPUに割り当てるかを書きます。例えば、グラフィックカードが2つ搭載されているマシンで、MPI8並列で実行し、4プロセスをデバイスID0のGPU、4プロセスをデバイスID1のGPUに割り当てる場合は次のようにします。"
@@ -881,11 +766,11 @@ msgstr ""
 " with allocating 4 processes to device ID0 GPU and 4 to device ID1 GPU, "
 "you can set it as follows."
 
-#: ../../usage.rst:432
+#: ../../usage.rst:369
 msgid "sannp.mpi2gpu"
 msgstr ""
 
-#: ../../usage.rst:432
+#: ../../usage.rst:369
 msgid ""
 "0\n"
 "0\n"
@@ -897,7 +782,7 @@ msgid ""
 "1"
 msgstr ""
 
-#: ../../usage.rst:444
+#: ../../usage.rst:381
 msgid ""
 "ファイルの行数とMPI並列数（プロセス数）が一致するようにしてください。デフォルト（\\ :file:`sannp.mpi2gpu`\\ "
 "がない場合）では、全てのプロセスがデバイスID0のGPUに割り当てられます。"
@@ -906,19 +791,34 @@ msgstr ""
 "parallel (processes). By default (without :file:`sannp.mpi2gpu`\\ ), all "
 "processes are allocated to device ID0 GPU."
 
-#: ../../usage.rst:446
+#: ../../usage.rst:383
 msgid "なお、各GPUに割り当てられたデバイスIDは"
 msgstr ""
 "For your information, you can check the device ID assigned to each GPU by"
 " executing following:"
 
-#: ../../usage.rst:448
+#: ../../usage.rst:385
 msgid "nvidia-smi -L"
 msgstr ""
 
-#: ../../usage.rst:452
+#: ../../usage.rst:389
 msgid "を実行して確認できます。"
 msgstr "\\ "
+
+#: ../../usage.rst:391 ../../usage/tool.rst:174
+msgid "1GPUデバイス当たりMPIプロセス数を2～4程度に設定すると効率的に計算を実行できます。"
+msgstr ""
+"The calculation is effectively executed if you assign 2-4 processes per 1"
+" GPU device."
+
+#: ../../usage.rst:393
+msgid ""
+"NanoLabo Toolに同梱の計算エンジンについては、Quantum ESPRESSOはGPU非対応、LAMMPSはGPU対応です。詳細は\\"
+" :ref:`toollammpsgpu`\\ をご参照ください。"
+msgstr ""
+"For the calculation engines included in NanoLabo Tool, Quantum ESPRESSO "
+"does not support GPU and LAMMPS support GPU. Please refer to "
+":ref:`toollammpsgpu` for the detail."
 
 #: ../../usage/behler.rst:5
 msgid "sannp.behlerの書式"
@@ -1153,8 +1053,9 @@ msgid "デフォルト"
 msgstr "default"
 
 #: ../../usage/prop.rst:13 ../../usage/prop.rst:19 ../../usage/prop.rst:25
-#: ../../usage/prop.rst:37 ../../usage/prop.rst:79 ../../usage/prop.rst:169
-#: ../../usage/prop.rst:199 ../../usage/prop.rst:205 ../../usage/prop.rst:211
+#: ../../usage/prop.rst:37 ../../usage/prop.rst:43 ../../usage/prop.rst:97
+#: ../../usage/prop.rst:187 ../../usage/prop.rst:217 ../../usage/prop.rst:223
+#: ../../usage/prop.rst:229
 msgid "0"
 msgstr ""
 
@@ -1180,7 +1081,7 @@ msgstr ""
 msgid "電荷の計算を行う(1)か行わない(0)かの指定です。"
 msgstr "Calculate charges (1) or not (0)."
 
-#: ../../usage/prop.rst:31 ../../usage/prop.rst:73
+#: ../../usage/prop.rst:31 ../../usage/prop.rst:91
 msgid "1"
 msgstr ""
 
@@ -1193,17 +1094,46 @@ msgstr ""
 
 #: ../../usage/prop.rst:39
 msgid ""
-"ニューラルネットワーク力場のみを使う(0)か、古典力場とニューラルネットワーク力場を組み合わせた\\ |Delta|\\ "
-"-NNPを使う(1)かの指定です。"
+"LJ-like力場とニューラルネットワーク力場を組み合わせた\\ |Delta|\\ "
+"-NNPを使う(1)か使わない(0)かの指定です。ReaxFFを用いた \\ |Delta|\\ -NNPとは併用できません。 "
+"``withClassical 1`` でも ``withLJlike 1`` と同じ設定になります。"
 msgstr ""
-"Use neural network force fields only (0) or |Delta|\\ -NNP (1), which "
-"combines classical force fields and neural network force fields."
+"Use |Delta|\\ -NNP, combination of LJ-like force field and neural network force field (1) or not(0). "
+"Can not be used with |Delta|\\ -NNP using ReaxFF at the same time. ``withClassical 1`` is the same as ``withLJlike 1``\\ ."
 
-#: ../../usage/prop.rst:43
+#: ../../usage/prop.rst:45
+msgid ""
+"ReaxFFとニューラルネットワーク力場を組み合わせた\\ |Delta|\\ "
+"-NNPを使う(1)か使わない(0)かの指定です。ReaxFFを使う場合、パラメータ定義ファイル\\ :file:`ffield.reax`\\ "
+"が必要です。LJ-like力場を用いた \\ |Delta|\\ -NNPとは併用できません。 ``withClassical 2`` でも "
+"``withReaxFF 1`` と同じ設定になります。"
+msgstr ""
+"Use |Delta|\\ -NNP, combination of ReaxFF and neural network force field (1) or not(0). "
+"For ReaxFF, parameter definition file :file:`ffield.reax` is required. "
+"Can not be used with |Delta|\\ -NNP using LJ-like force field at the same time. "
+"``withClassical 2`` is the same as ``withReaxFF 1``\\ ."
+
+#: ../../usage/prop.rst:49
+msgid "5.0"
+msgstr ""
+
+#: ../../usage/prop.rst:51
+msgid "ReaxFFを用いた \\ |Delta|\\ -NNPで、ReaxFFのカットオフ半径(\\ |angs|\\ )を指定します。"
+msgstr "For |Delta|\\ -NNP using ReaxFF, specify the cutoff radius(\\ |angs|\\ ) of ReaxFF."
+
+#: ../../usage/prop.rst:55 ../../usage/prop.rst:73
+msgid "0.5"
+msgstr ""
+
+#: ../../usage/prop.rst:57
+msgid "ReaxFFを用いた \\ |Delta|\\ -NNPで、エネルギーと力を計算する際のReaxFFの寄与（混合率）を指定します。"
+msgstr "For |Delta|\\ -NNP using ReaxFF, specify the contribution (mixing rate) of ReaxFF when calculating energy and force."
+
+#: ../../usage/prop.rst:61
 msgid "-1"
 msgstr ""
 
-#: ../../usage/prop.rst:45
+#: ../../usage/prop.rst:63
 msgid ""
 "対称関数の正規化をミニバッチ内で行う(1)か、サンプル全体で行う(0)かの指定です。負の値を指定した場合、Behler対称関数ならサンプル全体"
 "、Many-Body対称関数ならミニバッチ内になります。"
@@ -1212,49 +1142,45 @@ msgstr ""
 "(0); in case of a negative value, normalize in whole sample for Behler "
 "symmetry function, in mini batch for Many-Body symmetry function."
 
-#: ../../usage/prop.rst:49
+#: ../../usage/prop.rst:67
 msgid "10.0"
 msgstr ""
 
-#: ../../usage/prop.rst:51
+#: ../../usage/prop.rst:69
 msgid "教師データに含まれる、力が大きすぎる外れ値を除外するための閾値(eV/\\ |angs|\\ )です。0以下の値を指定した場合、除外を行いません。"
 msgstr ""
 "Specify the threshold (eV/\\ |angs|\\ ) to eliminate outliers with too "
 "large force in training data. Not eliminate in case of 0 or lower."
 
-#: ../../usage/prop.rst:55
-msgid "0.5"
-msgstr ""
-
-#: ../../usage/prop.rst:57
+#: ../../usage/prop.rst:75
 msgid "原子のエネルギーの正規化に使う分散の下限値(eV)を指定します。"
 msgstr "Specify the lower limit (eV) of variance for normalizing of atomic energy."
 
-#: ../../usage/prop.rst:61
+#: ../../usage/prop.rst:79
 msgid "0.1"
 msgstr ""
 
-#: ../../usage/prop.rst:63
+#: ../../usage/prop.rst:81
 msgid "原子の電荷の正規化に使う分散の下限値(e)を指定します。"
 msgstr "Specify the lower limit (e) of variance for normalizing of atomic charges."
 
-#: ../../usage/prop.rst:67
+#: ../../usage/prop.rst:85
 msgid "chebyshev"
 msgstr ""
 
-#: ../../usage/prop.rst:69
+#: ../../usage/prop.rst:87
 msgid "対称関数を指定します。behler、chebyshev、many-bodyが指定できます。"
 msgstr ""
 "Specify a symmetry function. behler, chebyshev and many-body are "
 "available."
 
-#: ../../usage/prop.rst:75
+#: ../../usage/prop.rst:93
 msgid "重み付き対称関数を使う(1)か、使わない(0)かの指定です。Behler対称関数、Chebyshev対称関数で使用可能です。"
 msgstr ""
 "Use weighted symmetry functions (1) or not (0). Available only when "
 "Behler symmetry function or Chebyshev symmetry function is used."
 
-#: ../../usage/prop.rst:81
+#: ../../usage/prop.rst:99
 msgid ""
 "カットオフ関数\\ :math:`f_c(R_{ij})`\\ "
 "としてtanhを使った関数を使う(1)か、cosを使った関数を使う(0)かの指定です。"
@@ -1262,87 +1188,87 @@ msgstr ""
 "Use functions composed of tanh (1) or cos (0) as cutoff functions "
 ":math:`f_c(R_{ij})`\\ ."
 
-#: ../../usage/prop.rst:85
+#: ../../usage/prop.rst:103
 msgid "100"
 msgstr ""
 
-#: ../../usage/prop.rst:87
+#: ../../usage/prop.rst:105
 msgid "Many-Body対称関数のパラメータ *M*:sub:`2` です。"
 msgstr "Specify the parameter *M*:sub:`2` of Many-Body symmetry functions."
 
-#: ../../usage/prop.rst:91
+#: ../../usage/prop.rst:109
 msgid "10"
 msgstr ""
 
-#: ../../usage/prop.rst:93
+#: ../../usage/prop.rst:111
 msgid "Many-Body対称関数のパラメータ *M*:sub:`3` です。"
 msgstr "Specify the parameter *M*:sub:`3` of Many-Body symmetry functions."
 
-#: ../../usage/prop.rst:97
+#: ../../usage/prop.rst:115
 msgid "0.0"
 msgstr ""
 
-#: ../../usage/prop.rst:99
+#: ../../usage/prop.rst:117
 msgid "Many-Body対称関数のパラメータ *R*:sub:`inner` (\\ |angs|\\ )です。"
 msgstr ""
 "Specify the parameter *R*:sub:`inner` (\\ |angs|\\ ) of Many-Body "
 "functions."
 
-#: ../../usage/prop.rst:103 ../../usage/prop.rst:121 ../../usage/prop.rst:127
+#: ../../usage/prop.rst:121 ../../usage/prop.rst:139 ../../usage/prop.rst:145
 msgid "6.5"
 msgstr ""
 
-#: ../../usage/prop.rst:105
+#: ../../usage/prop.rst:123
 msgid "Many-Body対称関数のパラメータ *R*:sub:`outer` (\\ |angs|\\ )です。"
 msgstr ""
 "Specify the parameter *R*:sub:`outer` (\\ |angs|\\ ) of Many-Body "
 "functions."
 
-#: ../../usage/prop.rst:109 ../../usage/prop.rst:115
+#: ../../usage/prop.rst:127 ../../usage/prop.rst:133
 msgid "20"
 msgstr ""
 
-#: ../../usage/prop.rst:111
+#: ../../usage/prop.rst:129
 msgid "Chebyshev対称関数の動径成分の数を指定します。"
 msgstr "Specify the number of radial components of Chebyshev symmetry functions."
 
-#: ../../usage/prop.rst:117
+#: ../../usage/prop.rst:135
 msgid "Chebyshev対称関数の角度成分の数を指定します。"
 msgstr "Specify the number of angular components of Chebyshev symmetry functions."
 
-#: ../../usage/prop.rst:123
+#: ../../usage/prop.rst:141
 msgid "Chebyshev対称関数の動径成分のカットオフ距離 *R*:sub:`c` (\\ |angs|\\ )を指定します。"
 msgstr ""
 "Specify the cutoff radius *R*:sub:`c` (\\ |angs|\\ ) of radial components"
 " of Chebyshev symmetry functions."
 
-#: ../../usage/prop.rst:129
+#: ../../usage/prop.rst:147
 msgid "Chebyshev対称関数の角度成分のカットオフ距離 *R*:sub:`c` (\\ |angs|\\ )を指定します。"
 msgstr ""
 "Specify the cutoff radius *R*:sub:`c` (\\ |angs|\\ ) of angular "
 "components of Chebyshev symmetry functions."
 
-#: ../../usage/prop.rst:133
+#: ../../usage/prop.rst:151
 msgid "2"
 msgstr ""
 
-#: ../../usage/prop.rst:135
+#: ../../usage/prop.rst:153
 msgid "ニューラルネットワークの隠れ層の層数です。"
 msgstr "Specify the number of hidden layers of a neural network."
 
-#: ../../usage/prop.rst:139
+#: ../../usage/prop.rst:157
 msgid "30"
 msgstr ""
 
-#: ../../usage/prop.rst:141
+#: ../../usage/prop.rst:159
 msgid "ニューラルネットワークのノード数です。"
 msgstr "Specify the number of nodes of of a neural network."
 
-#: ../../usage/prop.rst:145
+#: ../../usage/prop.rst:163
 msgid "twtanh"
 msgstr ""
 
-#: ../../usage/prop.rst:147
+#: ../../usage/prop.rst:165
 msgid ""
 "ニューラルネットワークの活性化関数です。asis（使用しない）、sigmoid、tanh、twtanh(twisted "
 "tanh)、eLU、GELUが指定できます。"
@@ -1350,11 +1276,11 @@ msgstr ""
 "Specify an activation function of a neural network. asis (not use), "
 "sigmoid, tanh, twtanh (twisted tanh), eLU, and GELU are available."
 
-#: ../../usage/prop.rst:151 ../../usage/prop.rst:163
+#: ../../usage/prop.rst:169 ../../usage/prop.rst:181
 msgid "32"
 msgstr ""
 
-#: ../../usage/prop.rst:153
+#: ../../usage/prop.rst:171
 msgid ""
 "学習時の最適化アルゴリズムの指定です。0を指定すると、Adam法を使用します。1以上の値を指定すると、その値を履歴数とするL-"
 "BFGS法を使用します。"
@@ -1363,62 +1289,62 @@ msgstr ""
 "method. In case of 1 or larger, use L-BFGS method with the specified "
 "value as the number of histories."
 
-#: ../../usage/prop.rst:157
+#: ../../usage/prop.rst:175
 msgid "more-thuente"
 msgstr ""
 
-#: ../../usage/prop.rst:159
+#: ../../usage/prop.rst:177
 msgid "L-BFGS法で使用する直線探索のアルゴリズムです。more-thuente、armijo、wolfe、strong-wolfeが指定できます。"
 msgstr ""
 "Specify a linear search algorithm used in L-BFGS method. more-thuente, "
 "armijo, wolfe, and srong-wolfe are available."
 
-#: ../../usage/prop.rst:165
+#: ../../usage/prop.rst:183
 msgid "L-BFGS法で使用する直線探索の試行回数の最大値です。"
 msgstr ""
 "Specify the maximum value of the number of trials of linear search used "
 "in L-BFGS method."
 
-#: ../../usage/prop.rst:171
+#: ../../usage/prop.rst:189
 msgid "学習時のミニバッチサイズです。0以下の値を指定した場合、ミニバッチは使用せず、フルバッチ（サンプル全体）で学習を行います。"
 msgstr ""
 "Specify the mini batch size at learning. In case of 0 or lower, not use "
 "mini batches but use a full batch (whole sample) for learning."
 
-#: ../../usage/prop.rst:175
+#: ../../usage/prop.rst:193
 msgid "5000"
 msgstr ""
 
-#: ../../usage/prop.rst:177
+#: ../../usage/prop.rst:195
 msgid "学習時の繰り返し回数(epoch)の上限です。"
 msgstr "Specify the upper limit of the number of repeats (epoch) at learning."
 
-#: ../../usage/prop.rst:181
+#: ../../usage/prop.rst:199
 msgid "1000"
 msgstr ""
 
-#: ../../usage/prop.rst:183
+#: ../../usage/prop.rst:201
 msgid "学習中にニューラルネットワークのデータをファイルに保存する間隔を設定します。0以下の値を設定すると終了時のみ保存します。"
 msgstr ""
 "Specify the interval to save data of neural network into a file at "
 "learning. In case of 0 or lower, store only at the end."
 
-#: ../../usage/prop.rst:187
+#: ../../usage/prop.rst:205
 msgid "250"
 msgstr ""
 
-#: ../../usage/prop.rst:189
+#: ../../usage/prop.rst:207
 msgid "学習時の繰り返し回数(epoch)がこの数字より小さいうちはエネルギーのみを使って学習を行います。それ以降はエネルギーと原子に働く力の両方を使って学習を行います。"
 msgstr ""
 "Use only energy for learning until the nuber of repeats (epoch) at "
 "learning becomes larger than this number. After that, use both energy and"
 " force for learning."
 
-#: ../../usage/prop.rst:193
+#: ../../usage/prop.rst:211
 msgid "500"
 msgstr ""
 
-#: ../../usage/prop.rst:195
+#: ../../usage/prop.rst:213
 msgid ""
 "エネルギーから原子に働く力の誤差を計算する際、繰り返し回数(epoch)がこの数字より小さいうちはDouble "
 "Backward法による近似的な微分法を使います。それ以降は厳密に微分を計算します。"
@@ -1428,126 +1354,126 @@ msgstr ""
 "number of repeats (epoch) becomes larger than this number. After that, "
 "strictly calculate a differentiate."
 
-#: ../../usage/prop.rst:201
+#: ../../usage/prop.rst:219
 msgid "損失関数のスケール係数を絶対値で設定する(1)か、2乗値で設定する(0)かの指定です。"
 msgstr ""
 "Specify the scale factor of a loss function with absolute value (1) or "
 "squared value (0)."
 
-#: ../../usage/prop.rst:207
+#: ../../usage/prop.rst:225
 msgid "損失関数の正規化を行う(1)か行わない(0)かの指定です。"
 msgstr "Specify whether a loss function should be normalized (1) or not (0)."
 
-#: ../../usage/prop.rst:213
+#: ../../usage/prop.rst:231
 msgid "エネルギーから原子に働く力の誤差を計算する際、epochsApproxFを使って近似的な微分と厳密な微分を切り替える(0)か、常に近似的な微分法を使う(1)か設定します。"
 msgstr ""
 "Select switching approximate and strict differentiation with "
 "epochsApproxF (0) or using always approximate one (1) when calculating "
 "from energy an error of force acting on an atom."
 
-#: ../../usage/prop.rst:217 ../../usage/prop.rst:229
+#: ../../usage/prop.rst:235 ../../usage/prop.rst:247
 msgid "0.01"
 msgstr ""
 
-#: ../../usage/prop.rst:219
+#: ../../usage/prop.rst:237
 msgid "学習が収束したか判定するためのエネルギー残差(RMS)の閾値(eV/atom)です。"
 msgstr ""
 "Specify the threshold (eV/atom) of residual (RMS) of energy to determine "
 "whether learning has converged or not."
 
-#: ../../usage/prop.rst:223
+#: ../../usage/prop.rst:241
 msgid "0.10"
 msgstr ""
 
-#: ../../usage/prop.rst:225
+#: ../../usage/prop.rst:243
 msgid "学習が収束したか判定するための力の残差(RMS)の閾値(eV/\\ |angs|\\ )です。"
 msgstr ""
 "Specify the threshold (eV/\\ |angs|\\ ) of residual (RMS) of force to "
 "determine whether learning has converged or not."
 
-#: ../../usage/prop.rst:231
+#: ../../usage/prop.rst:249
 msgid "学習が収束したか判定するための電荷の残差(RMS)の閾値(e)です。"
 msgstr ""
 "Specify the threshold (e) of residual (RMS) of charge to determine "
 "whether learning has converged or not."
 
-#: ../../usage/prop.rst:235 ../../usage/prop.rst:241 ../../usage/prop.rst:247
+#: ../../usage/prop.rst:253 ../../usage/prop.rst:259 ../../usage/prop.rst:265
 msgid "1.00"
 msgstr ""
 
-#: ../../usage/prop.rst:237
+#: ../../usage/prop.rst:255
 msgid "エネルギーの損失関数のスケール係数(1/eV または 1/eV\\ :sup:`2`\\ )です。"
 msgstr ""
 "Specify the scale factor (1/eV or 1/eV\\ :sup:`2`\\ ) of a loss function "
 "of energy."
 
-#: ../../usage/prop.rst:243
+#: ../../usage/prop.rst:261
 msgid "力の損失関数のスケール係数(\\ |angs|\\ /eV または (\\ |angs|\\ /eV)\\ :sup:`2`\\ )です。"
 msgstr ""
 "Specify the scale factor (\\ |angs|\\ /eV or (\\ |angs|\\ /eV)\\ "
 ":sup:`2`\\ ) of a loss function of force."
 
-#: ../../usage/prop.rst:249
+#: ../../usage/prop.rst:267
 msgid "電荷の損失関数のスケール係数(1/e または 1/e\\ :sup:`2`\\ )です。"
 msgstr ""
 "Specify the scale factor (1/e or 1/e\\ :sup:`2`\\ ) of a loss function of"
 " charge."
 
-#: ../../usage/prop.rst:253 ../../usage/prop.rst:259
+#: ../../usage/prop.rst:271 ../../usage/prop.rst:277
 msgid "1.0e-4"
 msgstr ""
 
-#: ../../usage/prop.rst:255
+#: ../../usage/prop.rst:273
 msgid "学習率の初期値です。"
 msgstr "Specify the initial value of learning rate."
 
-#: ../../usage/prop.rst:261
+#: ../../usage/prop.rst:279
 msgid "学習率の下限値です。"
 msgstr "Specify the lower limit of learning rate."
 
-#: ../../usage/prop.rst:265
+#: ../../usage/prop.rst:283
 msgid "0.9999"
 msgstr ""
 
-#: ../../usage/prop.rst:267
+#: ../../usage/prop.rst:285
 msgid "学習率の減衰率です。"
 msgstr "Specify the attenuation factor of learning rate."
 
-#: ../../usage/prop.rst:271
+#: ../../usage/prop.rst:289
 msgid "0.9"
 msgstr ""
 
-#: ../../usage/prop.rst:273
+#: ../../usage/prop.rst:291
 msgid "学習時のハイパーパラメータ（Adam法の\\ |beta|\\ :sub:`1`）です。"
 msgstr ""
 "Specify the hyper parameter (\\ |beta|\\ :sub:`1` of Adam method) at "
 "learning."
 
-#: ../../usage/prop.rst:277
+#: ../../usage/prop.rst:295
 msgid "0.999"
 msgstr ""
 
-#: ../../usage/prop.rst:279
+#: ../../usage/prop.rst:297
 msgid "学習時のハイパーパラメータ（Adam法の\\ |beta|\\ :sub:`2`）です。"
 msgstr ""
 "Specify the hyper parameter (\\ |beta|\\ :sub:`2` of Adam method) at "
 "learning."
 
-#: ../../usage/prop.rst:283
+#: ../../usage/prop.rst:301
 msgid "64"
 msgstr ""
 
-#: ../../usage/prop.rst:285
+#: ../../usage/prop.rst:303
 msgid "|Delta|\\ -NNPで使用する古典力場を最適化する際の繰り返し回数の上限です。"
 msgstr ""
 "Specify the upper limit of the number of repeats when optimizing a "
 "classical force field used in |Delta|\\ -NNP."
 
-#: ../../usage/prop.rst:289
+#: ../../usage/prop.rst:307
 msgid "-50.0"
 msgstr ""
 
-#: ../../usage/prop.rst:291
+#: ../../usage/prop.rst:309
 msgid ""
 "|Delta|\\ "
 "-NNPで使用する古典力場を最適化する際、ここで指定した値(eV)よりも小さいエネルギーが現れにくくなるように、ペナルティ関数を適用して最適化します。"
@@ -1556,33 +1482,33 @@ msgstr ""
 "functions will be applied so that lower energy than this value (eV) has "
 "seldomly appeared."
 
-#: ../../usage/prop.rst:295 ../../usage/tool.rst:137
+#: ../../usage/prop.rst:313 ../../usage/tool.rst:137
 msgid "256"
 msgstr ""
 
-#: ../../usage/prop.rst:297
+#: ../../usage/prop.rst:315
 msgid "（GPU版）CUDAのブロック当たりのスレッド数です。上限は1024（CUDAの仕様）です。32（ワープサイズ）の倍数を推奨します。"
 msgstr ""
 "(GPU version) Number of threads per block in CUDA. Upper limit is 1024 "
 "(specification of CUDA). Multiple of 32 (warp size) is appropriate."
 
-#: ../../usage/prop.rst:299
+#: ../../usage/prop.rst:317
 msgid "GPU上で生成するスレッドに関する設定で、CPUのスレッド並列（OpenMP並列）とは関係ありません。"
 msgstr ""
 "This setting is about the threads on GPU, and not related to thread "
 "parallel (OpenMP parallel) on CPU."
 
-#: ../../usage/prop.rst:303
+#: ../../usage/prop.rst:321
 msgid "512"
 msgstr ""
 
-#: ../../usage/prop.rst:305
+#: ../../usage/prop.rst:323
 msgid "（GPU版）対称関数をGPUで計算するときに、ここで指定した数の原子ごとにまとめて処理を行います。"
 msgstr ""
 "(GPU version) Number of atoms to be processed at a time when calculating "
 "the symmetry function using GPU."
 
-#: ../../usage/prop.rst:309
+#: ../../usage/prop.rst:327
 msgid "以降のファイル内容はコメントとして扱われます。"
 msgstr "Subsequent file contents are treated as comments."
 
@@ -1840,6 +1766,10 @@ msgid "対称関数をGPUで計算するときに、ここで指定した数の�
 msgstr ""
 "Number of atoms to be processed at a time when calculating the symmetry "
 "function using GPU."
+
+#: ../../usage/tool.rst:149
+msgid "全て0"
+msgstr "0 for all"
 
 #: ../../usage/tool.rst:151
 msgid "複数のGPUが搭載されているマシンの場合、使用するGPUをデバイスIDで指定します。MPI並列で使用する場合は、各行にプロセスをどのデバイスIDのGPUに割り当てるかを書きます。行数とMPI並列数（プロセス数）が一致するようにしてください。"
