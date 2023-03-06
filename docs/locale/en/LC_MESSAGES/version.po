@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Advance/NeuralMD \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-02 14:50+0900\n"
+"POT-Creation-Date: 2023-03-06 10:37+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,8 +23,8 @@ msgid "バージョン情報"
 msgstr "Version Information"
 
 #: ../../version.rst:10
-msgid "2022/3/-- バージョン1.8"
-msgstr "2022/3/-- Version 1.8"
+msgid "2022/3/6 バージョン1.8"
+msgstr "2022/3/6 Version 1.8"
 
 #: ../../version.rst:8
 msgid "ReaxFFを用いた\\ |Delta|\\ -NNP法"
@@ -32,7 +32,9 @@ msgstr "|Delta|\\ -NNP method using ReaxFF"
 
 #: ../../version.rst:9
 msgid "ASEのトラジェクトリファイルを教師データに変換するPythonスクリプト(\\ ``traj_to_train.py``\\ )を同梱"
-msgstr "Included Python script (\\ ``traj_to_train.py``\\ ) to convert ASE trajectory file into training data"
+msgstr ""
+"Included Python script (\\ ``traj_to_train.py``\\ ) to convert ASE "
+"trajectory file into training data"
 
 #: ../../version.rst:10 ../../version.rst:26
 msgid "その他、軽微な修正等"

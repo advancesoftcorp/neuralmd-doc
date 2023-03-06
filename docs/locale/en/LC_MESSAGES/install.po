@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Advance/NeuralMD \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-01 11:11+0900\n"
+"POT-Creation-Date: 2023-03-06 10:37+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -43,14 +43,14 @@ msgstr ""
 
 #: ../../install/linux.rst:14
 msgid ""
-"`Advance/NeuralMD (ver.1.7) "
-"<https://www.nanolabo.advancesoft.jp/?wpdmdl=970>`_"
+"`Advance/NeuralMD (ver.1.8) "
+"<https://www.nanolabo.advancesoft.jp/?wpdmdl=1052>`_"
 msgstr ""
 
 #: ../../install/linux.rst:16
 msgid ""
-"`Advance/NanoLabo Tool (ver.2.6) "
-"<https://www.nanolabo.advancesoft.jp/?wpdmdl=967>`_"
+"`Advance/NanoLabo Tool (ver.2.7) "
+"<https://www.nanolabo.advancesoft.jp/?wpdmdl=1051>`_"
 msgstr ""
 
 #: ../../install/linux.rst:23
@@ -269,8 +269,8 @@ msgid ""
 msgstr ""
 "Install it using the `remoteLicense installer "
 "<https://github.com/advancesoftcorp/remotelicense-"
-"doc/releases/download/v1.0/install_remotelicense_windows_v1.0.exe>`_"
-" and launch it."
+"doc/releases/download/v1.0/install_remotelicense_windows_v1.0.exe>`_ and "
+"launch it."
 
 #: ../../install/linux.rst:131 ../../install/purchase.rst:113
 msgid ":guilabel:`Host` タブでLinuxマシンへの接続情報を設定します。"
@@ -691,14 +691,14 @@ msgstr "How to Install (Windows)"
 
 #: ../../install/windows.rst:14
 msgid ""
-"`Advance/NeuralMD (ver.1.7) "
-"<https://www.nanolabo.advancesoft.jp/?wpdmdl=969>`_"
+"`Advance/NeuralMD (ver.1.8) "
+"<https://www.nanolabo.advancesoft.jp/?wpdmdl=1054>`_"
 msgstr ""
 
 #: ../../install/windows.rst:16
 msgid ""
-"`Advance/NanoLabo Tool (ver.2.6) "
-"<https://www.nanolabo.advancesoft.jp/?wpdmdl=968>`_"
+"`Advance/NanoLabo Tool (ver.2.7) "
+"<https://www.nanolabo.advancesoft.jp/?wpdmdl=1043>`_"
 msgstr ""
 
 #: ../../install/windows.rst:23
