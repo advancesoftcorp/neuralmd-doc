@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Advance/NeuralMD \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-06 10:37+0900\n"
+"POT-Creation-Date: 2023-03-08 16:10+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -43,14 +43,14 @@ msgstr ""
 
 #: ../../install/linux.rst:14
 msgid ""
-"`Advance/NeuralMD (ver.1.8) "
-"<https://www.nanolabo.advancesoft.jp/?wpdmdl=1052>`_"
+"`Advance/NeuralMD (ver.1.8.1) "
+"<https://www.nanolabo.advancesoft.jp/?wpdmdl=1092>`_"
 msgstr ""
 
 #: ../../install/linux.rst:16
 msgid ""
-"`Advance/NanoLabo Tool (ver.2.7) "
-"<https://www.nanolabo.advancesoft.jp/?wpdmdl=1051>`_"
+"`Advance/NanoLabo Tool (ver.2.7.1) "
+"<https://www.nanolabo.advancesoft.jp/?wpdmdl=1085>`_"
 msgstr ""
 
 #: ../../install/linux.rst:23
@@ -697,8 +697,8 @@ msgstr ""
 
 #: ../../install/windows.rst:16
 msgid ""
-"`Advance/NanoLabo Tool (ver.2.7) "
-"<https://www.nanolabo.advancesoft.jp/?wpdmdl=1043>`_"
+"`Advance/NanoLabo Tool (ver.2.7.1) "
+"<https://www.nanolabo.advancesoft.jp/?wpdmdl=1084>`_"
 msgstr ""
 
 #: ../../install/windows.rst:23
