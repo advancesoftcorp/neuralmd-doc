@@ -11,7 +11,7 @@ Advance/NeuralMD
 ================
 
 Advance/NeuralMDホームページ
- https://www.advancesoft.jp/product/advance_neuralmd/
+ https://www.nanolabo.advancesoft.jp/neuralmd/
 
 解析事例
  http://case.advancesoft.jp/NeuralMD/

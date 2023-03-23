@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Advance/NeuralMD \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-30 16:36+0900\n"
+"POT-Creation-Date: 2023-03-23 18:25+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,8 +39,8 @@ msgid "Advance/NeuralMDホームページ"
 msgstr "Advance/NeuralMD home page"
 
 #: ../../link.rst:14
-msgid "https://www.advancesoft.jp/product/advance_neuralmd/"
-msgstr ""
+msgid "https://www.nanolabo.advancesoft.jp/neuralmd/"
+msgstr "https://www.nanolabo.advancesoft.jp/en/neuralmd/"
 
 #: ../../link.rst:17
 msgid "解析事例"
@@ -60,7 +60,7 @@ msgstr "Advance/NanoLabo home page"
 
 #: ../../link.rst:23
 msgid "https://www.nanolabo.advancesoft.jp/"
-msgstr ""
+msgstr "https://www.nanolabo.advancesoft.jp/en/"
 
 #: ../../link.rst:26 ../../link.rst:52
 msgid "マニュアル"
@@ -68,7 +68,7 @@ msgstr "Manual"
 
 #: ../../link.rst:26
 msgid "https://nanolabo-doc.readthedocs.io/ja/latest/"
-msgstr ""
+msgstr "https://nanolabo-doc.readthedocs.io/en/latest/"
 
 #: ../../link.rst:29
 msgid "Quantum ESPRESSO"
