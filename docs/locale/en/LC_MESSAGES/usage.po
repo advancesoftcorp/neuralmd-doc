@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Advance/NeuralMD \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-02 16:06+0900\n"
+"POT-Creation-Date: 2023-05-18 10:25+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -461,10 +461,10 @@ msgid "eatom"
 msgstr ""
 
 #: ../../usage.rst
-msgid "ニューラルネットワーク最終層のバイアス項を0に設定する機能 (原子エネルギーの平準化)"
+msgid "ニューラルネットワーク最終層のバイアス項（原子の内部エネルギーに相当する定数）を0に設定する機能（原子エネルギーの平準化）"
 msgstr ""
-"Function to set the bias term in the final layer of a neural network to "
-"zero (atomic energy equalization)"
+"Function to set the bias term in the final layer of the neural network (constant corresponds to internal energy of atom) to "
+"zero (leveling of atomic energy)"
 
 #: ../../usage.rst
 msgid "eatom zeroで有効、eatom finiteまたは省略（力場ファイル名に続けて元素名を指定）で無効"
@@ -482,7 +482,7 @@ msgstr "Cutoff radius for real-space (short-range) Coulomb interaction"
 
 #: ../../usage.rst
 msgid ""
-"(\\ ``nnp/coul/cut``\\ では必ず指定、\\ ``nnp/coul/long``\\ では省略可)  (\\ |rarr|\\"
+"（\\ ``nnp/coul/cut``\\ では必ず指定、\\ ``nnp/coul/long``\\ では省略可）  (\\ |rarr|\\"
 " `coul/cut`_)"
 msgstr ""
 "(must be specified for ``nnp/coul/cut``\\ , can be omitted for "
@@ -499,7 +499,7 @@ msgstr ""
 "1/distance)"
 
 #: ../../usage.rst
-msgid "(\\ ``nnp/coul/long``\\ では必ず指定)  (\\ |rarr|\\ `kspace_modify`_)"
+msgid "（\\ ``nnp/coul/long``\\ では必ず指定）  (\\ |rarr|\\ `kspace_modify`_)"
 msgstr ""
 "(must be specified for ``nnp/coul/long``\\ ) (\\ |rarr|\\ "
 "`kspace_modify`_)"
@@ -579,10 +579,10 @@ msgid "MPI並列計算には非対応です。"
 msgstr "MPI parallel calculation is not supported."
 
 #: ../../usage.rst:282
-msgid "原子エネルギーは、最終層のバイアス項を0にして平準化した値が出力されます。"
+msgid "原子エネルギーは、最終層のバイアス項（原子の内部エネルギーに相当する定数）を0にして平準化した値が出力されます。"
 msgstr ""
 "Atomic energies in the output are leveled by setting the bias term of the"
-" last layer to 0."
+" last layer (constant corresponds to internal energy of atom) to 0."
 
 #: ../../usage.rst:286
 msgid ":option:`--test` と同様ですが、原子エネルギーの平準化を行わずに出力します。"
@@ -1098,8 +1098,10 @@ msgid ""
 "-NNPを使う(1)か使わない(0)かの指定です。ReaxFFを用いた \\ |Delta|\\ -NNPとは併用できません。 "
 "``withClassical 1`` でも ``withLJlike 1`` と同じ設定になります。"
 msgstr ""
-"Use |Delta|\\ -NNP, combination of LJ-like force field and neural network force field (1) or not(0). "
-"Can not be used with |Delta|\\ -NNP using ReaxFF at the same time. ``withClassical 1`` is the same as ``withLJlike 1``\\ ."
+"Use |Delta|\\ -NNP, combination of LJ-like force field and neural network"
+" force field (1) or not(0). Can not be used with |Delta|\\ -NNP using "
+"ReaxFF at the same time. ``withClassical 1`` is the same as ``withLJlike "
+"1``\\ ."
 
 #: ../../usage/prop.rst:45
 msgid ""
@@ -1108,10 +1110,11 @@ msgid ""
 "が必要です。LJ-like力場を用いた \\ |Delta|\\ -NNPとは併用できません。 ``withClassical 2`` でも "
 "``withReaxFF 1`` と同じ設定になります。"
 msgstr ""
-"Use |Delta|\\ -NNP, combination of ReaxFF and neural network force field (1) or not(0). "
-"For ReaxFF, parameter definition file :file:`ffield.reax` is required. "
-"Can not be used with |Delta|\\ -NNP using LJ-like force field at the same time. "
-"``withClassical 2`` is the same as ``withReaxFF 1``\\ ."
+"Use |Delta|\\ -NNP, combination of ReaxFF and neural network force field "
+"(1) or not(0). For ReaxFF, parameter definition file :file:`ffield.reax` "
+"is required. Can not be used with |Delta|\\ -NNP using LJ-like force "
+"field at the same time. ``withClassical 2`` is the same as ``withReaxFF "
+"1``\\ ."
 
 #: ../../usage/prop.rst:49
 msgid "5.0"
@@ -1119,7 +1122,9 @@ msgstr ""
 
 #: ../../usage/prop.rst:51
 msgid "ReaxFFを用いた \\ |Delta|\\ -NNPで、ReaxFFのカットオフ半径(\\ |angs|\\ )を指定します。"
-msgstr "For |Delta|\\ -NNP using ReaxFF, specify the cutoff radius(\\ |angs|\\ ) of ReaxFF."
+msgstr ""
+"For |Delta|\\ -NNP using ReaxFF, specify the cutoff radius(\\ |angs|\\ ) "
+"of ReaxFF."
 
 #: ../../usage/prop.rst:55 ../../usage/prop.rst:73
 msgid "0.5"
@@ -1127,7 +1132,9 @@ msgstr ""
 
 #: ../../usage/prop.rst:57
 msgid "ReaxFFを用いた \\ |Delta|\\ -NNPで、エネルギーと力を計算する際のReaxFFの寄与（混合率）を指定します。"
-msgstr "For |Delta|\\ -NNP using ReaxFF, specify the contribution (mixing rate) of ReaxFF when calculating energy and force."
+msgstr ""
+"For |Delta|\\ -NNP using ReaxFF, specify the contribution (mixing rate) "
+"of ReaxFF when calculating energy and force."
 
 #: ../../usage/prop.rst:61
 msgid "-1"
