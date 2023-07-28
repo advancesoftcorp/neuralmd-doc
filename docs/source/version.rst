@@ -11,11 +11,11 @@
    - ReaxFFの計算について、単精度版 :file:`sannp` でも倍精度版 :file:`sannp_d` と同じように内部処理します。
 
  - ReaxFFのパラメータ定義ファイル内で定義されていない元素が教師データに含まれる場合でも学習ができるよう対応
- - 複数のニューラルネットワークモデルの平均値を用いて1つの力場を定義する手法を実装 (\ |rarr|\ :ref:`models <propmodels>`)
+ - 複数のニューラルネットワークモデルの平均値を用いて1つの力場を定義する手法を追加 (\ |rarr|\ :ref:`models <propmodels>`)
 
    - 力場の外挿精度が向上し、溶融状態・液体系・アモルファス等のシミュレーションが容易になります。
 
- - Super Epoch法を実装 (\ |rarr|\ :ref:`superEpochs <propsuperepochs>`)
+ - Super Epoch法を追加 (\ |rarr|\ :ref:`superEpochs <propsuperepochs>`)
 
    - 教師データを複数のサブセットに分割して、各サブセットを使った学習処理を順次実行します。
    - メモリ使用量を低減しつつ、過学習を抑制することができます。
