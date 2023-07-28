@@ -146,6 +146,8 @@ sannp.propの書式
 
  Chebyshev対称関数の角度成分のカットオフ距離 *R*:sub:`c` (\ |angs|\ )を指定します。
 
+.. _propmodels:
+
 .. describe:: models
 
  :デフォルト: 16
@@ -217,6 +219,8 @@ sannp.propの書式
  :デフォルト: 500
 
  エネルギーから原子に働く力の誤差を計算する際、繰り返し回数(epoch)がこの数字より小さいうちはDouble Backward法による近似的な微分法を使います。それ以降は厳密に微分を計算します。
+
+.. _propsuperepochs:
 
 .. describe:: superEpochs
 
