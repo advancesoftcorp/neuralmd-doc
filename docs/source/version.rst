@@ -22,6 +22,7 @@
 
  - :file:`sannp.prop`\ ・\ :file:`sannp.behler`\ の一部のパラメータのデフォルト値を変更（無機結晶に特化した値を採用）
  - SLHMC: :file:`slhmc.prop`\ の一部のパラメータのデフォルト値を変更
+ - サポート対象OSにWindows 11を追加
 
 2023/3/8 バージョン1.8.1
  - CentOS7で、NeuralMD1.8同梱のMPIライブラリが正常に動作しない問題を解消
