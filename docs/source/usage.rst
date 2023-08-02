@@ -281,9 +281,15 @@ LAMMPSの入力ファイル中で、以下の\ ``pair_style``\ が使えます�
 
  原子エネルギーは、最終層のバイアス項（原子の内部エネルギーに相当する定数）を0にして平準化した値が出力されます。
 
+  :math:`E_\mathrm{tot}(\mathrm{DFT/NNP}) = \left(E(\mathrm{DFT/NNP}) - \sum_i b_i N_i \right) / \sum_i N_i` , （:math:`i`:元素）
+
+ 複数のニューラルネットワークモデルを使っている場合(models > 1)は、各モデルの最終層のバイアス項の平均値が0になるように平準化します。
+
 .. option:: --test-with-bias
 
  :option:`--test` と同様ですが、原子エネルギーの平準化を行わずに出力します。
+
+  :math:`E_\mathrm{tot}(\mathrm{DFT/NNP}) = E(\mathrm{DFT/NNP}) / \sum_i N_i` , （:math:`i`:元素）
 
 .. option:: --temp, --template
 
