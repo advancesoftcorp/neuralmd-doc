@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Advance/NeuralMD \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-15 15:00+0900\n"
+"POT-Creation-Date: 2023-08-02 18:50+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -241,15 +241,14 @@ msgid ""
 ":option:`sannp --classical`\\ ）を使う場合に、有効なライセンスが必要となります。その他の機能、およびQuantum "
 "ESPRESSO・LAMMPSを実行する際には、ライセンスは不要です。slhmc（自己学習ハイブリッドモンテカルロ法の実行ファイル）は、それ自身の実行にはライセンスは不要ですが、sannpを呼び出してニューラルネットワークの学習を行うためにライセンスが必要です。"
 msgstr ""
-"A license server (program"
-" for license authentication) must be running while you use this software. "
-"A valid license is required to use the functions to train neural networks"
-" (\\ :option:`sannp --train`\\ , :option:`sannp --train-charge`\\ , "
-":option:`sannp --classical`\\ ). No license is required for the other "
-"functions and for running Quantum ESPRESSO and LAMMPS. The slhmc (the "
-"self-learning hybrid Monte Carlo method executable) does not require a "
-"license to run by itself, but does require a license to call the sannp to"
-" train a neural network."
+"A license server (program for license authentication) must be running "
+"while you use this software. A valid license is required to use the "
+"functions to train neural networks (\\ :option:`sannp --train`\\ , "
+":option:`sannp --train-charge`\\ , :option:`sannp --classical`\\ ). No "
+"license is required for the other functions and for running Quantum "
+"ESPRESSO and LAMMPS. The slhmc (the self-learning hybrid Monte Carlo "
+"method executable) does not require a license to run by itself, but does "
+"require a license to call the sannp to train a neural network."
 
 #: ../../install/linux.rst:124
 msgid "Windowsから操作する場合"
@@ -361,7 +360,9 @@ msgstr "Floating license"
 
 #: ../../install/linux.rst:172
 msgid "Linuxマシンに対して発行されたライセンスはフローティングライセンスとなっており、ネットワーク接続された別のマシン上でNeuralMDを使うことができます。"
-msgstr "The license issued for a linux machine is floating license, and you can use NeuralMD on other connected machines via the network."
+msgstr ""
+"The license issued for a linux machine is floating license, and you can "
+"use NeuralMD on other connected machines via the network."
 
 #: ../../install/linux.rst:174
 msgid "ライセンスサーバーとして使うマシン側"
@@ -370,8 +371,10 @@ msgstr "Machine to be used as license server"
 #: ../../install/linux.rst:176
 msgid "別のWindowsマシンからremoteLicenseを使うか、またはそのマシンにNeuralMDをインストールして、ホストIDの取得・ライセンス登録を行ってください。ライセンスファイル取得後、remoteLicenseを使うか、またはマシン上で直接ライセンスサーバーを起動してください。"
 msgstr ""
-"Obtain the HostID and request the license by using remoteLicense from another Windows machine or installing NeuralMD to the machine itself. "
-"Once you get the license file, launch the license server by using remoteLicense or directly on the machine."
+"Obtain the HostID and request the license by using remoteLicense from "
+"another Windows machine or installing NeuralMD to the machine itself. "
+"Once you get the license file, launch the license server by using "
+"remoteLicense or directly on the machine."
 
 #: ../../install/linux.rst:178
 msgid "NeuralMDを使うクライアントマシン側"
@@ -382,8 +385,9 @@ msgid ""
 "NeuralMDをインストールして、同じライセンスファイルをインストール先の :file:`license` "
 "ディレクトリにコピーし、ファイルのパスを :envvar:`ADVANCED_LICENSE_FILE` に設定してください。"
 msgstr ""
-"Install NeuralMD, copy the same license file to :file:`license` directory in the installation destination and "
-"set the path in :envvar:`ADVANCED_LICENSE_FILE` ."
+"Install NeuralMD, copy the same license file to :file:`license` directory"
+" in the installation destination and set the path in "
+":envvar:`ADVANCED_LICENSE_FILE` ."
 
 #: ../../install/linux.rst:182
 msgid "ライセンス認証がうまくいかない場合は、以下をご確認ください。"
@@ -392,8 +396,10 @@ msgstr "If license authentication does not work, please check following."
 #: ../../install/linux.rst:184
 msgid "クライアントからライセンスサーバーへの接続には、ライセンスファイル中に書かれたホスト名を使用します。ホスト名を使った接続ができない場合、ファイル中のホスト名をIPアドレスに書き換えることで接続できるようになることがあります。"
 msgstr ""
-"The hostname stored in the license file is used when connecting from the client to the license server. "
-"If hostname can not be used for the connection, replace the hostname in the file with the IP address and see if it works."
+"The hostname stored in the license file is used when connecting from the "
+"client to the license server. If hostname can not be used for the "
+"connection, replace the hostname in the file with the IP address and see "
+"if it works."
 
 #: ../../install/linux.rst:186
 msgid ""
@@ -401,15 +407,20 @@ msgid ""
 "の2つのプロセスが起動し、それぞれがネットワーク通信を行います。使用するポート番号は動的に決まります（\\ :file:`lmgrd` "
 "は27000-27009番ポートを使用）が、ファイアウォールの設定等のためにポート番号を固定したい場合は、ライセンスファイル中に追記して指定することができます。"
 msgstr ""
-"While the license server is running, license manager daemon :file:`lmgrd` and vendor daemon :file:`advanced` are launched, and both of them perform network communications. "
-"While the port number is dynamically determined (\ :file:`lmgrd` uses port number 27000-27009), you can specify fixed port number by adding it in the license file, for "
-"firewall configuration etc."
+"While the license server is running, license manager daemon :file:`lmgrd`"
+" and vendor daemon :file:`advanced` are launched, and both of them "
+"perform network communications. While the port number is dynamically "
+"determined (\\ :file:`lmgrd` uses port number 27000-27009), you can "
+"specify fixed port number by adding it in the license file, for firewall "
+"configuration etc."
 
 #: ../../install/linux.rst:188
 msgid "ライセンスファイルはテキストファイルですので通常のテキストエディタで編集できます。ホスト名の変更・ポート番号の追記でライセンスの再発行は必要ありません。サーバー側・クライアント側両方で同じように変更してください。"
 msgstr ""
-"You can modify the license file with normal text editors as it is a text file. You do not have to re-issue the license by changing the hostname or adding the port number. Modify the file in the same way both for "
-"the server side and the client side."
+"You can modify the license file with normal text editors as it is a text "
+"file. You do not have to re-issue the license by changing the hostname or"
+" adding the port number. Modify the file in the same way both for the "
+"server side and the client side."
 
 #: ../../install/linux.rst:193
 msgid "lmgrdが30000番、advancedが30001番ポートを使うように設定する例"
@@ -607,8 +618,8 @@ msgid "基本機能に加え、強化された追加の機能をお使いいた�
 msgstr "Basic + additional powerful calculation functions"
 
 #: ../../install/purchase.rst:39
-msgid "Ver. 1.7 Pro版では、GPUを使った計算が利用可能です。"
-msgstr "Calculation using GPU is available in Ver. 1.7 Pro edition."
+msgid "Ver. 1.9 Pro版では、GPUを使った計算が利用可能です。"
+msgstr "Calculation using GPU is available in Ver. 1.9 Pro edition."
 
 #: ../../install/purchase.rst:41
 msgid "WindowsではPro版はご利用になれません。"

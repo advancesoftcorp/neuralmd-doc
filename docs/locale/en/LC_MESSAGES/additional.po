@@ -1,0 +1,241 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, AdvanceSoft Corporation
+# This file is distributed under the same license as the Advance/NeuralMD
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Advance/NeuralMD \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-02 16:06+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../additional.rst:5
+msgid "追加機能の使用手順"
+msgstr "Additional Features"
+
+#: ../../additional.rst:10
+msgid "LJ-like力場を用いた\\ |Delta|\\ -NNP"
+msgstr "|Delta|\\ -NNP using LJ-like force field"
+
+#: ../../additional.rst:12
+msgid "ニューラルネットワークの学習（手順4）の前に、古典力場のパラメータの最適化を行います。"
+msgstr ""
+"Before training the neural network (step"
+" 4), the parameters of the classical"
+" force field are optimized."
+
+#: ../../additional.rst:14
+msgid "sannp --classical"
+msgstr ""
+
+#: ../../additional.rst:18
+msgid "を実行することで、古典力場のパラメータを含むファイル\\ :file:`sannp.class`\\ が出力されます。"
+msgstr ""
+"Executing the above outputs the file "
+":file:`sannp.class`\\ , which contains the "
+"parameters of the classical force field."
+
+#: ../../additional.rst:20
+msgid "その後、\\ :file:`sannp.prop`\\ で ``withLJlike 1`` と設定して、手順4以降を実行します。"
+msgstr ""
+"Then, set ``withLJlike 1`` in "
+":file:`sannp.prop` and perform step 4 "
+"and onward."
+
+#: ../../additional.rst:25
+msgid "ReaxFFを用いた\\ |Delta|\\ -NNP"
+msgstr "|Delta|\\ -NNP using ReaxFF"
+
+#: ../../additional.rst:27
+msgid ""
+"ニューラルネットワークの学習（手順4）で、\\ :file:`sannp.prop`\\ で ``withReaxFF 1`` "
+"と設定して実行します。"
+msgstr ""
+"Set ``withReaxFF 1`` in "
+":file:`sannp.prop` and perform training of the neural network (step 4)."
+
+#: ../../additional.rst:29
+msgid ""
+"学習時、および分子動力学計算実行時（手順5）にパラメータ定義ファイル\\ :file:`ffield.reax`\\ が必要です。NanoLabo"
+" Toolに同梱されているものをお使いいただけます。\\ :file:`ffield.reax`\\ ファイルの書式は\\ `LAMMPSに準拠 "
+"<https://docs.lammps.org/pair_reaxff.html>`_\\ します。"
+msgstr ""
+"The parameter definition file :file:`ffield.reax` is required when training or executing the molecular dynamics "
+"calculation (step 5). You can use one included in NanoLabo Tool. The syntax of :file:`ffield.reax` file is "
+"`compatible with LAMMPS <https://docs.lammps.org/pair_reaxff.html>`_\ ."
+
+#: ../../additional.rst:31
+msgid "ReaxFFのパラメータはあらかじめ用意されたものを使い、本製品での最適化は行いません。"
+msgstr ""
+"Existing parameters are used for ReaxFF and "
+"no optimization is performed within this"
+" product.
+
+#: ../../additional.rst:36
+msgid "メトロポリス法による構造生成"
+msgstr "Structure Generation by Metropolis Method"
+
+#: ../../additional.rst:38
+msgid "ニューラルネットワークの学習（手順4）が終わった後に実行します。"
+msgstr "It is executed after the neural network training (step 4) is completed."
+
+#: ../../additional.rst:40
+msgid ""
+"メトロポリス法の設定をファイル\\ :file:`sannp.metro`\\ "
+"に用意します。デフォルトの設定を使う場合は、ファイルが無くてもかまいません。"
+msgstr ""
+"Prepare the settings for the Metropolis"
+" method in the file :file:`sannp.metro`\\"
+" . No file is required with the"
+" default settings."
+
+#: ../../additional.rst:47
+msgid "sannp --metro"
+msgstr ""
+
+#: ../../additional.rst:51
+msgid ""
+"を実行すると、モンテカルロ計算が行われ、構造が生成されます。生成された構造はQuantum ESPRESSOの入力ファイルの形で\\ "
+":file:`dft_geom`\\ フォルダに出力されます。"
+msgstr ""
+"When executing the above, a Monte "
+"Carlo calculation is performed and a "
+"structure is generated. The generated "
+"structure is output to the "
+":file:`dft_geom` folder in the form of"
+" a Quantum ESPRESSO input file."
+
+#: ../../additional.rst:55
+msgid "モンテカルロ計算の過程はmovieフォルダにxyz形式で保存されます。"
+msgstr ""
+"The Monte Carlo calculation process is"
+" saved in xyz format in the "
+"movie folder."
+
+#: ../../additional.rst:57
+msgid "xyzファイルをAdvance/NanoLaboの画面にドラッグ&ドロップすることで動画として可視化ができます。"
+msgstr ""
+"Dragging and dropping the xyz file "
+"onto the Advance/NanoLabo screen make it"
+" visible as a movie."
+
+#: ../../additional.rst:59
+msgid "続けて"
+msgstr "Following that, run"
+
+
+#: ../../additional.rst:61
+msgid "sannp --dft"
+msgstr ""
+
+#: ../../additional.rst:65
+msgid ""
+"を実行すると、\\ :file:`dft_geom`\\ 内の計算を実行するためのシェルスクリプト\\ :file:`dft_run.sh`\\ "
+"（Windowsの場合はバッチファイル\\ :file:`dft_run.bat`\\ "
+"）が生成されます。これを使って、再度手順3から実行し、教師データを追加します。"
+msgstr ""
+"to generate the shell script for "
+"the calculations in :file:`dft_geom`\\ , "
+":file:`dft_run.sh` (or the batch file "
+":file:`dft_run.bat` on Windows)."
+
+#: ../../additional.rst:70
+msgid "In-situテスト"
+msgstr "In-situ Tests"
+
+#: ../../additional.rst:72
+msgid "ニューラルネットワークの学習（手順4）を行う際に、同時にテストデータについても残差RMSを計算して表示する機能です。学習を進めながら、テストデータに対する性能を随時確認できます。また、教師データのRMSが小さくなっていてもテストデータのRMSが大きくなっている場合には、過学習を起こしていると判断できます。"
+msgstr ""
+"This function calculates and displays "
+"the residual RMS for test data at"
+" the same time when training a "
+"neural network (Step 4). While learning"
+" proceeds, that makes it possible to"
+" check the performance against the "
+"test data at any time. In "
+"addition, if the RMS of the test"
+" data is large even though one "
+"of the training data is small, it"
+" can be assumed that overlearning has"
+" occurred."
+
+#: ../../additional.rst:74
+msgid ""
+"まず、教師データとは別のテストデータを用意します。 :option:`sannp --dft` "
+"を実行し、\"test\"を選んで生成するか、または既存の教師データ\\ :file:`sannp.train`\\ を "
+":option:`sannp --split` で分割します。テストデータ\\ :file:`sannp.test`\\ が用意できたら、\\ "
+":file:`sannp.prop`\\ で ``insituTest 1`` と設定して、学習を実行します。"
+msgstr ""
+"First, prepare test data that is "
+"separate from the training data. Either"
+" run :option:`sannp --dft` and select "
+"\"test\" to generate it, or split "
+"the existing training data sannp.train "
+"with :option:`sannp --split`\\ . Once "
+"the test data :file:`sannp.test` is "
+"ready, set ``insituTest 1`` in "
+":file:`sannp.prop` and run the training."
+
+#: ../../additional.rst:79
+msgid "ASEのトラジェクトリファイルの変換"
+msgstr "Conversion of ASE trajectory file"
+
+#: ../../additional.rst:81
+msgid ""
+"Atomic Simulation Environment(ASE)の\\ `トラジェクトリ(.traj)ファイル "
+"<https://wiki.fysik.dtu.dk/ase/ase/io/trajectory.html>`_\\ "
+"を教師データに変換し、ニューラルネットワークの学習に使うことができます。"
+msgstr ""
+"You can convert Atomic Simulation Environment(ASE) `trajectory (.traj) file "
+"<https://wiki.fysik.dtu.dk/ase/ase/io/trajectory.html>`_to training data and use it for the "
+"training of the neural network."
+
+#: ../../additional.rst:83
+msgid "インストール先の :file:`python` フォルダーにあるPythonスクリプト :file:`traj_to_train.py` を使い、"
+msgstr ""
+"Go to the install folder and use the Python script :file:`traj_to_train.py` in :file:`python` folder as"
+
+#: ../../additional.rst:85
+msgid "python traj_to_train.py filename.traj"
+msgstr ""
+
+#: ../../additional.rst:89
+msgid "と実行すると、教師データ :file:`sannp.train` が出力されます。ニューラルネットワークの学習（手順4）以降は通常の手順と同様です。"
+msgstr ""
+"to output the training data :file:`sannp.train`\ . The procedure following the neural network training (step 4) is the same "
+"as normal."
+
+#: ../../additional.rst:91
+msgid "以下のオプションが使えます。"
+msgstr "Following options are available."
+
+#: ../../additional.rst:97
+msgid "出力ファイルを指定します。デフォルトは :file:`sannp.train` です。"
+msgstr ""
+"Specify the output file. Default is :file:`sannp.train`\ ."
+
+#: ../../additional.rst:101
+msgid ""
+"ファイル出力時の動作を指定します。 ``a`` : 追記、 ``w`` : 上書き、``x`` : "
+"新規作成（ファイルが既に存在する場合はエラー）です。デフォルトは ``x`` です。"
+msgstr ""
+"Specify the behavior of file output. ``a`` : append, ``w`` : overwrite and ``x`` : "
+"create new file (error if file already exists). Default is ``x``\ ."
+
+#: ../../additional.rst:105
+msgid "変換するデータの最初のインデックスです。デフォルトは0です。"
+msgstr "First index of the data to be converted. Default is 0."
+
+#: ../../additional.rst:109
+msgid "変換するデータのステップです。デフォルトは1です。"
+msgstr "The step of the data to be converted. Default is 1."
+
