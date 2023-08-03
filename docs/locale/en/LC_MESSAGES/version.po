@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Advance/NeuralMD \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-02 18:50+0900\n"
+"POT-Creation-Date: 2023-08-03 17:34+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,9 +23,8 @@ msgid "バージョン情報"
 msgstr "Version Information"
 
 #: ../../version.rst:25
-#, fuzzy
-msgid "2023/--/-- バージョン1.9"
-msgstr "2023/3/6 Version 1.8"
+msgid "2023/8/3 バージョン1.9"
+msgstr "2023/8/3 Version 1.9"
 
 #: ../../version.rst:8
 msgid "ReaxFFの計算手続きを倍精度で行うよう変更"
@@ -37,33 +36,42 @@ msgstr "Errors that was occurring in some systems are avoided."
 
 #: ../../version.rst:11
 msgid "ReaxFFの計算について、単精度版 :file:`sannp` でも倍精度版 :file:`sannp_d` と同じように内部処理します。"
-msgstr "ReaxFF calculations in single-precision version :file:`sannp` are internally processed "
-"in the same way as double-precision version :file:`sannp_d`\ ."
+msgstr ""
+"ReaxFF calculations in single-precision version :file:`sannp` are "
+"internally processed in the same way as double-precision version "
+":file:`sannp_d`\\ ."
 
 #: ../../version.rst:13
 msgid "ReaxFFのパラメータ定義ファイル内で定義されていない元素が教師データに含まれる場合でも学習ができるよう対応"
-msgstr "Support training data that has elements not defined in ReaxFF parameter definition file"
+msgstr ""
+"Support training data that has elements not defined in ReaxFF parameter "
+"definition file"
 
 #: ../../version.rst:14
 msgid ""
 "複数のニューラルネットワークモデルの平均値を用いて1つの力場を定義する手法を追加 (\\ |rarr|\\ :ref:`models "
 "<propmodels>`)"
 msgstr ""
-"Added a method to define one force field using the average value of multiple neural network models (\\ |rarr|\\ :ref:`models "
-"<propmodels>`)"
+"Added a method to define one force field using the average value of "
+"multiple neural network models (\\ |rarr|\\ :ref:`models <propmodels>`)"
 
 #: ../../version.rst:16
 msgid "力場の外挿精度が向上し、溶融状態・液体系・アモルファス等のシミュレーションが容易になります。"
-msgstr "Extrapolating precision of force field is improved and make the simulations of molten state / "
-"liquid system / amorphous etc. easier."
+msgstr ""
+"Extrapolating precision of force field is improved and make the "
+"simulations of molten state / liquid system / amorphous etc. easier."
 
 #: ../../version.rst:18
 msgid "Super Epoch法を追加 (\\ |rarr|\\ :ref:`superEpochs <propsuperepochs>`)"
-msgstr "Added Super Epoch method (\\ |rarr|\\ :ref:`superEpochs <propsuperepochs>`)"
+msgstr ""
+"Added Super Epoch method (\\ |rarr|\\ :ref:`superEpochs "
+"<propsuperepochs>`)"
 
 #: ../../version.rst:20
 msgid "教師データを複数のサブセットに分割して、各サブセットを使った学習処理を順次実行します。"
-msgstr "Split the training data into subsets and serially perform the training process using each subset."
+msgstr ""
+"Split the training data into subsets and serially perform the training "
+"process using each subset."
 
 #: ../../version.rst:21
 msgid "メモリ使用量を低減しつつ、過学習を抑制することができます。"
@@ -74,12 +82,15 @@ msgid ""
 ":file:`sannp.prop`\\ ・\\ :file:`sannp.behler`\\ "
 "の一部のパラメータのデフォルト値を変更（無機結晶に特化した値を採用）"
 msgstr ""
-"Changed default values of some of the parameters in :file:`sannp.prop`\\ /\\ :file:`sannp.behler`\\ "
-"(values suitable for inorganic crystal are adopted)"
+"Changed default values of some of the parameters in :file:`sannp.prop`\\ "
+"/\\ :file:`sannp.behler`\\ (values suitable for inorganic crystal are "
+"adopted)"
 
 #: ../../version.rst:24
 msgid "SLHMC: :file:`slhmc.prop`\\ の一部のパラメータのデフォルト値を変更"
-msgstr "SLHMC: changed default values of some of the parameters in :file:`slhmc.prop`"
+msgstr ""
+"SLHMC: changed default values of some of the parameters in "
+":file:`slhmc.prop`"
 
 #: ../../version.rst:25
 msgid "サポート対象OSにWindows 11を追加"
