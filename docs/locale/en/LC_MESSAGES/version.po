@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Advance/NeuralMD \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-03 17:34+0900\n"
+"POT-Creation-Date: 2023-11-06 16:21+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,32 +22,40 @@ msgstr ""
 msgid "バージョン情報"
 msgstr "Version Information"
 
-#: ../../version.rst:25
+#: ../../version.rst:8
+msgid "2023/11/-- バージョン1.9.1"
+msgstr "2023/11/-- Version 1.9.1"
+
+#: ../../version.rst:8
+msgid "Super Epoch法適用時に :file:`sannp.gdist` の内容が正しく生成されない不具合を修正"
+msgstr "Fixed bug which was causing invalid content of :file:`sannp.gdist` when Super Epoch method is employed"
+
+#: ../../version.rst:28
 msgid "2023/8/3 バージョン1.9"
 msgstr "2023/8/3 Version 1.9"
 
-#: ../../version.rst:8
+#: ../../version.rst:11
 msgid "ReaxFFの計算手続きを倍精度で行うよう変更"
 msgstr "Changed ReaxFF calculation process to be performed with double precision"
 
-#: ../../version.rst:10
+#: ../../version.rst:13
 msgid "一部の系で発生していたエラーが回避されます。"
 msgstr "Errors that was occurring in some systems are avoided."
 
-#: ../../version.rst:11
+#: ../../version.rst:14
 msgid "ReaxFFの計算について、単精度版 :file:`sannp` でも倍精度版 :file:`sannp_d` と同じように内部処理します。"
 msgstr ""
 "ReaxFF calculations in single-precision version :file:`sannp` are "
 "internally processed in the same way as double-precision version "
 ":file:`sannp_d`\\ ."
 
-#: ../../version.rst:13
+#: ../../version.rst:16
 msgid "ReaxFFのパラメータ定義ファイル内で定義されていない元素が教師データに含まれる場合でも学習ができるよう対応"
 msgstr ""
 "Support training data that has elements not defined in ReaxFF parameter "
 "definition file"
 
-#: ../../version.rst:14
+#: ../../version.rst:17
 msgid ""
 "複数のニューラルネットワークモデルの平均値を用いて1つの力場を定義する手法を追加 (\\ |rarr|\\ :ref:`models "
 "<propmodels>`)"
@@ -55,29 +63,29 @@ msgstr ""
 "Added a method to define one force field using the average value of "
 "multiple neural network models (\\ |rarr|\\ :ref:`models <propmodels>`)"
 
-#: ../../version.rst:16
+#: ../../version.rst:19
 msgid "力場の外挿精度が向上し、溶融状態・液体系・アモルファス等のシミュレーションが容易になります。"
 msgstr ""
 "Extrapolating precision of force field is improved and make the "
 "simulations of molten state / liquid system / amorphous etc. easier."
 
-#: ../../version.rst:18
+#: ../../version.rst:21
 msgid "Super Epoch法を追加 (\\ |rarr|\\ :ref:`superEpochs <propsuperepochs>`)"
 msgstr ""
 "Added Super Epoch method (\\ |rarr|\\ :ref:`superEpochs "
 "<propsuperepochs>`)"
 
-#: ../../version.rst:20
+#: ../../version.rst:23
 msgid "教師データを複数のサブセットに分割して、各サブセットを使った学習処理を順次実行します。"
 msgstr ""
 "Split the training data into subsets and serially perform the training "
 "process using each subset."
 
-#: ../../version.rst:21
+#: ../../version.rst:24
 msgid "メモリ使用量を低減しつつ、過学習を抑制することができます。"
 msgstr "Reduce the memory consumption while suppressing the overtraining."
 
-#: ../../version.rst:23
+#: ../../version.rst:26
 msgid ""
 ":file:`sannp.prop`\\ ・\\ :file:`sannp.behler`\\ "
 "の一部のパラメータのデフォルト値を変更（無機結晶に特化した値を採用）"
@@ -86,73 +94,73 @@ msgstr ""
 "/\\ :file:`sannp.behler`\\ (values suitable for inorganic crystal are "
 "adopted)"
 
-#: ../../version.rst:24
+#: ../../version.rst:27
 msgid "SLHMC: :file:`slhmc.prop`\\ の一部のパラメータのデフォルト値を変更"
 msgstr ""
 "SLHMC: changed default values of some of the parameters in "
 ":file:`slhmc.prop`"
 
-#: ../../version.rst:25
+#: ../../version.rst:28
 msgid "サポート対象OSにWindows 11を追加"
 msgstr "Added Windows 11 to supported OS"
 
-#: ../../version.rst:32
+#: ../../version.rst:35
 msgid "2023/3/8 バージョン1.8.1"
 msgstr "2023/3/8 Version 1.8.1"
 
-#: ../../version.rst:28
+#: ../../version.rst:31
 msgid "CentOS7で、NeuralMD1.8同梱のMPIライブラリが正常に動作しない問題を解消"
 msgstr ""
 "resolved issue that MPI library included in NeuralMD1.8 does not work "
 "properly on CentOS7"
 
-#: ../../version.rst:30
+#: ../../version.rst:33
 msgid "該当する場合、計算を実行するとlibhwloc.soに関するエラーが出力されます。"
 msgstr ""
 "In corresponding case, an error about libhwloc.so is output when "
 "executing a calculation."
 
-#: ../../version.rst:31
+#: ../../version.rst:34
 msgid "Windows版1.8には問題はありませんので更新は不要です。"
 msgstr "Windows ver. 1.8 has no problem and update is not required."
 
-#: ../../version.rst:32
+#: ../../version.rst:35
 msgid "NanoLabo Tool2.7にも同じ問題がありますので、NanoLabo Tool2.7.1をダウンロード・インストールしてください。"
 msgstr ""
 "Since NanoLabo Tool2.7 has the same problem, download and install "
 "NanoLabo Tool2.7.1."
 
-#: ../../version.rst:37
+#: ../../version.rst:40
 msgid "2023/3/6 バージョン1.8"
 msgstr "2023/3/6 Version 1.8"
 
-#: ../../version.rst:35
+#: ../../version.rst:38
 msgid "ReaxFFを用いた\\ |Delta|\\ -NNP法"
 msgstr "|Delta|\\ -NNP method using ReaxFF"
 
-#: ../../version.rst:36
+#: ../../version.rst:39
 msgid "ASEのトラジェクトリファイルを教師データに変換するPythonスクリプト(\\ ``traj_to_train.py``\\ )を同梱"
 msgstr ""
 "Included Python script (\\ ``traj_to_train.py``\\ ) to convert ASE "
 "trajectory file into training data"
 
-#: ../../version.rst:37 ../../version.rst:53
+#: ../../version.rst:40 ../../version.rst:56
 msgid "その他、軽微な修正等"
 msgstr "Other minor corrections, etc."
 
-#: ../../version.rst:48
+#: ../../version.rst:51
 msgid "2022/9/30 バージョン1.7"
 msgstr "2022/9/30 Version 1.7"
 
-#: ../../version.rst:40
+#: ../../version.rst:43
 msgid "「Pro版」をリリース"
 msgstr "Released \"Pro edition\""
 
-#: ../../version.rst:41
+#: ../../version.rst:44
 msgid "[Pro] GPU対応版を追加（新規実行ファイルとして同梱）"
 msgstr "[Pro] Added GPU support version (included as new executable file)"
 
-#: ../../version.rst:42
+#: ../../version.rst:45
 msgid ""
 "テスト計算時に最終層のバイアス項の有無を指定する機能を追加（\\ ``--test-with-bias``\\ 、\\ ``--test-"
 "without-bias``\\ ）"
@@ -161,7 +169,7 @@ msgstr ""
 "when performing test calculation (\\ ``--test-with-bias``\\ , ``--test-"
 "without-bias``\\ )"
 
-#: ../../version.rst:43
+#: ../../version.rst:46
 msgid ""
 "SLHMC: NNP-MDステップ数の自動調整範囲のデフォルト値を調整（\\ ``nnpStepUp``\\ 、\\ "
 "``nnpStepDown``\\ ）"
@@ -169,92 +177,92 @@ msgstr ""
 "SLHMC: Optimized default values of auto tuning range of NNP-MD steps (\\ "
 "``nnpStepUp``\\ , ``nnpStepDown``\\ )"
 
-#: ../../version.rst:44
+#: ../../version.rst:47
 msgid "SLHMC: NNP-MDをNPHで実行する設定を追加"
 msgstr "SLHMC: Added setting to perform NNP-MD with NPH"
 
-#: ../../version.rst:45
+#: ../../version.rst:48
 msgid "SLHMC: エラー終了時にCRASHログを出力する機能を追加"
 msgstr "SLHMC: Added function to output CRASH log when terminated with error"
 
-#: ../../version.rst:46
+#: ../../version.rst:49
 msgid "サポート対象OSからCentOS6を除外"
 msgstr "Excluded CentOS6 from supported OS"
 
-#: ../../version.rst:47
+#: ../../version.rst:50
 msgid "CentOS版・AlmaLinux版を共通化（インストーラーの一本化）"
 msgstr "Unified CentOS version and AlmaLinux version (unified installer)"
 
-#: ../../version.rst:48 ../../version.rst:65 ../../version.rst:79
-#: ../../version.rst:92
+#: ../../version.rst:51 ../../version.rst:68 ../../version.rst:82
+#: ../../version.rst:95
 msgid "その他、調整等"
 msgstr "Other adjustments, etc."
 
-#: ../../version.rst:53
+#: ../../version.rst:56
 msgid "2022/5/20 バージョン1.6"
 msgstr "2022/5/20 Version 1.6"
 
-#: ../../version.rst:51
+#: ../../version.rst:54
 msgid "自己学習ハイブリッドモンテカルロ法の実行機能を追加（新規実行ファイルとして同梱）"
 msgstr ""
 "Added the function to run self-learning hybrid Monte Carlo methods "
 "(included as a new executable)"
 
-#: ../../version.rst:52
+#: ../../version.rst:55
 msgid "電荷計算有効時に、教師データからカットオフ半径内のクーロンエネルギーを差し引く方法を修正"
 msgstr ""
 "Modified the method of subtracting Coulomb energy within the cutoff "
 "radius from the training data when charge calculation is enabled"
 
-#: ../../version.rst:65
+#: ../../version.rst:68
 msgid "2022/2/4 バージョン1.5"
 msgstr "2022/2/4 Version 1.5"
 
-#: ../../version.rst:56
+#: ../../version.rst:59
 msgid "メトロポリス法における元素置換で、ペアごとの個別の温度を設定する機能を追加"
 msgstr ""
 "Added the function to set individual temperatures for each pair of "
 "elemental substitutions in the Metropolis method"
 
-#: ../../version.rst:57
+#: ../../version.rst:60
 msgid "学習の実行中にin-situテストを行う機能を追加"
 msgstr "Added the function to perform in-situ testing during training"
 
-#: ../../version.rst:58
+#: ../../version.rst:61
 msgid "教師データを分割してテストデータを抽出する機能を追加"
 msgstr "Added the function to extract test data by splitting the training data"
 
-#: ../../version.rst:59
+#: ../../version.rst:62
 msgid "|Delta|\\ -NNPにおける古典力場の最適化計算のアルゴリズムを改善"
 msgstr ""
 "Improved the algorithm for calculating the optimization of the classical "
 "force field in |Delta|\\ -NNP"
 
-#: ../../version.rst:60
+#: ../../version.rst:63
 msgid "ライセンスエラー（同時実行数上限）の場合に終了せず待機するオプションを追加（Linuxのみ）"
 msgstr ""
 "Added the option to wait without terminating in case of license error "
 "(maximum number of concurrent executions) (Linux only)"
 
-#: ../../version.rst:61
+#: ../../version.rst:64
 msgid "LAMMPS実行時に最終層のバイアス項を0に設定する機能（原子エネルギーの平準化）を追加"
 msgstr ""
 "Added the function to set the bias term of the final layer to 0 (leveling"
 " of atomic energy) when LAMMPS is executed"
 
-#: ../../version.rst:62
+#: ../../version.rst:65
 msgid "メトロポリス法のログ出力に採択数／全構造数の情報を追加"
 msgstr ""
 "Added the information on the number of adoptions/total number of "
 "structures to the log output of the Metropolis method"
 
-#: ../../version.rst:63
+#: ../../version.rst:66
 msgid "sannp.behlerのテンプレート出力時、G2とG3で異なるカットオフを指定した場合に出力が指定と異なる不具合の修正"
 msgstr ""
 "Fixed the bug in sannp.behler template output that output was different "
 "from specified when different cutoffs were specified for G2 and G3"
 
-#: ../../version.rst:64
+#: ../../version.rst:67
 msgid ""
 "Linux版の実行ファイルのMPIライブラリ/コンパイラをOpen MPI/oneAPIに変更（以前はIntel MPI/Intel "
 "Compiler）"
@@ -262,103 +270,103 @@ msgstr ""
 "Changed MPI library/compiler of Linux executable to Open MPI/oneAPI "
 "(previously Intel MPI/Intel Compiler)"
 
-#: ../../version.rst:72
+#: ../../version.rst:75
 msgid "2021/7/29 バージョン1.4"
 msgstr "2021/7/29 Version 1.4"
 
-#: ../../version.rst:68
+#: ../../version.rst:71
 msgid "メトロポリス法を使ったモンテカルロ計算により構造を生成する機能を追加"
 msgstr ""
 "Added the function to generate structures by Monte Carlo calculations "
 "using the Metropolis method"
 
-#: ../../version.rst:69
+#: ../../version.rst:72
 msgid "古典力場とNNPを組み合わせた\\ |Delta|\\ -NNPを追加"
 msgstr "Added |Delta|\\ -NNP, a combination of classical force field and NNP"
 
-#: ../../version.rst:70
+#: ../../version.rst:73
 msgid "ニューラルネットワークの活性化関数にtwisted tanh関数・GELU関数を追加"
 msgstr ""
 "Added twisted tanh function and GELU function to neural network "
 "activation functions"
 
-#: ../../version.rst:71
+#: ../../version.rst:74
 msgid "HDNNP使用時の原子エネルギーの初期推定方法を改善"
 msgstr "Improved the initial estimation method of atomic energy when using HDNNP"
 
-#: ../../version.rst:72
+#: ../../version.rst:75
 msgid "教師データに含まれる不正な値・外れ値のチェックを追加"
 msgstr ""
 "Added the function to check for incorrect values/outliers in the training"
 " data"
 
-#: ../../version.rst:79
+#: ../../version.rst:82
 msgid "2021/2/22 バージョン1.3"
 msgstr "2021/2/22 Version 1.3"
 
-#: ../../version.rst:75
+#: ../../version.rst:78
 msgid "MPI並列に対応（Linuxのみ）"
 msgstr "Supported for MPI parallelism (Linux only)"
 
-#: ../../version.rst:76
+#: ../../version.rst:79
 msgid "エネルギーの厳密な2階微分による力の精度向上"
 msgstr "Improved accuracy of power by exact second-order differentiation of energy"
 
-#: ../../version.rst:77
+#: ../../version.rst:80
 msgid "学習中、定期的にニューラルネットワークをファイル出力する設定を追加"
 msgstr ""
 "Added the setting to periodically output neural network to file during "
 "training"
 
-#: ../../version.rst:78
+#: ../../version.rst:81
 msgid "libBFGS出力メッセージ改善"
 msgstr "Improvement of libBFGS output message"
 
-#: ../../version.rst:83
+#: ../../version.rst:86
 msgid "2020/12/18 バージョン1.2"
 msgstr "2020/12/18 Version 1.2"
 
-#: ../../version.rst:82
+#: ../../version.rst:85
 msgid "L-BFGSの性能改善（外部ライブラリー使用：libLBFGS）"
 msgstr "Improved the performance of L-BFGS (use external library: libLBFGS)"
 
-#: ../../version.rst:83
+#: ../../version.rst:86
 msgid "Windows用のバッチスクリプト生成機能"
 msgstr "Add the function to generate batch script for Windows"
 
-#: ../../version.rst:92
+#: ../../version.rst:95
 msgid "2020/09/11 バージョン1.1"
 msgstr "2020/09/11 Version 1.1"
 
-#: ../../version.rst:86
+#: ../../version.rst:89
 msgid "Chebyshev対称関数を追加"
 msgstr "Added Chebyshev symmetry functions"
 
-#: ../../version.rst:87
+#: ../../version.rst:90
 msgid "Behler対称関数にG3関数を追加"
 msgstr "Added G3 function to Behler symmetry functions"
 
-#: ../../version.rst:88
+#: ../../version.rst:91
 msgid "重み付き対称関数を追加"
 msgstr "Added weighted symmetry functions"
 
-#: ../../version.rst:89
+#: ../../version.rst:92
 msgid "対称関数のカットオフ関数にcosを使った関数を追加"
 msgstr "Added the function using cos as cutoff function for symmetric functions"
 
-#: ../../version.rst:90
+#: ../../version.rst:93
 msgid "ニューラルネットワークの学習アルゴリズムにL-BFGS法を追加"
 msgstr "Added L-BFGS method to the neural network training algorithm."
 
-#: ../../version.rst:91
+#: ../../version.rst:94
 msgid "GUIが無い環境でのインストーラー実行に対応"
 msgstr "Supported the installer execution in the environment without GUI."
 
-#: ../../version.rst:95
+#: ../../version.rst:98
 msgid "2020/03/05 バージョン1.0"
 msgstr "2020/03/05 Version 1.0"
 
-#: ../../version.rst:95
+#: ../../version.rst:98
 msgid "初回リリース"
 msgstr "Initial release"
 
