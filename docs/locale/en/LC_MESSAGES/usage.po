@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Advance/NeuralMD \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-02 18:50+0900\n"
+"POT-Creation-Date: 2024-03-15 10:28+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -596,8 +596,9 @@ msgstr ""
 #: ../../usage.rst:286
 msgid "複数のニューラルネットワークモデルを使っている場合(models > 1)は、各モデルの最終層のバイアス項の平均値が0になるように平準化します。"
 msgstr ""
-"In case multiple neural network models are used (models > 1), leveling is performed "
-"so the average value of the bias term of the last layer of each model becomes 0."
+"In case multiple neural network models are used (models > 1), leveling is"
+" performed so the average value of the bias term of the last layer of "
+"each model becomes 0."
 
 #: ../../usage.rst:290
 msgid ":option:`--test` と同様ですが、原子エネルギーの平準化を行わずに出力します。"
@@ -1076,9 +1077,9 @@ msgid "デフォルト"
 msgstr "default"
 
 #: ../../usage/prop.rst:13 ../../usage/prop.rst:19 ../../usage/prop.rst:25
-#: ../../usage/prop.rst:37 ../../usage/prop.rst:43 ../../usage/prop.rst:195
-#: ../../usage/prop.rst:227 ../../usage/prop.rst:241 ../../usage/prop.rst:247
-#: ../../usage/prop.rst:253
+#: ../../usage/prop.rst:37 ../../usage/prop.rst:43 ../../usage/prop.rst:213
+#: ../../usage/prop.rst:245 ../../usage/prop.rst:259 ../../usage/prop.rst:265
+#: ../../usage/prop.rst:271
 msgid "0"
 msgstr ""
 
@@ -1104,7 +1105,8 @@ msgstr ""
 msgid "電荷の計算を行う(1)か行わない(0)かの指定です。"
 msgstr "Calculate charges (1) or not (0)."
 
-#: ../../usage/prop.rst:31 ../../usage/prop.rst:91 ../../usage/prop.rst:97
+#: ../../usage/prop.rst:31 ../../usage/prop.rst:67 ../../usage/prop.rst:109
+#: ../../usage/prop.rst:115
 msgid "1"
 msgstr ""
 
@@ -1149,7 +1151,7 @@ msgstr ""
 "For |Delta|\\ -NNP using ReaxFF, specify the cutoff radius(\\ |angs|\\ ) "
 "of ReaxFF."
 
-#: ../../usage/prop.rst:55 ../../usage/prop.rst:73
+#: ../../usage/prop.rst:55 ../../usage/prop.rst:79
 msgid "0.5"
 msgstr ""
 
@@ -1172,45 +1174,63 @@ msgstr ""
 "(0); in case of a negative value, normalize in whole sample for Behler "
 "symmetry function, in mini batch for Many-Body symmetry function."
 
-#: ../../usage/prop.rst:67
+#: ../../usage/prop.rst:69
+msgid "教師データ中の元素名の後に文字が続く場合（例：Fe1、Fe2）、学習時に同じ元素として扱う(1)か、別の元素として扱う(0)かの指定です。"
+msgstr ""
+"When characters follow element names in the training data (e.g., Fe1, Fe2), "
+"specify whether to treat them as the same element (1) or as different elements (0) during training."
+
+#: ../../usage/prop.rst:73
 msgid "10.0"
 msgstr ""
 
-#: ../../usage/prop.rst:69
+#: ../../usage/prop.rst:75
 msgid "教師データに含まれる、力が大きすぎる外れ値を除外するための閾値(eV/\\ |angs|\\ )です。0以下の値を指定した場合、除外を行いません。"
 msgstr ""
 "Specify the threshold (eV/\\ |angs|\\ ) to eliminate outliers with too "
 "large force in training data. Not eliminate in case of 0 or lower."
 
-#: ../../usage/prop.rst:75
+#: ../../usage/prop.rst:81
 msgid "原子のエネルギーの正規化に使う分散の下限値(eV)を指定します。"
 msgstr "Specify the lower limit (eV) of variance for normalizing of atomic energy."
 
-#: ../../usage/prop.rst:79
-msgid "0.1"
-msgstr ""
-
-#: ../../usage/prop.rst:81
-msgid "原子の電荷の正規化に使う分散の下限値(e)を指定します。"
-msgstr "Specify the lower limit (e) of variance for normalizing of atomic charges."
-
-#: ../../usage/prop.rst:85
-msgid "chebyshev"
+#: ../../usage/prop.rst:85 ../../usage/prop.rst:97 ../../usage/prop.rst:127
+msgid "10"
 msgstr ""
 
 #: ../../usage/prop.rst:87
+msgid "原子のエネルギーの正規化に使う分散の上限値(eV)を指定します。"
+msgstr "Specify the upper limit (eV) of variance for normalizing of atomic energy."
+
+#: ../../usage/prop.rst:91
+msgid "0.1"
+msgstr ""
+
+#: ../../usage/prop.rst:93
+msgid "原子の電荷の正規化に使う分散の下限値(e)を指定します。"
+msgstr "Specify the lower limit (e) of variance for normalizing of atomic charges."
+
+#: ../../usage/prop.rst:99
+msgid "原子の電荷の正規化に使う分散の上限値(e)を指定します。"
+msgstr "Specify the upper limit (e) of variance for normalizing of atomic charges."
+
+#: ../../usage/prop.rst:103
+msgid "chebyshev"
+msgstr ""
+
+#: ../../usage/prop.rst:105
 msgid "対称関数を指定します。behler、chebyshev、many-bodyが指定できます。"
 msgstr ""
 "Specify a symmetry function. behler, chebyshev and many-body are "
 "available."
 
-#: ../../usage/prop.rst:93
+#: ../../usage/prop.rst:111
 msgid "重み付き対称関数を使う(1)か、使わない(0)かの指定です。Behler対称関数、Chebyshev対称関数で使用可能です。"
 msgstr ""
 "Use weighted symmetry functions (1) or not (0). Available only when "
 "Behler symmetry function or Chebyshev symmetry function is used."
 
-#: ../../usage/prop.rst:99
+#: ../../usage/prop.rst:117
 msgid ""
 "カットオフ関数\\ :math:`f_c(R_{ij})`\\ "
 "としてtanhを使った関数を使う(1)か、cosを使った関数を使う(0)かの指定です。"
@@ -1218,101 +1238,100 @@ msgstr ""
 "Use functions composed of tanh (1) or cos (0) as cutoff functions "
 ":math:`f_c(R_{ij})`\\ ."
 
-#: ../../usage/prop.rst:103
+#: ../../usage/prop.rst:121
 msgid "100"
 msgstr ""
 
-#: ../../usage/prop.rst:105
+#: ../../usage/prop.rst:123
 msgid "Many-Body対称関数のパラメータ *M*:sub:`2` です。"
 msgstr "Specify the parameter *M*:sub:`2` of Many-Body symmetry functions."
 
-#: ../../usage/prop.rst:109
-msgid "10"
-msgstr ""
-
-#: ../../usage/prop.rst:111
+#: ../../usage/prop.rst:129
 msgid "Many-Body対称関数のパラメータ *M*:sub:`3` です。"
 msgstr "Specify the parameter *M*:sub:`3` of Many-Body symmetry functions."
 
-#: ../../usage/prop.rst:115
+#: ../../usage/prop.rst:133
 msgid "0.0"
 msgstr ""
 
-#: ../../usage/prop.rst:117
+#: ../../usage/prop.rst:135
 msgid "Many-Body対称関数のパラメータ *R*:sub:`inner` (\\ |angs|\\ )です。"
 msgstr ""
 "Specify the parameter *R*:sub:`inner` (\\ |angs|\\ ) of Many-Body "
 "functions."
 
-#: ../../usage/prop.rst:121 ../../usage/prop.rst:139 ../../usage/prop.rst:145
+#: ../../usage/prop.rst:139 ../../usage/prop.rst:157 ../../usage/prop.rst:163
 msgid "6.0"
 msgstr ""
 
-#: ../../usage/prop.rst:123
+#: ../../usage/prop.rst:141
 msgid "Many-Body対称関数のパラメータ *R*:sub:`outer` (\\ |angs|\\ )です。"
 msgstr ""
 "Specify the parameter *R*:sub:`outer` (\\ |angs|\\ ) of Many-Body "
 "functions."
 
-#: ../../usage/prop.rst:127
+#: ../../usage/prop.rst:145
 msgid "50"
 msgstr ""
 
-#: ../../usage/prop.rst:129
+#: ../../usage/prop.rst:147
 msgid "Chebyshev対称関数の動径成分の数を指定します。"
 msgstr "Specify the number of radial components of Chebyshev symmetry functions."
 
-#: ../../usage/prop.rst:133
+#: ../../usage/prop.rst:151
 msgid "30"
 msgstr ""
 
-#: ../../usage/prop.rst:135
+#: ../../usage/prop.rst:153
 msgid "Chebyshev対称関数の角度成分の数を指定します。"
 msgstr "Specify the number of angular components of Chebyshev symmetry functions."
 
-#: ../../usage/prop.rst:141
+#: ../../usage/prop.rst:159
 msgid "Chebyshev対称関数の動径成分のカットオフ距離 *R*:sub:`c` (\\ |angs|\\ )を指定します。"
 msgstr ""
 "Specify the cutoff radius *R*:sub:`c` (\\ |angs|\\ ) of radial components"
 " of Chebyshev symmetry functions."
 
-#: ../../usage/prop.rst:147
+#: ../../usage/prop.rst:165
 msgid "Chebyshev対称関数の角度成分のカットオフ距離 *R*:sub:`c` (\\ |angs|\\ )を指定します。"
 msgstr ""
 "Specify the cutoff radius *R*:sub:`c` (\\ |angs|\\ ) of angular "
 "components of Chebyshev symmetry functions."
 
-#: ../../usage/prop.rst:153
+#: ../../usage/prop.rst:171
 msgid "16"
 msgstr ""
 
-#: ../../usage/prop.rst:155
+#: ../../usage/prop.rst:173
 msgid "指定した数のニューラルネットワークモデルを作り、同時並行で学習させます。力場として使う際は、各ニューラルネットワークが出力したエネルギー・力の平均値を力場の出力とします。1を指定すると、1つのニューラルネットワークモデルで力場を定義する従来の手法になります。"
 msgstr ""
-"Create specified number of neural network models and perform learning in parallel. When used as the force field, the average value of energy/force output from each neural network "
-"becomes the output of the force field. If 1 is specified, it results in the ordinary method in which the force field is defined by one neural network model."
+"Create specified number of neural network models and perform learning in "
+"parallel. When used as the force field, the average value of energy/force"
+" output from each neural network becomes the output of the force field. "
+"If 1 is specified, it results in the ordinary method in which the force "
+"field is defined by one neural network model."
 
-#: ../../usage/prop.rst:159
+#: ../../usage/prop.rst:177
 msgid "2"
 msgstr ""
 
-#: ../../usage/prop.rst:161
+#: ../../usage/prop.rst:179
 msgid "ニューラルネットワークの隠れ層の層数です。"
 msgstr "Specify the number of hidden layers of a neural network."
 
-#: ../../usage/prop.rst:165
+#: ../../usage/prop.rst:183
 msgid "40"
 msgstr ""
 
-#: ../../usage/prop.rst:167
+#: ../../usage/prop.rst:185
 msgid "ニューラルネットワークのノード数です。"
 msgstr "Specify the number of nodes of of a neural network."
 
-#: ../../usage/prop.rst:171
+#: ../../usage/prop.rst:189
 msgid "twtanh"
 msgstr ""
 
-#: ../../usage/prop.rst:173
+#: ../../usage/prop.rst:191
 msgid ""
 "ニューラルネットワークの活性化関数です。asis（使用しない）、sigmoid、tanh、twtanh(twisted "
 "tanh)、eLU、GELUが指定できます。"
@@ -1320,11 +1339,11 @@ msgstr ""
 "Specify an activation function of a neural network. asis (not use), "
 "sigmoid, tanh, twtanh (twisted tanh), eLU, and GELU are available."
 
-#: ../../usage/prop.rst:177 ../../usage/prop.rst:189
+#: ../../usage/prop.rst:195 ../../usage/prop.rst:207
 msgid "32"
 msgstr ""
 
-#: ../../usage/prop.rst:179
+#: ../../usage/prop.rst:197
 msgid ""
 "学習時の最適化アルゴリズムの指定です。0を指定すると、Adam法を使用します。1以上の値を指定すると、その値を履歴数とするL-"
 "BFGS法を使用します。"
@@ -1333,58 +1352,58 @@ msgstr ""
 "method. In case of 1 or larger, use L-BFGS method with the specified "
 "value as the number of histories."
 
-#: ../../usage/prop.rst:183
+#: ../../usage/prop.rst:201
 msgid "more-thuente"
 msgstr ""
 
-#: ../../usage/prop.rst:185
+#: ../../usage/prop.rst:203
 msgid "L-BFGS法で使用する直線探索のアルゴリズムです。more-thuente、armijo、wolfe、strong-wolfeが指定できます。"
 msgstr ""
 "Specify a linear search algorithm used in L-BFGS method. more-thuente, "
 "armijo, wolfe, and srong-wolfe are available."
 
-#: ../../usage/prop.rst:191
+#: ../../usage/prop.rst:209
 msgid "L-BFGS法で使用する直線探索の試行回数の最大値です。"
 msgstr ""
 "Specify the maximum value of the number of trials of linear search used "
 "in L-BFGS method."
 
-#: ../../usage/prop.rst:197
+#: ../../usage/prop.rst:215
 msgid "学習時のミニバッチサイズです。0以下の値を指定した場合、ミニバッチは使用せず、フルバッチ（サンプル全体）で学習を行います。"
 msgstr ""
 "Specify the mini batch size at learning. In case of 0 or lower, not use "
 "mini batches but use a full batch (whole sample) for learning."
 
-#: ../../usage/prop.rst:201 ../../usage/prop.rst:219
+#: ../../usage/prop.rst:219 ../../usage/prop.rst:237
 msgid "500"
 msgstr ""
 
-#: ../../usage/prop.rst:203
+#: ../../usage/prop.rst:221
 msgid "学習時の繰り返し回数(epoch)の上限です。"
 msgstr "Specify the upper limit of the number of repeats (epoch) at learning."
 
-#: ../../usage/prop.rst:207
+#: ../../usage/prop.rst:225
 msgid "1000"
 msgstr ""
 
-#: ../../usage/prop.rst:209
+#: ../../usage/prop.rst:227
 msgid "学習中にニューラルネットワークのデータをファイルに保存する間隔を設定します。0以下の値を設定すると終了時のみ保存します。"
 msgstr ""
 "Specify the interval to save data of neural network into a file at "
 "learning. In case of 0 or lower, store only at the end."
 
-#: ../../usage/prop.rst:213
+#: ../../usage/prop.rst:231
 msgid "250"
 msgstr ""
 
-#: ../../usage/prop.rst:215
+#: ../../usage/prop.rst:233
 msgid "学習時の繰り返し回数(epoch)がこの数字より小さいうちはエネルギーのみを使って学習を行います。それ以降はエネルギーと原子に働く力の両方を使って学習を行います。"
 msgstr ""
 "Use only energy for learning until the nuber of repeats (epoch) at "
 "learning becomes larger than this number. After that, use both energy and"
 " force for learning."
 
-#: ../../usage/prop.rst:221
+#: ../../usage/prop.rst:239
 msgid ""
 "エネルギーから原子に働く力の誤差を計算する際、繰り返し回数(epoch)がこの数字より小さいうちはDouble "
 "Backward法による近似的な微分法を使います。それ以降は厳密に微分を計算します。"
@@ -1394,149 +1413,151 @@ msgstr ""
 "number of repeats (epoch) becomes larger than this number. After that, "
 "strictly calculate a differentiate."
 
-#: ../../usage/prop.rst:229
+#: ../../usage/prop.rst:247
 msgid "教師データを複数のサブセットに分割して、各サブセットを使った学習処理を順次実行するSuper Epoch法の設定です。"
-msgstr "Setting of Super Epoch method, in which the training data is split in subsets and serially perform the training "
-"using each subset."
+msgstr ""
+"Setting of Super Epoch method, in which the training data is split in "
+"subsets and serially perform the training using each subset."
 
-#: ../../usage/prop.rst:231
+#: ../../usage/prop.rst:249
 msgid "分割するサブセット数（＝Super Epochの数）を指定します。0以下の値を指定した場合、geomsEpochを元に自動的に値が設定されます。"
 msgstr ""
-"Specify the number of subsets (= number of Super Epochs). In case of 0 or lower, the value is automatically set "
-"based on geomsEpoch."
+"Specify the number of subsets (= number of Super Epochs). In case of 0 or"
+" lower, the value is automatically set based on geomsEpoch."
 
-#: ../../usage/prop.rst:235
+#: ../../usage/prop.rst:253
 msgid "500（GPU版 :file:`sannp_gpu` では2500）"
-msgstr "500 (2500 for GPU version :file:`sannp_gpu`\ )"
+msgstr "500 (2500 for GPU version :file:`sannp_gpu`\\ )"
 
-#: ../../usage/prop.rst:237
+#: ../../usage/prop.rst:255
 msgid ""
 "Super "
 "Epochあたりの教師データ数を指定します。0以下の値を指定した場合、または教師データ数よりも値が大きかった場合は、自動的に教師データ数と同じ値に設定されます。"
 msgstr ""
-"Specify the number of training data per Super Epoch. In case of 0 or lower, or larger than the training data number, it is automatically "
-"set to the same value as the training data number."
+"Specify the number of training data per Super Epoch. In case of 0 or "
+"lower, or larger than the training data number, it is automatically set "
+"to the same value as the training data number."
 
-#: ../../usage/prop.rst:243
+#: ../../usage/prop.rst:261
 msgid "損失関数のスケール係数を絶対値で設定する(1)か、2乗値で設定する(0)かの指定です。"
 msgstr ""
 "Specify the scale factor of a loss function with absolute value (1) or "
 "squared value (0)."
 
-#: ../../usage/prop.rst:249
+#: ../../usage/prop.rst:267
 msgid "損失関数の正規化を行う(1)か行わない(0)かの指定です。"
 msgstr "Specify whether a loss function should be normalized (1) or not (0)."
 
-#: ../../usage/prop.rst:255
+#: ../../usage/prop.rst:273
 msgid "エネルギーから原子に働く力の誤差を計算する際、epochsApproxFを使って近似的な微分と厳密な微分を切り替える(0)か、常に近似的な微分法を使う(1)か設定します。"
 msgstr ""
 "Select switching approximate and strict differentiation with "
 "epochsApproxF (0) or using always approximate one (1) when calculating "
 "from energy an error of force acting on an atom."
 
-#: ../../usage/prop.rst:259 ../../usage/prop.rst:271
+#: ../../usage/prop.rst:277 ../../usage/prop.rst:289
 msgid "0.01"
 msgstr ""
 
-#: ../../usage/prop.rst:261
+#: ../../usage/prop.rst:279
 msgid "学習が収束したか判定するためのエネルギー残差(RMS)の閾値(eV/atom)です。"
 msgstr ""
 "Specify the threshold (eV/atom) of residual (RMS) of energy to determine "
 "whether learning has converged or not."
 
-#: ../../usage/prop.rst:265
+#: ../../usage/prop.rst:283
 msgid "0.10"
 msgstr ""
 
-#: ../../usage/prop.rst:267
+#: ../../usage/prop.rst:285
 msgid "学習が収束したか判定するための力の残差(RMS)の閾値(eV/\\ |angs|\\ )です。"
 msgstr ""
 "Specify the threshold (eV/\\ |angs|\\ ) of residual (RMS) of force to "
 "determine whether learning has converged or not."
 
-#: ../../usage/prop.rst:273
+#: ../../usage/prop.rst:291
 msgid "学習が収束したか判定するための電荷の残差(RMS)の閾値(e)です。"
 msgstr ""
 "Specify the threshold (e) of residual (RMS) of charge to determine "
 "whether learning has converged or not."
 
-#: ../../usage/prop.rst:277 ../../usage/prop.rst:283 ../../usage/prop.rst:289
+#: ../../usage/prop.rst:295 ../../usage/prop.rst:301 ../../usage/prop.rst:307
 msgid "1.00"
 msgstr ""
 
-#: ../../usage/prop.rst:279
+#: ../../usage/prop.rst:297
 msgid "エネルギーの損失関数のスケール係数(1/eV または 1/eV\\ :sup:`2`\\ )です。"
 msgstr ""
 "Specify the scale factor (1/eV or 1/eV\\ :sup:`2`\\ ) of a loss function "
 "of energy."
 
-#: ../../usage/prop.rst:285
+#: ../../usage/prop.rst:303
 msgid "力の損失関数のスケール係数(\\ |angs|\\ /eV または (\\ |angs|\\ /eV)\\ :sup:`2`\\ )です。"
 msgstr ""
 "Specify the scale factor (\\ |angs|\\ /eV or (\\ |angs|\\ /eV)\\ "
 ":sup:`2`\\ ) of a loss function of force."
 
-#: ../../usage/prop.rst:291
+#: ../../usage/prop.rst:309
 msgid "電荷の損失関数のスケール係数(1/e または 1/e\\ :sup:`2`\\ )です。"
 msgstr ""
 "Specify the scale factor (1/e or 1/e\\ :sup:`2`\\ ) of a loss function of"
 " charge."
 
-#: ../../usage/prop.rst:295 ../../usage/prop.rst:301
+#: ../../usage/prop.rst:313 ../../usage/prop.rst:319
 msgid "1.0e-4"
 msgstr ""
 
-#: ../../usage/prop.rst:297
+#: ../../usage/prop.rst:315
 msgid "学習率の初期値です。"
 msgstr "Specify the initial value of learning rate."
 
-#: ../../usage/prop.rst:303
+#: ../../usage/prop.rst:321
 msgid "学習率の下限値です。"
 msgstr "Specify the lower limit of learning rate."
 
-#: ../../usage/prop.rst:307
+#: ../../usage/prop.rst:325
 msgid "0.9999"
 msgstr ""
 
-#: ../../usage/prop.rst:309
+#: ../../usage/prop.rst:327
 msgid "学習率の減衰率です。"
 msgstr "Specify the attenuation factor of learning rate."
 
-#: ../../usage/prop.rst:313
+#: ../../usage/prop.rst:331
 msgid "0.9"
 msgstr ""
 
-#: ../../usage/prop.rst:315
+#: ../../usage/prop.rst:333
 msgid "学習時のハイパーパラメータ（Adam法の\\ |beta|\\ :sub:`1`）です。"
 msgstr ""
 "Specify the hyper parameter (\\ |beta|\\ :sub:`1` of Adam method) at "
 "learning."
 
-#: ../../usage/prop.rst:319
+#: ../../usage/prop.rst:337
 msgid "0.999"
 msgstr ""
 
-#: ../../usage/prop.rst:321
+#: ../../usage/prop.rst:339
 msgid "学習時のハイパーパラメータ（Adam法の\\ |beta|\\ :sub:`2`）です。"
 msgstr ""
 "Specify the hyper parameter (\\ |beta|\\ :sub:`2` of Adam method) at "
 "learning."
 
-#: ../../usage/prop.rst:325
+#: ../../usage/prop.rst:343
 msgid "64"
 msgstr ""
 
-#: ../../usage/prop.rst:327
+#: ../../usage/prop.rst:345
 msgid "|Delta|\\ -NNPで使用する古典力場を最適化する際の繰り返し回数の上限です。"
 msgstr ""
 "Specify the upper limit of the number of repeats when optimizing a "
 "classical force field used in |Delta|\\ -NNP."
 
-#: ../../usage/prop.rst:331
+#: ../../usage/prop.rst:349
 msgid "-50.0"
 msgstr ""
 
-#: ../../usage/prop.rst:333
+#: ../../usage/prop.rst:351
 msgid ""
 "|Delta|\\ "
 "-NNPで使用する古典力場を最適化する際、ここで指定した値(eV)よりも小さいエネルギーが現れにくくなるように、ペナルティ関数を適用して最適化します。"
@@ -1545,33 +1566,33 @@ msgstr ""
 "functions will be applied so that lower energy than this value (eV) has "
 "seldomly appeared."
 
-#: ../../usage/prop.rst:337 ../../usage/tool.rst:137
+#: ../../usage/prop.rst:355 ../../usage/tool.rst:137
 msgid "256"
 msgstr ""
 
-#: ../../usage/prop.rst:339
+#: ../../usage/prop.rst:357
 msgid "（GPU版）CUDAのブロック当たりのスレッド数です。上限は1024（CUDAの仕様）です。32（ワープサイズ）の倍数を推奨します。"
 msgstr ""
 "(GPU version) Number of threads per block in CUDA. Upper limit is 1024 "
 "(specification of CUDA). Multiple of 32 (warp size) is appropriate."
 
-#: ../../usage/prop.rst:341
+#: ../../usage/prop.rst:359
 msgid "GPU上で生成するスレッドに関する設定で、CPUのスレッド並列（OpenMP並列）とは関係ありません。"
 msgstr ""
 "This setting is about the threads on GPU, and not related to thread "
 "parallel (OpenMP parallel) on CPU."
 
-#: ../../usage/prop.rst:345
+#: ../../usage/prop.rst:363
 msgid "512"
 msgstr ""
 
-#: ../../usage/prop.rst:347
+#: ../../usage/prop.rst:365
 msgid "（GPU版）対称関数をGPUで計算するときに、ここで指定した数の原子ごとにまとめて処理を行います。"
 msgstr ""
 "(GPU version) Number of atoms to be processed at a time when calculating "
 "the symmetry function using GPU."
 
-#: ../../usage/prop.rst:351
+#: ../../usage/prop.rst:369
 msgid "以降のファイル内容はコメントとして扱われます。"
 msgstr "Subsequent file contents are treated as comments."
 

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Advance/NeuralMD \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-08 10:31+0900\n"
+"POT-Creation-Date: 2024-03-15 10:28+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -254,7 +254,8 @@ msgid ""
 "ESPRESSO、LAMMPS、NeuralMD実行用の各sh(bat)ファイル内で並列実行を行うように設定を行ってください。"
 msgstr ""
 "Parallel execution of slhmc itself is not available. Set up parallel "
-"execution in each sh(bat) file for Quantum ESPRESSO, LAMMPS, and NerualMD."
+"execution in each sh(bat) file for Quantum ESPRESSO, LAMMPS, and "
+"NerualMD."
 
 #: ../../slhmc.rst:120
 msgid ""
@@ -528,35 +529,115 @@ msgstr ""
 msgid "``aprioriNPH 1`` を指定した場合、 ``nphMethod apriori`` と同じ設定になります。"
 msgstr "Specifying ``aprioriNPH 1`` is the same setting as ``nphMethod apriori`` ."
 
-#: ../../slhmc/prop.rst:105
+#: ../../slhmc/prop.rst:105 ../../slhmc/prop.rst:117
 msgid "tri"
 msgstr ""
 
 #: ../../slhmc/prop.rst:107
-msgid "セルの変形を行う場合の制約条件の設定です。各軸が垂直のまま等方的に変形する(iso)、各軸が垂直のまま異方的な変形を許す(aniso)、各軸が垂直でなくなる変形を許す(tri)が設定できます。"
-msgstr ""
-"Specify the constraints for cell deformation. Isotropic deformation while"
-" each axis remains perpendicular (iso), allowing anisotropic deformation "
-"while each axis remains perpendicular (aniso), and allowing deformation "
-"where each axis is no longer perpendicular (tri) are selectable."
+msgid "セルの変形を行う場合の制約条件の設定です。"
+msgstr "Setting constraints for cell deformation."
 
-#: ../../slhmc/prop.rst:111
-msgid "1.0"
+#: ../../slhmc/prop.rst:113
+msgid "iso"
 msgstr ""
 
 #: ../../slhmc/prop.rst:113
-msgid "セルの変形を行う場合の圧力(bar)です。"
-msgstr "Specify the pressure (bar) while cell deformation."
+msgid "等方的な変形を許す"
+msgstr "Allow isotropic deformation"
+
+#: ../../slhmc/prop.rst:115
+msgid "aniso"
+msgstr ""
+
+#: ../../slhmc/prop.rst:115
+msgid "x,y,z軸方向の伸縮を許す"
+msgstr "Allow stretching along the x, y, and z axes"
 
 #: ../../slhmc/prop.rst:117
-msgid "250.0"
+msgid "任意の変形を許す"
+msgstr "Allow arbitrary deformation"
+
+#: ../../slhmc/prop.rst
+msgid "xy-iso"
+msgstr ""
+
+#: ../../slhmc/prop.rst
+msgid "yz-iso"
+msgstr ""
+
+#: ../../slhmc/prop.rst
+msgid "xz-iso"
 msgstr ""
 
 #: ../../slhmc/prop.rst:119
+msgid "2つの軸方向の同じ割合での伸縮を許す"
+msgstr "Allow stretching at the same ratio along the two axes"
+
+#: ../../slhmc/prop.rst
+msgid "xy-aniso"
+msgstr ""
+
+#: ../../slhmc/prop.rst
+msgid "yz-aniso"
+msgstr ""
+
+#: ../../slhmc/prop.rst
+msgid "xz-aniso"
+msgstr ""
+
+#: ../../slhmc/prop.rst:123
+msgid "2つの軸方向の伸縮を許す"
+msgstr "Allow stretching along the two axes"
+
+#: ../../slhmc/prop.rst
+msgid "xy"
+msgstr ""
+
+#: ../../slhmc/prop.rst
+msgid "yz"
+msgstr ""
+
+#: ../../slhmc/prop.rst
+msgid "xz"
+msgstr ""
+
+#: ../../slhmc/prop.rst:127
+msgid "2つの軸を含む面内の任意の変形を許す"
+msgstr "Allow arbitrary deformation within a plane containing the two axes"
+
+#: ../../slhmc/prop.rst
+msgid "x"
+msgstr ""
+
+#: ../../slhmc/prop.rst
+msgid "y"
+msgstr ""
+
+#: ../../slhmc/prop.rst
+msgid "z"
+msgstr ""
+
+#: ../../slhmc/prop.rst:131
+msgid "1つの軸方向の伸縮を許す"
+msgstr "Allow stretching along one axis"
+
+#: ../../slhmc/prop.rst:138
+msgid "1.0"
+msgstr ""
+
+#: ../../slhmc/prop.rst:140
+msgid "セルの変形を行う場合の圧力(bar)です。"
+msgstr "Specify the pressure (bar) while cell deformation."
+
+#: ../../slhmc/prop.rst:144
+msgid "250.0"
+msgstr ""
+
+#: ../../slhmc/prop.rst:146
 msgid "セルの変形を行う場合の圧力のダンピング時定数(fs)です。"
 msgstr "Specify the pressure damping time constant (fs) for cell deformation."
 
-#: ../../slhmc/prop.rst:123
+#: ../../slhmc/prop.rst:150
 msgid "以降のファイル内容はコメントとして扱われます。"
 msgstr "Subsequent file contents are treated as comments."
 
