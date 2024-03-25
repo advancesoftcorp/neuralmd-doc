@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Advance/NeuralMD \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-25 16:30+0900\n"
+"POT-Creation-Date: 2024-03-25 17:20+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -278,10 +278,8 @@ msgid ""
 "doc.readthedocs.io/ja/latest/install.html#download>`_\\ "
 "を使ってインストールし、起動します。"
 msgstr ""
-"Install it using the `remoteLicense "
-"installer <https://remotelicense-"
-"doc.readthedocs.io/en/latest/install.html#download>`_"
-" and launch it."
+"Install it using the `remoteLicense installer <https://remotelicense-"
+"doc.readthedocs.io/en/latest/install.html#download>`_ and launch it."
 
 #: ../../install/linux.rst:131 ../../install/purchase.rst:113
 msgid ":guilabel:`Host` タブでLinuxマシンへの接続情報を設定します。"
@@ -768,6 +766,26 @@ msgid ""
 msgstr ""
 "Click :guilabel:`Get Host ID` and once Host ID is acquired click "
 ":guilabel:`Send Mail of License Request` ."
+
+#: ../../install/requirement.rst:5
+msgid "動作環境"
+msgstr "Requirements"
+
+#: ../../install/requirement.rst:7
+msgid "OS"
+msgstr ""
+
+#: ../../install/requirement.rst:9
+msgid "Windows 10・Windows 11 (64 bit)"
+msgstr "Windows 10 / Windows 11 (64 bit)"
+
+#: ../../install/requirement.rst:10
+msgid "CentOS 7 (64 bit) （2024年6月30日のOSサポート終了に伴い、本製品でもサポート対象外となります。）"
+msgstr "CentOS 7 (64 bit) (With the end of OS support on June 30, 2024, use on it will no longer be supported.)"
+
+#: ../../install/requirement.rst:11
+msgid "AlmaLinux 8"
+msgstr ""
 
 #: ../../install/windows.rst:5
 msgid "インストール手順 (Windows)"
