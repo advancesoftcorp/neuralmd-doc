@@ -127,7 +127,7 @@ Windowsから操作する場合
 
 手順の概要を以下に示します。詳細は\ `マニュアル <https://remotelicense-doc.readthedocs.io/ja/latest/>`_\ を参照してください。
 
-#. `remoteLicenseインストーラー <https://www.nanolabo.advancesoft.jp/?wpdmdl=1012>`_\ を使ってインストールし、起動します。
+#. `remoteLicenseインストーラー <https://remotelicense-doc.readthedocs.io/ja/latest/install.html#download>`_\ を使ってインストールし、起動します。
 #. :guilabel:`Host` タブでLinuxマシンへの接続情報を設定します。
 #. :guilabel:`License` タブでライセンスファイルを選択します。
 #. :guilabel:`Start` タブの :guilabel:`Execute \`lmgrd'` ボタンをクリックすると、ライセンスサーバーが起動します。
