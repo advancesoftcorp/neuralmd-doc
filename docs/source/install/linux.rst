@@ -13,7 +13,7 @@
 
  `Advance/NeuralMD (ver.1.9.2) <https://www.nanolabo.advancesoft.jp/?sdm_process_download=1&download_id=2164>`_
 
- `Advance/NanoLabo Tool (ver.2.9.2) <https://www.nanolabo.advancesoft.jp/?sdm_process_download=1&download_id=2170>`_
+ `Advance/NanoLabo Tool (ver.3.0) <https://www.nanolabo.advancesoft.jp/?sdm_process_download=1&download_id=2795>`_
 
 .. _installerl:
 
