@@ -216,7 +216,7 @@ V2CPファイルのApplyに成功したら、ライセンスの設定は完了�
 
 - support.nano\@advancesoft.jpにライセンスの更新をリクエストしてください。ライセンス登録後、noreply\@sentinelcloud.comから新しいEntitlement Certificateをメールでお送りしますので、記載されているProduct Key (PKID)を用いてライセンスの更新を行ってください。
 
-- 初めにライセンスの設定を行う場合に必要なC2Vファイルのファイル名はfingerprint_32462.c2vですが、更新の際に必要なC2Vファイルのファイル名は(KeyID)_(timestamp).c2vとなります。
+- 初めてSentinelライセンスの設定を行う場合に必要なC2Vファイルのファイル名はfingerprint_32462.c2vですが、更新の際に必要なC2Vファイルのファイル名は(KeyID)_(timestamp).c2vとなります。
 
 - ACCのSentinel Keys画面からC2Vファイルをダウンロードする際は、必ず、更新を適用するキーのC2Vボタンをクリックしてダウンロードを行ってください。
 
