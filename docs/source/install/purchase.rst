@@ -6,13 +6,13 @@
 
 本ソフトウェアは有償です。試用ライセンスで1カ月間ご試用いただき、お客様の需要に応えると判断していただけましたら、継続利用のため製品ライセンスのご購入をお願いします。
 
-試用版・製品版とも、ご使用には弊社よりライセンスを取得していただく必要があります。ライセンス形態は実行環境により以下のようになっています。
+試用版・製品版とも、ご使用には弊社よりライセンスを取得していただく必要があります。ライセンス形態は実行環境によらず以下の2種類からお選びいただけます。
 
-* Windows： ノードロックライセンス
+* ノードロックライセンス
 
  本製品を使用するコンピューターが固定されます。
 
-* Linux： フローティングライセンス
+* フローティングライセンス
 
  本製品を使用するコンピューターは固定されませんが、ライセンスサーバー（ライセンス認証用のプログラム）を起動するコンピューターが固定されます。
 
@@ -73,42 +73,13 @@
 
 .. _license:
 
-お申し込み手順
+お申し込み方法
 ==========================
 
-ご使用になるコンピューター（Windowsは本製品を使用するコンピューター、Linuxではライセンスサーバーを起動するコンピューター）について、固有のHost IDを取得し、そのHost IDに対してライセンスファイルを発行します。
+`support.nano@advancesoft.jp <mailto:support.nano@advancesoft.jp>`_ 宛にご希望のライセンス種別を明記の上お申し込みください。
 
-ライセンス登録後、原則5営業日以内にライセンスファイルをお送りします。
+ライセンス登録後、原則5営業日以内にnoreply\@sentinelcloud.comからEntitlement Certificateをメールでお送りしますので、記載されているProduct Key (PKID)を用いてライセンスの設定を行ってください。
 
-.. _id-install:
+ライセンスの設定方法は、インストール手順（\ :doc:`Windows<windows>`\ 、\ :doc:`Linux<linux>`\ ）を参照ください。
 
-インストール時
-----------------------------------
-
-インストーラーでインストールを行う際に、ライセンス登録画面が表示されます。インストール手順（\ :doc:`Windows<windows>`\ 、\ :doc:`Linux<linux>`\ ）を参照ください。
-
-.. _id-after:
-
-インストール後または試用期間後
-----------------------------------
-
-インストール先の :file:`license` フォルダーにある :file:`advanceLCG` を実行することで、Host IDが表示されます。
-
-また、LinuxではHost IDに加えてホスト名が必要となりますので、 ``hostname`` コマンドを実行してご確認ください。
-
-試用版と製品版でHost IDは変わりませんので、試用期間後に製品版をご購入の場合、改めて確認していただく必要はございません。
-
-support.nano@advancesoft.jp 宛にご希望のライセンス種別と併せてお送りください。
-
-.. _id-remote:
-
-Windows上からLinuxマシンのHost IDを取得
------------------------------------------
-
-弊社ツール\ `remoteLicense <https://remotelicense-doc.readthedocs.io/ja/latest/>`_\ を使うことで、Windows上から簡単にLinuxマシンのHost IDを取得できます。
-
-手順の概要を以下に示します。詳細は\ `マニュアル <https://remotelicense-doc.readthedocs.io/ja/latest/>`_\ を参照してください。
-
-#. `remoteLicenseインストーラー <https://remotelicense-doc.readthedocs.io/ja/latest/install.html#download>`_\ を使ってインストールし、起動します。
-#. :guilabel:`Host` タブでLinuxマシンへの接続情報を設定します。
-#. :guilabel:`Get Host ID` をクリックし、Host IDが取得できたら :guilabel:`Send Mail of License Request` をクリックします。
+.. インストーラーでインストールを行う際に、ライセンス登録画面が表示されます。インストール手順（\ :doc:`Windows<windows>`\ 、\ :doc:`Linux<linux>`\ ）を参照ください。

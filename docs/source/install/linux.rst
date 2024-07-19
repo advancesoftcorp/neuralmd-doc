@@ -53,16 +53,6 @@
 
 .. image:: /img/install_license_l.png
 
-.. note::
-
- メール本文の「ホストＩＤ」が空欄になっている場合、Host ID取得時に必要なredhat-lsbライブラリがインストールされていない可能性があります。その場合、次のコマンドをroot権限で実行してインストールしてください。
-
- .. code-block:: console
-
-  # yum -y install redhat-lsb-core
-
- インストーラーで一旦「戻る」をクリックし、再度「次へ」をクリックしていただくことで、Host IDの取得を再試行します。
-
 最後の画面で完了をクリックすると、Advance/NeuralMDのインストールが終了します。
 
 続けて、Advance/NanoLabo Toolのインストーラーを実行します。
@@ -109,143 +99,125 @@ NeuralMDの実行ファイルのパスも環境変数 :envvar:`PATH` に設定�
 
  export PATH=/opt/AdvanceSoft/NeuralMD/bin:$PATH
 
-.. _launchl:
+.. _licensel:
 
 ライセンスの設定
 =============================
 
-ライセンス登録後、原則5営業日以内にライセンスファイル( :file:`neumd.lic` )をお送りします。
+.. note::
 
-本ソフトウェアを使用する際には、ライセンスサーバー（ライセンス認証用のプログラム）を起動しておく必要があります。ニューラルネットワークの学習を行う機能（\ :option:`sannp --train`\ 、\ :option:`sannp --train-charge`\ 、\ :option:`sannp --classical`\ ）を使う場合に、有効なライセンスが必要となります。その他の機能、およびQuantum ESPRESSO・LAMMPSを実行する際には、ライセンスは不要です。slhmc（自己学習ハイブリッドモンテカルロ法の実行ファイル）は、それ自身の実行にはライセンスは不要ですが、sannpを呼び出してニューラルネットワークの学習を行うためにライセンスが必要です。
+   ニューラルネットワークの学習を行う機能（\ :option:`sannp --train`\ 、\ :option:`sannp --train-charge`\ 、\ :option:`sannp --classical`\ ）を使う場合に、有効なライセンスが必要となります。その他の機能、およびQuantum ESPRESSO・LAMMPSを実行する際には、ライセンスは不要です。slhmc（自己学習ハイブリッドモンテカルロ法の実行ファイル）は、それ自身の実行にはライセンスは不要ですが、sannpを呼び出してニューラルネットワークの学習を行うためにライセンスが必要です。
 
-.. _launchlfromwin:
+ライセンス登録後、noreply\@sentinelcloud.comからEntitlement Certificateをメールでお送りします。Entitlement Certificateに記載されているProduct Key (PKID)を用いてライセンスの設定を行います。
 
-Windowsから操作する場合
------------------------
+.. _licenseaccc2vl:
 
-弊社ツール\ `remoteLicense <https://remotelicense-doc.readthedocs.io/ja/latest/>`_\ を使うことで、Windows上から簡単にLinuxマシン上のライセンスサーバーを起動することができます。
+C2Vファイルの生成
++++++++++++++++++
 
-手順の概要を以下に示します。詳細は\ `マニュアル <https://remotelicense-doc.readthedocs.io/ja/latest/>`_\ を参照してください。
+ NeuralMDをインストールしているマシンのウェブブラウザで、 Admin Control Center (ACC) (http://localhost:1947) にアクセスします。
 
-#. `remoteLicenseインストーラー <https://remotelicense-doc.readthedocs.io/ja/latest/install.html#download>`_\ を使ってインストールし、起動します。
-#. :guilabel:`Host` タブでLinuxマシンへの接続情報を設定します。
-#. :guilabel:`License` タブでライセンスファイルを選択します。
-#. :guilabel:`Start` タブの :guilabel:`Execute \`lmgrd'` ボタンをクリックすると、ライセンスサーバーが起動します。
+.. note::
+      
+     ACCはオフラインのマシンからもアクセス可能です。
 
-.. _launchlonlinux:
+ACCのSentinel Keys画面のリストのうち、Vendorの欄に32462と記載されている行の、Fingerprintボタンをクリックして、C2Vファイル（拡張子:c2v）をダウンロードします。
 
-Linux上で操作する場合
------------------------
+.. image:: /img/ACCSentinelKeys.png
 
-ライセンスファイル( :file:`neumd.lic` )をインストール先の :file:`license` ディレクトリにコピーしてください。
+.. _licenseaccv2cpl:
 
-ライセンスサーバーの実行ファイルはインストール先の :file:`license/lmgrd` です。端末（ターミナル）でインストール先のディレクトリに移動したら、以下のコマンド例のように起動します。
+V2CPファイルの生成
++++++++++++++++++++
 
-.. code-block:: console
+次に、ウェブブラウザで\ `EMS <https://advancesoftcorporation.prod.sentinelcloud.com/customer/>`_\ にアクセスします。
 
- $ license/lmgrd -c license/neumd.lic -l license/lmgrd.log
+.. note::
+      
+      NeuralMDをインストールしたマシンがオフラインの場合は、ダウンロードしたC2Vファイルをオンラインの別のマシンに移動したうえで\ `EMS <https://advancesoftcorporation.prod.sentinelcloud.com/customer/>`_\ にアクセスしてください。
 
-ライセンスサーバーの状態を表示するには、インストール先の :file:`license/lmstat` を使用します。
 
-.. code-block:: console
+ログイン方法としてPKIDを選択し、Entitlement Certificateに記載されているProduct Key (PKID)を入力してログインします。
 
- $ license/lmstat -a -c license/neumd.lic
+.. image:: /img/EMSLogin.png
 
-また、ライセンスサーバーを終了するには、インストール先の :file:`license/lmdown` を使用します。
+Products画面が開いたら、Activate Offlineボタンをクリックします。
 
-.. code-block:: console
+.. image:: /img/EMSProducts.png
 
- $ license/lmdown -c license/neumd.lic
+Activate Products画面が開いたら、Select Fileボタンをクリックして、先ほどダウンロードしたC2Vファイルを選択し、Complete Activationボタンをクリックします。
 
-実行時には、環境変数 :envvar:`ADVANCED_LICENSE_FILE` にライセンスファイルのパスが設定されている必要があります。
+.. image:: /img/EMSActivateProductsFingerprint.png
 
-.. code-block:: console
- :caption: デフォルトの場所にインストールした場合の例
+アクティベーションに成功したら、Download Licenseをクリックして、V2CPファイル(拡張子:.v2cp)をダウンロードします。
 
- export ADVANCED_LICENSE_FILE=/opt/AdvanceSoft/NeuralMD/license/neumd.lic
+.. image:: /img/EMSActivatedFingerprint.png
 
-.. _floating:
+.. _licenseaccv2cpapplyl:
+
+V2CPファイルの適用
++++++++++++++++++++
+
+ACCの画面に戻り、左側のメニューからUpdate/Attach画面を開きます。Select Fileボタンから、ダウンロードしたV2CPファイルを選択し、Apply Fileボタンをクリックしてください。
+
+.. note::
+      
+      NanoLaboをインストールしたマシンがオフラインの場合は、ダウンロードしたV2CPファイルをオフラインのマシンに移動したうえでACCにアクセスしてください。
+
+.. image:: /img/ACCApply.png
+
+V2CPファイルのApplyに成功したら、ライセンスの設定は完了となります。
+
+.. _floatingl:
 
 フローティングライセンス
------------------------------
++++++++++++++++++++++++++
 
-Linuxマシンに対して発行されたライセンスはフローティングライセンスとなっており、ネットワーク接続された別のマシン上でNeuralMDを使うことができます。
+フローティングライセンスをご購入いただいた場合は、ライセンスの設定を行ったマシンと同一のネットワーク上にある別のマシン（Windows・Linux）でもNeuralMDを使うことができます。
 
 - ライセンスサーバーとして使うマシン側
 
- 別のWindowsマシンからremoteLicenseを使うか、またはそのマシンにNeuralMDをインストールして、ホストIDの取得・ライセンス登録を行ってください。ライセンスファイル取得後、remoteLicenseを使うか、またはマシン上で直接ライセンスサーバーを起動してください。
+ NeuralMDをインストールして、ライセンスの設定を行ってください。マシンの起動時に毎回自動でライセンスマネージャが起動するため、一度ライセンスの設定を行って以降は特に必要な操作はありません。
 
 - NeuralMDを使うクライアントマシン側
+  - NeuralMDをインストールして下さい。通常、NeuralMDをインストールするだけで計算は実行可能となりますが、ライセンスエラーが発生する場合は次の設定が必要です。
+  
+  - Linuxの場合は /etc/hasplm/に、Windowsの場合は %CommonProgramFiles(x86)%\\Aladdin Shared\\HASP\\ にhasplm.iniファイルを作成してください。
+     
+  - 作成したhasplm.iniには、ライセンスサーバーのIPアドレスを以下の例を参考にして記述してください。
 
- NeuralMDをインストールして、同じライセンスファイルをインストール先の :file:`license` ディレクトリにコピーし、ファイルのパスを :envvar:`ADVANCED_LICENSE_FILE` に設定してください。
+   .. table::
+ 
+      +-------------------------------------------------------------------------------------------+
+      |IPアドレスが192.168.00.000の場合　　　　　　　　　　　　　　　　　　                       |
+      +===========================================================================================+
+      || serveraddr = 192.168.00.000                                                              |
+      +-------------------------------------------------------------------------------------------+ 
 
-ライセンス認証がうまくいかない場合は、以下をご確認ください。
-
-- クライアントからライセンスサーバーへの接続には、ライセンスファイル中に書かれたホスト名を使用します。ホスト名を使った接続ができない場合、ファイル中のホスト名をIPアドレスに書き換えることで接続できるようになることがあります。
-
-- ライセンスサーバー起動中はライセンスマネージャーデーモン :file:`lmgrd` とベンダーデーモン :file:`advanced` の2つのプロセスが起動し、それぞれがネットワーク通信を行います。使用するポート番号は動的に決まります（\ :file:`lmgrd` は27000-27009番ポートを使用）が、ファイアウォールの設定等のためにポート番号を固定したい場合は、ライセンスファイル中に追記して指定することができます。
-
-- ライセンスファイルはテキストファイルですので通常のテキストエディタで編集できます。ホスト名の変更・ポート番号の追記でライセンスの再発行は必要ありません。サーバー側・クライアント側両方で同じように変更してください。
-
- .. table::
-
-  +-----------------------------------------------------------------------------+
-  | lmgrdが30000番、advancedが30001番ポートを使うように設定する例               |
-  +=============================================================================+
-  || SERVER (ホスト名) COMPOSITE=(ホストID) |portlmgrd|                         |
-  || VENDOR advanced |portadvanced|                                             |
-  || USE_SERVER                                                                 |
-  || FEATURE ...                                                                |
-  +-----------------------------------------------------------------------------+
-
-.. |portlmgrd| raw:: html
-
-   <font color="blue">30000</font>
-
-.. |portadvanced| raw:: html
-
-   <font color="blue">PORT=30001</font>
-
-.. _concatlicense:
-
-ライセンスファイルの結合
--------------------------------
-
-本製品とは別の弊社製品をお使いの場合、ライセンスファイルを結合することで、1つのライセンスサーバーで複数製品のライセンス認証が可能です。\ :file:`.lic`\ ファイルを単純に結合した後、重複する行（ ``SERVER`` 、 ``VENDOR`` 、 ``USE_SERVER`` ） を削除して、1つのライセンスファイルを作ります。その後、そのファイルを使ってライセンスサーバーを起動してください。
-
-.. table::
- :widths: 100,100,10,100
-
- +------------------------------------+---------------------------------------++-------------------+
- | ファイル1.lic                      | ファイル2.lic                         || 結合ファイル.lic  |
- +====================================+=======================================++===================+
- || SERVER ...                        || SERVER ...                           ||| SERVER ...       |
- || VENDOR ...                        || VENDOR ...                           ||| VENDOR ...       |
- || USE_SERVER                        || USE_SERVER                           ||| USE_SERVER       |
- || |featgreen|                       || |featblue|                           ||| |featgreen|      |
- || |nbsp|                            || |nbsp|                               ||| |featblue|       |
- +------------------------------------+---------------------------------------++-------------------+
-
-.. |featblue| raw:: html
-
-   <font color="blue">FEATURE ...<br>...</font>
-
-.. |featgreen| raw:: html
-
-   <font color="green">FEATURE ...<br>...</font>
-
-.. |nbsp| raw:: html
-
-   &nbsp;<br>&nbsp;
 
 .. _upgradel:
 
 更新・アップグレード
 =============================
 
-- トライアル版から製品版にアップグレードされる場合、新たにインストールを行う必要はありません。ライセンスファイルのみ置き換えてください。
+- トライアル版から製品版にアップグレードされる場合、新たにインストールを行う必要はありません。以下の\ :ref:`licenseupdatel`\ を参考にしてライセンスのみを更新してください。
 
 - 新しいバージョンにアップデートされる場合、上書きインストールを行うことも可能ではありますが、あらかじめ以前のバージョンをアンインストールするか、インストール先を変更していただくことをお勧めします。
+
+.. _licenseupdatel:
+
+ライセンスの更新
++++++++++++++++++++++++++++++
+
+基本的な操作方法はライセンスの設定と同様です。ただし、以下の点に注意してください。
+
+- support.nano\@advancesoft.jpにライセンスの更新をリクエストしてください。ライセンス登録後、noreply\@sentinelcloud.comから新しいEntitlement Certificateをメールでお送りしますので、記載されているProduct Key (PKID)を用いてライセンスの更新を行ってください。
+
+- 初めにライセンスの設定を行う場合に必要なC2Vファイルのファイル名はfingerprint_32462.c2vですが、更新の際に必要なC2Vファイルのファイル名は(KeyID)_(timestamp).c2vとなります。
+
+- ACCのSentinel Keys画面からC2Vファイルをダウンロードする際は、必ず、更新を適用するキーのC2Vボタンをクリックしてダウンロードを行ってください。
+
+- EMS上では、fingerprint_32462.c2vではなく、必ず、手前の手順でダウンロードしたC2Vファイル((KeyID)_(timestamp).c2v)を使用してください。
 
 .. _uninstalll:
 
