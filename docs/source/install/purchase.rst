@@ -78,7 +78,7 @@
 
 `support.nano@advancesoft.jp <mailto:support.nano@advancesoft.jp>`_ 宛にご希望のライセンス種別を明記の上お申し込みください。
 
-ライセンス登録後、原則5営業日以内にnoreply\@sentinelcloud.comからEntitlement Certificateをメールでお送りしますので、記載されているProduct Key (PKID)を用いてライセンスの設定を行ってください。
+ライセンス契約後、noreply\@sentinelcloud.comからEntitlement Certificateをメールでお送りしますので、記載されているProduct Key (PKID)を用いてライセンスの設定を行ってください。
 
 ライセンスの設定方法は、インストール手順（\ :doc:`Windows<windows>`\ 、\ :doc:`Linux<linux>`\ ）を参照ください。
 
