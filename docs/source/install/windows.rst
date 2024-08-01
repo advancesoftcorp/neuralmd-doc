@@ -26,9 +26,7 @@
 
 .. image:: /img/install_summary.png
 
-インストールが終わると、ライセンス登録案内が表示されます。ライセンス登録がお済みでない場合は、必要な項目をご記入ください。次へをクリックすると、ライセンス登録メールの内容が表示されますので、弊社宛に送信してください。
-
-.. image:: /img/install_license.png
+.. iniファイルの生成
 
 最後の画面で完了をクリックすると、Advance/NeuralMDのインストールが終了します。
 
@@ -123,11 +121,12 @@ V2CPファイルのApplyに成功したら、ライセンスの設定は完了�
  NeuralMDをインストールして、ライセンスの設定を行ってください。マシンの起動時に毎回自動でライセンスマネージャが起動するため、一度ライセンスの設定を行って以降は特に必要な操作はありません。
 
 - NeuralMDを使うクライアントマシン側
-  - NeuralMDをインストールして下さい。通常、NeuralMDをインストールするだけで計算は実行可能となりますが、ライセンスエラーが発生する場合は、次のいずれかの方法でライセンスサーバーのIPアドレスを設定する必要があります。
 
-   - クライアントマシンでGUIアプリケーションが使用可能な場合、ACCを利用して設定を行います。クライアントマシンから\ `Admin Control Center (ACC) <http://localhost:1947>`_\ にアクセスし、画面左側のメニューからConfiguration画面を開いてください。次に、Access to Remote License Managersタブを開いて、Remote License Search ParametersにライセンスサーバーのIPアドレスを入力し、Submitをクリックしてください。
+  NeuralMDをインストールして下さい。通常、NeuralMDをインストールするだけで計算は実行可能となりますが、ライセンスエラーが発生する場合は、次のいずれかの方法でライセンスサーバーのIPアドレスを設定する必要があります。
+
+ - クライアントマシンでGUIアプリケーションが使用可能な場合、ACCを利用して設定を行います。クライアントマシンから\ `Admin Control Center (ACC) <http://localhost:1947>`_\ にアクセスし、画面左側のメニューからConfiguration画面を開いてください。次に、Access to Remote License Managersタブを開いて、Remote License Search ParametersにライセンスサーバーのIPアドレスを入力し、Submitをクリックしてください。
   
-   - クライアントマシンでGUIアプリケーションが使用できない場合、hasplm.iniファイルを作成して設定を行います。/etc/hasplm/にhasplm.iniファイルを作成し、以下の例を参考にしてライセンスサーバーのIPアドレスを記述してください。
+ - クライアントマシンでGUIアプリケーションが使用できない場合、hasplm.iniファイルを作成して設定を行います。/etc/hasplm/にhasplm.iniファイルを作成し、以下の例を参考にしてライセンスサーバーのIPアドレスを記述してください。
 
    .. table::
  
