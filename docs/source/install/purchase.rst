@@ -81,5 +81,3 @@
 ライセンス契約後、noreply\@sentinelcloud.comからEntitlement Certificateをメールでお送りしますので、記載されているProduct Key (PKID)を用いてライセンスの設定を行ってください。
 
 ライセンスの設定方法は、インストール手順（\ :doc:`Windows<windows>`\ 、\ :doc:`Linux<linux>`\ ）を参照ください。
-
-.. インストーラーでインストールを行う際に、ライセンス登録画面が表示されます。インストール手順（\ :doc:`Windows<windows>`\ 、\ :doc:`Linux<linux>`\ ）を参照ください。
