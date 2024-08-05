@@ -123,16 +123,20 @@ NeuralMDをインストールしているマシンのウェブブラウザで、
       
     NeuralMDをインストールしているマシンでGUIアプリケーションが使用できない場合、同一ネットワーク上の別のマシンのウェブブラウザからACCにアクセスして、C2Vファイルの生成を行う必要があります。詳細は\ :ref:`remoteACC`\ を参照してください。
 
-ACCのSentinel Keys画面のリストのうち、Vendorの欄に32462と記載されている行の、Fingerprintボタンをクリックして、C2Vファイル（拡張子:c2v）をダウンロードします。
+ACCのSentinel Keys画面のリストのうち、Vendorの欄に32462と記載されている行の、Fingerprintボタンをクリックして、C2Vファイル（fingerprint_32462.c2v）をダウンロードします。
 
 .. image:: /img/ACCSentinelKeys.png
+
+.. note::
+
+      ライセンスの更新をする際は、更新を適用するキーに表示されているC2VボタンをクリックしてC2Vファイル((KeyID)_(timestamp).c2v)をダウンロードしてください。
 
 .. _licenseaccv2cpl:
 
 V2CPファイルの生成
 +++++++++++++++++++
 
-次に、ウェブブラウザで\ `EMS <https://advancesoftcorporation.prod.sentinelcloud.com/customer/>`_\ にアクセスします。
+次に、ウェブブラウザで\ `Entitlement Management System (EMS) <https://advancesoftcorporation.prod.sentinelcloud.com/customer/>`_\ にアクセスします。
 
 .. note::
       
@@ -148,6 +152,10 @@ Products画面が開いたら、Activate Offlineボタンをクリックしま�
 .. image:: /img/EMSProducts.png
 
 Activate Products画面が開いたら、Select Fileボタンをクリックして、先ほどダウンロードしたC2Vファイルを選択し、Complete Activationボタンをクリックします。
+
+.. note::
+
+      初めてSentinelライセンスの設定を行う場合に必要なC2Vファイルのファイル名はfingerprint_32462.c2vですが、更新の際に必要なC2Vファイルのファイル名は(KeyID)_(timestamp).c2vとなります。
 
 .. image:: /img/EMSActivateProductsFingerprint.png
 
@@ -199,9 +207,11 @@ NeuralMDをインストールしたマシンでGUIアプリケーションが使
 
  .. note::
       
-      allow行は複数記述可能です。ただし、deny = allの行よりも後に記述したallow行は無効となりますのでご注意ください。
+      allow行は複数記述可能です。ただし、deny = all 行よりも後に記述したallow行は無効となりますのでご注意ください。
 
-.. パスワードの設定ができないので、deny=allは必須
+ .. note::
+      
+      deny = all 行を記述することにより、allow行に記述されていないマシンからの不正なアクセスを防ぐことができます。また、ACCに接続後は、GUI画面からパスワードを設定してアクセス権限を管理することも可能です。
 
 以上の設定を行うと、allow行にIPアドレスを指定したPCのウェブブラウザのアドレス欄にhttp://<NeuralMDをインストールしているマシンのIPアドレス>:1947と入力することで、NeuralMDをインストールしているマシンのACCにアクセスできます。
 
@@ -229,12 +239,13 @@ NeuralMDをインストールしたマシンでGUIアプリケーションが使
       +-------------------------------------------------------------------------------------------+
       |IPアドレスが192.168.00.000の場合　　　　　　　　　　　　　　　　　　                       |
       +===========================================================================================+
+      || [REMOTE]                                                                                 |
       || serveraddr = 192.168.00.000                                                              |
       +-------------------------------------------------------------------------------------------+ 
 
 .. note::
               
-  ライセンスサーバーのファイアウォールの設定で、TCP/UDP ポート 1947が開放されていない場合は、設定を変更して開放してください。（Windowsマシンの場合、インストール時に自動でこれらのポートは開放されるため、通常ではファイアウォールの設定は必要ありません。）
+  ライセンスサーバーのファイアウォールの設定で、TCP/UDP ポート 1947が開放されていない場合は、設定を変更して開放してください。
 
 .. _upgradel:
 
@@ -251,16 +262,19 @@ NeuralMDをインストールしたマシンでGUIアプリケーションが使
 
 ライセンスの更新
 +++++++++++++++++++++++++++++
+support.nano@advancesoft.jpにライセンスの更新をリクエストしてください。
+
+ライセンス登録後、noreply\@sentinelcloud.comから新しいEntitlement Certificateをメールでお送りしますので、記載されているProduct Key (PKID)を用いてライセンスの更新を行ってください。
 
 基本的な操作方法はライセンスの設定と同様です。ただし、以下の点に注意してください。
-
-- support.nano\@advancesoft.jpにライセンスの更新をリクエストしてください。ライセンス登録後、noreply\@sentinelcloud.comから新しいEntitlement Certificateをメールでお送りしますので、記載されているProduct Key (PKID)を用いてライセンスの更新を行ってください。
-
-- 初めてSentinelライセンスの設定を行う場合に必要なC2Vファイルのファイル名はfingerprint_32462.c2vですが、更新の際に必要なC2Vファイルのファイル名は(KeyID)_(timestamp).c2vとなります。
 
 - ACCのSentinel Keys画面からC2Vファイルをダウンロードする際は、必ず、更新を適用するキーのC2Vボタンをクリックしてダウンロードを行ってください。
 
 - EMS上では、fingerprint_32462.c2vではなく、必ず、手前の手順でダウンロードしたC2Vファイル((KeyID)_(timestamp).c2v)を使用してください。
+  
+.. note::
+
+      初めてSentinelライセンスの設定を行う場合に必要なC2Vファイルのファイル名はfingerprint_32462.c2vですが、更新の際に必要なC2Vファイルのファイル名は(KeyID)_(timestamp).c2vとなります。
 
 .. _uninstalll:
 

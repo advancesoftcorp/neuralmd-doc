@@ -62,16 +62,20 @@ NeuralMDをインストールしているマシンのウェブブラウザで、
       
      ACCはオフラインのマシンからもアクセス可能です。
 
-ACCのSentinel Keys画面のリストのうち、Vendorの欄に32462と記載されている行の、Fingerprintボタンをクリックして、C2Vファイル（拡張子:c2v）をダウンロードします。
+ACCのSentinel Keys画面のリストのうち、Vendorの欄に32462と記載されている行の、Fingerprintボタンをクリックして、C2Vファイル（fingerprint_32462.c2v）をダウンロードします。
 
 .. image:: /img/ACCSentinelKeys.png
+
+.. note::
+
+      ライセンスの更新をする際は、更新を適用するキーに表示されているC2VボタンをクリックしてC2Vファイル((KeyID)_(timestamp).c2v)をダウンロードしてください。
 
 .. _licenseaccv2cpw:
 
 V2CPファイルの生成
 +++++++++++++++++++
 
-次に、ウェブブラウザで\ `EMS <https://advancesoftcorporation.prod.sentinelcloud.com/customer/>`_\ にアクセスします。
+次に、ウェブブラウザで\ `Entitlement Management System (EMS) <https://advancesoftcorporation.prod.sentinelcloud.com/customer/>`_\ にアクセスします。
 
 .. note::
       
@@ -88,6 +92,10 @@ Products画面が開いたら、Activate Offlineボタンをクリックしま�
 
 Activate Products画面が開いたら、Select Fileボタンをクリックして、先ほどダウンロードしたC2Vファイルを選択し、Complete Activationボタンをクリックします。
 
+.. note::
+
+      初めてSentinelライセンスの設定を行う場合に必要なC2Vファイルのファイル名はfingerprint_32462.c2vですが、更新の際に必要なC2Vファイルのファイル名は(KeyID)_(timestamp).c2vとなります。
+
 .. image:: /img/EMSActivateProductsFingerprint.png
 
 アクティベーションに成功したら、Download Licenseをクリックして、V2CPファイル(拡張子:.v2cp)をダウンロードします。
@@ -103,7 +111,7 @@ ACCの画面に戻り、左側のメニューからUpdate/Attach画面を開き�
 
 .. note::
       
-      NeuralMDをインストールしたマシンがオフラインの場合は、ダウンロードしたV2CPファイルをオフラインのマシンに移動したうえでACCにアクセスしてください。
+      C2Vファイルをオンラインの別のマシンに移動してV2CPファイルを生成した場合は、NeuralMDをインストールしたマシンにV2CPファイルを移動したうえでACCにアクセスしてください。
 
 .. image:: /img/ACCApply.png
 
@@ -133,6 +141,7 @@ V2CPファイルのApplyに成功したら、ライセンスの設定は完了�
       +-------------------------------------------------------------------------------------------+
       |IPアドレスが192.168.00.000の場合　　　　　　　　　　　　　　　　　　                       |
       +===========================================================================================+
+      || [REMOTE]                                                                                 |
       || serveraddr = 192.168.00.000                                                              |
       +-------------------------------------------------------------------------------------------+ 
 
@@ -155,16 +164,19 @@ V2CPファイルのApplyに成功したら、ライセンスの設定は完了�
 
 ライセンスの更新
 +++++++++++++++++++++++++++++
+support.nano@advancesoft.jpにライセンスの更新をリクエストしてください。
+
+ライセンス登録後、noreply\@sentinelcloud.comから新しいEntitlement Certificateをメールでお送りしますので、記載されているProduct Key (PKID)を用いてライセンスの更新を行ってください。
 
 基本的な操作方法はライセンスの設定と同様です。ただし、以下の点に注意してください。
-
-- support.nano\@advancesoft.jpにライセンスの更新をリクエストしてください。ライセンス登録後、noreply\@sentinelcloud.comから新しいEntitlement Certificateをメールでお送りしますので、記載されているProduct Key (PKID)を用いてライセンスの更新を行ってください。
-
-- 初めてSentinelライセンスの設定を行う場合に必要なC2Vファイルのファイル名はfingerprint_32462.c2vですが、更新の際に必要なC2Vファイルのファイル名は(KeyID)_(timestamp).c2vとなります。
 
 - ACCのSentinel Keys画面からC2Vファイルをダウンロードする際は、必ず、更新を適用するキーのC2Vボタンをクリックしてダウンロードを行ってください。
 
 - EMS上では、fingerprint_32462.c2vではなく、必ず、手前の手順でダウンロードしたC2Vファイル((KeyID)_(timestamp).c2v)を使用してください。
+  
+.. note::
+
+      初めてSentinelライセンスの設定を行う場合に必要なC2Vファイルのファイル名はfingerprint_32462.c2vですが、更新の際に必要なC2Vファイルのファイル名は(KeyID)_(timestamp).c2vとなります。
 
 .. _uninstallw:
 

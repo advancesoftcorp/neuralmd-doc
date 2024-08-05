@@ -87,10 +87,6 @@ NanoLabo Tool同梱の計算エンジンを使用される場合は、ライブ�
 
  Quantum ESPRESSO、LAMMPS、NeuralMD実行用のファイルです。\ :file:`slhmc`\ からこれらのファイルが実行されます。必要に応じ、実行に必要な環境変数の設定（パス :envvar:`PATH`\ , :envvar:`LD_LIBRARY_PATH`\ 、ライセンス :envvar:`ADVANCED_LICENSE_FILE`\ ）や、並列実行の設定（ :file:`mpirun` コマンド、OpenMP並列数 :envvar:`OMP_NUM_THREADS`\ ）等を追記してください。ファイル内に書かれている入出力ファイル名は固定ですので、変更しないでください。
 
- .. note::
-
-   ライセンスをFlexNetからSentinelに更新して以降は、環境変数 :envvar:`ADVANCED_LICENSE_FILE`\ は不要となります。
-
  .. code-block:: none
   :caption: :file:`espresso.sh`\ でMPI並列を行う場合の記述例
 
@@ -98,6 +94,14 @@ NanoLabo Tool同梱の計算エンジンを使用される場合は、ライブ�
   mpirun -n 4 pw.x -in espresso.in 1> espresso.out 2> espresso.err
 
  .. note:: NeuralMD Windows版はMPI並列実行には非対応です。OpenMP並列は使用可能です。
+
+ .. note::
+
+   FlexNetライセンスを使用する場合は、sannpコマンドのオプションに--flexを指定してください。
+
+ .. note::
+
+   ライセンスをFlexNetからSentinelに更新して以降は、環境変数 :envvar:`ADVANCED_LICENSE_FILE`\ は不要となります。
 
 :file:`sannp.prop`
 
