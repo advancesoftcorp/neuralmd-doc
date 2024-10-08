@@ -98,7 +98,12 @@
 
 試用版と製品版でHost IDは変わりませんので、試用期間後に製品版をご購入の場合、改めて確認していただく必要はございません。
 
-support.nano@advancesoft.jp 宛にご希望のライセンス種別と併せてお送りください。
+`support.nano@advancesoft.jp <mailto:support.nano@advancesoft.jp>`_ `*`:sup: 宛にご希望のライセンス種別と併せてお送りください。
+
+.. role:: smallnote
+   :class: small-note
+
+:smallnote:`* このメールアドレスへの特定電子メール（広告・宣伝メール）の送信を拒否いたします。`
 
 .. _id-remote:
 

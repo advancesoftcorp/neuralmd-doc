@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Advance/NeuralMD \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-17 12:41+0900\n"
+"POT-Creation-Date: 2024-10-08 14:21+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -264,7 +264,7 @@ msgstr ""
 "doc.readthedocs.io/en/latest/>`_ to easily launch the license server on "
 "Linux machine from Windows."
 
-#: ../../install/linux.rst:128 ../../install/purchase.rst:110
+#: ../../install/linux.rst:128 ../../install/purchase.rst:115
 msgid ""
 "手順の概要を以下に示します。詳細は\\ `マニュアル <https://remotelicense-"
 "doc.readthedocs.io/ja/latest/>`_\\ を参照してください。"
@@ -272,7 +272,7 @@ msgstr ""
 "Below is the outline of procedure. Please refer to the `manual <https"
 "://remotelicense-doc.readthedocs.io/en/latest/>`_ for detail."
 
-#: ../../install/linux.rst:130 ../../install/purchase.rst:112
+#: ../../install/linux.rst:130 ../../install/purchase.rst:117
 msgid ""
 "`remoteLicenseインストーラー <https://remotelicense-"
 "doc.readthedocs.io/ja/latest/install.html#download>`_\\ "
@@ -281,7 +281,7 @@ msgstr ""
 "Install it using the `remoteLicense installer <https://remotelicense-"
 "doc.readthedocs.io/en/latest/install.html#download>`_ and launch it."
 
-#: ../../install/linux.rst:131 ../../install/purchase.rst:113
+#: ../../install/linux.rst:131 ../../install/purchase.rst:118
 msgid ":guilabel:`Host` タブでLinuxマシンへの接続情報を設定します。"
 msgstr ""
 "On :guilabel:`Host` tab, enter the connection information to the Linux "
@@ -740,16 +740,22 @@ msgstr ""
 "the trial and the full version."
 
 #: ../../install/purchase.rst:101
-msgid "support.nano@advancesoft.jp 宛にご希望のライセンス種別と併せてお送りください。"
+msgid ""
+"`support.nano@advancesoft.jp <mailto:support.nano@advancesoft.jp>`_ "
+"`*`:sup: 宛にご希望のライセンス種別と併せてお送りください。"
 msgstr ""
-"Please send the e-mail to support.nano@advancesoft.jp along with desired "
+"Please send the e-mail to `support.nano@advancesoft.jp <mailto:support.nano@advancesoft.jp>`_ `*`:sup: along with desired "
 "license type."
 
 #: ../../install/purchase.rst:106
+msgid ":smallnote:`* このメールアドレスへの特定電子メール（広告・宣伝メール）の送信を拒否いたします。`"
+msgstr ":smallnote:`* We do not accept commercial or promotional emails unrelated to our products or services to this address.`"
+
+#: ../../install/purchase.rst:111
 msgid "Windows上からLinuxマシンのHost IDを取得"
 msgstr "Acquiring Host ID of Linux machine from Windows"
 
-#: ../../install/purchase.rst:108
+#: ../../install/purchase.rst:113
 msgid ""
 "弊社ツール\\ `remoteLicense <https://remotelicense-"
 "doc.readthedocs.io/ja/latest/>`_\\ を使うことで、Windows上から簡単にLinuxマシンのHost "
@@ -759,7 +765,7 @@ msgstr ""
 "doc.readthedocs.io/en/latest/>`_ to easily acquire the Host ID of Linux "
 "machine from Windows."
 
-#: ../../install/purchase.rst:114
+#: ../../install/purchase.rst:119
 msgid ""
 ":guilabel:`Get Host ID` をクリックし、Host IDが取得できたら :guilabel:`Send Mail of "
 "License Request` をクリックします。"

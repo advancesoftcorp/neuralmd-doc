@@ -6,3 +6,10 @@ table.align-center td, table.align-center th {
 table.align-center div.first {
     margin-top: 1em !important;
 }
+
+.small-note {
+    display: block;
+    font-size: 0.8em;
+    color: gray;
+    text-align: end;
+}
