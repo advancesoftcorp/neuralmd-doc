@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Advance/NeuralMD \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-08 14:21+0900\n"
+"POT-Creation-Date: 2025-03-24 15:31+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -44,13 +44,13 @@ msgstr ""
 #: ../../install/linux.rst:14
 msgid ""
 "`Advance/NeuralMD (ver.1.9.2) "
-"<https://www.nanolabo.advancesoft.jp/?sdm_process_download=1&download_id=2164>`_"
+"<https://www.apps.advancesoft.jp/nanolabo/install_neuralmd_linux_v1.9.2.bin>`_"
 msgstr ""
 
 #: ../../install/linux.rst:16
 msgid ""
 "`Advance/NanoLabo Tool (ver.3.0) "
-"<https://www.nanolabo.advancesoft.jp/?sdm_process_download=1&download_id=2795>`_"
+"<https://www.apps.advancesoft.jp/nanolabo/install_nanolabo_tool_linux_v3.0.bin>`_"
 msgstr ""
 
 #: ../../install/linux.rst:23
@@ -744,12 +744,15 @@ msgid ""
 "`support.nano@advancesoft.jp <mailto:support.nano@advancesoft.jp>`_ "
 "`*`:sup: 宛にご希望のライセンス種別と併せてお送りください。"
 msgstr ""
-"Please send the e-mail to `support.nano@advancesoft.jp <mailto:support.nano@advancesoft.jp>`_ `*`:sup: along with desired "
+"Please send the e-mail to `support.nano@advancesoft.jp "
+"<mailto:support.nano@advancesoft.jp>`_ `*`:sup: along with desired "
 "license type."
 
 #: ../../install/purchase.rst:106
 msgid ":smallnote:`* このメールアドレスへの特定電子メール（広告・宣伝メール）の送信を拒否いたします。`"
-msgstr ":smallnote:`* We do not accept commercial or promotional emails unrelated to our products or services to this address.`"
+msgstr ""
+":smallnote:`* We do not accept commercial or promotional emails unrelated"
+" to our products or services to this address.`"
 
 #: ../../install/purchase.rst:111
 msgid "Windows上からLinuxマシンのHost IDを取得"
@@ -802,13 +805,13 @@ msgstr "How to Install (Windows)"
 #: ../../install/windows.rst:14
 msgid ""
 "`Advance/NeuralMD (ver.1.9.2) "
-"<https://www.nanolabo.advancesoft.jp/?sdm_process_download=1&download_id=2166>`_"
+"<https://www.apps.advancesoft.jp/nanolabo/install_neuralmd_windows_v1.9.2.exe>`_"
 msgstr ""
 
 #: ../../install/windows.rst:16
 msgid ""
 "`Advance/NanoLabo Tool (ver.3.0) "
-"<https://www.nanolabo.advancesoft.jp/?sdm_process_download=1&download_id=2793>`_"
+"<https://www.apps.advancesoft.jp/nanolabo/install_nanolabo_tool_windows_v3.0.exe>`_"
 msgstr ""
 
 #: ../../install/windows.rst:23
