@@ -7,5 +7,9 @@
 OS
 
 * Windows 10・Windows 11 (64 bit)
-* CentOS 7 (64 bit) （2024年6月30日のOSサポート終了に伴い、本製品でもサポート対象外となります。）
 * AlmaLinux 8
+
+GPUを使用する場合（Pro版）
+
+* CUDA 11.4.4以降
+* NVidiaドライババージョン470.82.01以降

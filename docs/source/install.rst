@@ -11,3 +11,5 @@
    install/windows
    install/linux
    install/purchase
+   install/license
+   install/flex
