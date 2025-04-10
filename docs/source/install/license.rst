@@ -22,7 +22,7 @@
   .. image:: /img/license_remote.svg
      :height: 200 px
 
-- :ref:`floating`
+- フローティングライセンスをご購入の場合は\ :ref:`floating`\ も参照して設定を行ってください。
 
   .. image:: /img/license_floating.svg
      :height: 200 px
@@ -141,7 +141,7 @@ NeuralMDをインストールしたマシンでGUIアプリケーションが使
 
 .. _floating:
 
-フローティングライセンス
+フローティングライセンスの設定
 ===============================
 
 フローティングライセンスをご購入いただいた場合は、ライセンスの設定を行ったマシンと同一のネットワーク上にある別のマシン（Windows・Linux）でもNeuralMDを使うことができます。
