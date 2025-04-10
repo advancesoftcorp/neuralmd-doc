@@ -36,7 +36,7 @@
 ライセンスの設定
 =============================
 
-ライセンス登録後、noreply\@sentinelcloud.comからEntitlement Certificateをメールでお送りします。Entitlement Certificateに記載されているProduct Key (PKID)を用いてライセンスの設定を行います。
+ライセンス登録後、noreply\@sentinelcloud.comからEntitlement Certificateをメールでお送りします。Entitlement Certificateに記載されているProduct Keyを用いてライセンスの設定を行います。
 
 .. _licenseaccc2v:
 
@@ -69,7 +69,7 @@ V2CPファイルの生成
       NeuralMDをインストールしたマシンがオフラインの場合は、ダウンロードしたC2Vファイルをオンラインの別のマシンに移動したうえで\ `EMS <https://advancesoftcorporation.prod.sentinelcloud.com/customer/>`_\ にアクセスしてください。
 
 
-ログイン方法としてPKIDを選択し、Entitlement Certificateに記載されているProduct Key (PKID)を入力してログインします。
+"Product Key ID"の入力欄に、Entitlement Certificateに記載されている"Product Key"を入力してログインボタンをクリックしてください。
 
 .. image:: /img/EMSLogin.png
 
@@ -182,7 +182,7 @@ support.nano@advancesoft.jp :sup:`*` にライセンスの更新をリクエス�
 
 :smallnote:`* このメールアドレスへの特定電子メール（広告・宣伝メール）の送信を拒否いたします。`
 
-ライセンス登録後、noreply\@sentinelcloud.comから新しいEntitlement Certificateをメールでお送りしますので、記載されているProduct Key (PKID)を用いてライセンスの更新を行ってください。
+ライセンス登録後、noreply\@sentinelcloud.comから新しいEntitlement Certificateをメールでお送りしますので、記載されているProduct Keyを用いてライセンスの更新を行ってください。
 
 基本的な操作方法はライセンスの設定と同様です。ただし、以下の点に注意してください。
 
