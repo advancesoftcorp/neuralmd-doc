@@ -45,7 +45,7 @@ Advance/NanoLabo Toolに同梱された計算エンジン（Quantum ESPRESSO・L
 ライセンスの設定
 =============================
 
-:ref:`licensesetupdate`\ を参照してProduct Keyの登録を行ってください。
+:ref:`licensesetupdate`\ の手順に従ってライセンスの設定を行ってください。
 
 .. _upgradew:
 
