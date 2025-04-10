@@ -89,6 +89,10 @@ Activate Products画面が開いたら、Select Fileボタンをクリックし�
 
 .. image:: /img/EMSActivatedFingerprint.png
 
+.. note::
+
+      同一のV2CPファイルを圧縮して添付したメールが自動配信されますので、そちらを解凍してご利用いただくことも可能です。
+
 .. _licenseaccv2cpapplyl:
 
 V2CPファイルの適用
