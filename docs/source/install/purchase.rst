@@ -80,4 +80,4 @@
 
 ライセンス契約後、noreply\@sentinelcloud.comからEntitlement Certificateをメールでお送りしますので、記載されているProduct Keyを用いてライセンスの設定を行ってください。
 
-ライセンスの設定方法は、インストール手順（\ :doc:`Windows<windows>`\ 、\ :doc:`Linux<linux>`\ ）を参照ください。
+ライセンスの設定方法については、:ref:`licensesetupdate`\ を参照してください。
