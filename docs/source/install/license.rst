@@ -168,14 +168,26 @@ NeuralMDをインストールしたマシンでGUIアプリケーションが使
 
  NeuralMDをインストールして下さい。通常、NeuralMDをインストールするだけで計算は実行可能となりますが、ライセンスエラーが発生する場合は、次のいずれかの方法でライセンスサーバーのIPアドレスを設定する必要があります。
 
- - クライアントマシンでGUIアプリケーションが使用可能な場合、ACCを利用して設定を行います。クライアントマシンから\ `Admin Control Center (ACC) <http://localhost:1947>`_\ にアクセスし、画面左側のメニューからConfiguration画面を開いてください。次に、Access to Remote License Managersタブを開いて、Remote License Search ParametersにライセンスサーバーのIPアドレスを入力し、Submitをクリックしてください。
+ - Sentinel RTEをインストール済みで、GUIアプリケーションが使用できる場合 :
   
- - クライアントマシンでGUIアプリケーションが使用できない場合、hasplm.iniファイルを作成して設定を行います。/etc/hasplm/にhasplm.iniファイルを作成し、以下の例を参考にしてライセンスサーバーのIPアドレスを記述してください。
+   クライアントマシンから\ `Admin Control Center (ACC) <http://localhost:1947>`_\ にアクセスし、画面左側のメニューからConfiguration画面を開いてください。次に、Access to Remote License Managersタブを開いて、Remote License Search ParametersにライセンスサーバーのIPアドレスを入力し、Submitをクリックしてください。
+  
+ - Sentinel RTEをインストール済みで、GUIアプリケーションが使用できない場合 :
 
-   .. table::
+   /etc/hasplm/にhasplm.iniファイルを作成し、以下の例を参考にしてライセンスサーバーのIPアドレスを記述してください。
+
+ - Sentinel RTEをインストールできない場合 :
+
+   以下のディレクトリにhasp_32462.iniファイルを作成し、例を参考にしてライセンスサーバーのIPアドレスを記述してください。
+  
+   - Windowsの場合 : %LocalAppData%\\SafeNet Sentinel\\Sentinel LDK\\
+
+   - Linuxの場合 : $HOME/.hasplm/
+  
+  .. table::
  
       +-------------------------------------------------------------------------------------------+
-      |IPアドレスが192.168.00.000の場合                                                           |
+      |IPアドレスが192.168.00.000の場合のiniファイルへの記述例                                    |
       +===========================================================================================+
       || [REMOTE]                                                                                 |
       || serveraddr = 192.168.00.000                                                              |
