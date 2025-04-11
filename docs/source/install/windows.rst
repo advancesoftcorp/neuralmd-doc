@@ -26,8 +26,6 @@
 
 .. image:: /img/install_summary.png
 
-.. iniファイルの生成
-
 最後の画面で完了をクリックすると、Advance/NeuralMDのインストールが終了します。
 
 続けて、Advance/NanoLabo Toolのインストーラーを実行します。
@@ -76,5 +74,3 @@ Advance/NeuralMDのアンインストールが終わったら、同様にAdvance
 .. note::
 
    アンインストールの際に、インストールログファイルが残る場合があります。また、FlexNetライセンスをご利用の場合は、ライセンスファイルは削除されずに残ります。その際はお手数ですが手動で削除してください。
-
-.. NeuralMDのアンインストーラとSentinel RTEのアンインストーラを別にする場合は、Sentinel RTEのアンインストール方法を追記。
