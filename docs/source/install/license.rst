@@ -22,7 +22,7 @@
   .. image:: /img/license_remote.svg
      :height: 200 px
 
-- フローティングライセンスをご購入の場合は\ :ref:`floating`\ も参照して設定を行ってください。
+- フローティングライセンスをご購入の場合は\ :ref:`floating`\ を参照してから上記の手順を実行してください。
 
   .. image:: /img/license_floating.svg
      :height: 200 px
