@@ -144,7 +144,7 @@ NeuralMDをインストールしたマシンでGUIアプリケーションが使
 
 以上の設定を行うと、別のマシンのウェブブラウザのアドレス欄にhttp://<NeuralMDをインストールしているマシンのIPアドレス>:1947と入力することで、NeuralMDをインストールしているマシンのACCにアクセスできます。
 
-- ポートフォワーディングを利用してリモートのACCへアクセスします。詳細については\ `こちらのドキュメント <https://apps.advancesoft.jp/sentinel/doc/index.html>`_\ を参照してください。
+- SSHポートフォワーディングを利用してリモートのACCへアクセスします。詳細については\ `こちらのドキュメント <https://apps.advancesoft.jp/sentinel/doc/index.html>`_\ を参照してください。
 
 .. _floating:
 
