@@ -17,7 +17,7 @@
 
 - NeuralMDをインストールしているマシンでGUIアプリケーションが使用できない場合:
 
-  以下の\ :ref:`remoteACC`\ を行った後、ACCのアドレスを読み替えて\ :ref:`licenseset`\ または\ :ref:`licenseupdate`\ の手順を実行してください。
+  以下の\ :ref:`remoteACC`\ を行った後、リモートのマシンから\ :ref:`licenseset`\ または\ :ref:`licenseupdate`\ の手順を実行してください。
 
   .. image:: /img/license_remote.svg
      :height: 200 px
@@ -43,11 +43,15 @@
 C2Vファイルの生成
 +++++++++++++++++
 
-NeuralMDをインストールしているマシンのウェブブラウザで、 Admin Control Center (ACC) (http://localhost:1947) にアクセスします。
+Sentinel RTEをインストールしているマシンのウェブブラウザで、Admin Control Center (ACC) (http://localhost:1947) にアクセスします。ACCはオフラインのマシンからもアクセス可能です。
 
 .. note::
 
-     ACCはオフラインのマシンからもアクセス可能です。
+      Sentinel RTEはNeuralMDインストーラの「Sentinel RTEをインストールしますか？」ではいを選択した場合、NeuralMDと同時にインストールされます。
+
+.. note::
+
+      ウェブブラウザが使用できない場合は、\ :ref:`remoteACC`\ を行った上で別のマシンからACCにアクセスしてください。
 
 ACCのSentinel Keys画面のリストのうち、Vendorの欄に32462と記載されている行の、Fingerprintボタンをクリックして、C2Vファイル（fingerprint_32462.c2v）をダウンロードします。
 
@@ -117,11 +121,15 @@ V2CPファイルのApplyに成功したら、ライセンスの設定は完了�
 リモートのACCへのアクセス設定
 =================================
 
-NeuralMDをインストールしたマシンでGUIアプリケーションが使用できない場合、GUIアプリケーションを使用可能かつネットワーク接続された別のマシンからACCにアクセスする必要があります。
+Sentinel RTEをインストールしたマシンでGUIアプリケーションが使用できない場合、GUIアプリケーションを使用可能かつネットワーク接続された別のマシンからACCにアクセスする必要があります。
+
+.. note::
+
+      Sentinel RTEはNeuralMDインストーラの「Sentinel RTEをインストールしますか？」ではいを選択した場合、NeuralMDと同時にインストールされます。
 
 そのためには、以下のいずれかの方法で、ACCへのリモートアクセス設定を行ってください。
 
-- NeuralMDをインストールしたマシンの :file:`/etc/hasplm/hasplm.ini` ファイルを管理者権限で編集し、以下の例を参考にして設定を記述してください。
+- Sentinel RTEをインストールしたマシンの :file:`/etc/hasplm/hasplm.ini` ファイルを管理者権限で編集し、以下の例を参考にして設定を記述してください。
 
  .. table::
 
@@ -142,7 +150,7 @@ NeuralMDをインストールしたマシンでGUIアプリケーションが使
       ACCの画面左側のConfigurationを選択し、Basic Settingsタブを開くと、Password Protectionの欄からパスワードの適用範囲とパスワードを設定できます。
       このパスワードは、選択した適用範囲(ACCの設定ページまたは全てのページ)にアクセスする際に必要となります。
 
- 以上の設定を行うと、別のマシンのウェブブラウザのアドレス欄にhttp://<NeuralMDをインストールしているマシンのIPアドレス>:1947と入力することで、NeuralMDをインストールしているマシンのACCにアクセスできます。
+ 以上の設定を行うと、別のマシンのウェブブラウザのアドレス欄にhttp://<Sentinel RTEをインストールしたマシンのIPアドレス>:1947と入力することで、Sentinel RTEをインストールしたマシンのACCにアクセスできます。
 
 - SSHポートフォワーディングを利用してリモートのACCへアクセスします。詳細については\ `こちらのドキュメント <https://apps.advancesoft.jp/sentinel/doc/index.html>`_\ を参照してください。
 
@@ -157,7 +165,7 @@ NeuralMDをインストールしたマシンでGUIアプリケーションが使
 
  `Sentinel RTE（ライセンスマネージャー）をダウンロード <https://apps.advancesoft.jp/sentinel/Sentinel-LDK-RTE-for-AdvanceSoft-v10.13.1_Linux.tar.gz>`_\ ・インストールしてください。
 
- インストール後、ACCを利用してライセンスの設定を行ってください。
+ インストール後、ACCを利用してライセンスの設定を行ってください。ライセンスサーバーでGUIアプリケーションを使用できない場合は\ :ref:`remoteACC`\ を行った後、リモートのマシンからACCを利用してライセンスの設定を行ってください。
 
  マシンの起動時に毎回自動でライセンスマネージャが起動するため、一度ライセンスの設定を行って以降は特に必要な操作はありません。
 
