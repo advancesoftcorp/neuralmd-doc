@@ -155,7 +155,9 @@ NeuralMDをインストールしたマシンでGUIアプリケーションが使
 
 - ライセンスサーバーとして使うマシン側
 
- `Sentinel RTE（ライセンスマネージャー）をダウンロード <https://apps.advancesoft.jp/sentinel/Sentinel-LDK-RTE-for-AdvanceSoft-v9.15_Linux.tar.gz>`_\ ・インストールし、ACCを利用してライセンスの設定を行ってください。
+ `Sentinel RTE（ライセンスマネージャー）をダウンロード <https://apps.advancesoft.jp/sentinel/Sentinel-LDK-RTE-for-AdvanceSoft-v10.13.1_Linux.tar.gz>`_\ ・インストールしてください。
+
+ インストール後、ACCを利用してライセンスの設定を行ってください。
 
  マシンの起動時に毎回自動でライセンスマネージャが起動するため、一度ライセンスの設定を行って以降は特に必要な操作はありません。
 
