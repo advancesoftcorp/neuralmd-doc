@@ -53,17 +53,17 @@ Sentinel RTEをインストールしているマシンのウェブブラウザ�
 
       ウェブブラウザが使用できない場合は、\ :ref:`remoteACC`\ を行った上で別のマシンからACCにアクセスしてください。
 
-ACCのSentinel Keys画面のリストのうち、Vendorの欄に32462と記載されている行の、Fingerprintボタンをクリックして、C2Vファイル（fingerprint_32462.c2v）をダウンロードします。
+ACCのSentinel Keys画面のリストのうち、Vendorの欄に32462と記載されている行の、Fingerprintボタンをクリックして、C2Vファイル :file:`fingerprint_32462.c2v` をダウンロードします。
 
 .. image:: /img/ACCSentinelKeys.png
 
 .. note::
 
-    弊社の他の製品のキーがマシンに対して登録されている場合、Vendorの欄に32462と記載されている行にFingerprintボタンは表示されません。この場合は、弊社の他の製品のキーに表示されているC2Vボタンをクリックして、C2Vファイル（(KeyID)_(timestamp).c2v）をダウンロードしてください。
+    弊社の他の製品のキーがマシンに対して登録されている場合、Vendorの欄に32462と記載されている行にFingerprintボタンは表示されません。この場合は、弊社の他の製品のキーに表示されているC2Vボタンをクリックして、C2Vファイル :file:`(KeyID)_(timestamp).c2v` をダウンロードしてください。
 
 .. note::
 
-      ライセンスの更新をする際は、更新を適用するキーに表示されているC2VボタンをクリックしてC2Vファイル((KeyID)_(timestamp).c2v)をダウンロードしてください。
+      ライセンスの更新をする際は、更新を適用するキーに表示されているC2VボタンをクリックしてC2Vファイル :file:`(KeyID)_(timestamp).c2v` をダウンロードしてください。
 
 .. _licenseaccv2cpl:
 
@@ -89,11 +89,11 @@ Activate Products画面が開いたら、Select Fileボタンをクリックし�
 
 .. note::
 
-      初めてSentinelライセンスの設定を行う場合に必要なC2Vファイルのファイル名はfingerprint_32462.c2vですが、更新の際に必要なC2Vファイルのファイル名は(KeyID)_(timestamp).c2vとなります。
+      初めてSentinelライセンスの設定を行う場合に必要なC2Vファイルのファイル名は :file:`fingerprint_32462.c2v` ですが、更新の際に必要なC2Vファイルのファイル名は :file:`(KeyID)_(timestamp).c2v` となります。
 
 .. image:: /img/EMSActivateProductsFingerprint.png
 
-アクティベーションに成功したら、Download Licenseをクリックして、V2CPファイル(拡張子:.v2cp)をダウンロードします。
+アクティベーションに成功したら、Download Licenseをクリックして、V2CPファイル（拡張子:.v2cp）をダウンロードします。
 
 .. image:: /img/EMSActivatedFingerprint.png
 
@@ -167,7 +167,7 @@ Sentinel RTEをインストールしたマシンでGUIアプリケーション�
 
  インストール後、ACCを利用してライセンスの設定を行ってください。ライセンスサーバーでGUIアプリケーションを使用できない場合は\ :ref:`remoteACC`\ を行った後、リモートのマシンからACCを利用してライセンスの設定を行ってください。
 
- マシンの起動時に毎回自動でライセンスマネージャが起動するため、一度ライセンスの設定を行って以降は特に必要な操作はありません。
+ マシンの起動時に毎回自動でライセンスマネージャーが起動するため、一度ライセンスの設定を行って以降は特に必要な操作はありません。
 
 - NeuralMDを使うクライアントマシン側
 
@@ -215,4 +215,4 @@ support.nano@advancesoft.jp :sup:`*` にライセンスの更新をリクエス�
   
 .. note::
 
-      初めてSentinelライセンスの設定を行う場合に必要なC2Vファイルのファイル名はfingerprint_32462.c2vですが、更新の際に必要なC2Vファイルのファイル名は(KeyID)_(timestamp).c2vとなります。
+      初めてSentinelライセンスの設定を行う場合に必要なC2Vファイルのファイル名は :file:`fingerprint_32462.c2v` ですが、更新の際に必要なC2Vファイルのファイル名は :file:`(KeyID)_(timestamp).c2v` となります。
