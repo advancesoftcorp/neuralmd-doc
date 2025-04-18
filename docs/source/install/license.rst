@@ -27,10 +27,6 @@
   .. image:: /img/license_floating.svg
      :height: 200 px
 
-.. note::
-
-      NeuralMDをインストールしたマシンがインターネットに接続されていない場合、別途インターネットに接続されているマシンが必要です。
-
 .. _licenseset:
 
 ライセンスの設定
