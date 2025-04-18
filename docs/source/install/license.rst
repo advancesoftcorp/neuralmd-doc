@@ -17,7 +17,7 @@
 
 - NeuralMDをインストールしているマシンでGUIアプリケーションが使用できない場合:
 
-  以下の\ :ref:`remoteACC`\ を行った後、リモートのマシンから\ :ref:`licenseset`\ または\ :ref:`licenseupdate`\ の手順を実行してください。
+  以下の\ :ref:`remoteACC`\ を行った後、GUIアプリケーションを使用可能な別のマシンから\ :ref:`licenseset`\ または\ :ref:`licenseupdate`\ の手順を実行してください。
 
   .. image:: /img/license_remote.svg
      :height: 200 px
@@ -47,7 +47,7 @@ Sentinel RTEをインストールしているマシンのウェブブラウザ�
 
 .. note::
 
-      ウェブブラウザが使用できない場合は、\ :ref:`remoteACC`\ を行った上で別のマシンからACCにアクセスしてください。
+      ウェブブラウザが使用できない場合は、\ :ref:`remoteACC`\ を参照して、ウェブブラウザを使用可能な別のマシンからACCにアクセスしてください。
 
 ACCのSentinel Keys画面のリストのうち、Vendorの欄に32462と記載されている行の、Fingerprintボタンをクリックして、C2Vファイル :file:`fingerprint_32462.c2v` をダウンロードします。
 
@@ -57,9 +57,9 @@ ACCのSentinel Keys画面のリストのうち、Vendorの欄に32462と記載�
 
     弊社の他の製品のキーがマシンに対して登録されている場合、Vendorの欄に32462と記載されている行にFingerprintボタンは表示されません。この場合は、弊社の他の製品のキーに表示されているC2Vボタンをクリックして、C2Vファイル :file:`(KeyID)_(timestamp).c2v` をダウンロードしてください。
 
-.. note::
+.. warning::
 
-      ライセンスの更新をする際は、更新を適用するキーに表示されているC2VボタンをクリックしてC2Vファイル :file:`(KeyID)_(timestamp).c2v` をダウンロードしてください。
+      ライセンスの更新をする場合は、必ず、更新を適用するキーに表示されているC2VボタンをクリックしてC2Vファイル :file:`(KeyID)_(timestamp).c2v` をダウンロードしてください。
 
 .. _licenseaccv2cpl:
 
@@ -69,9 +69,8 @@ V2CPファイルの生成
 次に、ウェブブラウザで\ `Entitlement Management System (EMS) <https://advancesoftcorporation.prod.sentinelcloud.com/customer/>`_\ にアクセスします。
 
 .. note::
-      
-      NeuralMDをインストールしたマシンがオフラインの場合は、ダウンロードしたC2Vファイルをオンラインの別のマシンに移動したうえで\ `EMS <https://advancesoftcorporation.prod.sentinelcloud.com/customer/>`_\ にアクセスしてください。
 
+      C2Vファイルをダウンロードしたマシンがオフラインの場合は、C2Vファイルをオンラインの別のマシンに移動したうえで\ `EMS <https://advancesoftcorporation.prod.sentinelcloud.com/customer/>`_\ にアクセスしてください。
 
 "Product Key ID"の入力欄に、Entitlement Certificateに記載されている"Product Key"を入力してログインボタンをクリックしてください。
 
@@ -83,9 +82,9 @@ Products画面が開いたら、Activate Offlineボタンをクリックしま�
 
 Activate Products画面が開いたら、Select Fileボタンをクリックして、先ほどダウンロードしたC2Vファイルを選択し、Complete Activationボタンをクリックします。
 
-.. note::
+.. warning::
 
-      初めてSentinelライセンスの設定を行う場合に必要なC2Vファイルのファイル名は :file:`fingerprint_32462.c2v` ですが、更新の際に必要なC2Vファイルのファイル名は :file:`(KeyID)_(timestamp).c2v` となります。
+      ライセンスを更新する場合は、 :file:`fingerprint_32462.c2v` ではなく、必ず、手前の手順でダウンロードしたC2Vファイル :file:`(KeyID)_(timestamp).c2v` を使用してください。
 
 .. image:: /img/EMSActivateProductsFingerprint.png
 
@@ -97,16 +96,14 @@ Activate Products画面が開いたら、Select Fileボタンをクリックし�
 
       同一のV2CPファイルを圧縮して添付したメールが自動配信されますので、そちらを解凍してご利用いただくことも可能です。
 
+ダウンロードしたV2CPファイルは、Sentinel RTEをインストールしたマシンの任意のディレクトリに格納してください。
+
 .. _licenseaccv2cpapplyl:
 
 V2CPファイルの適用
 +++++++++++++++++++
 
 ACCの画面に戻り、左側のメニューからUpdate/Attach画面を開きます。Select Fileボタンから、ダウンロードしたV2CPファイルを選択し、Apply Fileボタンをクリックしてください。
-
-.. note::
-      
-      C2Vファイルをオンラインの別のマシンに移動してV2CPファイルを生成した場合は、NeuralMDをインストールしたマシンにV2CPファイルを移動したうえでACCにアクセスしてください。
 
 .. image:: /img/ACCApply.png
 
@@ -129,16 +126,18 @@ Sentinel RTEをインストールしたマシンでGUIアプリケーション�
 
  .. table::
 
-     +-------------------------------------------------------------------------------------------+
-     |/etc/hasplm/hasplm.iniの設定例                                                             |
-     +===========================================================================================+
-     || accremote = 1                                                                            |
-     || adminremote = 0                                                                          |
-     +-------------------------------------------------------------------------------------------+
+       +-------------------------------------------------------------------------------------------+
+       |/etc/hasplm/hasplm.iniの設定例                                                             |
+       +===========================================================================================+
+       || accremote = 1                                                                            |
+       || adminremote = 0                                                                          |
+       +-------------------------------------------------------------------------------------------+
 
  .. warning::
 
       adminremoteに別の値が既に設定されている場合は、その値を変更する必要はありません。accremoteの値のみを変更してください。
+
+ 以上の設定を行うと、別のマシンのウェブブラウザのアドレス欄にhttp://<Sentinel RTEをインストールしたマシンのIPアドレス>:1947と入力することで、Sentinel RTEをインストールしたマシンのACCにアクセスできます。
 
  .. note::
 
@@ -146,7 +145,6 @@ Sentinel RTEをインストールしたマシンでGUIアプリケーション�
       ACCの画面左側のConfigurationを選択し、Basic Settingsタブを開くと、Password Protectionの欄からパスワードの適用範囲とパスワードを設定できます。
       このパスワードは、選択した適用範囲(ACCの設定ページまたは全てのページ)にアクセスする際に必要となります。
 
- 以上の設定を行うと、別のマシンのウェブブラウザのアドレス欄にhttp://<Sentinel RTEをインストールしたマシンのIPアドレス>:1947と入力することで、Sentinel RTEをインストールしたマシンのACCにアクセスできます。
 
 - SSHポートフォワーディングを利用してリモートのACCへアクセスします。詳細については\ `こちらのドキュメント <https://apps.advancesoft.jp/sentinel/doc/index.html>`_\ を参照してください。
 
@@ -175,7 +173,7 @@ Sentinel RTEをインストールしたマシンでGUIアプリケーション�
  
  .. note::
 
-      ライセンスサーバーでGUIアプリケーションを使用できない場合は\ :ref:`remoteACC`\ を行った後、リモートのマシンからACCを利用してライセンスの設定を行ってください。
+      ライセンスサーバーでGUIアプリケーションを使用できない場合は\ :ref:`remoteACC`\ を行った後、GUIアプリケーションを使用可能な別のマシンからACCにアクセスしてライセンスの設定を行ってください。
 
  .. note::
 
@@ -223,9 +221,13 @@ support.nano@advancesoft.jp :sup:`*` にライセンスの更新をリクエス�
 
 基本的な操作方法は\ :ref:`licenseset`\ と同様です。ただし、以下の点に注意してください。
 
-- C2VファイルおよびV2CPファイルは必ず新たに生成したものを使用してください。過去の設定・更新時に生成したものを誤って使用しないようにご注意ください。
+.. warning::
 
-- ACCのSentinel Keys画面からC2Vファイルをダウンロードする際は、必ず、更新を適用するキーに表示されているC2Vボタンをクリックしてダウンロードを行ってください。
+      C2VファイルおよびV2CPファイルは必ず新たに生成したものを使用してください。過去の設定・更新時に生成したものを誤って使用しないようにご注意ください。
+
+.. warning::
+
+      ACCのSentinel Keys画面からC2Vファイルをダウンロードする際は、必ず、更新を適用するキーに表示されているC2Vボタンをクリックしてダウンロードを行ってください。
   
 .. note::
 
