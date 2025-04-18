@@ -76,7 +76,12 @@
 お申し込み方法
 ==========================
 
-`support.nano@advancesoft.jp <mailto:support.nano@advancesoft.jp>`_ 宛にご希望のライセンス種別を明記の上お申し込みください。
+`support.nano@advancesoft.jp <mailto:support.nano@advancesoft.jp>`_ :sup:`*` 宛にご希望のライセンス種別を明記の上お申し込みください。
+
+.. role:: smallnote
+   :class: small-note
+
+:smallnote:`* このメールアドレスへの特定電子メール（広告・宣伝メール）の送信を拒否いたします。`
 
 ライセンス契約後、noreply\@sentinelcloud.comからEntitlement Certificateをメールでお送りしますので、記載されているProduct Keyを用いてライセンスの設定を行ってください。
 
