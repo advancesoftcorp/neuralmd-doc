@@ -137,3 +137,7 @@ Advance/NeuralMDのアンインストールが終わったら、同様にAdvance
 .. note::
 
    アンインストールの際に、インストールログファイルが残る場合があります。また、FlexNetライセンスをご利用の場合は、ライセンスファイルは削除されずに残ります。その際はお手数ですが手動で削除してください。
+
+.. note::
+
+   Sentinel RTEを後からアンインストールするには、\ `Sentinel RTEインストーラー <https://apps.advancesoft.jp/sentinel/Sentinel-LDK-RTE-for-AdvanceSoft-v9.15_Linux.tar.gz>`_\ に入っている :file:`dunst` を実行してください。
