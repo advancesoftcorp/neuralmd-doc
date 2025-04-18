@@ -165,9 +165,25 @@ Sentinel RTEをインストールしたマシンでGUIアプリケーション�
 
  `Sentinel RTE（ライセンスマネージャー）をダウンロード <https://apps.advancesoft.jp/sentinel/Sentinel-LDK-RTE-for-AdvanceSoft-v10.13.1_Linux.tar.gz>`_\ ・インストールしてください。
 
- インストール後、ACCを利用してライセンスの設定を行ってください。ライセンスサーバーでGUIアプリケーションを使用できない場合は\ :ref:`remoteACC`\ を行った後、リモートのマシンからACCを利用してライセンスの設定を行ってください。
+ .. code-block:: console
+
+      tar -xf Sentinel-LDK-RTE-for-AdvanceSoft-v10.13.1_Linux.tar.gz
+      cd aksusbd-10.13.1
+      sudo ./dinst
+      # アンインストール時には、同フォルダのdunstを実行してください。
+      sudo ./dunst
+
+ インストール後、ACCを利用してライセンスの設定を行ってください。
 
  マシンの起動時に毎回自動でライセンスマネージャーが起動するため、一度ライセンスの設定を行って以降は特に必要な操作はありません。
+ 
+ .. note::
+
+      ライセンスサーバーでGUIアプリケーションを使用できない場合は\ :ref:`remoteACC`\ を行った後、リモートのマシンからACCを利用してライセンスの設定を行ってください。
+
+ .. note::
+
+      Windowsマシンをライセンスサーバーとする場合は、 `こちらのSentinel RTE（ライセンスマネージャー）をダウンロード <https://apps.advancesoft.jp/sentinel/Sentinel-LDK-RTE-for-AdvanceSoft-v10.13.1_Windows.exe>`_\ し、\ `こちらのドキュメント <https://apps.advancesoft.jp/sentinel/doc/index.html>`_\ を参照してインストールを行ってください。
 
 - NeuralMDを使うクライアントマシン側
 
