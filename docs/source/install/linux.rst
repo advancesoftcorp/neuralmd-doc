@@ -13,15 +13,15 @@
 
 - 本体
 
- `Advance/NeuralMD (ver.1.9.2) <https://www.apps.advancesoft.jp/nanolabo/install_neuralmd_linux_v1.9.2.bin>`_
+ `Advance/NeuralMD (ver.2.0) <https://www.nanolabo.advancesoft.jp/?sdm_process_download=1&download_id=3096>`_
 
 - 弊社で改修した計算エンジン（Quantum ESPRESSO・LAMMPS）
 
- `Advance/NanoLabo Tool (ver.3.0) <https://www.apps.advancesoft.jp/nanolabo/install_nanolabo_tool_linux_v3.0.bin>`_
+ `Advance/NanoLabo Tool (ver.3.1) <https://www.nanolabo.advancesoft.jp/?sdm_process_download=1&download_id=3087>`_
 
 - 追加のGNN力場モデルファイル（FAIR-ChemまたはSevenNetを使う場合のみ）
 
- `Advance/NanoLabo GNNP (ver.3.0) <https://www.apps.advancesoft.jp/nanolabo/install_nanolabo_tool_windows_v3.0.exe>`_
+ `Advance/NanoLabo GNNP (ver.3.1) <https://www.nanolabo.advancesoft.jp/?sdm_process_download=1&download_id=3085>`_
 
 .. _installerl:
 
