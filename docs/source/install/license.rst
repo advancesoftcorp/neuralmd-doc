@@ -39,11 +39,11 @@
 C2Vファイルの生成
 +++++++++++++++++
 
-Sentinel RTEをインストールしているマシンのウェブブラウザで、Admin Control Center (ACC) (http://localhost:1947) にアクセスします。ACCはオフラインのマシンからもアクセス可能です。
+Sentinel-LDK-RTEをインストールしているマシンのウェブブラウザで、Admin Control Center (ACC) (http://localhost:1947) にアクセスします。ACCはオフラインのマシンからもアクセス可能です。
 
 .. note::
 
-      Sentinel RTEはNeuralMDインストーラの「Sentinel RTEをインストールしますか？」ではいを選択した場合、NeuralMDと同時にインストールされます。
+      Sentinel-LDK-RTEはNeuralMDインストーラの「Sentinel-LDK-RTEをインストールしますか？」ではいを選択した場合、NeuralMDと同時にインストールされます。
 
 .. note::
 
@@ -96,7 +96,7 @@ Activate Products画面が開いたら、Select Fileボタンをクリックし�
 
       同一のV2CPファイルを圧縮して添付したメールが自動配信されますので、そちらを解凍してご利用いただくことも可能です。
 
-ダウンロードしたV2CPファイルは、Sentinel RTEをインストールしたマシンの任意のディレクトリに格納してください。
+ダウンロードしたV2CPファイルは、Sentinel-LDK-RTEをインストールしたマシンの任意のディレクトリに格納してください。
 
 .. _licenseaccv2cpapplyl:
 
@@ -114,15 +114,15 @@ V2CPファイルのApplyに成功したら、ライセンスの設定は完了�
 リモートのACCへのアクセス設定
 =================================
 
-Sentinel RTEをインストールしたマシンでGUIアプリケーションが使用できない場合、GUIアプリケーションを使用可能かつネットワーク接続された別のマシンからACCにアクセスする必要があります。
+Sentinel-LDK-RTEをインストールしたマシンでGUIアプリケーションが使用できない場合、GUIアプリケーションを使用可能かつネットワーク接続された別のマシンからACCにアクセスする必要があります。
 
 .. note::
 
-      Sentinel RTEはNeuralMDインストーラの「Sentinel RTEをインストールしますか？」ではいを選択した場合、NeuralMDと同時にインストールされます。
+      Sentinel-LDK-RTEはNeuralMDインストーラの「Sentinel-LDK-RTEをインストールしますか？」ではいを選択した場合、NeuralMDと同時にインストールされます。
 
 そのためには、以下のいずれかの方法で、ACCへのリモートアクセス設定を行ってください。
 
-- Sentinel RTEをインストールしたマシンの :file:`/etc/hasplm/hasplm.ini` ファイルを管理者権限で編集し、以下の例を参考にして設定を記述してください。
+- Sentinel-LDK-RTEをインストールしたマシンの :file:`/etc/hasplm/hasplm.ini` ファイルを管理者権限で編集し、以下の例を参考にして設定を記述してください。
 
  .. table::
 
@@ -137,7 +137,7 @@ Sentinel RTEをインストールしたマシンでGUIアプリケーション�
 
       adminremoteに別の値が既に設定されている場合は、その値を変更する必要はありません。accremoteの値のみを変更してください。
 
- 以上の設定を行うと、別のマシンのウェブブラウザのアドレス欄にhttp://<Sentinel RTEをインストールしたマシンのIPアドレス>:1947と入力することで、Sentinel RTEをインストールしたマシンのACCにアクセスできます。
+ 以上の設定を行うと、別のマシンのウェブブラウザのアドレス欄にhttp://<Sentinel-LDK-RTEをインストールしたマシンのIPアドレス>:1947と入力することで、Sentinel-LDK-RTEをインストールしたマシンのACCにアクセスできます。
 
  .. note::
 
@@ -157,7 +157,7 @@ Sentinel RTEをインストールしたマシンでGUIアプリケーション�
 
 - ライセンスサーバーとして使うマシン側
 
- `Sentinel RTE（ライセンスマネージャー）をダウンロード <https://apps.advancesoft.jp/sentinel/Sentinel-LDK-RTE-for-AdvanceSoft-v10.13.1_Linux.tar.gz>`_\ ・インストールしてください。
+ `Sentinel-LDK-RTE（ライセンスマネージャー）をダウンロード <https://apps.advancesoft.jp/sentinel/Sentinel-LDK-RTE-for-AdvanceSoft-v10.13.1_Linux.tar.gz>`_\ ・インストールしてください。
 
  .. code-block:: console
 
@@ -177,7 +177,7 @@ Sentinel RTEをインストールしたマシンでGUIアプリケーション�
 
  .. note::
 
-      Windowsマシンをライセンスサーバーとする場合は、 `こちらのSentinel RTE（ライセンスマネージャー）をダウンロード <https://apps.advancesoft.jp/sentinel/Sentinel-LDK-RTE-for-AdvanceSoft-v10.13.1_Windows.exe>`_\ し、\ `こちらのドキュメント <https://apps.advancesoft.jp/sentinel/doc/index.html>`_\ を参照してインストールを行ってください。
+      Windowsマシンをライセンスサーバーとする場合は、 `こちらのSentinel-LDK-RTE（ライセンスマネージャー）をダウンロード <https://apps.advancesoft.jp/sentinel/Sentinel-LDK-RTE-for-AdvanceSoft-v10.13.1_Windows.exe>`_\ し、\ `こちらのドキュメント <https://apps.advancesoft.jp/sentinel/doc/index.html>`_\ を参照してインストールを行ってください。
 
  .. note::
 

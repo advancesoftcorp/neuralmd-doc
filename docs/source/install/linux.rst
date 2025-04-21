@@ -9,11 +9,19 @@
 インストールの準備
 ==============================
 
-本ソフトウェアのインストールには、インストーラーを使用します。インストーラーは本体の「Advance/NeuralMD」に加え、弊社で改修した計算エンジン（Quantum ESPRESSO・LAMMPS）を含む「Advance/NanoLabo Tool」が用意されています。それぞれ以下のリンクからダウンロードしてください。
+本ソフトウェアのインストールには、インストーラーを使用します。それぞれ以下のリンクからダウンロードしてください。
+
+- 本体
 
  `Advance/NeuralMD (ver.1.9.2) <https://www.apps.advancesoft.jp/nanolabo/install_neuralmd_linux_v1.9.2.bin>`_
 
+- 弊社で改修した計算エンジン（Quantum ESPRESSO・LAMMPS）
+
  `Advance/NanoLabo Tool (ver.3.0) <https://www.apps.advancesoft.jp/nanolabo/install_nanolabo_tool_linux_v3.0.bin>`_
+
+- 追加のGNN力場モデルファイル（FAIR-ChemまたはSevenNetを使う場合のみ）
+
+ `Advance/NanoLabo GNNP (ver.3.0) <https://www.apps.advancesoft.jp/nanolabo/install_nanolabo_tool_windows_v3.0.exe>`_
 
 .. _installerl:
 
@@ -45,7 +53,7 @@
 
  書き込み権限のない場所にはインストールできません。インストール先として書き込み権限のある場所（ :file:`/home/ユーザー名/AdvanceSoft/NeuralMD` など）を指定するか、書き込み権限のあるユーザーでインストーラーを実行してください。
 
-- フローティングライセンスでクライアントとして使用する場合、Sentinel RTEをインストールしますか？でいいえを選択してください。
+- フローティングライセンスでクライアントとして使用する場合、Sentinel-LDK-RTEをインストールしますか？でいいえを選択してください。
 
   ライセンスサーバーが異なるネットワークセグメントに存在する場合は、次の画面でライセンスサーバーのIPアドレスまたはホスト名を入力してください。ここで指定しない場合でも、後からライセンスサーバーのIPアドレスまたはホスト名を設定することは可能です。詳細は\ :ref:`floating`\ を参照してください。
 
@@ -68,6 +76,8 @@
 .. image:: /img/install_tool_l.png
 
 インストール後、最後の画面で完了をクリックすると、Advance/NanoLabo Toolのインストールが終了します。
+
+FAIR-ChemまたはSevenNetを使う場合は、Advance/NanoLabo GNNPも同様にインストールしてください。
 
 Advance/NanoLabo Toolに同梱された計算エンジン（Quantum ESPRESSO・LAMMPS）の使用方法については、\ :doc:`/usage/tool`\ を参照してください。
 
@@ -140,4 +150,4 @@ Advance/NeuralMDのアンインストールが終わったら、同様にAdvance
 
 .. note::
 
-   Sentinel RTEを後からアンインストールするには、\ `Sentinel RTEインストーラー <https://apps.advancesoft.jp/sentinel/Sentinel-LDK-RTE-for-AdvanceSoft-v9.15_Linux.tar.gz>`_\ に入っている :file:`dunst` を実行してください。
+   Sentinel-LDK-RTEを後からアンインストールするには、\ `Sentinel-LDK-RTEインストーラー <https://apps.advancesoft.jp/sentinel/Sentinel-LDK-RTE-for-AdvanceSoft-v9.15_Linux.tar.gz>`_\ に入っている :file:`dunst` を実行してください。
