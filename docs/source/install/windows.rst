@@ -87,6 +87,17 @@ Advance/NanoLabo Toolに同梱された計算エンジン（Quantum ESPRESSO・L
 
 画面の指示に従い、アンインストールを行ってください。
 
+.. note::
+
+   Windows 11でアンインストーラーを起動しようとしたときに、「This Application has Unexpectedly Quit」「Flexeraayd$aaa: Windows DLL failed to load」というエラーが表示される場合があります。
+
+   これは :envvar:`JAVA_TOOL_OPTIONS="-Dos.name=Windows 10"` という環境変数を設定することで回避できます。アンインストーラーのみに適用するには、例えば次のようなバッチファイルを作成し、管理者権限で実行してください。
+
+   .. code-block:: batch
+
+       set JAVA_TOOL_OPTIONS="-Dos.name=Windows 10"
+       "C:\Program Files\AdvanceSoft\NanoLabo\_NanoLabo_Tool_installation\Change NanoLabo Tool Installation.exe"
+
 Advance/NeuralMDのアンインストールが終わったら、同様にAdvance/NanoLabo Toolをアンインストールしてください。
 
 .. note::

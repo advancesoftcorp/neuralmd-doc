@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Advance/NeuralMD \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-23 12:32+0900\n"
+"POT-Creation-Date: 2025-04-23 17:10+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1058,13 +1058,13 @@ msgstr ""
 msgid "画面の指示に従い、アンインストールを行ってください。"
 msgstr "Follow the on-screen instructions to uninstall the software."
 
-#: ../../install/linux.rst:145 ../../install/windows.rst:90
+#: ../../install/linux.rst:145 ../../install/windows.rst:101
 msgid "Advance/NeuralMDのアンインストールが終わったら、同様にAdvance/NanoLabo Toolをアンインストールしてください。"
 msgstr ""
 "After uninstalling Advance/NeuralMD, uninstall Advance/NanoLabo Tool in "
 "the same manner."
 
-#: ../../install/linux.rst:149 ../../install/windows.rst:94
+#: ../../install/linux.rst:149 ../../install/windows.rst:105
 msgid "アンインストールの際に、インストールログファイルが残る場合があります。また、FlexNetライセンスをご利用の場合は、ライセンスファイルは削除されずに残ります。その際はお手数ですが手動で削除してください。"
 msgstr ""
 "Installation log files may remain after uninstallation. Also, if you are "
@@ -1095,9 +1095,9 @@ msgstr ""
 #: ../../install/purchase.rst:9
 msgid "試用版・製品版とも、ご使用には弊社よりライセンスを取得していただく必要があります。ライセンス形態は実行環境によらず以下の2種類からお選びいただけます。"
 msgstr ""
-"For both the trial and full versions, you need to obtain a license from us to "
-"use the software. You can choose from the following two license types, "
-"regardless of the execution environment."
+"For both the trial and full versions, you need to obtain a license from "
+"us to use the software. You can choose from the following two license "
+"types, regardless of the execution environment."
 
 #: ../../install/purchase.rst:11
 msgid "ノードロックライセンス"
@@ -1119,7 +1119,9 @@ msgstr ""
 
 #: ../../install/purchase.rst:21
 msgid "\\* ライセンスサーバーのインストール時に管理者権限が必要です。"
-msgstr "\\* Administrator privileges are required during license server installation."
+msgstr ""
+"\\* Administrator privileges are required during license server "
+"installation."
 
 #: ../../install/purchase.rst:26
 msgid "エディション"
@@ -1234,21 +1236,24 @@ msgid ""
 "`support.nano@advancesoft.jp <mailto:support.nano@advancesoft.jp>`_ "
 ":sup:`*` 宛にご希望のライセンス種別を明記の上お申し込みください。"
 msgstr ""
-"Please apply to `support.nano@advancesoft.jp <mailto:support.nano@advancesoft.jp>`_ "
-":sup:`*`, including your name, country, affiliation, and desired license type."
+"Please apply to `support.nano@advancesoft.jp "
+"<mailto:support.nano@advancesoft.jp>`_ :sup:`*`, including your name, "
+"country, affiliation, and desired license type."
 
 #: ../../install/purchase.rst:90
 msgid ""
 "ライセンス契約後、noreply\\@sentinelcloud.comからEntitlement "
 "Certificateをメールでお送りしますので、記載されているProduct Keyを用いてライセンスの設定を行ってください。"
 msgstr ""
-"After the license registration, an Entitlement Certificate will be sent via email "
-"from noreply@sentinelcloud.com. Please use the Product Key provided in the "
-"certificate to configure the license."
+"After the license registration, an Entitlement Certificate will be sent "
+"via email from noreply@sentinelcloud.com. Please use the Product Key "
+"provided in the certificate to configure the license."
 
 #: ../../install/purchase.rst:92
 msgid "ライセンスの設定方法については、:ref:`licensesetupdate`\\ を参照してください。"
-msgstr "For how to configure the license, please refer to :ref:`licensesetupdate`\\ ."
+msgstr ""
+"For how to configure the license, please refer to "
+":ref:`licensesetupdate`\\ ."
 
 #: ../../install/requirement.rst:5
 msgid "動作環境"
@@ -1334,11 +1339,38 @@ msgstr ""
 "Launch :file:`Change NeuralMD Installation.exe` in the "
 ":file:`_NeuralMD_installation` folder of the installation location."
 
-#: ../../install/windows.rst:98
+#: ../../install/windows.rst:92
+msgid ""
+"Windows 11でアンインストーラーを起動しようとしたときに、「This Application has Unexpectedly "
+"Quit」「Flexeraayd$aaa: Windows DLL failed to load」というエラーが表示される場合があります。"
+msgstr ""
+"When trying to launch the uninstaller on Windows 11, errors like \"This "
+"Application has Unexpectedly Quit\" or \"Flexeraayd$aaa: Windows DLL failed "
+"to load\" may be displayed."
+
+#: ../../install/windows.rst:94
+msgid ""
+"これは :envvar:`JAVA_TOOL_OPTIONS=\"-Dos.name=Windows 10\"` "
+"という環境変数を設定することで回避できます。アンインストーラーのみに適用するには、例えば次のようなバッチファイルを作成し、管理者権限で実行してください。"
+msgstr ""
+"This can be avoided by setting the environment variable "
+":envvar:`JAVA_TOOL_OPTIONS=\"-Dos.name=Windows 10\"`\\ . To apply this only to "
+"the uninstaller, for example, create a batch file like the following and run "
+"it with administrator privileges."
+
+#: ../../install/windows.rst:96
+msgid ""
+"set JAVA_TOOL_OPTIONS=\"-Dos.name=Windows 10\"\n"
+"\"C:\\Program "
+"Files\\AdvanceSoft\\NanoLabo\\_NanoLabo_Tool_installation\\Change "
+"NanoLabo Tool Installation.exe\""
+msgstr ""
+
+#: ../../install/windows.rst:109
 msgid ""
 "Sentinel-LDK-RTEは\"Thales Sentinel LDK Run-time "
 "Environment\"という名前でインストールされます。後からアンインストールする場合はそちらをアンインストールしてください。"
 msgstr ""
-"Sentinel-LDK-RTE is installed under the name \"Thales Sentinel LDK Run-time "
-"Environment\". To uninstall it later, please uninstall that program."
+"Sentinel-LDK-RTE is installed under the name \"Thales Sentinel LDK Run-"
+"time Environment\". To uninstall it later, please uninstall that program."
 
