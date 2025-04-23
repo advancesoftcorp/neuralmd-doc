@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Advance/NeuralMD \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-02 18:50+0900\n"
+"POT-Creation-Date: 2025-04-23 11:29+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,114 +31,122 @@ msgid "https://www.advancesoft.jp/"
 msgstr ""
 
 #: ../../link.rst:11
+msgid "Sentinel-LDK-RTEドキュメント"
+msgstr "Sentinel-LDK-RTE document"
+
+#: ../../link.rst:11
+msgid "https://apps.advancesoft.jp/sentinel/doc/index.html"
+msgstr ""
+
+#: ../../link.rst:14
 msgid "Advance/NeuralMD"
 msgstr ""
 
-#: ../../link.rst:14
+#: ../../link.rst:17
 msgid "Advance/NeuralMDホームページ"
 msgstr "Advance/NeuralMD home page"
 
-#: ../../link.rst:14
+#: ../../link.rst:17
 msgid "https://www.nanolabo.advancesoft.jp/neuralmd/"
 msgstr "https://www.nanolabo.advancesoft.jp/en/neuralmd/"
 
-#: ../../link.rst:17
+#: ../../link.rst:20
 msgid "解析事例"
 msgstr "Analysis cases"
 
-#: ../../link.rst:17
+#: ../../link.rst:20
 msgid "http://case.advancesoft.jp/NeuralMD/"
 msgstr ""
 
-#: ../../link.rst:20
+#: ../../link.rst:23
 msgid "力場データベース"
 msgstr "Force field database"
 
-#: ../../link.rst:20
+#: ../../link.rst:23
 msgid "https://www.nanolabo.advancesoft.jp/forcefield/"
 msgstr ""
 
-#: ../../link.rst:23
+#: ../../link.rst:26
 msgid "Advance/NanoLabo"
 msgstr ""
 
-#: ../../link.rst:26
+#: ../../link.rst:29
 msgid "Advance/NanoLaboホームページ"
 msgstr "Advance/NanoLabo home page"
 
-#: ../../link.rst:26
+#: ../../link.rst:29
 msgid "https://www.nanolabo.advancesoft.jp/"
 msgstr "https://www.nanolabo.advancesoft.jp/en/"
 
-#: ../../link.rst:29 ../../link.rst:55
+#: ../../link.rst:32 ../../link.rst:58
 msgid "マニュアル"
 msgstr "Manual"
 
-#: ../../link.rst:29
+#: ../../link.rst:32
 msgid "https://nanolabo-doc.readthedocs.io/ja/latest/"
 msgstr "https://nanolabo-doc.readthedocs.io/en/latest/"
 
-#: ../../link.rst:32
+#: ../../link.rst:35
 msgid "Quantum ESPRESSO"
 msgstr ""
 
-#: ../../link.rst:35
+#: ../../link.rst:38
 msgid "Quantum ESPRESSO ホームページ"
 msgstr "Quantum ESPRESSO home page"
 
-#: ../../link.rst:35
+#: ../../link.rst:38
 msgid "https://www.quantum-espresso.org/"
 msgstr ""
 
-#: ../../link.rst:40
+#: ../../link.rst:43
 msgid "擬ポテンシャル"
 msgstr "Pseudo potential"
 
-#: ../../link.rst:38
+#: ../../link.rst:41
 msgid "http://pseudopotentials.quantum-espresso.org/"
 msgstr ""
 
-#: ../../link.rst:40
+#: ../../link.rst:43
 msgid "http://pseudopotentials.quantum-espresso.org/legacy_tables/"
 msgstr ""
 
-#: ../../link.rst:43
+#: ../../link.rst:46
 msgid "|lsquo|\\ pw.x\\ |rsquo| マニュアル"
 msgstr "|lsquo|\\ pw.x\\ |rsquo| manual"
 
-#: ../../link.rst:43
+#: ../../link.rst:46
 msgid "https://www.quantum-espresso.org/Doc/INPUT_PW.html"
 msgstr ""
 
-#: ../../link.rst:46
+#: ../../link.rst:49
 msgid "アドバンスソフト改修版Quantum ESPRESSOソースコード"
 msgstr "Source code of Quantum ESPRESSO modified by AdvanceSoft"
 
-#: ../../link.rst:46
+#: ../../link.rst:49
 msgid "https://github.com/advancesoftcorp/espresso"
 msgstr ""
 
-#: ../../link.rst:49
+#: ../../link.rst:52
 msgid "LAMMPS"
 msgstr ""
 
-#: ../../link.rst:52
+#: ../../link.rst:55
 msgid "LAMMPSホームページ"
 msgstr "LAMMPS home page"
 
-#: ../../link.rst:52
+#: ../../link.rst:55
 msgid "https://www.lammps.org/"
 msgstr ""
 
-#: ../../link.rst:55
+#: ../../link.rst:58
 msgid "https://docs.lammps.org/Manual.html"
 msgstr ""
 
-#: ../../link.rst:58
+#: ../../link.rst:61
 msgid "アドバンスソフト改修版LAMMPSソースコード"
 msgstr "Source code of LAMMPS modified by AdvanceSoft"
 
-#: ../../link.rst:58
+#: ../../link.rst:61
 msgid "https://github.com/advancesoftcorp/lammps"
 msgstr ""
 

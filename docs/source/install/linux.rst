@@ -150,4 +150,4 @@ Advance/NeuralMDのアンインストールが終わったら、同様にAdvance
 
 .. note::
 
-   Sentinel-LDK-RTEを後からアンインストールするには、\ `Sentinel-LDK-RTEインストーラー <https://apps.advancesoft.jp/sentinel/Sentinel-LDK-RTE-for-AdvanceSoft-v9.15_Linux.tar.gz>`_\ に入っている :file:`dunst` を実行してください。
+   Sentinel-LDK-RTEを後からアンインストールするには、\ `Sentinel-LDK-RTEインストーラー <https://apps.advancesoft.jp/sentinel/Sentinel-LDK-RTE-for-AdvanceSoft-v10.13.1_Linux.tar.gz>`_\ に入っている :file:`dunst` を実行してください。
