@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Advance/NeuralMD \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-23 17:10+0900\n"
+"POT-Creation-Date: 2025-07-30 10:56+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -65,8 +65,8 @@ msgstr ""
 "semicolons."
 
 #: ../../install/flex.rst:22 ../../install/flex.rst:75
-#: ../../install/linux.rst:86 ../../install/linux.rst:93
-#: ../../install/linux.rst:109
+#: ../../install/linux.rst:92 ../../install/linux.rst:99
+#: ../../install/linux.rst:115
 msgid "デフォルトの場所にインストールした場合の例"
 msgstr "Example of installing in the default location"
 
@@ -375,7 +375,7 @@ msgstr ""
 "If you have purchased a floating license, refer to :ref:`floating` before"
 " performing the steps above."
 
-#: ../../install/license.rst:33 ../../install/linux.rst:117
+#: ../../install/license.rst:33 ../../install/linux.rst:123
 #: ../../install/windows.rst:62
 msgid "ライセンスの設定"
 msgstr "License Configuration"
@@ -852,36 +852,46 @@ msgstr ""
 #: ../../install/linux.rst:33
 msgid ""
 "$ chmod +x install_neural_linux.bin install_nanolabo_tool_linux.bin\n"
-"$ ./install_neuralmd_linux.bin"
+"$ sudo ./install_neuralmd_linux.bin"
 msgstr ""
 
 #: ../../install/linux.rst:40
+msgid "ライセンスマネージャー(Sentinel-LDK-RTE)をインストールするためにroot権限での実行が必要です。"
+msgstr "Root privileges are required to install the License Manager (Sentinel-LDK-RTE)."
+
+#: ../../install/linux.rst:42
+msgid "Sentinel-LDK-RTEのインストールが不要（既にインストール済みなど）という場合は一般ユーザーでも実行できます。"
+msgstr ""
+"It can also be run by a standard user if the installation of Sentinel-LDK-RTE "
+"is not required (e.g., it is already installed)."
+
+#: ../../install/linux.rst:46
 msgid "インストーラーはコンソールモード（GUIを表示せず、CUIで操作が完結する）でも動作します。もしGUIが無い環境で、実行時にコンソールモードにならない場合は"
 msgstr ""
 "The installer can also run in the console mode (no GUI is displayed, even"
 " only the CUI completes the operation). If the installer does not enter "
 "console mode at runtime in environment without a GUI, execute as follows."
 
-#: ../../install/linux.rst:42
+#: ../../install/linux.rst:48
 msgid "$ ./install_neuralmd_linux.bin -i console"
 msgstr ""
 
-#: ../../install/linux.rst:46
+#: ../../install/linux.rst:52
 msgid "のように実行してください。"
 msgstr "\\ "
 
-#: ../../install/linux.rst:48
+#: ../../install/linux.rst:54
 msgid "言語の選択画面が出た場合は、インストール中に使用する言語を選択してください（ソフトウェア本体で使用する言語ではありません）。"
 msgstr ""
 "When the language selection screen appears, select the language to be "
 "used during installation (not the language used in the software itself)."
 
-#: ../../install/linux.rst:50 ../../install/linux.rst:74
+#: ../../install/linux.rst:56 ../../install/linux.rst:80
 #: ../../install/windows.rst:33 ../../install/windows.rst:49
 msgid "画面の指示に従い、インストールの設定を行ってください。"
 msgstr "Follow the on-screen instructions to set up the installation."
 
-#: ../../install/linux.rst:54
+#: ../../install/linux.rst:60
 msgid ""
 "書き込み権限のない場所にはインストールできません。インストール先として書き込み権限のある場所（ "
 ":file:`/home/ユーザー名/AdvanceSoft/NeuralMD` "
@@ -892,13 +902,16 @@ msgstr ""
 "/home/username/AdvanceSoft/NeuralMD) as the installation location or run "
 "the installer as a user with write permission."
 
-#: ../../install/linux.rst:56 ../../install/windows.rst:35
-msgid "フローティングライセンスでクライアントとして使用する場合、Sentinel-LDK-RTEをインストールしますか？でいいえを選択してください。"
+#: ../../install/linux.rst:62
+msgid ""
+"フローティングライセンスでクライアントとして使用する場合、Sentinel-LDK-"
+"RTEをインストールしますか？でいいえを選択してください（一般ユーザーで実行した場合は確認は表示されません）。"
 msgstr ""
-"When using a floating license as a client, select 'No' for the \"Install "
-"Sentinel-LDK-RTE?\" prompt."
+"If you are using the software as a client with a floating license, select No "
+"for 'Install Sentinel-LDK-RTE?' (this confirmation prompt will not be "
+"displayed if run by a standard user)."
 
-#: ../../install/linux.rst:58 ../../install/windows.rst:37
+#: ../../install/linux.rst:64 ../../install/windows.rst:37
 msgid ""
 "ライセンスサーバーが異なるネットワークセグメントに存在する場合は、次の画面でライセンスサーバーのIPアドレスまたはホスト名を入力してください。ここで指定しない場合でも、後からライセンスサーバーのIPアドレスまたはホスト名を設定することは可能です。詳細は\\"
 " :ref:`floating`\\ を参照してください。"
@@ -908,37 +921,37 @@ msgstr ""
 "do not specify it here, you can configure the license server's IP address"
 " or hostname later. For details, refer to :ref:`floating`\\ ."
 
-#: ../../install/linux.rst:62 ../../install/windows.rst:41
+#: ../../install/linux.rst:68 ../../install/windows.rst:41
 msgid "設定が終わると要約の画面が表示されます。"
 msgstr "After the setup is complete, a summary screen will appear."
 
-#: ../../install/linux.rst:66 ../../install/windows.rst:45
+#: ../../install/linux.rst:72 ../../install/windows.rst:45
 msgid "最後の画面で完了をクリックすると、Advance/NeuralMDのインストールが終了します。"
 msgstr ""
 "Clicking Finish on the last screen will complete the Advance/NeuralMD "
 "installation."
 
-#: ../../install/linux.rst:68 ../../install/windows.rst:47
+#: ../../install/linux.rst:74 ../../install/windows.rst:47
 msgid "続けて、Advance/NanoLabo Toolのインストーラーを実行します。"
 msgstr "Then run the Advance/NanoLabo Tool installer."
 
-#: ../../install/linux.rst:70
+#: ../../install/linux.rst:76
 msgid "$ ./install_nanolabo_tool_linux.bin"
 msgstr ""
 
-#: ../../install/linux.rst:78 ../../install/windows.rst:53
+#: ../../install/linux.rst:84 ../../install/windows.rst:53
 msgid "インストール後、最後の画面で完了をクリックすると、Advance/NanoLabo Toolのインストールが終了します。"
 msgstr ""
 "After the installation, click Finish on the last screen to complete the "
 "installation of the Advance/NanoLabo Tool."
 
-#: ../../install/linux.rst:80 ../../install/windows.rst:55
+#: ../../install/linux.rst:86 ../../install/windows.rst:55
 msgid "FAIR-ChemまたはSevenNetを使う場合は、Advance/NanoLabo GNNPも同様にインストールしてください。"
 msgstr ""
 "If using FAIR-Chem or SevenNet, please also install Advance/NanoLabo GNNP"
 " in the same way."
 
-#: ../../install/linux.rst:82 ../../install/windows.rst:57
+#: ../../install/linux.rst:88 ../../install/windows.rst:57
 msgid ""
 "Advance/NanoLabo Toolに同梱された計算エンジン（Quantum ESPRESSO・LAMMPS）の使用方法については、\\ "
 ":doc:`/usage/tool`\\ を参照してください。"
@@ -947,7 +960,7 @@ msgstr ""
 "and LAMMPS) included with the Advance/NanoLabo Tool, please refer to "
 ":doc:`/usage/tool`\\ ."
 
-#: ../../install/linux.rst:84
+#: ../../install/linux.rst:90
 msgid ""
 "NeuralMDの実行時には :file:`mpi/lib` にある動的ライブラリが必要ですので、環境変数 "
 ":envvar:`LD_LIBRARY_PATH` に設定するため、以下を実行してください。"
@@ -956,11 +969,11 @@ msgstr ""
 "NeuralMD, execute the following to set up the environment variable "
 ":envvar:`LD_LIBRARY_PATH`\\ ."
 
-#: ../../install/linux.rst:86
+#: ../../install/linux.rst:92
 msgid "export LD_LIBRARY_PATH=/opt/AdvanceSoft/NeuralMD/mpi/lib:$LD_LIBRARY_PATH"
 msgstr ""
 
-#: ../../install/linux.rst:91
+#: ../../install/linux.rst:97
 msgid ""
 "また、環境変数 :envvar:`PATH` 、およびOpen MPIの環境変数 :envvar:`OPAL_PREFIX` "
 "の設定が必要ですので、以下を実行してください。"
@@ -968,49 +981,49 @@ msgstr ""
 "In addition, the environment variable :envvar:`PATH` and that of "
 ":envvar:`OPAL_PREFIX` for Open MPI must be set, execute the followings."
 
-#: ../../install/linux.rst:93
+#: ../../install/linux.rst:99
 msgid ""
 "export PATH=/opt/AdvanceSoft/NeuralMD/mpi/bin:$PATH\n"
 "export OPAL_PREFIX=/opt/AdvanceSoft/NeuralMD/mpi"
 msgstr ""
 
-#: ../../install/linux.rst:101
+#: ../../install/linux.rst:107
 msgid "MPIの実行ファイル・ライブラリはNeuralMD本体のインストーラー、NanoLabo Toolインストーラーの両方に含まれています。"
 msgstr ""
 "The MPI executable files and libraries are included in both the NeuralMD "
 "main unit installer and the NanoLabo Tool installer."
 
-#: ../../install/linux.rst:103
+#: ../../install/linux.rst:109
 msgid "前者はインストール先の :file:`mpi` 、後者はインストール先の :file:`exec.LINUX/mpi` に配置されます。"
 msgstr ""
 "The former is located in the :file:`mpi` and the latter in the "
 ":file:`exec.LINUX/mpi` directory in the installation location."
 
-#: ../../install/linux.rst:105
+#: ../../install/linux.rst:111
 msgid "内容は同じものですので、環境変数にはどちらか片方のみを設定していただければ大丈夫です。"
 msgstr ""
 "The contents are the same, so you only need to set one of them in the "
 "environment variable."
 
-#: ../../install/linux.rst:107
+#: ../../install/linux.rst:113
 msgid "NeuralMDの実行ファイルのパスも環境変数 :envvar:`PATH` に設定していただくと便利です。"
 msgstr ""
 "It is also helpful to set the path to the NeuralMD executable in the "
 "environment variable :envvar:`PATH`\\ ."
 
-#: ../../install/linux.rst:109
+#: ../../install/linux.rst:115
 msgid "export PATH=/opt/AdvanceSoft/NeuralMD/bin:$PATH"
 msgstr ""
 
-#: ../../install/linux.rst:119 ../../install/windows.rst:64
+#: ../../install/linux.rst:125 ../../install/windows.rst:64
 msgid ":ref:`licensesetupdate`\\ の手順に従ってライセンスの設定を行ってください。"
 msgstr "Follow the procedure in :ref:`licensesetupdate` to configure the license."
 
-#: ../../install/linux.rst:124 ../../install/windows.rst:69
+#: ../../install/linux.rst:130 ../../install/windows.rst:69
 msgid "更新・アップグレード"
 msgstr "Update/Upgrade"
 
-#: ../../install/linux.rst:126 ../../install/windows.rst:71
+#: ../../install/linux.rst:132 ../../install/windows.rst:71
 msgid ""
 "トライアル版から製品版にアップグレードされる場合、新たにインストールを行う必要はありません。\\ :ref:`licenseupdate`\\ "
 "を参考にしてライセンスのみを更新してください。"
@@ -1019,14 +1032,14 @@ msgstr ""
 "need to perform a new installation. Refer to :ref:`licenseupdate` to "
 "update only the license."
 
-#: ../../install/linux.rst:128 ../../install/windows.rst:73
+#: ../../install/linux.rst:134 ../../install/windows.rst:73
 msgid "新しいバージョンにアップデートされる場合、上書きインストールを行うことも可能ではありますが、あらかじめ以前のバージョンをアンインストールするか、インストール先を変更していただくことをお勧めします。"
 msgstr ""
 "When updating to a new version, it is possible to perform an overwrite "
 "install. However, uninstalling the previous version or changing the "
 "installation location beforehand is recommended."
 
-#: ../../install/linux.rst:130 ../../install/windows.rst:75
+#: ../../install/linux.rst:136 ../../install/windows.rst:75
 msgid ""
 "メジャーバージョンが新しいNeuralMDにアップデートする場合は、ライセンスの更新が必要です。\\ :ref:`licenseupdate`\\"
 " を参考にしてライセンスを更新してください。"
@@ -1035,11 +1048,11 @@ msgstr ""
 "required. Please update the license by referring to "
 ":ref:`licenseupdate`\\ ."
 
-#: ../../install/linux.rst:135 ../../install/windows.rst:80
+#: ../../install/linux.rst:141 ../../install/windows.rst:80
 msgid "アンインストール"
 msgstr "Uninstallation"
 
-#: ../../install/linux.rst:137
+#: ../../install/linux.rst:143
 msgid ""
 "端末（ターミナル）でインストール先の :file:`_NeuralMD_installation` ディレクトリにある :file:`Change"
 " NeuralMD Installation` を起動します。"
@@ -1048,30 +1061,30 @@ msgstr ""
 ":file:`_NeuralMD_installation` directory in the installation location in "
 "the terminal."
 
-#: ../../install/linux.rst:139
+#: ../../install/linux.rst:145
 msgid ""
 "$ AdvanceSoft/NeuralMD/_NeuralMD_installation/Change\\ NeuralMD\\ "
 "Installation"
 msgstr ""
 
-#: ../../install/linux.rst:143 ../../install/windows.rst:88
+#: ../../install/linux.rst:149 ../../install/windows.rst:88
 msgid "画面の指示に従い、アンインストールを行ってください。"
 msgstr "Follow the on-screen instructions to uninstall the software."
 
-#: ../../install/linux.rst:145 ../../install/windows.rst:101
+#: ../../install/linux.rst:151 ../../install/windows.rst:101
 msgid "Advance/NeuralMDのアンインストールが終わったら、同様にAdvance/NanoLabo Toolをアンインストールしてください。"
 msgstr ""
 "After uninstalling Advance/NeuralMD, uninstall Advance/NanoLabo Tool in "
 "the same manner."
 
-#: ../../install/linux.rst:149 ../../install/windows.rst:105
+#: ../../install/linux.rst:155 ../../install/windows.rst:105
 msgid "アンインストールの際に、インストールログファイルが残る場合があります。また、FlexNetライセンスをご利用の場合は、ライセンスファイルは削除されずに残ります。その際はお手数ですが手動で削除してください。"
 msgstr ""
 "Installation log files may remain after uninstallation. Also, if you are "
 "using a FlexNet license, the license file will remain undeleted. In such "
 "cases, please delete them manually."
 
-#: ../../install/linux.rst:153
+#: ../../install/linux.rst:159
 msgid ""
 "Sentinel-LDK-RTEを後からアンインストールするには、\\ `Sentinel-LDK-RTEインストーラー "
 "<https://apps.advancesoft.jp/sentinel/Sentinel-LDK-RTE-for-"
@@ -1312,6 +1325,12 @@ msgstr ""
 "selection screen appears, select the language that will be used during "
 "installation (not the language used in the software itself)."
 
+#: ../../install/windows.rst:35
+msgid "フローティングライセンスでクライアントとして使用する場合、Sentinel-LDK-RTEをインストールしますか？でいいえを選択してください。"
+msgstr ""
+"When using a floating license as a client, select 'No' for the \"Install "
+"Sentinel-LDK-RTE?\" prompt."
+
 #: ../../install/windows.rst:82
 msgid "次のいずれかの方法でアンインストーラーを起動してください。"
 msgstr "Launch the uninstaller in one of the following ways."
@@ -1345,8 +1364,8 @@ msgid ""
 "Quit」「Flexeraayd$aaa: Windows DLL failed to load」というエラーが表示される場合があります。"
 msgstr ""
 "When trying to launch the uninstaller on Windows 11, errors like \"This "
-"Application has Unexpectedly Quit\" or \"Flexeraayd$aaa: Windows DLL failed "
-"to load\" may be displayed."
+"Application has Unexpectedly Quit\" or \"Flexeraayd$aaa: Windows DLL "
+"failed to load\" may be displayed."
 
 #: ../../install/windows.rst:94
 msgid ""
@@ -1354,9 +1373,9 @@ msgid ""
 "という環境変数を設定することで回避できます。アンインストーラーのみに適用するには、例えば次のようなバッチファイルを作成し、管理者権限で実行してください。"
 msgstr ""
 "This can be avoided by setting the environment variable "
-":envvar:`JAVA_TOOL_OPTIONS=\"-Dos.name=Windows 10\"`\\ . To apply this only to "
-"the uninstaller, for example, create a batch file like the following and run "
-"it with administrator privileges."
+":envvar:`JAVA_TOOL_OPTIONS=\"-Dos.name=Windows 10\"`\\ . To apply this "
+"only to the uninstaller, for example, create a batch file like the "
+"following and run it with administrator privileges."
 
 #: ../../install/windows.rst:96
 msgid ""
