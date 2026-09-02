@@ -702,7 +702,6 @@ msgstr ""
 " to run calculations."
 
 #: ../../install/license.rst:192
-#, fuzzy
 msgid "ライセンスサーバーと異なるネットワークセグメントに存在するクライアントマシンで、NeuralMDインストール時にライセンスサーバーのIPアドレスまたはホスト名を設定していない場合は、次の方法で設定を行ってください。"
 msgstr ""
 "On a client machine located in a different network segment from the "
