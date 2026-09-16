@@ -17,7 +17,7 @@ Advance/NeuralMDホームページ
  https://www.nanolabo.advancesoft.jp/neuralmd/
 
 解析事例
- http://case.advancesoft.jp/NeuralMD/
+ https://case.advancesoft.jp/NeuralMD/
 
 力場データベース
  https://www.nanolabo.advancesoft.jp/forcefield/

@@ -55,7 +55,7 @@ msgid "解析事例"
 msgstr "Analysis cases"
 
 #: ../../link.rst:20
-msgid "http://case.advancesoft.jp/NeuralMD/"
+msgid "https://case.advancesoft.jp/NeuralMD/"
 msgstr ""
 
 #: ../../link.rst:23
